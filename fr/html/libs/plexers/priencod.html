@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2021-08-16T19:07:13.152000000">
+    <meta name="changed" content="2021-08-16T19:07:13.152000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Encodeur de priorité
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/priencod.png" alt="#########" height="32" width="32"> <em>Encodeur de priorité</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Multiplexeurs</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.3.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img  class="appearancelibs"  src="../../../../img-libs/priencod.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Le composant possède un certain nombre d'entrées sur son bord ouest, la première étant étiquetée 0 et les autres étant numérotées à partir de là. Le composant détermine les indices des entrées dont les valeurs sont à <b class="unov">1</b>, et il émet l'indice le plus élevé. Par exemple, si les entrées 0, 2, 5 et 6 valent toutes <b class="unov">1</b>, le codeur de priorité émet une valeur de 110<sub>b</sub> (6).
+        Si aucune entrée ne vaut <b class="unov">1</b>, ou si le composant est désactivé, alors la sortie du codeur de priorité est flottante (<b class="uvalue">U</b>).
+      </p>
+      <p>
+        Le codeur de priorité est conçu de manière à ce qu'un certain nombre de codeurs puissent être enchaînés en guirlande pour accueillir des entrées supplémentaires. En particulier, le composant comprend une entrée de validation et une sortie de validation. Lorsque l'entrée d'activation est égale à <b class="zerov">0</b>, le composant est désactivé et la sortie est constituée de tous les bits flottants (<b class="uvalue">U</b>).
+        La sortie d'activation est à <b class="unov">1</b> lorsque le composant est activé et qu'aucune des entrées indexées n'est à <b class="unov">1</b>. Ainsi, vous pouvez prendre deux encodeurs prioritaires et connecter la sortie enable du premier à l'entrée enable du second: Si l'une des entrées indexées du premier est à <b class="unov">1</b>, alors le second sera désactivé et sa sortie sera à <b class="unov">1</b>.
+        le second sera désactivé et sa sortie sera donc flottante. Mais si aucune des entrées indexées du premier n'est à <b class="unov">1</b>, alors sa sortie sera constituée de bits flottants (<b class="uvalue">U</b>), et le second encodeur de priorité sera activé et identifiera l'entrée de plus haute priorité avec un <b class="unov">1</b>.
+      </p>
+      <p>
+        Une sortie supplémentaire de l'encodeur prioritaire est égale à  <b class="unov">1</b> chaque fois que l'encodeur prioritaire est activé et trouve un  <b class="unov">1</b> sur l'une des entrées indexées. Lors du chaînage d'encodeurs prioritaires, cette sortie peut être utilisée pour identifier lequel des encodeurs a été déclenché.
+      </p>
+      <h2>
+        Pins (en supposant que le composant est orienté vers l'est)
+      </h2>
+      <dl>
+        <dt class="lib">
+          Bord ouest :
+        </dt>
+        <dd>
+          Entrée de nombre variable indexées à partir de 0 à l'extrémité supérieure/ouest de l'arête. La largeur de donnée en bit est de 1.
+        </dd>
+        <dt class="lib">
+          Bord est, broche supérieure :
+        </dt>
+        <dd>
+          Sortie: L'indice le plus élevé des entrées dont la valeur est à <b class="unov">1</b> ou tous les bits sont flottants (<b class="uvalue">U</b>) si aucune entrée ne vaut <b class="unov">1</b> ou si le composant est désactivé via l'entrée <b class="vprop">Enable</b>. La largeur de donnée correspond à l'attribut <b class="property">Largeur du select</b>
+        </dd>
+        <dt class="lib">
+          Bord est, broche inférieure
+        </dt>
+        <dd>
+		  Sortie : Group Select: Est à <b class="unov">1</b> si le composant est activé et qu'au moins une entrée indexée a une valeur de <b class="unov">1</b>, sinon cette sortie est à <b class="zerov">0</b>. Sa largeur de donnée en bit est de 1.
+        </dd>
+        <dt class="lib">
+          Bord sud :
+        </dt>
+        <dd>
+		  Entrée Enable : Si <b class="zerov">0</b>, le composant est désactivé ; sinon le composant est activé. Sa largeur de donnée en bit est de 1.
+        </dd>
+        <dt class="lib">
+		  Bord nord :
+        </dt>
+        <dd>
+		  Sortie Enable : est à <b class="unov">1</b> si ce composant est activé et qu'aucune des entrées indexées n'est à <b class="unov">1</b>, sinon la sortie est à <b class="zerov">0</b>. Sa largeur en bit est de 1.
+        </dd>
+      </dl>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+		Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">1</b> à <b class="tkeybd">4</b> modifient son attribut <b class="property">Select Bits</b>, <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b> et les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          <b class="property">Orientation</b>
+        </dt>
+        <dd>
+          La direction du composant (sa sortie par rapport à ses entrées
+        </dd>
+        <dt class="lib">
+          Largeur su select
+        </dt>
+        <dd>
+          La largeur de donnle en bit de la sortie primaire du composant. Le nombre d'entrées indexées du codeur de priorité sera de 2<sup><small><var>Largeur su select</var></small></sup>.
+        </dd>
+        <dt class="lib">
+          Désactiver les sorties
+        </dt>
+        <dd>
+          Spécifie ce que doit être chaque bit de la sortie lorsque le composant est désactivé (c'est-à-dire lorsque la broche d'activation est à <b class="zerov">0</b>). Les options comprennent zéro (<b class="zerov">0</b>) et flottant (<b class="uvalue">U</b>) ; dans ce dernier cas, la sortie est effectivement déconnectée de tout autre port.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Comportement de l'outil Pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil de texte
+      </h2>
+      <p>
+        Permets de modifier le texte apparaissant dans l'étiquette.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>-
+  </body>
+</html>

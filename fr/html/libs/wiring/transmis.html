@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-07-18T10:59:00.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Porte de transmission
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/transmis.png" alt="#########" width="32" height="32">&nbsp;
+		<b>Porte de transmission</b>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Câblage</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.7.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/transmis.png" alt="#########" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Une porte de transmission a trois entrées appelées <b>source</b>, <b>n-gate</b> et <b>p-gate</b> et une sortie appelée <b>drain</b>. Schématisées, l'entrée <b>source</b> et la sortie <b>drain</b> sont reliées par deux plaques, Logisim dessine une pointe de flèche pour indiquer la direction du flux de l'entrée à la sortie. Les deux entrées <b>gate</b> sont dessinées sous forme de lignes reliées à des plaques parallèles reliant <b>source</b> à <b>drain</b>. La ligne d'entrée <b>p-gate</b> a un cercle, alors que la ligne d'entrée <b>n-gate</b> ne l'a pas.
+      </p>
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td align="center">
+                <b>p-gate</b>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td valign="middle">
+                <b>source</b>
+              </td>
+              <td valign="middle" align="center">
+                <img class="appearancelibs" src="../../../../img-libs/transmis.png" alt="#########" width="64" height="64">
+              </td>
+              <td valign="middle">
+                <b>drain</b>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="center">
+                <b>n-gate</b>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <p>
+        La porte de transmission est simplement la combinaison de deux transistors complémentaires. En effet, le même comportement peut être réalisé dans Logisim en n'utilisant qu'un seul transistor. Cependant, les concepteurs préfèrent parfois utiliser des paires de transistors appariés en raison de problèmes électriques avec la tension de drainage bien plus complexe que les tentatives de simulation de Logisim.
+      </p>
+      <p>
+        Normalement la valeur des commandes de <b>n-gate</b> et <b>p-gate</b> devrait être opposée l'une à l'autre. Si <b>p-gate</b> vaut <b class="zerov">0</b> et <b>n-gate</b> vaut <b class="unov">1</b>, alors la valeur trouvée sur <b>source</b> est transmise au <b>drain</b> . Si <b>p-gate</b> vaut <b class="unov">1</b> et <b>p-gate</b> vaut <b class="zerov">0</b>, la connexion est rompue, la valeur du <b>drain</b> reste donc flottante. Dans tous les autres cas, <b>drain</b> reçoit une sortie d'erreur sauf si <b>source</b> est flottant, auquel cas <b>drain</b> est également flottant. Ce Comportement est résumé par le tableau suivant.
+      </p>
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <th class="tspace">
+                p-gate
+              </th>
+              <th class="tspace">
+                n-gate
+              </th>
+              <th class="tspace">
+                drain
+              </th>
+            </tr>
+            <tr>
+              <td class="zerov">
+                0
+              </td>
+              <td class="zerov">
+                0
+              </td>
+              <td align="center">
+                *
+              </td>
+            </tr>
+            <tr>
+              <td class="zerov">
+                0
+              </td>
+              <td class="unov">
+                1
+              </td>
+              <td align="center">
+                source
+              </td>
+            </tr>
+            <tr>
+              <td class="unov">
+                1
+              </td>
+              <td class="zerov">
+                0
+              </td>
+              <td class="uvalue">
+                U
+              </td>
+            </tr>
+            <tr>
+              <td class="unov">
+                1
+              </td>
+              <td class="unov">
+                1
+              </td>
+              <td align="center">
+                *
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="uvalue">U</b>/<b class="evalue">E</b>
+              </td>
+              <td align="center">
+                tout
+              </td>
+              <td align="center">
+                *
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                tout
+              </td>
+              <td align="center">
+                <b class="uvalue">U</b>/<b class="evalue">E</b>
+              </td>
+              <td align="center">
+                *
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <p>
+        * Si <b>source</b> est Haute impédance (<b class="uvalue">U</b>), <b>drain</b> est Haute impédance (<b class="uvalue">U</b>) autrement <b>drain</b> est en erreur (<b class="evalue">E</b>).
+      </p>
+      <p>
+        Note :Étant donné que Logisim utilise les marqueurs <b class="uvalue">U</b> (haute impédance) et <b class="evalue">E</b> (Erreur) j'ai utilisé les mêmes dans les illustrations plutôt que Z (haute impédance) et X (Erreur) plus communs dans d'autres documents.
+      </p>
+      <p>
+        Si l'attribut <b class="property">Largeur de donnée</b> est supérieur à 1, l'entrée <b>gate</b> est toujours d'un seul bit, mais sa valeur est appliquée simultanément à chacun des bits de l'entrée <b>source</b> .
+      </p>
+      <h2>
+        Pins
+      </h2>
+      <p>
+        Ce composant possède quatre broches, trois sont des entrées <b class=vprop>Source</b>,<b class=vprop>P-gate</b>,<b class=vprop>N-gate</b> une est une sortie <b class=vprop>Drain</b> que vous pouvez observer sur la figure plus haut.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Bord est : la source. 
+        </dt>
+        <dd>
+          En entrée, l'état sera transmis à la sortie si elle est déclenchée par l'entrée <b>n-gate</b> et <b>p-gate</b> . La largeur en bit est définie par l'attribut <b class="property">Largeur  données</b>.
+        </dd>
+        <dt class="lib">
+          Bord  nord : P-gate
+        </dt>
+        <dd>
+          En entrées, commande la transmission. Normalement on applique des valeurs de commande opposée sur ces entrées. La largeur en bit est de 1.
+        </dd>
+		<dt class="lib">
+          Bord sud : N-gate
+        </dt>
+        <dd>
+          En entrée, commande la transmission. Normalement on applique des valeurs de commande opposée sur ces entrées. La largeur en bit est de 1.
+        </dd>
+        <dt class="lib">
+          Bord ouest : Le drain
+        </dt>
+        <dd>
+          La sortie du composant, qui correspondra à l'entrée source si p-gate est <b class="zerov">0</b> et n-gate est <b class="unov">1</b>, ou sera flottante (<b class="uvalue">U</b>) si p-gate est <b class="unov">1</b> et n-gate est <b class="zerov">0</b>. Pour toutes les autres valeurs de p-gate et n-gate, la sortie est une valeur d'erreur (<b class="evalue">E</b>). La largeur en bit est définie par l'attribut <b class="property">Largeur de donnée</b>.
+        </dd>
+      </dl>
+	  </diV>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou ajouté, <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifie l'attribut <b class="property">Largeur de donnée</b>, et les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+      <div class="attliste">
+      <dl>
+        <dt class="lib">
+          <b class="property">Orientation</b>
+        </dt>
+        <dd>
+          Le côté du composant dessiné où doit se trouver sa broche de sortie <b>Drain</b>.
+        </dd>
+        <dt class="lib">
+          <b class="property">Position de la porte</b>
+        </dt>
+        <dd>
+          Disposition haut/gauche ou bas/droite de l'entrée <b>P-gate</b>.
+        </dd>
+        <dt class="lib">
+          <b class="property">Largeur de donnée</b>
+        </dt>
+        <dd>
+          Largeur de donnée en bit de l'entrée <b>source</b> et de la sortie <b>Drain</b>. L'entrées <b>Gate</b> a toujours une largeur de 1 bit.
+        </dd>
+      </dl>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>&gt;
+  </body>
+</html>

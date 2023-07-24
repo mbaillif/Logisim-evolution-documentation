@@ -1,0 +1,36 @@
+/* 
+This css file is for the look of the two httml files libstatus.html and docstatus.html 
+*/
+
+
+/* For page  */
+td.title {
+	background-color:#DCDCDC;
+	
+}
+/* for documents in line with the latest version */
+td.good {
+	background-color:#72BF44;	
+}
+
+/* for documents in agreement with an older but still up-to-date version */
+td.good1 {
+background-color:#a4bf44;	
+}
+
+td.needtask {
+	background-color:#FF9F00;	
+}
+td.obsolete {
+	background-color:#FACFCD;	
+}
+
+td.nonexist {
+	background-color:#ED1C24;	
+}
+
+td.notverif {
+	background-color:#E0E0E0;	
+}
+
+

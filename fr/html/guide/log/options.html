@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2018-10-23T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Onglet Options
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+	 <h1>
+        Onglet Options
+      </h1>
+	  
+      <p>
+        <b>Next:</b> <a href="timetable.html">Timetable tab</a>.
+      </p>
+    </div>
+  </body>
+</html>
+
+  // [ ] Stop-motion mode [ time_scale: 5ms ]
+  //   [ ] Coarse-grained summary
+  //     Data is captured only when all signals have stabilized, hiding any
+  //     transient signal fluctuations that may happen during propagation.  Each
+  //     captured value is recorded as if it were held stable for {5ms}.
+  //   [ ] Fine-grained details  [ gate_delay: 10ns ]
+  //     Data is captured whenever any signal value changes, including any
+  //     transient signal fluctuations that may happen during propagation.
+  //     Transient fluctuations are recorded as if the gate delay were {10ns},
+  //     and stable signals are recorded as if they were held stable for {5ms}.
+  // [ ] Real-time mode aka continuous [ time_scale: 5ms per second ]
+  //   [ ] Coarse-grained summary
+  //     Data is captured continuously, whenever the simulator is enabled.
+  //     Transient signal fluctuations are ignored. Each second of real time is
+  //     recorded as {5ms} of simulated circuit time.
+  //   [ ] Fine-grained details
+  //     Data is captured continuously, whenever the simulator is enabled.
+  //     Transient signal fluctuations are captured. Each second of real time is
+  //     recorded as {5ms} of simulated circuit time.
+  // [ ] Clocked mode [ time_scale: 5ms per tick ] [ clock_cycle_length: 2 ticks ]
+  //   [ ] Coarse-grained summary
+  //     Data is captured at the end of each clock cycle (2 ticks), hiding any
+  //     transient fluctuations that happen during the clock cycle.
+  //     Each clock cycle is recorded as if it took {10ms} per cycle ({5ms} per tick).
+  //   [ ] Fine-grained details  [ gate_delay: 10ns ]
+  //     Data is captured whenever any signal value changes, including any
+  //     transient signal fluctuations that may happen during propagation.
+  //     Transient fluctuations are recorded as if the gate delay were {10ns},
+  //     and each clock cycle is recorded as if it took {10ms} per cycle ({5ms}
+  //     per tick).

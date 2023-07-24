@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-05-21T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Priority Encoder
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/priencod.png" alt="#########" height="32" width="32"> <em>Priority Encoder</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Plexers</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              2.3.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+            <td valign="top">
+              <img  class="appearancelibs"  src="../../../../img-libs/priencod.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        The component has a number of inputs on its west edge, with the first labeled <q>0</q> and the other numbered from there. The component determines the indices of the inputs whose values are <b class="unov">1</b>, and it emits the highest index. For example, if inputs 0, 2, 5, and 6 are all <b class="unov">1</b>, then the priority
+        encoder emits a value of 110. If no inputs are <b class="unov">1</b>, or if the component is disabled, then the output of the priority encoder is floating (<b class="uvalue">U</b>).
+      </p>
+      <p>
+        The priority encoder is designed so that a number of encoders can be daisy-chained to accommodate additional inputs. In particular, the component includes an enable input and an enable output. Whenever the enable input is <b class="zerov">0</b>, the component is disabled, and the output will be all floating (<b class="uvalue">U</b>)
+        bits. The enable output is <b class="unov">1</b> whenever the component is enabled and none of the indexed inputs are <b class="unov">1</b>. Thus, you can take two priority encoders and connect the enable output of the first to the enable input of the second: If any of the indexed inputs to the first are <b class="unov">1</b>, then the second will
+        be disabled and so its output will be all floating. But if none of the first's indexed inputs are <b class="unov">1</b>, then its output will be all-floating bits, and the second priority encoder will be enabled and it will identify the highest-priority input with a <b class="unov">1</b>.
+      </p>
+      <p>
+        An additional output of the priority encoder is <b class="unov">1</b> whenever the priority encoder is enabled and finds a <b class="unov">1</b> on one of the indexed inputs. When chaining priority encoders together, this output can be used to identify which of the encoders was triggered.
+      </p>
+      <h2>
+        Pins (assuming component faces east)
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          West edge, variable number 
+        </dt>
+        <dd>
+          Input values, indexed from 0 at the top/west end of the edge. Inputs, bit width 1.
+        </dd>
+        <dt class="lib">
+          East edge, upper pin
+        </dt>
+        <dd>
+          Output: the highest index among those inputs whose value is <b class="unov">1</b> - or all floating bits if no inputs are <b class="unov">1</b> or if the component is disabled via the Enable In input. Vit width matches Select Bits attribute.
+        </dd>
+        <dt class="lib">
+          East edge, lower pin
+        </dt>
+        <dd>
+          Group Signal: <b class="unov">1</b> if the component is enabled and at least one indexed input has a value of <b class="unov">1</b>; otherwise this output is <b class="zerov">0</b>. bit width 1.
+        </dd>
+        <dt class="lib">
+          South edge
+        </dt>
+        <dd>
+          Enable In: if <b class="zerov">0</b>, the component is disabled; otherwise the component is enabled. Bit width 1.
+        </dd>
+        <dt class="lib">
+          North edge
+        </dt>
+        <dd>
+          Enable Out: <b class="unov">1</b> if this component is enabled and none of the indexed inputs are <b class="unov">1</b>; otherwise the output is <b class="zerov">0</b>. Bit width 1.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+        When the component is selected or being added, the digits <b class="tkeybd">1</b> through <b class="tkeybd">4</b> alter its <b class="property">Select Bits</b> attribute and the arrow keys alter its <b class="property">Facing</b> attribute.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Facing
+        </dt>
+        <dd>
+          The direction of the component (its output relative to input).
+        </dd>
+        <dt class="lib">
+          Select Bits
+        </dt>
+        <dd>
+          The bit width of the component's primary output. The number of indexed inputs to the priority encoder will be 2<sup><small><var>selectBits</var></small></sup>.
+        </dd>
+        <dt class="lib">
+          Disabled Output
+        </dt>
+        <dd>
+          Specifies what each bit of the output should be when the component is disabled (i.e., when the enable pin is <b class="zerov">0</b>). Options include zero (<b class="zerov">0</b>) and floating (<b class="uvalue">U</b>); in the latter case, the output is effectively disconnected from any other ports.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>-
+  </body>
+</html>

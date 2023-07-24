@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2018-10-23T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Programmable logic array
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/pla0.png" alt="#########" border=0 height="32" width="32"> <em>Programmable logic array</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Gates</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              3.2
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/pla.png" alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+	    The <b>Programmable Logic Array</b> (PLA) will present on its output the result of a combinatorial logic function. If one of the inputs is in error (<b class="evalue">E</b>) or undefined (<b class="uvalue">U</b>), it will consider that all its inputs are at <b class="unov">1</b>. This component resembles a ROM, and you need to enter the programming in a very similar way. Programming can be exported and imported from a file.
+In the Input/Output library (extra), there's a PLA coposant that better represents the internal workings of these components.
+      </p>
+	  <h2>
+        Pins (assuming component faces east)
+      </h2>
+	  <div class="attliste">
+      <dl>
+	   <dt class="lib">
+          West edge:
+        </dt>
+        <dd>
+		  The component input,  Bit width matches <b class="property">Bit width in</b> attribute. 
+		</dd>
+		<dt class="lib">
+          East edge:
+        </dt>
+        <dd>
+		  The component output,  Bit width matches <b class="property">Bit width out</b> attribute. 
+		</dd>
+	  </dl>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+	    When the component is selected or being added, the arrow keys alter its <b class="property">Facing</b> attribute.
+      </p>
+	  <div class="attliste">
+	  <dl>
+         <dt class="lib">
+          Facing
+        </dt>
+        <dd>
+          The direction of the component, its output relative to input.
+        </dd>
+		<dt class="lib">
+          Bit width in
+        </dt>
+        <dd>
+          The bit width of the component's inputs.
+        </dd>
+		<dt class="lib">
+          Bit width out
+        </dt>
+        <dd>  
+		  The bit width of the component's output.
+        </dd>
+		<dt class="lib">
+          Program
+        </dt>
+        <dd>
+		  Opens the programming window.
+        </dd>
+		<dt class="lib">
+          Label
+        </dt>
+        <dd>
+          The text within the label associated with the gate.
+        </dd>
+        <dt class="lib">
+          Label Font
+        </dt>
+        <dd>
+          The font with which to render the label.
+        </dd>
+	  </dl>
+      </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+	    None.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

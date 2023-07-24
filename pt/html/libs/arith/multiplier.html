@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-09-08T16:29:25.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+    <title>
+      Multiplicador
+   </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+      <div class="maindiv">
+    <h1>
+      <img  class="iconlibs" src="../../../../icons/6464/multiplier.png" alt="#########" width="32" height="32" align="middle">  <em>Multiplicador</em>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Biblioteca:</strong>
+          </td>
+          <td>
+            <a href="index.html">Aritmética</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Introdução:</strong>
+          </td>
+          <td>
+            2.0 Beta 20
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Aparência:</strong>
+          </td>
+          <td valign="top">
+            <img src="../../../../img-libs/multiplier.png" alt="#########">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      Comportamento
+    </h2>
+    <p>
+      Esse componente multiplicará os dois valores que vierem através das entradas a oeste e fornecerá o produto na saída leste. O componente é projetado de forma a poder ser conectado a outros multiplicadores para tratar com um multiplicando com mais bits do que for possível para um único multiplicador. A entrada <i>carry-in</i> fornecerá um valor multibit para ser adicionado ao produto (se ele for especificado), e saída <i>carry-out</i> fornecerá a metade superior do resultado do produto, que poderá ser enviada para outro multiplicador.
+    </p>
+    <p>
+      Se o multiplicando, o multiplicador, ou a entrada <i>carry-in</i> de entrada contiverem algum bit flutuante ou erro, então, o componente irá realizar uma multiplicação parcial. Ou seja, ele irá calcular como tantos bits de mais baixa ordem quanto possível. Mas acima do bit flutuante ou do erro, o resultado terá bits flutuantes ou de erro. Observar que se a entrada <i>carry-in</i> for completamente flutuante, então serão supostos todos os valores iguais a zero.
+    </p>
+    <h2>
+      Pinos
+    </h2>
+    <div class="attliste">
+    <dl>
+      <dt class="lib">
+        Na face oeste, extremo norte: (entrada, )
+      </dt>
+      <dd>
+        O multiplicando (ou seja, o primeiro dos dois números para se multiplicar). Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face oeste, extremo sul: (entrada, )
+      </dt>
+      <dd>
+        O multiplicador (ou seja, o segundo dos dois números a serem multiplicados). Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face norte: marcado por <var>c in</var> (entrada, )
+      </dt>
+      <dd>
+        Valor de <i>carry-in</i> a ser adicionado ao produto. Se todos os bits do valor forem desconhecidos (ou seja, flutuantes), então eles serão considerados iguais a 0. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face leste: (saída, )
+      </dt>
+      <dd>
+        Os bits de mais baixa ordem dos <var>Bits de Dados</var> do produto dos dois valores que vierem da face oeste, mais o valor do <var>c</var> <sub><var>in</var></sub>. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face sul: marcado <var>c out</var> (saída, )
+      </dt>
+      <dd>
+        Os bits mais significativos dos <var>Bits de Dados</var> do produto. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Atributos
+    </h2>
+    <p>
+      Quando o componente for selecionado ou estiver sendo acrescentado,  <b class="tkeybd">Alt-0</b> até <b class="tkeybd">ALT-9</b> irão alterar o seu atributo <b class="property">Bits de Dados</b>.
+    </p>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Bits de Dados
+      </dt>
+      <dd>
+        A largura dos bits dos valores a serem multiplicados e também do resultado.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Comportamento da ferramenta Testar
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <h2>
+      Comportamento da ferramenta Texto
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <p>
+      <b>>Voltar à</b> <a href="../index.html">Referência para bibliotecas</a>
+    </p>
+	</div>
+  </body>
+</html>

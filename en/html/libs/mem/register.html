@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2023-07-20T24:08:12.432000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Register
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/register.png" alt="#########" width="32" height="32"> <em>Register</em>
+      </h1>
+	    	  <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Library :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+			<td rowspan="3">
+			<img class="appearancelibs" src="../../../../img-libs/hregister.png"alt="#########" >
+			</td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduced :</b>
+            </td>
+            <td>
+              2.0 Beta 1
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Appearance :</b>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/lregister.png" alt="#########" >
+            </td>
+          </tr>
+		  <tr>
+		   <td>
+              
+            </td>
+            <td>
+              Logisim-clasique&nbsp;
+            </td>
+			</td>
+            <td>
+             Logisim-Evolution&nbsp;<br>Logisim-HolyCross&nbsp;
+            </td>
+		  </tr>
+		  
+		  
+        </tbody>
+      </table>
+	  
+
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        A register stores a single multi-bit value, which is displayed in hexadecimal within its rectangle, and is emitted on its <var>Q</var> output. When the clock input (indicated by a triangle ) indicates so, the value stored in the register changes to the value of the <var>D</var> input at that instant. Exactly when the clock input indicates for this to happen is configured via the <b class="property">Trigger</b> attribute.
+      </p>
+      <p>
+        The <var>R</var> input resets the register's value to <b class="zerov">0</b> (all zeroes) asynchronously; that is, as long as reset is <b class="unov">1</b>, the value is pinned to <b class="zerov">0</b>, regardless of the clock input.
+      </p>
+      <h2>
+        Pins
+      </h2>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            East edge: labeled <var>Q</var>
+          </dt>
+          <dd>
+            Outputs the value currently stored by the register. Bit width matches <b class="property">Data Bits</b> attribute.
+          </dd>
+          <dt class="lib">
+            West edge: labeled <var>D</var>
+          </dt>
+          <dd>
+            Data input: At the instant that the clock value rises from <b class="zerov">0</b> to <b class="unov">1</b>, the register's value changes to the value of the <var>D</var> input at that instant. Bit width matches <b class="property">Data Bits</b> attribute.
+          </dd>
+          <dt class="lib">
+            West edge: labeled <var>WE</var>
+          </dt>
+          <dd>
+            Input Enable: When this is <b class="zerov">0</b>, clock triggers are ignored. The current value continues to appear on the output. The clock triggers are enabled when this input is <b class="unov">1</b> or undefined (<b class="uvalue">U</b>). Bit width 1.
+          </dd>
+          <dt class="lib">
+            South edge: indicated with a triangle
+          </dt>
+          <dd>
+            Clock input: At the instant that this input value rises from <b class="zerov">0</b> to <b class="unov">1</b> (the rising edge), the register's value will be updated to the value of the <var>D</var> input. Bit width 1.
+          </dd>
+          <dt class="lib">
+            South edge: labeled <var>0</var>
+          </dt>
+          <dd>
+            Input Reset: Asynchronous reset: When <b class="zerov">0</b> or undefined <b class="uvalue">U</b>, this input has no effect. As long as it is <b class="unov">1</b>, the register's value is pinned to <b class="zerov">0</b>. This occurs asynchronously - that is, without regard to the current clock input value. As long as this is <b class="unov">1</b>, the other inputs have no effect. Bit width 1.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+        When the component is selected or being added, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> alter its <b class="property">Data Bits</b> attribute.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Data Bits
+          </dt>
+          <dd>
+            The bit width of the value stored in the register.
+          </dd>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+            Configures how the clock input is interpreted. The value:<br><b class="vprop">Rising edge</b> indicates that the register should update its value at the instant when the clock rises from <b class="zerov">0</b> to <b class="unov">1</b>. <br><b class="vprop">falling edge</b> value indicates that it should update at the instant the clock falls from <b class="unov">1</b> to <b class="zerov">0</b>. <br><b class="vprop">High level</b> value indicates that the register should update continuously whenever the clock input is <b class="unov">1</b>. <br><b class="vprop">Low level</b> value indicates that it should update continuously when the clock input is <b class="zerov">0</b>.
+          </dd>
+          <dt class="lib">
+            Label
+          </dt>
+          <dd>
+            The text within the label associated with the register.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font with which to render the label.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        Clicking the register brings keyboard focus to the register (indicated by a red rectangle), and typing hexadecimal digits will change the value stored in the register.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        Allows the label associated with the component to be edited.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

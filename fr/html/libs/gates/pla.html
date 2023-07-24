@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2021-08-23T06:18:10.521000000">
+    <meta name="changed" content="2021-08-23T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Réseau logique programmable  
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/pla0.png" alt="#########" border=0 height="32" width="32"> <em>Réseau logique programmable</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Portes</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              3.2
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/pla.png" alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+	    Le <b>Réseau logique programmable</b> (PLA) va présenter sur sa sortie le résultat d'une fonction logique combinatoir. Si une des entrées est en erreur (<b class="evalue">E</b>) ou indéfini (<b class="uvalue">U</b>) il considérera que toutes ses entrées sont à <b class="unov">1</b>. Ce composant resemble a une ROM et vous devez entrez la programation de manière très similaire. Il est possible d'exporter et d'importer la programation à partir d'un fichier.<br>  
+
+		Il existe dans la <b class="property">libririe Entrée/Sortie (extra)</b> un coposant PLA qui représente mieux le fonctionnement interne de ceux-ci.  
+      </p>
+	  <h2>
+        Pins (en supposant que le composant est orienté vers l'est)
+      </h2>
+	  <div class="attliste">
+      <dl>
+	   <dt class="lib">
+           Bord ouest :
+        </dt>
+        <dd>
+		  Entrée des donnée du composant, sa largeur en bit est définie par l'attribut <b class="property">Largeur de donnée en entrée</b>. 
+		</dd>
+		<dt class="lib">
+          Bord est :
+        </dt>
+        <dd>
+		  Sortie des résultat de traitement, sa largeur en bit est définie par l'attribut <b class="property">Largeur de donnée en sortie</b>. 
+		</dd>
+	  </dl>
+	  </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+	     Lorsque le composant est sélectionné ou en cours d'ajout, les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+	  <div class="attliste">
+	  <dl>
+         <dt class="lib">
+          Orientation
+        </dt>
+        <dd>
+          La direction du composant, sa sortie par rapport à son entrée.
+        </dd>
+		<dt class="lib">
+          Largeur de donnée en entrée
+        </dt>
+        <dd>
+          La largeur de donnée en bit de l'entrée.
+        </dd>
+		<dt class="lib">
+          Largeur de donnée en sortie
+        </dt>
+        <dd>  
+		  La largeur de donnée en bit de la sortie.
+        </dd>
+		<dt class="lib">
+          Program
+        </dt>
+        <dd>
+		  Ouvre le fenètre de programation 
+        </dd>
+		<dt class="lib">
+            Étiquette
+          </dt>
+          <dd>
+            Le texte de l'étiquette associée à la porte.
+          </dd>
+          <dt class="lib">
+            Police des étiquettes
+          </dt>
+          <dd>
+            La police avec laquelle l'étiquette doit être rendue.
+          </dd>
+	  </dl>
+      </div>
+      <h2>
+        Comportement de l'outil pousser 
+      </h2>
+      <p>
+        Aucun. 
+      </p>
+      <h2>
+        Comportement de l'outil text 
+      </h2>
+      <p>
+	    Permets de modifier l'étiquette associée au composant.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

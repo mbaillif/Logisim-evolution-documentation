@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2023-07-20T17:34:42.112000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Compteur
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/counter.png" alt="#########" width="32" height="32"> <em>Compteur</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Librairie :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+            <td rowspan="3">
+              <img class="appearancelibshaut" src="../../../../img-libs/counterlh.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduction :</b>
+            </td>
+            <td>
+              2.3.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Apparence :</b>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/counter.png" alt="#########" width="96" height="96">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Le compteur contient une seule valeur celle-ci est émise sur les sorties <var>Q</var> incrémentée ou décrémentée de 1 a chaque fois que l'entrée horloge se déclenche , la valeur du compteur peut être mise à jour en fonction des ses entrées <var>D</var> et <var>Load</var> en sychronisation avec le déclenchement de l'horologe. L'entrée <var>Clear</var> force à zero les bits du compteur de manière asynchrone. L'entrée <var>UpDown</var> détermine si le compteur s'incrémente ou se décrément au déclanchement de l'horloge. La propriété <b class="property">Trigger</b> permet de définir si le déclanchement a lieu sur le front montant ou descendant de l'horloge.
+      </p>
+      <center>
+        <table class="truthtable">
+          <tbody>
+            <tr>
+              <td class="tspace">
+                <var>Clear</var>
+              </td>
+              <td class="tspace">
+                <var>Load</var>
+              </td>
+              <td class="tspace">
+                <var>Count</var>
+              </td>
+              <td class="tspace">
+                <var>UpDown</var>
+              </td>
+              <td class="tspace">
+                Déclenchement
+              </td>
+              <td class="tspace">
+                Q
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td>
+                <var>Q</var>=<b class="zerov">0</b>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td>
+                Front
+              </td>
+              <td>
+                Sans changement
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td>
+                Front
+              </td>
+              <td>
+                <var>Q</var>=<var>D</var>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                Front
+              </td>
+              <td>
+                <var>Q</var>=<var>Q</var>-1
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                Front
+              </td>
+              <td>
+                <var>Q</var>=<var>Q</var>+1
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <p>
+        La plage de comptage peut être configurée à l'aide de l'attribut <b class="property">Valeur max</b>. Lorsque le compteur atteint cette valeur, la prochaine incrémentation ramène le compteur à 0 ; et s'il est à 0, une décrémentation ramène le compteur à sa valeur maximale.
+      </p>
+      <p>
+        En adition avec les sorties <var>Q</var>, ce composant a une sortie de retenue (carry) de un bit. Cette valeur est à <b class="unov">1</b> quand le compteur est à sa valeur maximal et qu'il fonctionne en incrémentation ou à <b class="unov">1</b> quand sa valeur est à 0 et qu'il fonctionne en décrémentation.
+      </p>
+      <p>
+        L'entrée <b>Clear</b> remet la valeur du compteur à 0 (tous à zero) de manière asynchrone, c'est-à-dire que tant que l'entrée <b>Clear</b> est à <b class="unov">1</b>, la valeur de sortie est fixée à 0, quelle que soit l'entrée de l'horloge.
+      </p>
+      <h2>
+        Pins
+      </h2><img class="pinslib" src="../../../../img-libs/counterpins.png" alt="#########">
+      <p>
+        L'attribut <b class="property">Apparence</b> permet deux différents affichages pour ce composant. Logisim evolution présente les entrées à l'ouest et les sorties à l'est, je présente le pins du haut en bas et de l'ouest à l'est.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Entrée Clear: étiquette <var>R</var>
+          </dt>
+          <dd>
+            Si <b class="zerov">0</b> ou indéfini <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur du compteur est forcée à 0 de manière asynchrone, Sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Entrée Load : étiquette <var>M1 [load] M2 [Count]</var>
+          </dt>
+          <dd>
+            Lorsque cette entrée est à <b class="unov">1</b> le compteur chargera la valeur trouvée à l'entrée de données au prochain déclenchement de l'horloge. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Entrée UpDown : étiquette <var>M4 [up] M4 [down]</var>
+          </dt>
+          <dd>
+            Lorsque cette entrée est à <b class="unov">1</b> le compteur s'incréemente sur les évènments trigger et s'il est à <b class="zerov">0</b> il décrémente. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Entrée Count : étiquette <var>G5</var>
+          </dt>
+          <dd>
+            Lorsque cette entrée est à <b class="unov">1</b> les évènements de l'horloge incrémentent ou décrémentent le compteur en accord avec l'état de la pin <b>UpDown</b>. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Entrée Clock : étiquette <var>2,3,5+/C6 2,4,5</var>
+          </dt>
+          <dd>
+            Au moment où il est déclenché selon les règles spécifiées par l'attribut <b class="property">Trigger</b>, le compteur est incrémenté ou mis à jour comme indiqué par les entrées <b>load</b> et <b>count</b>. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Entrée Data : étiquette <var>1,6 D</var>
+          </dt>
+          <dd>
+            Lorsque l'horloge se déclenche alors que Load est à <b class="unov">1</b> ,la valeur du compteur passe à la valeur trouvée à cette entrée. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
+          </dd>
+          <dt class="lib">
+            Sortie Carry : étiquette <var>3CT=0x.. 4CT=0</var>
+          </dt>
+          <dd>
+            Lorsque l'entrée <var>UpDown</var> est à <b class="unov">1</b> cette sortie est à <b class="unov">1</b> si le compteur est à son maximum et lorsque l'entrée UpDown est à <b class="zerov">0</b> cette sortie est à <b class="unov">1</b> si le compteur est à <b class="zerov">0</b>. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Sortie OutPut : 
+          </dt>
+          <dd>
+            Émet la valeur actuellement stockée par le compteur. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou est en cours d'ajout, <b class="tkeybd">Alt-0</b> ... <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b>.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Largeur donnée
+          </dt>
+          <dd>
+            La largeur de bit de la valeur émise par le composant.
+          </dd>
+          <dt class="lib">
+            Valeur Max
+          </dt>
+          <dd>
+            Valeur maximale à partir de laquelle le compteur activera sa sortie de report ou reboucle.
+          </dd>
+          <dt class="lib">
+            Action en cas de dépassement
+          </dt>
+          <dd>
+            Le comportement lorsque le compteur tente d'augmenter au-delà de la valeur maximale ou de diminuer au-delà de 0. Quatre actions possibles sont prises en charge :
+            <dl>
+              <dt class="lib">
+                Reboucler
+              </dt>
+              <dd>
+                La valeur suivante est à 0 en cas d'incrémentation - la valeur maximale en cas de décrémentation.
+              </dd>
+              <dt class="lib">
+                Rester à la valeur
+              </dt>
+              <dd>
+                La valeur du compteur reste au maximum en incrémentation ou à 0 en cas de décrémentation.
+              </dd>
+              <dt class="lib">
+                Continuer à compter
+              </dt>
+              <dd>
+                Le compteur continue à s'incrémenter/décrémenter, en conservant le nombre de bits fourni par l'attribut Data Bits.
+              </dd>
+              <dt class="lib">
+                Charger la valeur suivante
+              </dt>
+              <dd>
+                La valeur suivante est chargée à partir de l'entrée <b>D</b>.
+              </dd>
+            </dl>
+          </dd>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
+          </dd>
+          <dt class="lib">
+            Etiquette
+          </dt>
+          <dd>
+            Le texte de l'étiquette associée au composant.
+          </dd>
+          <dt class="lib">
+            Police de l'étiquette
+          </dt>
+          <dd>
+            La police de caractères avec laquelle l'étiquette doit être affichée.
+          </dd>
+		  <dt class="lib">
+            Emplacement de l'étiquette
+          </dt>
+          <dd>
+            Détermine la position de l'étiquette par rapport au dessin du composant.
+          </dd>
+		  <dt class="lib">
+            Apparence
+          </dt>
+          <dd>
+            <b class="vprop">Logisim-HolyCross</b> / <b class="vprop">Logsim-Evolutions</b>: nouvelle présentation des bascules à la manière de la CEI. <b class="vprop">Logisim Classic</b>: présente les bascules comme le faisait logisim. 
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        En cliquant sur le compteur, le clavier se concentre sur le composant (indiqué par un carré rouge) et la saisie de chiffres hexadécimaux modifie la valeur stockée dans le compteur.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Permets de modifier l'étiquette associée au composant.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html#hlibmem">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

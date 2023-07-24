@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2021-08-16T19:07:13.152000000">
+    <meta name="changed" content="2021-08-16T19:07:13.152000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Sélecteur de Bit
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+       <img class="iconlibs" src="../../../../icons/6464/bitselector.png" alt="#########" height="32" width="32"> <em>Sélecteur de Bit</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Multiplexeurs</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.0.5
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img  class="appearancelibs" src="../../../../img-libs/selector.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+       Le <b>sélecteur</b> va la diviser en plusieurs groupes de taille égale une entrée de plusieurs bit, en commençant par le bit de poids le plus faible et présenter sur la sortie le groupe sélectionné par la valeur de l'entrée sélection.
+      </p>
+      <p>
+        Par exemple, si nous avons une entrée de huit bits 01010101, et que nous devons avoir une sortie de trois bits, alors le groupe 0 sera les trois bits de poids faible 101, le groupe 1 sera les trois bits suivants, 010, et le groupe 2 sera les trois bits suivants 001. (Tous les bits au-delà du haut sont remplis de <b class="zerov">0</b>.) L'entrée select sera un nombre de deux bits qui sélectionne lequel de ces trois groupes doit être sorti; si l'entrée de selection est 3, alors 000 sera la sortie.
+		Si l'entrée sélect a une valeur indéterminé ou flottant (<b class="uvalue">U</b>) ou erreur (<b class="evalue">E</b>)  le bits de sotie seront dans l'état indéterminé (<b class="uvalue">U</b>).
+		Si un des bit de la donnée en entrée est indéterminé ou flottant (<b class="uvalue">U</b>) ou erreur (<b class="evalue">E</b>) alors le bit correspondant en sortie sera dans l'état indéterminé (<b class="uvalue">U</b>) ou erreur (<b class="evalue">E</b>)
+      </p>
+      <h2>
+        Pins (en supposant que le composant est orienté vers l'est)
+      </h2>
+      <dl>
+        <dt>
+          Bord ouest :
+        </dt>
+        <dd>
+          Entrée de données à partir de laquelle les groupes de bits doivent être sélectionnés pour la sortie. la largeur des bits correspond à l'attribut <b class="property">Largeur de données</b>.
+        </dd>
+        <dt>
+          Bord est :
+        </dt>
+        <dd>
+          Sortie groupe de bits de la valeur des données, tel que sélectionné par l'entrée de sélection. la largeur des bits correspond à l'attribut <b class="property">Bits en sortie</b>
+        </dd>
+        <dt>
+          Bord sud :
+        </dt>
+        <dd>
+          Entré de sélection: Détermine lequel des groupes de bits doit être acheminé vers la sortie. la largeur des bits est le quotient de la Largeur de données et des bits de sortie, arrondis au supérieur.
+        </dd>
+      </dl>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">0</b> à <b class="tkeybd">9</b> modifient son attribut <b class="property">Nombre d'entrées</b>, <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b> et les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+      <dl>
+        <dt class="lib">
+         Orientation
+        </dt>
+        <dd>
+          La direction du composant, sa sortie par rapport à ses entrées.
+        </dd>
+        <dt class="lib">
+         Largeur de données
+        </dt>
+        <dd>
+          La largeur de donnée en bit des entrées.
+        </dd>
+        <dt class="lib">
+          Bits de sortie
+        </dt>
+        <dd>
+          La largeur de donnée en bit de la sortie du composant.
+        </dd>
+      </dl>
+	  <h2>
+        Comportement de l'outil Pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil de texte
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

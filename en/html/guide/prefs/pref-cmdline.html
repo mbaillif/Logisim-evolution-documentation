@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2019-03-16T06:18:10.521000000">
+    <meta name="changed" content="2021-10-22T11:23:21.115000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Command-line options
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        Command-line options
+      </h1>
+      <p>
+        You can configure many of Logisim's application preferences via command line options. This can be particularly useful in a laboratory of single-student computers where you want Logisim to start up the same for students every time, regardless of how previous students may have configured the program.
+      </p>
+      <p>
+        The overall command-line syntax is as follows.
+      </p>
+      <blockquote>
+        <pre>java -jar <i><b>jarFileName</b></i> <i>[options]</i> <i>[filenames]</i>
+</pre>
+      </blockquote>
+      <p>
+        The optional additional files named on the command line will be opened as separate windows within Logisim.
+      </p>
+      <p>
+        The following example starts Logisim in its basic configuration.
+      </p>
+      <blockquote>
+        <pre>java -jar <i><b>jarFileName</b> <b>--user-template plain -gates ansi -locale en</b></i>
+</pre>
+      </blockquote>
+	  <blockquote>
+	     usage: Logisim-evolution [-b <file>] [--clear-prefs] [-f <args>] [-g <shape>] [-h] [-l <file>] [-m
+       <geometry>] [-n <args>] [--no-splash] [-o <lang>] [-s <args>] [-t <format>]
+       [--toplevel-circuit <name>] [-u <arg>] [-v] [-w <args>]
+	  </blockquote>
+      <p>
+        Supported options include the following.
+      </p>
+      <dl>
+ <!--
+       <dt>
+          <tt>-plain</tt>
+        </dt>
+        <dt>
+          <tt>-empty</tt>
+        </dt>
+-->
+        <dt>
+          <tt>-u, --user-template [<b><i>empty|plain|filename</i></b>]</tt>
+        </dt>
+        <dd>
+          <p>
+            Configures the template for Logisim to use. Argument: "empty" for an empty template, "plain" for the default template, or the filename of the template to load.
+          </p>
+        </dd>
+        <dt>
+          <tt>-g, --gates [<b><i>ansi|iec</i></b>]</tt>
+        </dt>
+        <dd>
+          <p>
+            Configures which type de symbol to use for the gate.
+          </p>
+        </dd>
+        <dt>
+          <tt>-o, --locale <b><i>LocaleIdentifier</i></b></tt>
+        </dt>
+        <dd>
+          <p>
+            Configures which translation to use. As of this writing, the supported locales include:
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <tt>de</tt> German
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>el</tt> Greek
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>en</tt> English
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>es</tt> Spanish
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>fr</tt> French
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>pt</tt> Portugais
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>ru</tt> Russian
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>it</tt> Italian
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>nl</tt> Dutch
+                </td>
+              </tr>
+			  <tr>
+                <td>
+                  <tt>jp</tt> Japanese
+                </td>
+              </tr>
+			    <tr>
+                <td>
+                  <tt>pl</tt> Polisch
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+ <!--
+        <dt>
+          <tt>-accents <i>[<b>yes</b>|<b>no</b>]</i></tt>
+        </dt>
+        <dd>
+          <p>
+            This is only relevant for languages that use characters outside the 7-bit ASCII character set; this would include languages using accented characters, and it would not include English. If <i>no</i>, characters outside the 7-bit ASCII character set are replaced with equivalents appropriate to the language; this would be useful for Java/OS combinations where such characters are not supported well.
+          </p>
+        </dd>
+-->
+        <dt>
+          <tt>--clear-prefs</tt>
+        </dt>
+        <dd>
+          <p>
+            Clear all application preferences at startup, so Logisim will act as if it were being executed on the host system for the first time.
+          </p>
+        </dd>
+        <dt>
+          <tt>--no-splash</tt>
+        </dt>
+        <dd>
+          <p>
+            Hides the initial Logisim splash screen.
+          </p>
+        </dd>
+        <dt>
+          <tt>-h, --help </tt>
+        </dt>
+        <dd>
+          <p>
+            Displays a summary of the command line options.
+          </p>
+        </dd>
+        <dt>
+          <tt>-v, --version </tt>
+        </dt>
+        <dd>
+          <p>
+            Displays the Logisim version number and exit.
+          </p>
+        </dd>
+<!--
+        <dt>
+          <tt>-analyze</tt>
+        </dt>
+        <dd>
+          <p>
+            Displays the combinatorial analysis menus.
+          </p>
+        </dd>
+-->
+        <dt>
+          <tt>-l, --load <i><b>filename</b></i></tt>
+        </dt>
+        <dd>
+          <p>
+            Load image file into RAM (works only with -tty)
+          </p>
+        </dd>
+        <dt>
+          <tt>-s, --substitute <i><b>file1 file2</b></i></tt>
+        </dt>
+        <dd>
+          <p>
+            load the file by replacing the library file (file1) with the library file (file2). More information in <a href="../verify/sub.html">Substituting libraries</a>
+          </p>
+        </dd>
+        <dt>
+          <tt>-t, --tty </tt> [<b><i>table|speed|tty|halt|stats|binary|hex|csv|tabs</i></b>]
+        </dt>
+        <dd>
+          <p>
+            Run without GUI. More information in <a href="../verify/other.html">Other verification</a>
+          </p>
+        </dd>
+        <dt>
+          <tt>-w, --test-vector <i><b>circuitname</b> <b>vectorfile</b> <b>projectfile</b></i></tt>
+        </dt>
+        <dd>
+          <p>
+            Run the <b>circuitname</b> tests in <b>projectfile</b> based on vectors in <b>vectorfile</b>. More information in <a href="../verify/test.html">Window Text Vector</a>
+          </p>
+        </dd>
+        <dt>
+          <tt>-m, --geometry  [<b><i>widthxheight|widthxheight+X+Y</i></b>]</tt>
+        </dt>
+        <dd>
+          <p>
+            Opens Logisim with a window dimensioned according to the parameters W (width) and H (height) or with the upper left corner positioned according to the parameters X,Y.<br>
+            Example: -m 600x400+100+100
+          </p>
+        </dd>
+		<dt>
+          <tt>-n, --new-file-format <b><i>circ_input circ_output</i></b></tt>
+        </dt>
+        <dd>
+          <p>
+            Open a .circ file of any version (circ_input) of Logisim and write a new one (circ_output) in the current format used in Logisim-evolution.
+          </p>
+        </dd>
+      </dl>
+      <h2>
+        Undocumented Options
+      </h2>
+      <dl>
+        <dt> 
+         <tt>-b, --test-circuit <b>testCircuitPathInput</b></tt>
+        </dt>
+        <dd>Open up a circ file and start the test bench within it. It returns Success or fail.</dd>
+        <dt>
+          <tt>-f, --test-fpga <b>inputpath</b> <b>Circuitimapfile</b> <b>cicuitimpname</b> <b>cicuitimpboard</b></tt>
+        </dt>
+        <dd>Test implementations design using circ_input file. The implementation circuit_name is the circuit choose to implement(FPGA_Top) and the board is the board name located in resources/logisim/boards/ without the ".xml" extension. The optional tick frequency is in Hz. The optional switch HDLONLY will only generate the HDL-description and will not perform synthesis, P&R, and Download. Arguments: <circ_input> <circuit_name> <board> [tick frequency] [HDLONLY]</dd>
+        <dt>
+          <tt>-test-circ-gen <b>testCircPathInput</b> <b>testCircPathOutput</b></tt>
+        </dt>
+        <dd></dd>
+        <dt>
+          <tt>-questa [<b><i>yes</b>|<b>no</i></b>]</tt>
+        </dt>
+        <dd></dd>
+      </dl>
+      <p>
+        <b>Next:</b> <a href="../index.html">User's Guide</a>.
+      </p>
+    </div>
+  </body>
+</html>

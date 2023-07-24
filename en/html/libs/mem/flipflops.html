@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2023-07-20T24:08:12.432000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      D/T/J-K/S-R Flip-Flop
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/dflipflop.png" alt="#########" width="32" height="32">&nbsp; 
+		<img class="iconlibs" src="../../../../icons/6464/tflipflop.png" alt="#########" width="32" height="32">&nbsp; 
+		<img class="iconlibs" src="../../../../icons/6464/jkflipflop.png" alt="#########" width="32" height="32">&nbsp; 
+		<img class="iconlibs" src="../../../../icons/6464/srflipflop.png" alt="#########" width="32" height="32">&nbsp; <em>D / T / J-K / S-R Flip-Flop</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              2.0 Beta 1
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <th></th>
+            <th width="70">
+              D
+            </th>
+            <th width="70">
+              T
+            </th>
+            <th width="70">
+              J-K
+            </th>
+            <th width="70">
+              S-R
+            </th>
+          </tr>
+          <tr>
+            <th valign="middle" align="left">
+              Logisim Evolution :<br>
+              Logisim HolyCross :
+            </th>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/hdflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/htflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/hjkflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/hsrflipflops.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <th valign="middle" align="left">
+              Logisim Classique:
+            </th>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/ldflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/ltflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/ljkflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/lsrflipflops.png" alt="#########">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        Each flip-flop stores a single bit of data, which is emitted through the <var>Q</var> output on the east side. Normally, the value can be controlled via the inputs to the west side. In particular, the value changes when the <strong>clock</strong> input, marked by a triangle on each flip-flop, rises from <b class="zerov">0</b> to <b class="unov">1</b> or vice versa, depending on the configuration of the <b class="property">Trigger</b> attribute ; on this edge, the value changes according to the table below.<br>
+		There are two other inputs on the north and south sides. <var>S</var> (Set) to force the value of the flip-flop to <b class="unov">1</b> and <var>R</var> (Reset) to force the value of the flip-flop to <b class="zerov">0</b>.
+      </p>
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                D 
+              </th>
+              <th>
+                T 
+              </th>
+              <th>
+                J-K 
+              </th>
+              <th>
+                S-R 
+              </th>
+            </tr>
+            <tr>
+              <td valign="top" align="center">
+                <table class="truthtable">
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>D</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td class="zerov">
+                        0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td class="unov">
+                        1
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td valign="top" align="center">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>T</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>'
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td valign="top" align="center">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>J</var>
+                      </th>
+                      <th class="tspace">
+                        <var>K</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td class="zerov">
+                        0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td class="unov">
+                        1
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>'
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td valign="top" align="center">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>S</var>
+                      </th>
+                      <th class="tspace">
+                        <var>R</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td class="zerov">
+                        0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td class="unov">
+                        1
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <em>??</em>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      
+        Another way of describing the different behavior of the flip-flops is in English text.
+      
+      <ul>
+        <li>
+          <p>
+            <strong>D Flip-Flop:</strong> When the clock triggers, the value remembered by the flip-flop becomes the value of the <var>D</var> input (<em>Data</em>) at that instant.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>T Flip-Flop:</strong> When the clock is triggered and the  <var>T</var>  (Toggle) input is at <b class="unov">1</b>, the value stored by the flip-flop is inverted. If the <var>T</var> (Toggle) input is <b class="zerov">0</b>, the value remains unchanged.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>J-K Flip-Flop:</strong> When the clock triggers, the value remembered by the flip-flop toggles if the <var>J</var> and <var>K</var> inputs are both <b class="unov">1</b> and the value remains the same if both are <b class="zerov">0</b>; if they are different, then the value becomes <b class="unov">1</b> if the <var>J</var> (<em>Jump</em>) input is <b class="unov">1</b> and <b class="zerov">0</b> if the <var>K</var> (<em>Kill</em>) input is <b class="unov">1</b>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>S-R Flip-Flop:</strong> When the clock triggers, the value remembered by the flip-flop remains unchanged if <var>R</var> and <var>S</var> are both <b class="zerov">0</b>, becomes <b class="zerov">0</b> if the <var>R</var> input (<em>Reset</em>) is <b class="unov">1</b>, and becomes <b class="unov">1</b> if the <var>S</var> input (<em>Set</em>) is <b class="unov">1</b>. The behavior in unspecified if both inputs are <b class="unov">1</b>. (In Logisim, the value in the flip-flop remains unchanged).
+			<b class="note">Note</b>: For this flip-flop, do not confuse the synchronous <Var>R S</var> inputs on the west side with the asynchronous R S inputs on the north and south sides.
+          </p>
+        </li>
+      </ul>
+      <p>
+        By default, the clock triggers on a <b class="vprop">Rising edge</b> that is, when the clock input changes from <b class="zerov">0</b> to <b class="unov">1</b>. However, the <b class="property">Trigger</b> attribute allows this to change to a <b class="vprop">Falling edge</b> when the clock input changes from <b class="unov">1</b> to <b class="zerov">0</b>.
+		There are also  <b class="vprop">high level</b> for the duration that the clock input is <b class="unov">1</b>), or a <b class="vprop">low level</b> for the duration that the clock input is <b class="zerov">0</b>. The level-trigger options are unavailable for the T and J-K flip-flops, because a flip-flop behaves unpredictably when told to toggle for an indeterminate amount of time.
+      </p>
+      <h2>
+        Pins
+      </h2>
+      <p>
+        All inputs or outputs have a bit width of 1.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            West edge: marked by triangle or the label <var>E</var>
+          </dt>
+          <dd>
+            Clock input: This signal triggers the update of the scale value according to the inputs on the west side. The trigger mode is determined by the <b class="property">Trigger</b> property: <b class="vprop">Rising edge, Falling edge, Low level, High level</b>.
+          </dd>
+          <dt class="lib">
+            West edge: other labeled pin(s)
+          </dt>
+          <dd>
+            These inputs control how the value of the flip-flop changes when the clock is triggered (see clock input and <b class="property">Trigger</b> property). Their exact bhavior depends on the flip-flop; the above tables summarize their behavior.
+          </dd>
+          <dt class="lib">
+            East edge: labeled <var>Q</var>, north end
+          </dt>
+          <dd>
+            Outputs the value currently stored by the flip-flop.
+          </dd>
+          <dt class="lib">
+            East edge, south end
+          </dt>
+          <dd>
+            Outputs the complement of the value currently stored by the flip-flop.
+          </dd>
+          <dt class="lib">
+            South edge: east end or center
+          </dt>
+          <dd>
+            Asynchronous reset: When <b class="zerov">0</b> or undefined (<b class="uvalue">U</b>), this input has no effect. As long as it is <b class="unov">1</b>, the flip-flop's value is pinned to <b class="zerov">0</b>. This occurs asynchronously - that is, without regard to the current clock input value. As long as this is <b class="unov">1</b>, the other inputs have no effect.
+          </dd>
+          <dt class="lib">
+            South edge: west end or nort edge
+          </dt>
+          <dd>
+            Asynchronous input set: When <b class="unov">1</b> or undefined (<b class="uvalue">U</b>), this input has no effect. When <b class="unov">1</b>, the flip-flop's value is pinned to <b class="unov">1</b>. This occurs asynchronously - that is, without regard to the current clock input value. As long as this input is <b class="unov">1</b>, the other inputs have no effect, except for the asynchronous reset input, which has priority.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributes
+      </h2>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+            Configures how the clock input is interpreted. The value:<br> 
+			<b class="vprop">rising edge</b> indicates that the flip-flop should update its value at the instant when the clock rises from <b class="zerov">0</b> to <b class="unov">1</b>.<br>
+			<b class="vprop">falling edge</b> value indicates that it should update at the instant the clock falls from <b class="unov">1</b> to <b class="zerov">0</b>.<br>
+			<b class="vprop">high level</b> value indicates that the flip-flop should update continuously whenever the clock input is <b class="unov">1</b>.<br>
+			<b class="vprop">low level</b> value indicates that it should update continuously when the clock input is <b class="zerov">0</b>. Note that the latter two options are unavailable for T and J-K flip-flops.
+          </dd>
+          <dt class="lib">
+            Label
+          </dt>
+          <dd>
+            The text within the label associated with the flip-flop.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font with which to render the label.
+          </dd>
+          <dt class="lib">
+            Appaerance
+          </dt>
+          <dd>
+            <b class="vprop">Logisim-HolyCross / Logsim-Evolutions</b>: New presentation of flipflops in the IEC way. <b class="vprop">Classic Logisim</b>: Presents flipflops as the legacy of logisim 
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        Clicking a flip-flop using the Poke Tool(<img class="icontxt" src="../../../../icons/1616/toolpoke.png" alt="#########">) toggles the bit stored in the flip-flop, unless the asynchronous set/reset inputs currently pin the flip-flop's value.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        Allows the label associated with the component to be edited.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

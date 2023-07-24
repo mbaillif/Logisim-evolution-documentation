@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2018-10-23T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+    <title>
+      Display de 7-segmentos
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/7seg.png" alt="#########" width="32" height="32" align="middle">
+		<em>Display de 7-segmentos</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Biblioteca:</strong>
+            </td>
+            <td>
+              <a href="index.html">Entrada/Saída</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introdução:</strong>
+            </td>
+            <td>
+              2.1.3
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Aparência:</strong>
+            </td>
+            <td valign="top">
+               <img class="appearancelibs" src="../../../../img-libs/7seg.png" alt="#########" width="64" height="64"> 
+			  <img class="appearancelibs" src="../../../../img-libs/7segoff.png" alt="#########" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportamento
+      </h2>
+      <p>
+        Exibirá os valores de suas oito entradas de um bit. <q>Segmentos</q> ou serão coloridos ou cinzas, dependendo das entradas. A correspondência é a que se segue.
+      </p>
+      <center>
+        <img src="../../../../img-libs/io-segs.png" width="82" height="127" alt="#########">
+      </center>(Os fabricantes variam a forma como eles mapeiam as entradas para os segmentos, o correspondência usada aqui é baseada no Texas Instruments TIL321.)
+      <h2>
+        Pinos
+      </h2>
+      <dl>
+        <dt>
+          Na face norte, primeiro da esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o segmento médio horizontal.
+        </dd>
+        <dt>
+          Na face norte, de segunda à esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o segmento superior vertical no lado esquerdo.
+        </dd>
+        <dt>
+          Na face norte, o terceiro da esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o segmento superior horizontal.
+        </dd>
+        <dt>
+          Na face norte, o quarto da esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o segmento superior vertical no lado direito.
+        </dd>
+        <dt>
+          Na face sul, primeiro da esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o segmento menor vertical do lado esquerdo.
+        </dd>
+        <dt>
+          Na face sul, de segunda à esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o segmento horizontal inferior.
+        </dd>
+        <dt>
+          Na face sul, o terceiro da esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o segmento menor vertical do lado direito.
+        </dd>
+        <dt>
+          Na face sul, a quarta da esquerda (entrada, com largura de 1 bit)
+        </dt>
+        <dd>
+          Serve para controlar o ponto decimal.
+        </dd>
+      </dl>
+      <h2>
+        Atributos
+      </h2>
+      <dl>
+        <dt>
+          Cor Se Ligado
+        </dt>
+        <dd>
+          Cor com a qual desenhar os segmentos do <i>display</i> e do ponto decimal quando eles estiverem ligados.
+        </dd>
+        <dt>
+          Cor Se Desligado
+        </dt>
+        <dd>
+          Cor com a qual desenhar os segmentos do <i>display</i> e do ponto decimal quando elas estiverem desligados.
+        </dd>
+        <dt>
+          Cor de Fundo
+        </dt>
+        <dd>
+          Cor com a qual desenhar o fundo de tela (transparente por padrão).
+        </dd>
+        <dt>
+          Ativado em alto?
+        </dt>
+        <dd>
+          Se <q>sim</q>, então os segmentos se acenderão se a entrada correspondente for 1. Se <q>não</q>, eles acenderão somente quando a entrada correspondente for 0.
+        </dd>
+      </dl>
+      <h2>
+        Comportamento da ferramenta Testar
+      </h2>
+      <p>
+        Nenhum.
+      </p>
+      <h2>
+        Comportamento da ferramenta Texto
+      </h2>
+      <p>
+        Nenhum.
+      </p>
+      <p>
+        <b>Voltar à</b> <a href="../index.html">Referência para bibliotecas</a>
+      </p>
+    </div>
+  </body>
+</html>

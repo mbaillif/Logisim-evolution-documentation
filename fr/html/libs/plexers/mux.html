@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2021-08-16T19:07:13.152000000">
+    <meta name="changed" content="2021-08-16T19:07:13.152000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Multiplexeur
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/multiplexer.png" alt="#########" height="32" width="32"> <em>Multiplexeur</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Multiplexeurs</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.0 Beta 11
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+             <img  class="appearancelibs"  src="../../../../img-libs/mux.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Copie une des entrées du bord ouest sur la sortie du bord est; l'entrée à copier est spécifiée par la valeur courante reçue par l'entrée de sélection du bord sud. Je trouve utile de considérer un multiplexeur comme l'analogue d'un aiguillage de chemin de fer, contrôlé par l'entrée sélection.
+      </p>
+      <h2>
+        Pins (en supposant que le composant est orienté vers l'est)
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+		  Bord ouest :
+        </dt>
+        <dd>
+          Entrées de données dont l'une doit être acheminée vers la sortie. Chaque valeur de données d'entrée est numérotée en commençant par 0 au nord.<br>
+          Le nombre d'entrées est déterminé par l'attribut <b class="property">Largeur du select</b>.<br>
+		  La largeur en bit correspond à l'attribut <b class="property">Largeur de données</b>.
+        </dd>
+        <dt class="lib">
+          Bord est : 
+        </dt>
+        <dd>
+          La valeur de sortie correspondra a une des valeurs d'entrée sur le bord ouest dont le numéro est le même que la valeur actuellement reçue par l'entrée de sélection sur le sud.<br>Si l'entrée de sélection contient des bits non spécifiés (c'est-à-dire flottants (<b class="uvalue">U</b>)), la sortie est complètement flottante (<b class="uvalue">U</b>).<br> la largeur des bits correspond à l'attribut largeur de données</b>.
+        </dd>
+        <dt class="lib">
+          Bord sud, coté gauche indiqué par un cercle gris:
+        </dt>
+        <dd>
+          Entrée de sélection: La valeur de cette entrée détermine quelle entrée du bord ouest doit être acheminée vers la sortie du bord est.<br>La largeur des bits correspond à l'attribut <b class="property">Largeur de données</b>.
+        </dd>
+        <dt class="lib">
+          Bord sud, côté droit:
+        </dt>
+        <dd>
+          Entrée d'activation, lorsqu'elle est à (<b class="zerov">0</b>), la sortie du multiplexeur a tous ses bits flottants (<b class="uvalue">U</b>), indépendamment des entrées de données et de sélection. La largeur en bit est de 1.
+        </dd>
+      </dl>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">1</b> à <b class="tkeybd">5</b> modifient son attribut <b class="property">Largeur du select</b>, <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b> et les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Orientation
+        </dt>
+        <dd>
+          La direction du composant, sa sortie par rapport à ses entrées.
+        </dd>
+		<dt class="lib">
+          Dimension dessin
+        </dt>
+        <dd>
+          Détermine la largeur de dessin du composant, large ou étroit.
+        </dd>
+        <dt class="lib">
+          Emplacement du select
+        </dt>
+        <dd>
+		  L'emplacement des lignes de sélection et d'activation par rapport au composant.
+        </dd>
+        <dt class="lib"> 
+          Largeur du select
+        </dt>
+        <dd>
+		  La largeur de donnée en bit de l'entrée de sélection du composant sur son bord sud. Le nombre d'entrées du multiplexeur sera de 2<sup><var>Largeur du select</var></sup>.
+        </dd>
+        <dt class="lib">
+          Largeur de données
+        </dt>
+        <dd>
+		  La largeur de donnée en bit des données acheminées par le multiplexeur.
+        </dd>
+        <dt class="lib">
+          Désactiver les sorties
+        </dt>
+        <dd>
+          Spécifie ce que doit être chaque bit de la sortie lorsque le composant est désactivé (c'est-à-dire lorsque la broche d'activation est à <b class="zerov">0</b>). Les options comprennent zéro (<b class="zerov">0</b>) et flottant (<b class="uvalue">U</b>) ; dans ce dernier cas, la sortie est effectivement déconnectée de tout autre port.
+        </dd>
+        <dt class="lib">
+          Inclure l'activation ?
+        </dt>
+        <dd>
+		  Le composant possède une entrée d'activation lorsque cet attribut est <b class=vprop>Oui</b>. Cet attribut sert principalement à prendre en charge les circuits construits à l'aide d'anciennes versions de Logisim qui ne fournissaient pas d'entrée d'activation.
+        </dd>
+      </dl>
+      <h2>
+        Comportement de l'outil Pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil de Texte
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

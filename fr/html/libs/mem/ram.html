@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2023-07-10T06:18:42.262000000">
+    <meta name="changed" content="2023-07-20T17:34:42.112000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      RAM&lt;
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/ram.png" alt="#########" width="32" height="32"> <em>RAM</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Librairie :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+            <td rowspan="3">
+              <img class="appearancelibshaut" src="../../../../img-libs/ramlh.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduction :</b>
+            </td>
+            <td>
+              2.0 Beta 1
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Apparence :</b>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/ram.png" alt="#########">
+            </td>
+          </tr>
+        </tbody>
+      </table><a href="./Ramappearance.html">Plus de figures sur l'apparence des mémoires</a>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Le composant RAM, qui est de loin le composant le plus complexe des bibliothèques intégrées de Logisim, il mémorise jusqu'à 16 777 216 valeurs. Avec un maximum de 24bits d'adressage spécifiés dans l'attribut <b class="property">Largeur d'adresse</b>. Chaque valeur pouvant comprendre jusqu'à 32 bits spécifiés dans l'attribut Largeur de données. En outre, l'utilisateur peut modifier des valeurs individuelles de manière interactive à l'aide de l'outil <b class="property">"Pousser"</b> (<img class="icontxt" src="../../../../icons/1616/toolpoke.png" alt="#########">), ou modifier
+        l'ensemble du contenu à l'aide du menu contextuel. Voir <a href="../../guide/mem/index.html">Composants de mémoire</a> dans <em>Guide de l'utilisateur</em>.
+      </p>
+      <p>
+        Les valeurs actuelles sont affichées à l'intérieur de l'image du composant dans la zone grise. Les adresses affichées sont énumérées en gris à gauche de la zone d'affichage. À l'intérieur, chaque valeur est indiquée en hexadécimal. La valeur de l'adresse sélectionnée est affichée en texte inversé (blanc sur noir).
+      </p>
+      <p>
+        Le composant RAM prend en charge plusieurs interfaces différentes, en fonction des attributs <b class="property">Lecture asynchrone</b>, <b class="property">Type de bus de données</b> et <b class="property">Activation</b>.
+      </p>
+      <p>
+        La propriété <b class="property">Type de bus de données</b> permet de modifier l'architecture des bus de données soit un bus <var>Input</var> et un bus <var>Data</var> omnidirectionnel soit un bus <var>data</var> bidirectionnel.
+      </p>
+      <dl>
+        <dt>
+          Par défaut on a un bus de chargement et de lecture séparé avec une commande synchrone
+        </dt>
+        <dd>
+          <p>
+            Un port de chargement piloté par le signal <var>Store</var>. Un port de lecture piloté par le signal <var>Load</var>. Le chargement et la lecture sont synchronisés par l'horloge selon le mode de déclenchement défini par la propriété <b class="property">trigger</b>.<br>
+            Si les deux lignes de commande sont à <b class="unov">1</b> alors la lecture s'effectue après l'écriture, ce processus peut être inversé par la modification de la propriété <b class="property">Comportement de lecture</b>.
+          </p>
+        </dd>
+        <dt>
+          Lecture asynchrone et activation de la lecture par byte.
+        </dt>
+        <dd>
+          <p>
+            Si la propriété <b class="property">Activation</b> est <b class="vprop">Par byte</b> et la propriété Lecture <b class="property">asynchrone</b> est paramétrée à <b class="vprop">Oui</b> seul l'état du signal <var>Load</var> déclenche l'apparition des données sur le bus de sortie. Pour le chargement le fonctionnement reste le même que précédemment.
+          </p>
+        </dd>
+        <dt>
+          Lecture asynchrone et activation de la lecture par ligne.
+        </dt>
+        <dd>
+          <p>
+            Si la propriété <b class="property">Activation</b> est <b class="vprop">Par ligne</b>, que la propriété <b class="property">Nombre de lignes</b> est <b class="vprop">simple</b> alors les données seront immédiatement présentent sur le bus de sortie dès le changement d'adresse. Pour le chargement le fonctionnement reste le même que précédemment.
+          </p>
+        </dd>
+        <dt>
+          Lecture synchrone et activation de la lecture par ligne, plusieurs lignes.
+        </dt>
+        <dd>
+          <p>
+            Si la propriété <b class="property">Activation</b> est <b class="vprop">Par ligne</b>, que la propriété <b class="property">Nombre de ligne</b> est différent de <b class="vprop">simple</b> alors les données seront immédiatement présente sur le bus de sortie dès le changement d'adresse. Pour le chargement, les signaux supplémentaires LE1..LE7 permettent la sélection des lignes de données actives. Le mode de déclenchement par l'horloge est défini par la propriété <b class="property">Trigger</b>.
+          </p>
+        </dd>
+      </dl>
+      <p>
+        Il existe d'autres réglages plus subtils, veuillez lire la description des broches et des propriétés si dessous pour plus de précision.
+      </p>
+      <h2>
+        Pins
+      </h2><img class="pinslib" src="../../../../img-libs/rampins.png" alt="#########">
+      <p>
+        L'attribut <b class="property">Apparence</b> permet deux différentes images pour ce composant. Logisim Evolution présente les entrées à l'ouest et les sorties à l'est, je présente les pins du haut en bas et de l'ouest à l'est.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            <var>Clear</var>
+          </dt>
+          <dd>
+            Entrée : Cette broche n'est présente que si la propriété <b class="property">Broche d'effacement</b> est positionnée sur <b class="vprop">Oui</b>. Lorsque ce paramètre est à <b class="unov">1</b>, toutes les valeurs en mémoire sont fixées à <b class="zerov">0</b>, quelles que soient les autres entrées.
+          </dd>
+          <dt class="lib">
+            <var>Adresse</var>
+          </dt>
+          <dd>
+            Bus entrée : Sélectionne la position de la mémoire à laquelle le circuit accède actuellement.
+          </dd>
+          <dt class="lib">
+            <var>Store</var>
+          </dt>
+          <dd>
+            Entrée : Lorsqu'elle est activée, elle autorise le stockage des données à la position définie par la valeur présente sur le bus Adresse. Selon les valeurs de la propriété <b class="property">Trigger</b> elle est active à <b class="unov">1</b> sur les valeurs <b class="vprop">Front montant/Front descendant</b> avec la synchronisation par le signal d'horloge. Elle est active à <b class="unov">1</b> sur la valeur <b class="vprop">Niveau haut</b> et à <b class="zerov">0</b> sur la valeur <b class="vprop">Niveau bas</b> indépendamment du signal d'horloge.<br>
+            <p>
+              Ci-dessous vous pouvez observer un tableau qui présente les différents cas de déclenchement de l'écriture en mémoire en fonction de l'état des différentes propriétés du composant.
+            </p>
+            <center>
+              <br>
+              <table class="truthtable">
+                <caption>
+                  Mode de déclenchement écriture
+                </caption>
+                <tbody>
+                  <tr>
+                    <th class="tspace1">
+                      Propriété Trigger
+                    </th>
+                    <th class="tspace">
+                      Signal Clock
+                    </th>
+                    <th class="tspace">
+                      Signal Store
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      Front montant
+                    </td>
+                    <td>
+                      ↑
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Front descendant
+                    </td>
+                    <td>
+                      ↓
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Niveau haut
+                    </td>
+                    <td>
+                      --
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Niveau bas
+                    </td>
+                    <td>
+                      --
+                    </td>
+                    <td>
+                      0
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </center>
+          </dd>
+          <dt class="lib">
+            <var>Load</var>
+          </dt>
+          <dd>
+            Entrée : Cette broche n'est présente que si la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par byte</b>.<br>
+            Lorsqu'elle est active, elle autorise l'émission des données de la position définie par la valeur présente sur le bus Adresse.
+            <p>
+              Ci-dessous vous pouvez observer un tableau qui présente les différents cas de lecture de la mémoire vers le port de sortie en fonction de l'état des différentes propriétés du composant.
+            </p>
+            <center>
+              <br>
+              <table class="truthtable">
+                <caption>
+                  Modes de déclenchement de la lecture
+                </caption>
+                <tbody>
+                  <tr>
+                    <th class="tspace1">
+                      Activation
+                    </th>
+                    <th class="tspace1">
+                      Trigger
+                    </th>
+                    <th class="tspace1">
+                      Lecture Asynchrone
+                    </th>
+                    <th class="tspace">
+                      Signal Clock
+                    </th>
+                    <th class="tspace">
+                      Signal Load
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      Par byte
+                    </td>
+                    <td>
+                      Front montant
+                    </td>
+                    <td>
+                      No
+                    </td>
+                    <td>
+                      ↑
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Par byte
+                    </td>
+                    <td>
+                      Front descendant
+                    </td>
+                    <td>
+                      No
+                    </td>
+                    <td>
+                      ↓
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Par byte
+                    </td>
+                    <td>
+                      Niveau haut
+                    </td>
+                    <td>
+                      --
+                    </td>
+                    <td>
+                      --
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Par byte
+                    </td>
+                    <td>
+                      Niveau bas
+                    </td>
+                    <td>
+                      --
+                    </td>
+                    <td>
+                      --
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Par byte
+                    </td>
+                    <td>
+                      Sans effet
+                    </td>
+                    <td>
+                      Oui
+                    </td>
+                    <td>
+                      Sans effet
+                    </td>
+                    <td>
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Par ligne
+                    </td>
+                    <td>
+                      Sans effet
+                    </td>
+                    <td>
+                      --
+                    </td>
+                    <td>
+                      Sans effet
+                    </td>
+                    <td>
+                      --
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </center>
+          </dd>
+          <dt class="lib">
+            <var>Clock</var>
+          </dt>
+          <dd>
+            Entrée : Cette broche n'est présente que si la propriété <b class="property">Trigger</b> est positionnée sur <b class="vprop">Front montant/Front Descendant</b> et dans les autres cas si la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par ligne</b>. Au moment de son déclenchement, la mémoire enregistrera ou présentera les données. Le mode de déclenchement est défini par les paramètres de la propriété <b class="property">Trigger</b>.<br>
+            Observez les deux tableaux au-dessus.
+          </dd>
+          <dt class="lib">
+            <var>LE0</var> à <var>LE7</var>
+          </dt>
+          <dd>
+            Entrée : Ces broches ne sont présentes que si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b>. Leur nombre (2,4,8) dépend de la propriété <b class="vprop">Nombre de lignes</b> . Chaque broche active une des lignes d'entrée.
+          </dd>
+          <dt class="lib">
+            <var>Input</var>
+          </dt>
+          <dd>
+            Bus Entrée : Ce bus n'est présent que si la propriété <b class="property">Type de bus de données</b> est positionnée sur <b class="vprop">deux bus omnidirectionnels</b>. Il reçoit les données qui seront écrites dans la mémoire à la position spécifiée par la valeur des broches d'adresse au déclenchement du trigger. Voir tableaux au-dessus.
+          </dd>
+          <dt class="lib">
+            <var>Input0</var> à <var>Input7</var>
+          </dt>
+          <dd>
+            Bus Entrée : Ces bus ne sont présent que si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b> et que la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">simple</b>. Leur fonction est la même que l'entrée Input avec cette différence, Input0 pointe sur la position mémoire Adresse, Input1 pointe sur adresse + 1, Input2 pointe sur adresse + 2 et ainsi de suite. Chaque ligne d'entrée a un signal d'autorisation associée LE0..LE7.
+          </dd>
+          <dt class="lib">
+            <var>Data</var>
+          </dt>
+          <dd>
+            Bus Sortie : Ce bus n'est présent que si la propriété <b class="property">Type de bus de données</b> est positionnée sur <b class="vprop">deux bus omnidirectionnels</b>. Il émet les données qui seront lues à la position spécifiée par la valeur des broches d'adresse au déclenchement. Voir tableaux au-dessus.
+          </dd>
+          <dt class="lib">
+            <var>Data0</var> à <var>Data7</var>
+          </dt>
+          <dd>
+            Bus Sortie : Ces bus ne sont présent si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b> et que la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">simple</b>. Leur fonction est la même que la sortie Data avec cette différence, Data0 émet les données de la position mémoire spécifiée par la valeur des broches d'adresse, Data1 émet adresse + 1, Data2 émet adresse + 2 et ainsi de suite.<br>
+            La propriété <b class="property">Autoriser les accès non alignés ?</b> détermine si une erreur est générée quand l'adresse n'est pas alignée sur un multiple du nombre de lignes.<br>
+            <br>
+            <center>
+              <img class="appearancelibs" src="../../../../img-libs/memoryline.gif" alt="#########">
+            </center>
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">0</b> à <b class="tkeybd">9</b> modifient son attribut <b class="property">Largeur de bit d'adresse</b> et les chiffres <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de bit de données</b>.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Largeur d'adresse
+          </dt>
+          <dd>
+            Nombre de bits d'adresse. Le nombre de valeurs stockées dans la RAM est de 2<sup><var>Largeur d'adresse</var></sup>.
+          </dd>
+          <dt class="lib">
+            Largeur de donnée
+          </dt>
+          <dd>
+            La largeur des données en bit de chaque valeur individuelle dans la mémoire.
+          </dd>
+          <dt class="lib">
+            Activation
+          </dt>
+          <dd>
+            Détermine de quelle manière les données sont présentées au composant.<br>
+            <b class="vprop">Par byte</b> : Un seul bus de donnée est présent.<br>
+            <b class="vprop">Par ligne</b> une ou plusieurs lignes de données composent le bus de donnée. Elles ont chacune un signal de sélection propre. La propriété <b class="property">Nombre de lignes</b> permet d'en définir le nombre (1,2,4,8).
+          </dd>
+          <dt class="lib">
+            Type de RAM
+          </dt>
+          <dd>
+            Détermine comment est modifié le contenu de la mémoire en cas de redémarrage de la simulation :<br>
+            <b class="vprop">Non Volatile</b> le contenu de la mémoire n'est pas modifié.<br>
+            <b class="vprop">Volatile</b>; Le contenu de la RAM est réinitialisé à zéro ou aléatoirement ( selon les options de projet <a href="opts-simulate.html">L'onglet Simulation</a>).
+          </dd>
+          <dt class="lib">
+            Broche d'effacement
+          </dt>
+          <dd>
+            Détermine si la broche <var>Clear</var> est présente ou pas. Si cette broche est à <b class="unov">1</b>, le contenu de la mémoire est mis à <b class="zerov">0</b> de manière asynchrone, les autres commandes n'ont plus d'effet.
+          </dd>
+          <dt class="lib">
+            Nombre de lignes
+          </dt>
+          <dd>
+            Cette propriété est présente seulement quand la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par ligne</b>. Détermine le nombre de lignes de donnée présente en entrée et sortie 1,2,4 ou 8. Chaque ligne étant pilotée au chargement par son propre signal (LE0..LE7). La ligne 0 pointe l'adresse 1, la ligne 1 pointe à l'adresse+1 et ainsi de suite. Voir la figure sous Data0..Data7
+          </dd>
+          <dt class="lib">
+            Autoriser les accès non alignés ?
+          </dt>
+          <dd>
+            Cette propriété est présente seulement quand la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par ligne</b>. Détermine si les lignes de donnée peuvent interagir avec l'ensemble des adresses de la mémoire ou si les lignes de donnée sont alignées sur les positions mémoire multiples de leur nombre, par exemple si vous avez deux lignes, la première ligne est reliée à adresse + 0 la seconde à adresse + 1 et votre adressage ne peut recevoir que des valeurs multiples de 2 dans le cas contraire les sorties seront en erreur (<b class="evalue">E</b>).
+          </dd>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br>
+            <b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>.<br>
+            <b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.<br>
+            <b class="vprop">Niveau haut</b> indique que la mémoire doit mettre à jour en continu lorsque l'entrée load est à <b class="unov">1</b>.<br>
+            <b class="vprop">Niveau bas</b> indique qu'elle doit mettre à jour en continu lorsque l'entrée load est à <b class="zerov">0</b>.
+          </dd>
+          <dt class="lib">
+            Lecture asynchrone
+          </dt>
+          <dd>
+            Détermine si le signal d'horloge intervient dans le processus de lecture de la mémoire.<br>
+            <b class="vprop">Oui</b> signifie que seul le signal <b class="vprop">load</b> déclenche la lecture.<br>
+            <b class="vprop">Non</b>, la lecture sera déclenchée par le signal <b class="vprop">load</b> et un front du signal d'horloge (clock).
+          </dd>
+          <dt class="lib">
+            Comportement de lecture
+          </dt>
+          <dd>
+            Détermine le comportement du composant si la lecture et l'écriture sont activées en même temps.<br>
+            <b class="vprop">Lecture après écriture</b> : La donnée de la case mémoire pointée par <b class="vprop">Adresse</b> sera écrite et ensuite lue et transmise en sortie.<br>
+            <b class="vprop">Ecriture après lecture</b> : La donnée de la case mémoire pointée par <b class="vprop">Adresse</b> sera transmise en sortie et ensuite la valeur de la case mémoire sera modifiée par la donnée entrante.
+          </dd>
+          <dt class="lib">
+            Type de bus de donnée
+          </dt>
+          <dd>
+            Détermine l'architecture du bus de donnée. Les valeurs:<br>
+            <b class="vprop">Bus bidirectionel</b> : Un bus est présent pour l'entrée et la sortie des données. Il faudra utiliser des buffers contrôlés pour gérer la circulation des données. <b class="vprop">Bus omnidirectionel</b> : Deux bus un en entré et un en sorti sont présent.
+          </dd>
+          <dt class="lib">
+            Etiquette
+          </dt>
+          <dd>
+            Le texte de l'étiquette associée au composant.
+          </dd>
+          <dt class="lib">
+            Police de l'étiquette
+          </dt>
+          <dd>
+            La police de caractères avec laquelle l'étiquette doit être affichée.
+          </dd>
+          <dt class="lib">
+            Etiquette visible
+          </dt>
+          <dd>
+            Si l'étiquette est visible ou non.
+          </dd>
+          <dt class="lib">
+            Apparence
+          </dt>
+          <dd>
+            <b class="vprop">Logisim Classic</b>: présente les bascules comme le faisait logisim. <b class="vprop">Logisim-HolyCross</b> / <b class="vprop">Logsim-Evolutions</b>: nouvelle présentation des bascules à la manière de la CEI.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        Voire <a href="../../guide/mem/mem-poke.html">Editer la mémoire</a> dans le <em>Guide l'utilisateur</em>.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Permets de modifier l'étiquette associée au composant.
+      </p>
+      <h2>
+        Menu contextuel
+      </h2>
+      <p>
+        Voire <a href="../../guide/mem/mem-menu.html">Le menu contextuel et les fichiers</a> dans le <em>Guide l'utilisateur</em>.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html#hlibmem">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

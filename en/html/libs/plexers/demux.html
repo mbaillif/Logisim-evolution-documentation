@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-05-21T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Demultiplexer
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/demultiplexer.png" alt="#########" height="32" width="32"> <em>Demultiplexer</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Plexers</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              2.0 Beta 11
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+            <td valign="top">
+              <img  class="appearancelibs"  src="../../../../img-libs/demux.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        An output will match the west edge input if its number matches the value currently received through the select input on the south edge; otherwise, its value will be either all-zeroes or all-floating, depending on the value of the <b class="property">Three-State?</b> attribut. If the select input contains any floating (<b class="uvalue">U</b>) bits, then all outputs are floating (<b class="uvalue">U</b>). If the select input contains the value error(<b class="evalue">E</b>), then all outputs are error error(<b class="evalue">E</b>). I find it useful to think of a demultiplexer as analogous to a railroad switch, controlled by the select input.
+      </p>
+      <p>
+        (Incidentally, some authorities spell this <em>demultiplex<strong>o</strong>r</em>, but <em>demultiplex<strong>e</strong>r</em> is the predominant spelling.)
+      </p>
+      <h2>
+        Pins (assuming component faces east, select is bottom/left)
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          West edge:
+        </dt>
+        <dd>
+          Input that receives the value to be routed to one of the outputs of the eastern edge. Bit width matches  <b class="property">Data Bits</b> attribute.
+        </dd>
+        <dt class="lib">
+          East edge:
+        </dt>
+        <dd>
+          A variable number of outputs they are numbered starting with 0 in the north. The number of entries is determined by the 2<sup><var><b class="property">Select Bits</b></var></sup> attribute. <br> Bit width matches <b class="property">Data Bits</b> attribute.
+        </dd>
+        <dt class="lib">
+          South edge, left side:
+        </dt>
+        <dd>
+          input <b>Enable</b>: When <b class="zerov">0</b>, all outputs consist of all floating bits (<b class="uvalue">U</b>), regardless of the data and select inputs. Bit width 1
+        </dd>
+        <dt class="lib">
+          South edge, right side indicated by gray circle:
+        </dt>
+        <dd>
+          Input <b>Select</b>: The value of this input determines to which output on the east edge to route the value received on the west edge. Bit width matches <b class="property">Select Bits</b> attribute.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+        When the component is selected or being added, the digits <b class="tkeybd">1</b> through <b class="tkeybd">5</b> alter its <b class="property">Select Bits</b> attribute, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> alter its <b class="property">Data Bits</b> attribute, and the arrow keys alter its <b class="property">Facing</b> attribute.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Facing
+        </dt>
+        <dd>
+          The direction of the component, specifying which side has the outputs.
+        </dd>
+        <dt class="lib">
+          Select Location
+        </dt>
+        <dd>
+          The location of the select and enable lines relative to the component.
+        </dd>
+        <dt class="lib">
+          Select Bits
+        </dt>
+        <dd>
+          The bit width of the component's select input on its south edge. The number of outputs for the demultiplexer will be 2<sup><var>selectBits</var></sup>.
+        </dd>
+        <dt class="lib">
+          Data Bits
+        </dt>
+        <dd>
+          The bit width of the data being routed through the demultiplexer.
+        </dd>
+        <dt class="lib">
+          Three-state?
+        </dt>
+        <dd>
+          Specifies whether the unselected outputs should be floating(U) (<b class="vprop">Yes</b>) or zero(0) (<b class="vprop">No</b>).
+        </dd>
+        <dt class="lib">
+          Disabled Output
+        </dt>
+        <dd>
+          Specifies what each bit of the outputs should be when the component is disabled (i.e., when the enable pin is 0). Options include zero and floating; in the latter case, the outputs are effectively disconnected from any other ports.
+        </dd>
+        <dt class="lib">
+          Include Enable?
+        </dt>
+        <dd>
+          The component has an enable input when this attribute is <b class="vprop">yes.</b> The attribute is primarily for supporting circuits built using older versions of Logisim that did not provide an enable input.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <p>
+       <b>Back to </b><a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

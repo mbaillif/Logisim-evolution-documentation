@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2023-07-20T24:08:12.432000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Counter
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/counter.png" alt="#########" width="32" height="32"> <em>Counter</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Library :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+            <td rowspan="3">
+              <img class="appearancelibshaut" src="../../../../img-libs/counterlh.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduced :</b>
+            </td>
+            <td>
+              2.3.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Appearance :</b>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/counter.png" alt="#########" width="96" height="96">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        The counter holds a single value, whose value is emitted on the output <var>Q</var> and incremented or decremented by 1 each time the clock input is triggered. The counter value can be updated according to its <var>D</var> and <var>Load</var> inputs in synchronisation with the clock triggering. The <var>Clear</var> input asynchronously sets the counter bits to zero. The <var>UpDown</var> input determines whether the counter is incremented or decremented when the clock is triggered. The <b class="property">Trigger</b> property is used to define whether the counter is triggered on the
+        rising or falling edge of the clock.
+      </p>
+      <center>
+        <table class="truthtable">
+          <tbody>
+            <tr>
+              <td class="tspace">
+                <var>Clear</var>
+              </td>
+              <td class="tspace">
+                <var>Load</var>
+              </td>
+              <td class="tspace">
+                <var>Count</var>
+              </td>
+              <td class="tspace">
+                <var>UpDown</var>
+              </td>
+              <td class="tspace">
+                Déclanchement
+              </td>
+              <td class="tspace">
+                Q
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td>
+                <var>Q</var>=<b class="zerov">0</b>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td>
+                Front
+              </td>
+              <td>
+                Unchanged
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td align="center">
+                --
+              </td>
+              <td>
+                Front
+              </td>
+              <td>
+                <var>Q</var>=<var>D</var>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                Front
+              </td>
+              <td>
+                <var>Q</var>=<var>Q</var>-1
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="zerov">0</b>/<b class="uvalue">U</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                <b class="unov">1</b>
+              </td>
+              <td align="center">
+                Front
+              </td>
+              <td>
+                <var>Q</var>=<var>Q</var>+1
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <p>
+        The range of counting can be configured using the <b class="property">Maximum Value</b> attribute. When the counter reaches this value, the next increment wraps the counter back to 0; and if it is at 0, then a decrement will wrap the counter around back to its maximum value.
+      </p>
+      <p>
+        In addition to the output <var>Q</var>, the component also includes a single-bit output <var>carry</var>. This value is <b class="unov">1</b> when the counter is at its maximum value and is incrementing, or <b class="unov">1</b> when its value is 0 and is decrementing.
+      </p>
+      <p>
+        The <var>clear</var> input resets the counter's value to 0 (all zeroes) asynchronously; that is, as long as the <var>Clear</var> input is <b class="unov">1</b>, the value is pinned to 0, regardless of the clock input.
+      </p>
+      <h2>
+        Pins
+      </h2><img class="pinslib" src="../../../../img-libs/counterpins.png" alt="#########">
+      <p>
+        The <b class="property">Appearance</b> attribute allows two different images for this component. Logisim Evolution presents inputs to the west and outputs to the east, while I present the pins from top to bottom and from west to east.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Clear: labeled <var>R</var>
+          </dt>
+          <dd>
+            Input. When <b class="zerov">0</b> or undefined <b class="uvalue">U</b>, this input has no effect. As long as it is <b class="unov">1</b>, the counter's value is asynchronously pinned to 0. This occurs asynchronously - that is, without regard to the current clock input value. As long as this is <b class="unov">1</b>, the other inputs have no effect.
+          </dd>
+          <dt class="lib">
+            Load: labeled <var>M1 [load] M2 [Count]</var>
+          </dt>
+          <dd>
+            Input: When this is <b class="unov">1</b> the counter will load the value found at the <var>data</var> input at the next clock trigger. Bit width 1.
+          </dd>
+          <dt class="lib">
+            UpDown : labeled <var>M4 [up] M4 [down]</var>
+          </dt>
+          <dd>
+            When this input is set to <b class="unov">1</b>, the counter increments on trigger events; when it is set to <b class="zerov">0</b>, it decrements. Bit width 1.
+          </dd>
+          <dt class="lib">
+            Count : labeled <var>G5</var>
+          </dt>
+          <dd>
+            When this input is set to 1, clock events increment or decrement the counter according to the <b>UpDown</b> pin status. Bit width 1.
+          </dd>
+          <dt class="lib">
+            Clock : labeled <var>2,3,5+/C6 2,4,5</var>
+          </dt>
+          <dd>
+            When triggered according to the rules specified by the <b class="property">Trigger</b> attribute, the counter is incremented or updated as indicated by the load and count inputs. Bit width 1.
+          </dd>
+          <dt class="lib">
+            Data: labeled <var>1,6 D</var>
+          </dt>
+          <dd>
+            Input Data: When the clock triggers while <var>load</var> is <b class="unov">1</b> the counter's value changes to the value found at this input. Bit width matches <b class="property">Data Bits</b> attribute.
+          </dd>
+          <dt class="lib">
+            Sortie Carry : étiquette <var>3CT=0x.. 4CT=0</var>
+          </dt>
+          <dd>
+            When input <var>UpDown</var> is set to <b class="unov">1</b>, this output is set to <b class="unov">1</b> if the counter is at its maximum, and when input <var>UpDown</var> is set to <b class="zerov">0</b>, this output is set to <b class="unov">1</b> if the counter is at <b class="zerov">0</b>. Bit width 1.
+          </dd>
+          <dt class="lib">
+            OutPut :
+          </dt>
+          <dd>
+            Outputs the value currently stored by the counter. Bit width matches <b class="property">Data Bits</b> attribute.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+        When the component is selected or being added, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> alter its <b class="property">Data Bits</b> attribute.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Data Bits
+          </dt>
+          <dd>
+            The bit width of the value emitted by the component.
+          </dd>
+          <dt class="lib">
+            Maximum Value
+          </dt>
+          <dd>
+            The maximum value, at which point the counter will set its carry outputor loop.
+          </dd>
+          <dt class="lib">
+            Action On Overflow
+          </dt>
+          <dd>
+            The behavior when the counter attempts to increment beyond the maximum value or decrement beyond 0. Four possible actions are supported:
+            <dl>
+              <dt class="lib">
+                Wrap around
+              </dt>
+              <dd>
+                The next value is 0 if incrementing - the maximum value if decrementing.
+              </dd>
+              <dt class="lib">
+                Stay at value
+              </dt>
+              <dd>
+                The counter's value remains at the maximum or 0 if decrementing.
+              </dd>
+              <dt class="lib">
+                Continue counting
+              </dt>
+              <dd>
+                The counter continues incrementing/decrementing, keeping the number of bits as provided by the Data Bits attribute.
+              </dd>
+              <dt class="lib">
+                Load next value
+              </dt>
+              <dd>
+                The next value is loaded from the <b>D</b> input.
+              </dd>
+            </dl>
+          </dd>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+            Configures how the clock input is interpreted. Values :<br>
+            <b class="vprop">rising edge</b> indicates that the counter should update its value at the instant when the clock rises from <b class="zerov">0</b> to <b class="unov">1</b>.<br>
+            <b class="vprop">falling edge</b> value indicates that it should update at the instant the clock falls from <b class="unov">1</b> to <b class="zerov">0</b>.
+          </dd>
+          <dt class="lib">
+            Label
+          </dt>
+          <dd>
+            The text within the label associated with the component.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font with which to render the label.
+          </dd>
+          <dt class="lib">
+            Appaerance
+          </dt>
+          <dd>
+            <b class="vprop">Logisim-HolyCross / Logsim-Evolutions</b>: New presentation of flipflops in the IEC way. <b class="vprop">Classic Logisim</b>: Presents flipflops as the legacy of logisim
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        Clicking the counter brings keyboard focus to the component (indicated by a red rectangle), and typing hexadecimal digits will change the value stored in the counter.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        Allows the label associated with the component to be edited.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

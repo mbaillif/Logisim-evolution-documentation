@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2023-07-10T06:18:42.262000000">
+    <meta name="changed" content="2023-07-20T17:34:42.112000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      ROM
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/rom.png" alt="#########" width="32" height="32"> 
+		<em>ROM</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Librairie :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+            <td rowspan="3">
+              <img class="appearancelibshaut" src="../../../../img-libs/romlh.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduction :</b>
+            </td>
+            <td>
+              2.1.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Apparence :</b>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/rom.png" alt="#########">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+		Le composant ROM stocke jusqu'à 16 777 216 valeurs spécifiées dans l'attribut <b class="property">Largeur d'adresse</b>, chaque valeur pouvant comprendre jusqu'à 32 bits spécifiés dans l'attribut <b class="property">Largeur de données</b>. Un circuit peut accéder aux valeurs actuelles de la ROM, mais il ne peut pas les modifier. L'utilisateur peut modifier des valeurs individuelles de manière interactive via l'outil <b class="property">"Pousser"</b> (<img class="icontxt" src="../../../../icons/1616/toolpoke.png" alt="#########">), ou l'utilisateur peut modifier l'ensemble du contenu via le menu contextuel.
+      </p>
+      <p>
+        Les valeurs actuelles sont affichées à l'intérieur de l'image du composant dans la zone grise. Les adresses affichées sont énumérées en gris à gauche de la zone d'affichage. À l'intérieur, chaque valeur est indiquée en hexadécimal. La valeur de l'adresse sélectionnée est affichée en texte inversé (blanc sur noir).
+      </p>
+      <h2>
+        Pins
+      </h2>
+	  </h2><img class="pinslib" src="../../../../img-libs/rompins.png" alt="#########">
+      <p>
+        L'attribut <b class="property">Apparence</b> permet deux différents différents pour ce composant. Logisim Evolution présente les entrées à l'ouest et les sorties à l'est, je présente les pins du haut en bas et de l'ouest à l'est.
+      </p>
+      <dl>
+        <dt>
+          <var>Adresse</var>
+        </dt>
+        <dd>
+          Bus entrée : Sélectionne la position de la mémoire à laquelle le circuit accède actuellement.
+        </dd>
+        <dt>
+          <var>Sortie Data</var>
+        </dt>
+        <dd>
+          Bus Sortie : Il émet les données qui seront lues à la position spécifiée par la valeur des broches d'adresse
+        </dd>
+<!--à
+        <dt>
+          <var>sel</var> on south edge (input, bit width 1)
+        </dt>
+        <dd>
+          If you have just one ROM module, ignore this input. If you have multiple ROM modules in parallel, you can use this input to enable or disable the entire ROM module, based on whether the value is 1 or 0. In other words, when this is 0, no value is emitted on the <var>D</var> output.
+        </dd>
+-->		<dt class="lib">
+            <var>Data0</var> à <var>Data7</var>
+          </dt>
+          <dd>
+            Bus Sortie : Ces bus sont présent si la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">simple</b>. Leur fonction est la même que la sortie Data avec cette différence, Data0 émet les données de la position mémoire  spécifiée par la valeur des broches d'adresse, Data1 émet adresse + 1, Data2 émet adresse + 2 et ainsi de suite.<br>
+			La propriété <b class="property">Autoriser les accès non alignés ?</b> détermine si une erreur est générée quand l'adresse n'est pas alignée sur un multiple du nombre de lignes.<br><br>
+			<center>
+			 <img class="appearancelibs" src="../../../../img-libs/memoryromline.gif" alt="#########">
+			</center>
+          </dd>
+      </dl>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">0</b> à <b class="tkeybd">9</b> modifient son attribut <b class="property">Largeur de donnée d'adresse</b> et les chiffres <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b>.
+      </p>
+      <dl>
+        <dt class="lib">
+          Largeur d'adresse
+        </dt>
+        <dd>
+          La largeur en bit de l'adressage. Le nombre de valeurs stockées dans la RAM est de 2<sup><var>Largeur d'adresse</var></sup>.
+        </dd>
+        <dt class="lib">
+          Largeur de donnée
+        </dt>
+		<dd>
+          La largeur de donnée en bit de chaque valeur individuelle dans la mémoire.
+        </dd>
+		<dt class="lib">
+            Nombre de lignes
+          </dt>
+          <dd>
+            Détermine le nombre de lignes de donnée présente en sortie 1,2,4 ou 8. La ligne 0 pointe l'adresse 1, la ligne 1 pointe à l'adresse+1 et ainsi de suite.
+          </dd>
+          <dt class="lib">
+            Autoriser les accès non alignés ?
+          </dt>
+          <dd>
+            Cette propriété est présente seulement quand la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">Simple</b>. Détermine si les lignes de donnée peuvent interagir avec l'ensemble des adresses de la mémoire ou si les lignes de donnée sont alignées sur les positions mémoire multiples de leur nombre, par exemple si vous avez deux lignes, la première ligne est reliée à adresse + 0 la seconde à adresse + 1 et votre adressage ne peut recevoir que des valeurs multiples de 2 dans le cas contraire les sorties seront en erreur (<b class="evalue">E</b>).
+          </dd>
+        
+        <dt class="lib">
+          Contenu
+        </dt>
+        <dd>
+          Ouvre l'éditeur de contenu de la mémoire. Voire <a href="../../guide/mem/mem-hex.html">Editeur hexadécimal </a> dans le <em>Guide l'utilisateur</em>.
+      
+        </dd>
+      </dl>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        Voire <a href="../../guide/mem/mem-poke.html">Editer la mémoire</a> dans le <em>Guide l'utilisateur</em>.
+      
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Permets de modifier l'étiquette associée au composant.
+      </p>
+      <h2>
+        Menu Tool Comportement
+      </h2>
+      <p>
+        Voire <a href="../../guide/mem/mem-menu.html">Le menu contextuel et les fichiers</a> dans le <em>Guide l'utilisateur</em>.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html#hlibmem">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

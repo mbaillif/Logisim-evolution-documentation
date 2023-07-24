@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2023-07-20T17:34:42.112000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Random
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/random.png" alt="#########" width="32" height="32"> <em>Random</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Librairie :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+            <td rowspan="3">
+              <img class="appearancelibs" src="../../../../img-libs/randomlh.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduction :</b>
+            </td>
+            <td>
+              2.3.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Apparence :</b>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/random.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              Logisim-clasique&nbsp;
+            </td>
+            <td>
+              Logisim-Evolution&nbsp;<br>
+              Logisim-HolyCross&nbsp;
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Ce composant itère à travers une séquence pseudo-aléatoire de nombres, qui avance au nombre suivant de la séquence chaque fois que l'horloge est déclenchée alors que le composant est activé. Techniquement parlant, l'algorithme utilisé pour calculer la séquence pseudo-aléatoire est un générateur congruentiel linéaire : À partir d'une graine <var>r</var><sub><small>0</small></sub>, le nombre suivant <var>r</var><sub><small>1</small></sub> est le nombre
+      </p>
+      <center>
+        <var>r</var><sub><small>1</small></sub> = (25,214,903,917 <var>r</var><sub><small>0</small></sub> + 11) mod 2<sup><small>48</small></sup>
+      </center>
+      <p>
+        La valeur suivante <var>r</var><sub><small>2</small></sub> est calculée à partir de <var>r</var><sub><small>1</small></sub> en utilisant le même calcul, et ainsi de suite. Cette séquence est composée de nombres de 48 bits. La valeur vue par le composant est celle des bits de poids faible, telle que configurée par l'attribut <b class="property">Largeur de donnée</b> après avoir rejeté les 12 bits inférieurs de la graine actuelle.
+      </p>
+      <p>
+        Outre l'entrée d'horloge, le composant comprend également une entrée d'activation <var>enable</var>, qui conduit l'entrée d'horloge à être ignorée lorsque l'activation est à <b class="zerov">0</b>, et l'entrée de réinitialisation <var>reset</var>, qui réinitialise la valeur du composant de manière asynchrone à la graine
+        initiale <var>r</var><sub><small>0</small></sub>.
+      </p>
+      <p>
+        La graine initiale est configurable par l'utilisateur. Si elle est configurée à 0 (ce qui est la valeur par défaut), la graine est basée sur l'heure actuelle ; lorsqu'on lui demande de se réinitialiser par l'entrée de <var>reset</var>, le composant calcule une nouvelle graine basée sur la nouvelle heure actuelle.
+      </p>
+      <h2>
+        Pins
+      </h2>
+	  <img class="pinslib" src="../../../../img-libs/randompins.png" alt="#########">
+      <p>
+        L'attribut <b class="property">Apparence</b> permet deux différents affichages pour ce composant. Logisim evolution présente les entrées à l'ouest et les sorties à l'est, je présente les pins du haut en bas et de l'ouest à l'est.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Entrée Clear: étiquette <var>R</var>
+          </dt>
+          <dd>
+            Lorsque cette valeur est égale à <b class="unov">1</b>, la séquence pseudo-aléatoire est réinitialisée de manière asynchrone sur la graine initiale. Si la graine vaut <b class="zerov">0</b> la sortie sera initialisée chaque fois différemment, car dépendante de l'heure, Si elle est à
+            <b class="unovv">1</b> la sortie sera initialisée sur le premier nombre de la série. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Entrée Enable : étiquette <var>EM</var>
+          </dt>
+          <dd>
+            Le composant est activé lorsque cette entrée est  à <b class="unov">1</b> ou indéfini <b class="uvalue">U</b>, mais si elle est à <b class="zerov">0</b>, l'entrée d'horloge est ignorée. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Entrée Clock : étiqueté avec un triangle.
+          </dt>
+          <dd>
+            Au moment où cette action est déclenchée comme spécifié par l'attribut <b class="property">Trigger</b>, le composant passe au numéro suivant dans sa séquence. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Sortie Output :
+          </dt>
+          <dd>
+            Émets la valeur actuellement stockée par le composant.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou en cours d'ajout, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b>.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Largeur de donnée
+          </dt>
+          <dd>
+            La largeur de donnée en bit de la valeur émise par le composant.
+          </dd>
+          <dt class="lib">
+            Graine
+          </dt>
+          <dd>
+            Valeur de départ utilisée pour la séquence pseudo-aléatoire. Si cette valeur est 0 (valeur par défaut), la valeur de départ est basée sur l'heure à laquelle la séquence aléatoire a commencé.
+          </dd>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
+          </dd>
+          <dt class="lib">
+            Etiquette
+          </dt>
+          <dd>
+            Le texte de l'étiquette associée au composant.
+          </dd>
+          <dt class="lib">
+            Police des étiquettes
+          </dt>
+          <dd>
+            La police de caractères avec laquelle l'étiquette doit être affichée.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Permets de modifier l'étiquette associée au composant.
+      </p>
+	  <p>
+        <b>Retour à</b> <a href="../index.html#hlibmem">Référence de la bibliothèque</a>
+	</p>
+    </div>
+  </body>
+</html>

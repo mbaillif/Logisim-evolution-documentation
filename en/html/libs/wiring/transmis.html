@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-07-18T10:59:00.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Transmission Gate
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/transmis.png" alt="#########" width="32" height="32">&nbsp;
+		<em>Transmission Gate</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Wiring</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              2.7.0
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/transmis.png" alt="#########" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        A transmission gate has three inputs, called <b>source</b>, <b>n-gate</b>, and <b>p-gate</b>; and it has one output, called <b>drain</b>. When diagrammed, the <b>source</b> input and <b>drain</b> output are drawn connected by two plates; Logisim draws an arrowhead to indicate the direction of flow from input to output. The two <b>gate</b> inputs are drawn as lines connected to plates parallel to each of the plates connecting <b>source</b> to <b>drain</b>. The <b>p-gate</b> input's line has a circle, while the <b>n-gate</b> input's line does not.
+      </p>
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td align="center">
+                <b>p-gate</b>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td valign="middle">
+                <b>source</b>
+              </td>
+              <td valign="middle" align="center">
+                <img class="appearancelibs" src="../../../../img-libs/transmis.png" alt="#########" width="64" height="64">
+              </td>
+              <td valign="middle">
+                <b>drain</b>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="center">
+                <b>n-gate</b>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <p>
+        The transmission gate is simply the combination of two complementary transistors. Indeed, the same behavior can be achieved in Logisim by using just one transistor. However, designers sometimes prefer to use matched pairs of transistors due to electrical issues with draining voltage that is more complex than Logisim attempts to simulate.
+      </p>
+      <p>
+        The values at <b>n-gate</b> and <b>p-gate</b> are expected to be opposite to each other. If <b>p-gate</b> is <b class="zerov">0</b> while <b>n-gate</b> is <b class="unov">1</b>, then the value found at <b>source</b> is transmitted to <b>drain</b>. If <b>p-gate</b> is <b class="unov">1</b> while <b>p-gate</b> is <b class="zerov">0</b>, then the connection is broken, so the value at <b>drain</b> is left floating. In all other cases, <b>drain</b> receives an error output — unless <b>source</b> is floating, in which case <b>drain</b> is floating as well. This behavior is summarized by the following table.
+      </p>
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <th class="tspace">
+                p-gate
+              </th>
+              <th class="tspace">
+                n-gate
+              </th>
+              <th class="tspace">
+                drain
+              </th>
+            </tr>
+            <tr>
+              <td class="zerov">
+                0
+              </td>
+              <td class="zerov">
+                0
+              </td>
+              <td class="space">
+                *
+              </td>
+            </tr>
+            <tr>
+              <td class="zerov">
+                0
+              </td>
+              <td class="unov">
+                1
+              </td>
+              <td align="center">
+                source
+              </td>
+            </tr>
+            <tr>
+              <td class="unov">
+                1
+              </td>
+              <td class="zerov">
+                0
+              </td>
+              <td class="uvalue">
+                U
+              </td>
+            </tr>
+            <tr>
+              <td class="unov">
+                1
+              </td>
+              <td class="unov">
+                1
+              </td>
+              <td class="space">
+                *
+              </td>
+            </tr>
+            <tr>
+              <td class="space">
+                <b class="uvalue">U</b>/<b class="evalue">E</b>
+              </td>
+              <td class="space">
+                all
+              </td>
+              <td class="space">
+                *
+              </td>
+            </tr>
+            <tr>
+              <td class="space">
+                all
+              </td>
+              <td class="space">
+                <b class="uvalue">U</b>/<b class="evalue">E</b>
+              </td>
+              <td class="space">
+                *
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <p>
+        * If <b>source</b> is  High impedance (<b class="uvalue">U</b>), <b>drain</b> is High impedance (<b class="uvalue">U</b>) otherwise <b>drain</b> is in error (<b class="evalue">E</b>).
+      </p>
+      <p>
+        <b class="note">Note:</b>Since Logisim uses the markers <b class="uvalue">U</b> (High impedance) and <b class="evalue">E</b> (Error) I used the same in the illustrations rather than the more common Z (High impedance) and X (Error) in other documents 
+      </p>
+      <p>
+       If the Data Bits attribute is more than 1, each <b>gate</b> input is still a single bit, but the <b>gate</b> values are applied simultaneously to each of the <b>source</b> input's bits.
+      </p>
+      <h2>
+        Pins
+      </h2>
+	  <p>This component has four pins, three are inputs <b>Source</b>,<b>P-gate</b> and <b>N-gate</b> one is an output <b>Drain</b> which you can see in the figure above.
+	  </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          West edge: The source
+        </dt>
+        <dd>
+          The component's <b>source</b> input that will transmit to the output if triggered by the <b>p-gate</b> and <b>n-gate</b> inputs. Bit width matches  <b class="property">Data Bits</b> attribute.
+        </dd>
+        <dt class="lib">
+          North edge: p-gate
+        </dt>
+        <dd>
+          The component's <b>p-gate</b> input, controls the transmission. Normally, opposite control values are applied to these inputs. The bit width is 1.
+        </dd>
+        <dt class="lib">
+          South edge: n-gate
+        </dt>
+        <dd>
+          The component's <b>n-gate</b> input, controls the transmission. Normally, opposite control values are applied to these inputs. The bit width is 1.
+        </dd>
+        <dt class="lib">
+          East edge: The drain
+        </dt>
+        <dd>
+          The component's output, which will match the <b>source</b> input if <b>p-gate</b> is <b class="zerov">0</b> and <b>n-gate</b> is <b class="unov">1</b>, or it will be floating (<b class="uvalue">U</b>) if <b>p-gate</b> is <b class="unov">1</b> and <b>n-gate</b> is <b class="zerov">0</b>. For all other values on <b>p-gate</b> and <b>n-gate</b>, the output is an error value (<b class="evalue">E</b>). Bit width matches  <b class="property">Data Bits</b> attribute.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributes
+      </h2><p>
+           When the component is selected or being added, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> alter its <b class="property">Data Bits</b> attribute and the arrow keys alter its <b class="property">Facing</b> attribute.
+        </p>
+        <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Facing
+          </dt>
+          <dd>
+            The direction of the component its output relative to input.
+          </dd>
+          <dt class="lib">
+            Gate Location
+          </dt>
+          <dd>
+            The location of the gate input.
+          </dd>
+          <dt class="lib">
+            Data Bits
+          </dt>
+          <dd>
+            The bit width of the component's inputs and outputs.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

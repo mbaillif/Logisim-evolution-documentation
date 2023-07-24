@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-05-21T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Bit Selector
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+       <img class="iconlibs" src="../../../../icons/6464/bitselector.png" alt="#########" height="32" width="32"> <em>Bit Selector</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Plexers</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              2.0.5
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+            <td valign="top">
+              <img  class="appearancelibs" src="../../../../img-libs/selector.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        Given an input of several bits, this will divide it into several equal-sized groups (starting from the lowest-order bit) and output the group selected by the select input.
+      </p>
+      <p>
+        For example, if we have an eight-bit input 01010101, and we are to have a three-bit output, then group 0 will be the lowest-order three bits 101, group 1 will be the next three bits, 010, and group 2 will be the next three bits 001. (Any bits beyond the top are filled in with <b class="zerov">0</b>.) The select
+        input will be a two-bit number that selects which of these three groups to output; if the select input is 3, then 000 will be the output.
+		If the select input has an indeterminate or floating value (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>), the output bits will be in the indeterminate state (<b class="uvalue">U</b>).
+		If one of the input data bits is indeterminate or floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>), then the corresponding output bit will be in the indeterminate state (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>).
+      </p>
+      <h2>
+        Pins (assuming component faces east)
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          West edge
+        </dt>
+        <dd>
+          Input: Data value from which bits should be selected for the output. Bit width matches Data Bits attribute.
+        </dd>
+        <dt class="lib">
+          East edge
+        </dt>
+        <dd>
+          Output: A group of bits from the data value, as selected by the select input. Bit width matches Output Bits attribute.
+        </dd>
+        <dt class="lib">
+          South edge
+        </dt>
+        <dd>
+          Input: Select input: Determines which of the bit groups should be routed to the output. Bit width is quotient of Data Bits and Output Bits, rounded up.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+        When the component is selected or being added, the digits <b class="tkeybd">0</b> through <b class="tkeybd">9</b> alter its <b class="property">Output Bits</b> attribute, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> alter its <b class="property">Data Bits</b> attribute, and the arrow keys alter its <b class="property">Facing</b> attribute.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Facing
+        </dt>
+        <dd>
+          The direction of the component (its output relative to input).
+        </dd>
+        <dt class="lib">
+          Data Bits
+        </dt>
+        <dd>
+          The bit width of the component's data input.
+        </dd>
+        <dt class="lib">
+          Output Bits
+        </dt>
+        <dd>
+          The bit width of the component's output.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

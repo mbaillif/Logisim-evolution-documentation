@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2023-07-20T17:34:42.112000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Bascules D /T/ J-K/ R-S
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/dflipflop.png" alt="#########" width="32" height="32">&nbsp; <img class="iconlibs" src="../../../../icons/6464/tflipflop.png" alt="#########" width="32" height="32">&nbsp; <img class="iconlibs" src="../../../../icons/6464/jkflipflop.png"
+        alt="#########" width="32" height="32">&nbsp; <img class="iconlibs" src="../../../../icons/6464/srflipflop.png" alt="#########" width="32" height="32">&nbsp; <em>Bascule D / T / J-K / R-S</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Librairie :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduction :</b>
+            </td>
+            <td>
+              2.0 Beta 1
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Apparence :</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <th></th>
+            <th width="70">
+              D
+            </th>
+            <th width="70">
+              T
+            </th>
+            <th width="70">
+              J-K
+            </th>
+            <th width="70">
+              S-R
+            </th>
+          </tr>
+          <tr>
+            <th valign="middle" align="left">
+              Logisim Evolution :<br>
+              Logisim HolyCross :
+            </th>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/hdflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/htflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/hjkflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/hsrflipflops.png" alt="#########">
+            </td>
+          </tr>
+          <tr>
+            <th valign="middle" align="left">
+              Logisim Classique:
+            </th>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/ldflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/ltflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/ljkflipflops.png" alt="#########">
+            </td>
+            <td>
+              <img class="appearancelibs" src="../../../../img-libs/lsrflipflops.png" alt="#########">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Chaque bascule stocke un seul bit de données, qui est émis par la sortie <var>Q</var> du côté est. Normalement, la valeur peut être contrôlée par les entrées du côté ouest. En particulier, la valeur change lorsque l'entrée <b>d'horloge</b>, marquée par un triangle sur chaque bascule, passe de <b class="zerov">0</b> à <b class="unov">1</b> ou inversement selon la configuration de l'attribut <b class="property">Trigger</b>, la valeur est modifiée selon le tableau ci-dessous.<br>
+        Il existe deux autres entrées du côté nord et sud. <var>S</var> (Set) qui permet de forcer à <b class="unov">1</b> la valeur de la bascule et <var>R</var> (Reset) qui permet de forcer à <b class="zerov">0</b> la valeur de la bascule.
+      </p>
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                D
+              </th>
+              <th>
+                T
+              </th>
+              <th>
+                J-K
+              </th>
+              <th>
+                S-R
+              </th>
+            </tr>
+            <tr>
+              <td valign="top" align="center">
+                <table class="truthtable">
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>D</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td class="zerov">
+                        0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td class="unov">
+                        1
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td valign="top" align="center">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>T</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>'
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td valign="top" align="center">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>J</var>
+                      </th>
+                      <th class="tspace">
+                        <var>K</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td class="zerov">
+                        0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td class="unov">
+                        1
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>'
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td valign="top" align="center">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th class="tspace">
+                        <var>S</var>
+                      </th>
+                      <th class="tspace">
+                        <var>R</var>
+                      </th>
+                      <th></th>
+                      <th class="tspace">
+                        <var>Q</var>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <var>Q</var>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td class="zerov">
+                        0
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="zerov">
+                        0
+                      </td>
+                      <td></td>
+                      <td class="unov">
+                        1
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td class="unov">
+                        1
+                      </td>
+                      <td></td>
+                      <td align="center">
+                        <em>??</em>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>Une autre façon de décrire le comportement différent des bascules est le texte français.
+      <ul>
+        <li>
+          <p>
+            <b>Bascule D :</b> Lorsque l'horloge se déclenche, à cet instant la valeur mémorisée par la bascule devient la valeur de l'entrée <var>D</var> (<em>Data</em>).
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Bascule T :</b> Lorsque l'horloge se déclenche et que l'entrée <var>T</var> (<em>Toggle</em>) est à <b class="unov">1</b>, la valeur mémorisée par la bascule est inversée. Si l'entrée <var>T</var> (<em>Toggle</em>) est à <b class="zerov">0</b> la valeur n'est pas modifiée.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Bascule J-K :</b> Lorsque l'horloge se déclenche, la valeur mémorisée par la bascule est inversée si les entrées <var>J</var> et <var>K</var> sont toutes deux à <b class="unov">1</b>. La valeur n'est pas modifiée si les deux entrées sont à <b class="zerov">0</b>. Si elles
+            sont différentes, la valeur devient <b class="unov">1</b> si l'entrée <var>J</var> est à <b class="unov">1</b> et <b class="zerov">0</b> si l'entrée <var>K</var> est à <b class="unov">1</b>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Bascule R-S :</b> Lorsque l'horloge se déclenche, la valeur mémorisée par la bascule reste inchangée si <var>R</var> et <var>S</var> sont tous deux à <b class="zerov">0</b>, devient <b class="zerov">0</b> si l'entrée R (Reset) est à <b class="unov">1</b>, et devient
+            <b class="unov">1</b> si l'entrée S (Set) est à <b class="unov">1</b>.Dans la réalité le comportement est indéterminé si les deux entrées sont à <b class="unov">1</b>. Dans Logisim, la valeur dans la bascule reste inchangée.<br>
+            <b class="note">Note</b> : Pour cette bascule, ne pas confondre les entrées <var>R S</var> sur le côté ouest synchrone et les entrées R S au nord et au sud asynchrone.
+          </p>
+        </li>
+      </ul>
+      <p>
+        Par défaut, l'horloge se déclenche sur un <b class="vprop">Front montant</b>, lorsque l'entrée de l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. Toutefois, l'attribut <b class="property">Trigger</b> permet de modifier ce fonctionnement et d'utiliser l'option <b class="vprop">Front descendant</b> lorsque l'entrée de l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
+		Il existe aussi les options <b class="vprop">Niveau bas</b>, pendant toute la durée où l'entrée de l'horloge est à <b class="zerov">0</b> et <b class="vprop">Niveau haut</b>, pendant toute la durée où l'entrée de l'horloge est à <b class="unov">1</b>. Ces deux dernières options de déclenchement ne sont pas disponibles pour les bascules T et J-K, car ces bascules se comportent de manière imprévisible lorsqu'on leur demande de basculer pendant une durée indéterminée.
+      </p>
+      <h2>
+        Pins
+      </h2>
+      <p>
+        Toutes les entrées ou sorties ont une largeur de bit de 1.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Bord ouest : marqué par un triangle ou le label <var>E</var>
+          </dt>
+          <dd>
+            Entrée d'horloge : Ce signal déclenche la mise à jour de la valeur de la bascule en fonction des entrées sur le côté ouest. Le mode de déclenchement est déterminé par la propriété <b class="property">Trigger</b> : <b class="vprop">Front montant, Front descendant, Niveau bas, Niveau haut</b>.
+          </dd>
+          <dt class="lib">
+            Bord ouest : autre(s) broche(s) étiquetée(s)
+          </dt>
+          <dd>
+            Ces entrées contrôlent la façon dont la valeur de la bascule change pendant le déclenchement de l'horloge (voir l'entrée d'horloge et la propriété <b class="property">Trigger</b>). Leur comportement exact dépend du type de la bascule ; les tableaux ci-dessus résument leur comportement.
+          </dd>
+          <dt class="lib">
+            Bord est : étiqueté <var>Q</var>, extrémité nord
+          </dt>
+          <dd>
+            Sortie : Délivre la valeur actuellement stockée par la bascule.
+          </dd>
+          <dt class="lib">
+            Bord est, extrémité sud
+          </dt>
+          <dd>
+            Sortie : Délivre le complément de la valeur actuellement stockée par la bascule.
+          </dd>
+          <dt class="lib">
+            Bord sud : extrémité est ou centre
+          </dt>
+          <dd>
+            Reset entrée asynchrone : Lorsqu'elle est à <b class="zerov">0</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur de la bascule est ramenée à <b class="zerov">0</b>. Cela se produit de manière asynchrone,
+            c'est-à-dire sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet.
+          </dd>
+          <dt class="lib">
+            Bordure sud : extrémité ouest ou bord nord
+          </dt>
+          <dd>
+            Set entrée asynchrone : Lorsqu'elle est à <b class="unov">1</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Lorsqu'elle est à <b class="unov">1</b>, la valeur de la bascule est fixée à <b class="unov">1</b>. Cela se produit de manière asynchrone, c'est-à-dire
+            sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet, à l'exception de l'entrée de réinitialisation asynchrone, qui est prioritaire.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributs
+      </h2>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+            Configure la façon dont l'entrée de l'horloge est interprétée. Les réglages :<br><b class="vprop">Front montant</b> indique que la bascule doit mettre à jour la valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>.<br>
+			<b class="vprop">Front descendant</b> indique qu'elle doit mettre à jour la valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.<br>
+			<b class="vprop">Niveau haut</b> indique que la bascule doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="unov">1</b>. <br>
+			<b class="vprop">Niveau bas</b> indique qu'elle doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="zerov">0</b>. Notez que les deux dernières options ne sont pas disponibles pour les bascules T et J-K.
+          </dd>
+          <dt class="lib">
+            Étiquette
+          </dt>
+          <dd>
+            Texte de l'étiquette associée à la bascule.
+          </dd>
+          <dt class="lib">
+            Police des étiquettes
+          </dt>
+          <dd>
+            Police avec laquelle l'étiquette doit être affichée.
+          </dd>
+          <dt class="lib">
+            Apparence
+          </dt>
+          <dd>
+            <b class="vprop">Logisim-HolyCross</b> / <b class="vprop">Logsim-Evolutions</b>: nouvelle présentation des bascules à la manière de la CEI. <b class="vprop">Logisim Classic</b>: présente les bascules comme le faisait logisim. 
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        Cliquer sur une bascule sur la valeur interne à l'aide de l'outil pousser(<img class="icontxt" src="../../../../icons/1616/toolpoke.png" alt="#########">) fait basculer le bit stocké dans la bascule, à moins que les entrées set/reset asynchrones n'imposent actuellement une valeur à la bascule.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Permet de modifier l'étiquette associée au composant.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html#hlibmem">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

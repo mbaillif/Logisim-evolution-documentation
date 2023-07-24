@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-05-21T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Multiplexer
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/multiplexer.png" alt="#########" height="32" width="32"> <em>Multiplexer</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Plexers</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              2.0 Beta 11
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+            <td valign="top">
+             <img  class="appearancelibs"  src="../../../../img-libs/mux.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+        Copies an input on the west edge onto the output on the east edge; which of the inputs to copy is specified via the current value received through the input on the south edge. I find it useful to think of a multiplexer as analogous to a railroad switch, controlled by the select input.
+      </p>
+      <p>
+        (Incidentally, some authorities spell this <em>multiplex<strong>o</strong>r</em>, but <em>multiplex<strong>e</strong>r</em> is the predominant spelling.)
+      </p>
+      <h2>
+        Pins (assuming component faces east, select is bottom/left)
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          West edge:
+        </dt>
+        <dd>
+          The component input, one of which is to be routed to the output. Each input data value is numbered, starting with 0 on the north.<br>The number of entries is determined by the <b class="property">Select Bits</b> attribute.<br>Bit width matches  <b class="property">Data Bits</b> attribute.
+        </dd>
+        <dt class="lib">
+          East edge:
+        <dd>
+          The output value will match the input values on the west edge whose number is the same as the value currently received through the select input on the south.<br>If the select input contains any unspecified (i.e., floating) bits, then the output is completely floating.<br>Bit width matches <b class="property">Data Bits</b> attribute.
+        </dd>
+        <dt class="lib">
+          South edge, left side indicated by gray circle:
+        </dt>
+        <dd>
+          Select input: The value of this input determines which input on the west edge to route to the output on the east edge.<br>Bit width matches <b class="property">Select Bits</b> attribute
+        </dd>
+        <dt class="lib">
+          South edge, right side:
+        </dt>
+        <dd>
+          Enable input: When 0, the multiplexer's output consists of all floating (U) bits, regardless of the data and select inputs. The bit width is 1.
+        </dd>
+      </dl>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+        When the component is selected or being added, the digits <b class="tkeybd">1</b> through <b class="tkeybd">5</b> alter its <b class="property">Select Bits</b> attribute, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> alter its <b class="property">Data Bits</b> attribute, and the arrow keys alter its <b class="property">Facing</b> attribute.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Facing
+        </dt>
+        <dd>
+          The direction of the component (its output relative to input).
+        </dd>
+		<dt class="lib">
+          Gate Size
+        </dt>
+        <dd>
+          Determines the width of the component's design, wide or narrow.
+        </dd>
+        <dt class="lib">
+          Select Location
+        </dt>
+        <dd>
+          The location of the select and enable lines relative to the component.
+        </dd>
+        <dt class="lib">
+          Select Bits
+        </dt>
+        <dd>
+          The bit width of the component's select input on its south edge. The number of inputs to the multiplexer will be 2<sup><var>selectBits</var></sup>.
+        </dd>
+        <dt class="lib">
+          Data Bits
+        </dt>
+        <dd>
+          The bit width of the data being routed through the multiplexer.
+        </dd>
+        <dt class="lib">
+          Disabled Output
+        </dt>
+        <dd>
+          Specifies what each bit of the output should be when the component is disabled (i.e., when the enable pin is <b class="zerov">0</b>). Options include zero (<b class="zerov">0</b>) and floating (<b class="uvalue">U</b>); in the latter case, the output is effectively disconnected from any other ports.
+        </dd>
+        <dt class="lib">
+          Include Enable?
+        </dt>
+        <dd>
+          The component has an enable input when this attribute is <q>yes</q> The attribute is primarily for supporting circuits built using older versions of Logisim that did not provide an enable input.
+        </dd>
+      </dl>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>

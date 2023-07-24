@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-08-04T06:18:42.262000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+	</title>
+      Demultiplexador
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+    <h1>
+       <img class="iconlibs" src="../../../../icons/6464/demultiplexer.png" alt="#########" height="32" width="32"> <em>Demultiplexador</em>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Biblioteca:</strong>
+          </td>
+          <td>
+            <a href="index.html">Plexers</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Introdução:</strong>
+          </td>
+          <td>
+            2.0 Beta 11
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Appearance:</strong>
+          </td>
+          <td valign="top">
+             <img  class="appearancelibs"  src="../../../../img-libs/demux.png"  alt="#########" height="64" width="64">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      Comportamento
+    </h2>
+    <p>
+      Uma saída irá coincidir com a entrada na face oeste, se seu número coincidir com o valor atual recebido através da seleção de entrada na face sul. Para as outras saídas o valor será (<b class="zerov">0</b>) ou flutuante (<b class="uvalue">U</b>), dependendo do valor do atributo <i>Tri-state</i>?. 
+	  Se a selecção de entrada contiver bits não flutuantes (<b class="uvalue">U</b>) , todas as saídas serão flutuantes (<b class="uvalue">U</b>). 
+	  Se a entrada seleccionada contém o erro de valor(<b class="evalue">E</b>), então todas as saídas são erro(<b class="evalue">E</b>). Acho útil pensar em um demultiplexador como análogo a um comutador de trilhos em uma estrada de ferro, controlado por uma seleção feita à entrada.
+    </p>
+    <h2>
+      Pinos (componente supondo voltado para leste)
+    </h2>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Na face oeste:
+      </dt>
+      <dd>
+        Entrada que recebe o valor a ser encaminhado para uma das saídas na face leste.
+		Com largura de bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face leste:
+      </dt>
+      <dd>
+        Um número variável de saídas, são numeradas a partir de 0 começando na norte.
+        O número de resultados é determinado por 2<sup><var>Bits Selecionados</var></sup>		
+		Com largura de bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+	  <dt class="lib">
+          Na face sul, lado esquerdo:
+        </dt>
+        <dd>
+          entrada <b>Enable</b>: Quando 0, todas as saídas consistem em todos os bits flutuantes (<b class="uvalue">U</b>), independentemente dos dados e das entradas seleccionadas. Largura de bits 1.
+        </dd>
+      <dt class="lib">
+        Na face sul, lado direito indicado por círculo cinzento:
+      </dt>
+      <dd>
+        Entrada selecionada: o valor dessa entrada determinará para qual a saída na face leste será encaminhado o valor recebido na face oeste. Com largura de bits de acordo com o atributo <b class="property">Bits para selecção</b>
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Atributos
+    </h2>
+	<div class="attliste">
+    <p>
+      Quando o componente for selecionado ou estiver sendo acrescentado os dígitos de <b class="tkeybd">1</b> a <b class="tkeybd">5</b> poderão ter o seu atributo <b class="property">Bits para selecção</b> alterado, <b class="tkeybd">Alt-0</b> até <b class="tkeybd">Alt-9</b> irão alterar o seu atributo <b class="property">Bits de dados</b>, e as teclas com setas poderão alterar o seu atributo <b class="property">Posição</b>.
+    </p>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Posição
+      </dt>
+      <dd>
+        A Posição do componente (especificará qual dos lados terá as saídas).
+      </dd>
+	  <dt class="lib">
+        Selectionar posiçâo
+      </dt>
+      <dd>
+        A localização das linhas de selecção e activação em relação ao componente.
+      </dd>
+      <dt class="lib">
+        Bits para selecção
+      </dt>
+      <dd>
+        A largura em bits da entrada selecionada do componente na face sul. O número de saídas para o demultiplexador será 2 <sup><var>Bits Selecionados</var></sup>.
+      </dd>
+      <dt class="lib">
+        Bits de dados
+      <dt class="lib">
+      <dd>
+        Largura dos bits de dados que serão roteados pelo demultiplexador.
+      </dd>
+      <dt class="lib">
+        <i>Tri-state</i>?
+      </dt>
+      <dd>
+        Especificará se as saídas não selecionadas deverão ser flutuantes (<b class=vprop>Sim</b>) ou zero (<b class=vprop>Não</b>).
+      </dd>
+      <dt class="lib">
+        Desabilitar saida
+      </dt>
+      <dd>
+        Especificará qual deverá ser o valor de cada bit das saídas quando o componente estiver desabilitado (ou seja, quando o pino de habilitação estiver em 0). Opções incluem zero (<b class="zerov">0</b>) e flutuante (<b class="uvalue">U</b>); e neste caso, as saídas estarão efetivamente desconectadas de quaisquer outras portas.
+      </dd>
+	  <dt class="lib">
+        Incluir Enable?
+      </dt>
+      <dd>
+        O componente tem uma entrada de activação quando este atributo é <b class=vprop>Sim</b> Este atributo é utilizado principalmente para suportar circuitos construídos usando versões mais antigas de Logisim que não forneciam uma entrada de activação.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Comportamento da ferramenta Testar
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <h2>
+      Comportamento da ferramenta Texto
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <p>
+      <b>Voltar à </b><a href="../index.html">Referência para bibliotecas</a>
+    </p>
+    </div>
+  </body>
+</html>

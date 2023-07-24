@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-09-08T16:29:25.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+    <title>
+      Negador
+	</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+    <h1>
+      <img class="iconlibs" src="../../../../icons/6464/negator.png" alt="#########" width="32" height="32" align="middle"> <em>Negador</em>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Biblioteca:</strong>
+          </td>
+          <td>
+            <a href="index.html">Aritmética</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Introdução:</strong>
+          </td>
+          <td>
+            2.0 Beta 22
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Aparência:</strong>
+          </td>
+          <td valign="top">
+            <img class="appearancelibs" src="../../../../img-libs/negator.png" alt="#########" width="64" height="64">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      Comportamento
+    </h2>
+    <p>
+      Serve para calcular o complemento de dois da entrada. Essa operação será realizada através da manutenção de todos os bits de ordem inferior até o primeiro 1 de mais baixa ordem, e completando todos os bits acima disso.
+    </p>
+    <p>
+      Se o valor à entrada já for o menor valor negativo, então a operação não se realizará (pois não poderá ser representada na forma de complemento de dois), e permanecerá como o menor valor negativo.
+    </p>
+    <h2>
+      Pinos
+    </h2>
+    <div class="attliste">
+    <dl>
+      <dt class="lib">
+        Na face oeste:
+      </dt>
+      <dd>
+        Entrada, O valor para se negar. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face leste: marcado por -<var>x</var>
+      </dt>
+      <dd>
+        Saída, A negação da entrada. Se a entrada ultrapassar o menor valor negativo representável no atributo <var>Bits de Dados</var>, então, a saída coincidirá com a entrada. Com largura de bits de acordo com o atributo <b class="property">Bits de Dados</b>
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Atributos
+    </h2>
+    <p>
+      Quando o componente for selecionado ou estiver sendo acrescentado,  <b class="tkeybd">Alt-0</b> até <b class="tkeybd">ALT-9</b> irão alterar o seu atributo <b class="property">Bits de Dados</b>.
+    </p>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Bits de dados
+      </dt>
+      <dd>
+        Largura dos bits de dados da entrada e da saída do componente.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Comportamento da ferramenta Testar
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <h2>
+      Comportamento da ferramenta Texto
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <p>
+      <b>Voltar à</b> <a href="../index.html">Referência para bibliotecas</a>
+    </p>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-09-08T16:29:25.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+    <title>
+      Somador
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+    <h1>
+       <img class="iconlibs" src="../../../../icons/6464/adder.png" alt="#########" width="32" height="32" align="middle"> <em>Somador</em>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Biblioteca:</strong>
+          </td>
+          <td>
+            <a href="index.html">Aritmética</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Introdução:</strong>
+          </td>
+          <td>
+            2.0 Beta 11
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Aparência:</strong>
+          </td>
+          <td valign="top">
+                <img class="appearancelibs" src="../../../../img-libs/adder.png" alt="#########" width="64" height="64"> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      Comportamento
+    </h2>
+    <p>
+      Esse componente adicionará dois valores que vierem através das entradas a oeste e fornecerá a soma na saída a leste. O componente é projetado de modo a poder ser conectado a outros somadores para tratar mais bits que os possíveis para um único somador. A entrada <i>carry-in</i> fornecerá um valor de um bit para ser adicionado ao montante (se for especificado), e a saída <i>carry-out</i> fornecerá um valor de um bit correspondente ao valor de <i>overflow</i> (transbordamento) que poderá ser enviado a outro componente.
+    </p>
+    <p>
+      Se qualquer um dos adendos contiver algum bit flutuante ou erro, então o componente irá executar uma adição parcial. Ou seja, ele irá calcular com tantos bits de mais baixa ordem quanto possível. Mas, acima do bit flutuante ou de erro, o resultado terá bits flutuantes ou de erro.
+    </p>
+    <h2>
+      Pinos
+    </h2>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Na face oeste, norte final:
+      </dt>
+      <dd>
+        Entrada. Um dos dois valores a serem somados. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face oeste, extremo sul:
+      </dt>
+      <dd>
+        Entrada. O outro dos dois valores a serem somados. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face norte: marcado <var>c in</var>
+      </dt>
+      <dd>
+        Entrada. Valor do <i>carry-in</i> a ser acrescentado à soma. Se o valor for desconhecido (ou seja, flutuante), então será considerado como igual 0. Com largura de 1 bit
+      </dd>
+      <dt class="lib">
+        Na face leste:
+      </dt>
+      <dd>
+        Saida. Os bits de mais baixa ordem dos <var>Bits de Dados</var> da soma dos dois valores que vierem da face oeste, mais o bit de <var>c</var><sub><var>in</var></sub>. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face sul: marcado <var>c out</var>
+      </dt>
+      <dd>
+        Saida. O valor de <i>carry-out</i> calculado para a soma. Se os valores sem sinais somados produzirem um resultado que caiba nos <var>Bits de Dados</var> , então, esse bit será 0, caso contrário, será 1. Com largura de 1 bit.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Atributos
+    </h2>
+	<p>
+      Quando o componente for selecionado ou estiver sendo acrescentado, <b class="tkeybd">Alt-0</b> até <b class="tkeybd">ALT-9</b> irão alterar o seu atributo <b class="property">Bits de Dados</b>.
+    </p>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Bits de Dados
+      </dt>
+      <dd>
+        A largura em bits dos valores a serem adicionados e também do resultado.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Comportamento da ferramenta Testar
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <h2>
+      Comportamento da ferramenta Texto
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <p>
+     <b>Voltar à</b> <a href="../index.html">Referência para bibliotecas</a>
+    </p>
+	</div>
+  </body>
+</html>

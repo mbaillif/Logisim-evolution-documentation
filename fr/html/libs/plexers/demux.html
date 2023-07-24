@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2021-08-16T19:07:13.152000000">
+    <meta name="changed" content="2021-08-16T19:07:13.152000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Démultiplexeur
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/demultiplexer.png" alt="#########" height="32" width="32"> <em>Démultiplexeur</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Multiplexeurs</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.0 Beta 11
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img  class="appearancelibs"  src="../../../../img-libs/demux.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+	    Une sortie du bord est correspondra à l'entrée du bord ouest si son numéro correspond à la valeur actuellement reçue par l'entrée select au sud; Sinon. Pour les autres sorties la valeur sera soit (<b class="zerov">0</b>), soit flottante (<b class="uvalue">U</b>), selon la valeur de l'attribut <b class="property">Trois-etats?</b><br>
+        Si l'entrée select contient des bits flottant(<b class="uvalue">U</b>), alors toutes les sorties sont flottantes.<br>
+	    Si l'entrée select contient la valeur erreur(<b class="evalue">E</b>), alors toutes les sorties sont erreur (<b class="evalue">E</b>).
+        Je trouve utile de considérer un démultiplexeur comme analogue à un aiguillage de chemin de fer, contrôlé par l'entrée sélection.
+      </p>
+      <h2>
+        Pins (en supposant que le composant est orienté vers l'est)
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+		  Bord ouest :
+        </dt>
+        <dd>
+		  Entrée qui recoit la valeur à acheminer vers l'une des sorties du bord est. La largeur des bits correspond à l'attribut <b class="property">Largeur de données</b>
+        </dd>
+        <dt class="lib">
+		  Bord est :
+        </dt>
+        <dd>
+          Un nombre variable de sorties elles sont numérotées en commençant par 0 au nord. 
+		  Le nombre de sortie est déterminé par 2<sup><var>Largeur du select</var></sup>.		 
+		  La largeur des bits correspond à l'attribut <b class="property">Bits de données</b>.
+        </dd>
+        <dt class="lib">
+		  Bord sud, côté gauche:
+        </dt>
+        <dd>
+		  Antrée <b>Activer</b>: Lorsqu'elle est à <b class="zerov">0</b>, toutes les sorties à l'etat flottants (<b class="uvalue">U</b>), indépendamment des entrées de données et de sélection. Largeur en bit est de 1.
+        </dd>
+        <dt class="lib">
+		  Bord sud, côté droit indiqué par un cercle gris:
+        </dt>
+        <dd>
+		  Entrée <b>Select</b> la valeur de cette entrée détermine vers quelle sortie du bord est est acheminé la valeur reçue sur le bord ouest. La largeur en bit correspondant à l'attribut <b class="property">Largeur du select</b>.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+		Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">1</b> à <b class="tkeybd">5</b> modifient son attribut <b class="property">Nombre d'entrées</b>, <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b> et les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          <b class="property">Orientation</b>
+        </dt>
+        <dd>
+		  La direction du composant, sa sortie par rapport à ses entrées.
+        </dd>
+        <dt class="lib">
+          Emplacement du select
+        </dt>
+        <dd>
+		  L'emplacement des lignes de sélection et d'activation par rapport au composant.
+        </dd>
+        <dt class="lib">
+          Largeur du select
+        </dt>
+        <dd>
+		  La largeur de donnée en bit de l'entrée de sélection du composant sur son bord sud. Le nombre de sorties du démultiplexeur sera de 2<sup><var>Largeur du select</var></sup>.
+        </dd>
+        <dt class="lib">
+          Largeur de données
+        </dt>
+        <dd>
+          La largeur de donnée en bit des données acheminées par le démultiplexeur.
+        </dd>
+        <dt class="lib">
+          Trois états?
+        </dt>
+        <dd>
+		  Spécifie si les sorties non sélectionnées doivent être flottantes (<b class="uvalue">U</b>) (<b class=vprop>Oui</b>) ou zero (<b class="zerov">0</b>) (<b class=vprop>Non</b>).
+        </dd>
+        <dt class="lib">
+          Désactiver les sorties
+        </dt>
+        <dd>
+          Spécifie ce que doit être chaque bit de la sortie lorsque le composant est désactivé (c'est-à-dire lorsque la broche d'activation est à <b class="zerov">0</b>). Les options comprennent zéro (<b class="zerov">0</b>) et flottant (<b class="uvalue">U</b>) ; dans ce dernier cas, la sortie est effectivement déconnectée de tout autre port.
+        </dd>
+        <dt class="lib">
+          Inclure l'activation ?
+        </dt>
+        <dd>
+          Le composant possède une entrée d'activation lorsque cet attribut est <b class=vprop>Oui</b>. Cet attribut sert principalement à prendre en charge les circuits construits à l'aide d'anciennes versions de Logisim qui ne fournissaient pas d'entrée d'activation.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Comportement de l'outil Pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil de texte
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

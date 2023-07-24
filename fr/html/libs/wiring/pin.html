@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-07-18T10:59:00.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Broche
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/pininput.png" alt="#########" height="32" width="32">&nbsp; 
+		<img class="iconlibs" src="../../../../icons/6464/pinoutput.png" alt="#########" height="32" width="32">&nbsp;
+		<em>Broche</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Câblage</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.0 bêta 1 (dans la bibliothèque de base, déplacé dans le câblage en 2.7.0)
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+			<td valign="top">
+            <table>
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th colspan=2>
+                      Flèche
+                    </th>
+                    <th colspan=2>
+                      Classic
+                    </th>
+                    <th >
+                    </th>
+                  </tr>
+                  <tr>
+                    <th valign="middle" align="left">
+                      En entrée:
+                    </th>
+                    <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/pinin1.png" alt="#########" width="64" height="64">
+                    </td>
+					 <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/pinin3.png" alt="#########" width="64" height="64">
+                    </td>
+					 <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/lpinin1.png" alt="#########" width="64" height="64">
+                    </td>
+					 <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/lpinin3.png" alt="#########" width="64" height="64">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th valign="middle" align="left">
+                      En sortie:
+                    </th>
+					 <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/pinout1.png" alt="#########" width="64" height="64">
+                    </td>
+					 <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/pinout3.png" alt="#########" width="64" height="64">
+                    </td>
+					 <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/lpinout1.png" alt="#########" width="64" height="64">
+                    </td>
+					 <td>
+                      <img class="Apparencelibs" src="../../../../img-libs/lpinout3.png" alt="#########" width="64" height="64">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+			  </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Le composant "Broche" est une sortie ou une entrée d’un circuit, en fonction de la valeur de son attribut <b class="property">sortie?</b> Vous pouvez observer ci-dessus la manière dont Logisim représente les broches d'entrées et/ ou de sorties selon son attribut <b class="property">Apparence</b>.<br>
+        Dans le mode "flèche" les entrées auront le branchement du côté pointu et les sorties du côté rectangulaire. Dans l'apparence "classique" les sorties sont reprsentées par un cercle ou par un rectangle arrondi, et les broches d'entrée sont représentées à l'aide de carrés ou de rectangles. Dans tous les cas, la valeur des bits individuels de la valeur envoyée ou reçue sont affichée dans le composant (sauf dans la vue de'impression, lorsque le composant indique uniquement sa largeur en bit). 
+      </p>
+      <p>
+        Une "broche" est un composant pratique pour interagir avec un circuit en mode simulation (en cliquant dessus), et les utilisateurs débutants de Logisim n'ont pas besoin de les utiliser d'une autre manière. Mais quand la complexité augmente on construit un circuit en utilisant plusieurs sous-circuits (comme décrit dans la section <a class=refguide href="../../guide/subcirc/index.html">Design hiérarchique</a> du <a href="../index.html">Guide de l'utilisateur</a> et on utilisera également des broches pour spécifier les interconnexions entre un circuit et un sous-circuit. En particulier, les composants "Broche" du schéma d'un circuit définissent les contactes qui apparaissent sur le symbole du sous-circuit lorsque qu'il est utilisé dans un autre circuit. Dans une telle construction, les valeurs envoyées et reçues à ces emplacements sur le symbole du sous-circuit sont liées aux broches dans le schéma du sous-circuit.
+      </p>
+      <h2>
+        Pins
+      </h2>
+      <p>
+        Un composant "broche" ne possède qu’une pin, qui sera une entrée pour lui si la broche est une connexion de sortie du schéma, et qui sera une sortie si la broche est une connexion d’entrée du schéma. Dans les deux cas, sa largeur en bit correspond à l'attribut <b class="property">Largeur de donnée</b> et son emplacement est spécifié par l'attribut <b class="property">Orientation</b>.
+      </p>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou ajouté, <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifie son attribut <b class="property">Largeur  données</b>. L'utilisation rapide des touches permet la saisie de plus grande valeur par exemple: <b class="tkeybd">ALT-1 ALT-2</b> donne 12. Les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+           Orientation
+        </dt>
+        <dd>
+          Le côté du composant dessiné où doit se trouver sa broche d'entrée / sortie.
+        </dd>
+        <dt class="lib">
+           Sortie ?
+        </dt>
+        <dd>
+          Spécifie si le composant est une connexion de sortie ou une connexion d’entrée. <b class=note>Note</b>: Si le composant broche est une entrée, la connexion qui agit comme interface dans un circuit de hiérarchie supérieur sera une sortie, et inversement.
+        </dd>
+        <dt class="lib">
+           Largeur de donnée
+        </dt>
+        <dd>
+          Le nombre de bits correspondant à la largeur des données prise en charge par la broche.
+        </dd>
+        <dt class="lib">
+           Trois états?
+        </dt>
+        <dd>
+          Pour une broche d’entrée, cette option détermine si l’utilisateur peut demander à la pin d’émettre des valeurs flottantes (<b class="uvalue">U</b>). L'attribut n'est utile que dans l'interface utilisateur pour la simulation. Cela n'a aucun effet sur le comportement de la broche lorsque la disposition du circuit est utilisée comme sous-circuit. Pour une broche de sortie, l'attribut n'a aucun effet.
+        </dd>
+        <dt class="lib">
+           Comportement
+        </dt>
+        <dd>
+          Pour une broche d'entrée, l'attribut spécifie comment les valeurs flottantes doivent être traitées dans la simulation lorsqu'elles sont reçues depuis un circuit de hiérarchie supérieur. Avec <b class="vprop">inchangé</b>, les valeurs flottantes sont reprise dans le schéma sous forme de valeurs flottantes; avec <b class="vprop">pull up</b>, ils sont convertis en <b class="unov">1</b> et avec <b class="vprop">pull down</b>, ils sont convertis en valeurs <b class="zerov">0</b>.
+        </dd>
+        <dt class="lib">
+          Étiquette 
+        </dt>
+        <dd>
+          Le texte dans l'étiquette associée au composant.
+        </dd>
+        <dt class="lib">
+           Police de l'étiquette
+        </dt>
+        <dd>
+          La police avec laquelle rendre l'étiquette.
+        </dd>
+		 <dt class="lib">
+          Base
+        </dt>
+        <dd>
+          Permets de définir la base dans laquelle les valeurs seront représentées.
+		  <blockquote>
+		  Exemple pour 1010 en binaire<br>
+			Binaire&emsp;: <b>1010<sub>b</sub></b><br>
+			Octal&emsp;: <b>12<sub>o</sub></b><br>
+			Décimal signé&emsp;: <b>-6<sub>s</sub></b><br>
+			Décimal non signé&emsp;: <b>10<sub>u</sub></b><br>
+			Hexadécimal&emsp;: <b>A<sub>h</sub></b><br>
+			Virgule flottante&emsp;: <b>1.4E-44<sub>f</sub> </b> Seulement en 32 ou 64 bits de 1 ou de 0. Sinon présente la valeur <b>NaN<sub>f</sub></b>
+		</blockquote>
+        </dd>
+		<dt class="lib">
+          Apparence
+        </dt>
+        <dd>
+          Il existe deux types d'apparence, <b class="vprop">Logisim Ccassic</b> et les <b class="vprop">Formes de flèches</b>. Voir les exemples en haut de la page.
+        </dd>
+      </dl>
+      <h2>
+        Comportement de l'outil pousser 
+      </h2>
+      <p>
+        Cliquer sur une broche de sortie n’a aucun effet, bien que les attributs de la broche soient affichés.
+      </p>
+      <p>
+        En cliquant sur une broche d’entrée, vous activez le bit sur lequel vous avez cliqué. S'il s'agit d'une broche à trois états, le bit correspondant va pivoter entre les trois états.<br>
+		Si la base est du type flottant un petit écran de saisie sera affiché.
+      </p>
+      <p>
+        Si, toutefois, l’utilisateur visualise l’état d’un sous-circuit comme décrit dans le <a href="../../guide/subcirc/sub-debug.html">débogage de Sous-circuits</a> du <em>Guide de l'utilisateur</em> , alors la valeur de la pin est pilotée par la valeur que le sous-circuit reçoit du circuit de hyérachie supérieur. L'utilisateur ne peut pas modifier la valeur sans rompre ce lien entre l'état du sous-circuit et l'état du circuit contenant, et Logisim demandera à l'utilisateur de vérifier que la rupture de ce lien est réellement souhaitée.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+	  </div>
+      <p>
+        Permet de modifier l’étiquette associée au composant.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>&gt;
+  </body>
+</html>

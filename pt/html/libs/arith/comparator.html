@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-09-08T16:29:25.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+    <title>
+      Comparador
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+  <div class="maindiv">
+    <h1>
+      <img class="iconlibs" src="../../../../icons/6464/comparator.png" alt="#########" width="32" height="32" align="middle"> <em>Comparador</em>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Biblioteca:</strong>
+          </td>
+          <td>
+            <a href="index.html">Aritmética</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Introdução:</strong>
+          </td>
+          <td>
+            2.0 Beta 22
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Aparência:</strong>
+          </td>
+          <td valign="top">
+             <img class="appearancelibs" src="../../../../img-libs/comparator.png" alt="#########" width="64" height="64">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      Comportamento
+    </h2>
+    <p>
+      Serve para comparar dois valores, quer sejam sem sinal ou em complemento de dois, dependendo do atributo Tipo Numérico. Normalmente, uma das saídas será 1, e as outras duas saídas serão 0.
+    </p>
+    <p>
+      A comparação será feita a partir dos bits mais significativos em cada número e irá decrescendo, em paralelo, até onde forem encontrados dois valores em desacordo. Se, no entanto, um erro ou valor flutuante for encontrado, então, todas as saídas irão corresponder a esse erro ou ao valor flutuante.
+    </p>
+    <h2>
+      Pinos
+    </h2>
+    <div class="attliste">
+    <dl>
+      <dt class="lib">
+        Na face oeste, extremo norte:
+      </dt>
+      <dd>
+        Entrada. O primeiro dos dois valores a serem comparados. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face oeste, extremo sul:
+      </dt>
+      <dd>
+        Entrada. O segundo dos dois valores a serem comparados. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face leste: marcado por <tt>&gt;&gt;</tt>
+      </dt>
+      <dd>
+        Saida. Será 1, se a primeira entrada for maior que a segunda; ou 0, se a primeira entrada for menor ou igual à segunda. Com largura de 1 bit.
+      </dd>
+      <dt class="lib">
+        Na face leste: marcado por <tt>=</tt>
+      </dt>
+      <dd>
+        Saida. Será 1, se a primeira entrada é igual à segunda; ou 0, se a primeira entrada não for igual à segunda. Com largura de 1 bit.
+      </dd>
+      <dt class="lib">
+        Na face leste: marcado por <tt>&lt;</tt>
+      </dt>
+      <dd>
+        Saida. Será 1, se a primeira entrada for menor que a segunda; ou 0, se a primeira entrada for maior ou igual a segunda. Com largura de 1 bit.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Atributos
+    </h2>
+    <p>
+      Quando o componente for selecionado ou estiver sendo acrescentado,  <b class="tkeybd">Alt-0</b> até <b class="tkeybd">ALT-9</b> irão alterar o seu atributo <b class="property">Bits de Dados</b>.
+    </p>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Bits de dados
+      </dt>
+      <dd>
+        Largura dos bits de dados da entrada e da saída do componente.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Comportamento da ferramenta Testar
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <h2>
+      Comportamento da ferramenta Texto
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <p>
+      <b>Voltar à</b> <a href="../index.html">Referência para bibliotecas</a>
+    </p>
+	</div>
+  </body>
+</html>

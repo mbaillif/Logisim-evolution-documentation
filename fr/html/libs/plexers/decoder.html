@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2021-08-16T19:07:13.152000000">
+    <meta name="changed" content="2021-08-16T19:07:13.152000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Decodeur
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/decoder.png" alt="#########" height="32" width="32"> <em>Decodeur</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Multiplexeurs</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.0 Beta 11
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img  class="appearancelibs" src="../../../../img-libs/decoder.png"  alt="#########" height="64" width="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+		Emet 1 sur exactement une sortie, celle-ci est déterminée par la valeur reçue par l'entrée sur le front sud.
+      </p>
+      <h2>
+        Pins (en supposant que le composant est orienté vers l'est)
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+		  Bord est :
+        </dt>
+        <dd>
+		  Les sorties de nombre variable sont numérotées en commençant par <b class="zerov">0</b> au nord. Chaque sortie sera à <b class="unov">1</b> si son numéro correspond à la valeur reçue par l'entrée de sélection au sud; sinon, sa valeur sera soit <b class="zerov">0</b>, soit flottante (<b class="uvalue">U</b>), selon la valeur de l'attribut <b class="property">Trois-etats?</b> Si l'entrée de sélection contient des bits non spécifiés, toutes les sorties sont flottantes (<b class="uvalue">U</b>).
+		  La largeur en bit est de 1.
+        </dd>
+        <dt class="lib">
+          Bord sud, côté gauche :
+        </dt>
+        <dd>
+		  Entrée Activer: Lorsqu'elle est à <b class="zerov">0</b>, toutes les sorties sont règlée flottantes ou zéros selon le paramètre <b class="property">trois-états?</b>, indépendamment de l'entrée de sélection.
+        </dd>
+        <dt class="lib">
+          Bord sud, côté droit : 
+        </dt>
+        <dd>
+		  Entrée de sélection indiqué par un cercle gris: La valeur de cette entrée détermine laquelle des sorties est à <b class="unov">1</b>. La largeur de donnée en bit correspondant à l'attribut <b class="property">Largeur du select</b>
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+		Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">1</b> à <b class="tkeybd">5</b> modifient son attribut <b class="property">Largeur du select</b> et les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Orientation
+        </dt>
+        <dd>
+		  La direction du composant sa sortie par rapport à ses entrées.
+        </dd>
+        <dt class="lib">
+          Sélectionner l'emplacement
+        </dt>
+        <dd>
+          L'emplacement des lignes de sélection et d'activation par rapport au composant.
+        </dd>
+        <dt class="lib">
+          Largeur du select
+        </dt>
+        <dd>
+		  La largeur de donnée en bit de la broche <b class=vprop>Select</b> au sud. Le nombre de sortie du décodeur sera 2<sup><var>Largeur du select</var></sup>.
+        </dd>
+        <dt class="lib">
+          Trois états ?
+        </dt>
+        <dd>
+          Spécifie si les sorties non sélectionnées doivent être flottantes (<b class="uvalue">U</b>) (<b class=vprop>Oui</b>) ou zero (<b class="zerov">0</b>) (<b class=vprop>Non</b>). 
+        </dd>
+       <dt class="lib">
+          Désactiver les sorties
+        </dt>
+        <dd>
+          Spécifie ce que doit être chaque bit de la sortie lorsque le composant est désactivé (c'est-à-dire lorsque la broche d'activation est à <b class="zerov">0</b>). Les options comprennent zéro (<b class="zerov">0</b>) et flottant (<b class="uvalue">U</b>) ; dans ce dernier cas, la sortie est effectivement déconnectée de tout autre port.
+        </dd>
+        <dt class="lib">
+          Inclure l'activation ?
+        </dt>
+        <dd>
+		  Le composant possède une entrée d'activation lorsque cet attribut est <b class=vprop>Oui</b>. Cet attribut sert principalement à prendre en charge les circuits construits à l'aide d'anciennes versions de Logisim qui ne fournissaient pas d'entrée d'activation.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Comportement de l'outil Pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil de texte
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

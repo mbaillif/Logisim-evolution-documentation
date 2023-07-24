@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-09-08T16:29:25.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+	<title>
+      Subtrator
+  </head>
+  <body>
+      <div class="maindiv">
+    <h1>
+      <img class="iconlibs" src="../../../../icons/6464/subtractor.png" alt="#########" width="32" height="32" align="middle"> <em>Subtrator</em>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Biblioteca:</strong>
+          </td>
+          <td>
+            <a href="index.html">Aritmética</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Introdução:</strong>
+          </td>
+          <td>
+            2.0 Beta 11
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Aparência:</strong>
+          </td>
+          <td valign="top">
+             <img class="Apparencelibs" src="../../../../img-libs/subtractor.png" alt="#########" width="64" height="64">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      Comportamento
+    </h2>
+    <p>
+      Esse componente subtrairá os valores que vierem através das entradas a oeste (o superior menos o inferior) e fornecerá na saída leste a diferença. O componente é projetado de modo a poder ser conectado a outros subtratores para subtrair mais bits do que for possível com um único subtractor. A entrada <i>borrow-in</i> fornecerá um valor de um bit que deverá ser tomado emprestado fora da diferença (se o empréstimo tivier sido especificado), e um <i>borrow-out</i> indicará se o componente precisar pedir um bit de mais alta ordem para completar a subtração sem <i>underflow</i> (supondo subtração sem sinal).
+    </p>
+    <p>
+      Internamente, o subtrator simplesmente executará uma negação (NOT) bit a bit no subtraendo, e irá adicioná-lo ao minuendo, juntamente com a negação da entrada relativa ao <i>borrow-in</i>. (O <em>minuendo</em> é o primeiro operando (entrada superior), e o <em>subtraendo</em> será o segundo (entrada inferior). Acontece que gosto dos termos antiquados.)
+    </p>
+    <p>
+      Se um dos operandos contiver algum bit flutuante, ou de erro, então o componente irá executar uma subtração parcial. Ou seja, irá calcular usando os bits de mais baixa ordem possíveis. Porém, acima do bit flutuante, ou de erro, o resultado terá bits flutuante ou de erro.
+    </p>
+    <h2>
+      Pinos
+    </h2>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Na face oeste, extremo norte:
+      </dt>
+      <dd>
+        Entrada. O minuendo da subtração, ou seja, o número a partir do qual se irá subtrair. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face oeste, extremo sul:
+      </dt>
+      <dd>
+        Entrada. O subtraendo da subtração, ou seja, o número que será subtraído do minuendo. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face norte: marcado <var>b in</var>
+      </dt>
+      <dd>
+        Entrada. Se for 1, então 1 será emprestado fora da diferença. Se o valor for desconhecido (ou seja, flutuante), então será tomado como sendo igual a 0. Com largura de 1 bit.
+      </dd>
+      <dt class="lib">
+        Na face leste:
+      </dt>
+      <dd>
+        Saída. Os bits menos significativos dos <var>Bits de Dados</var> da diferença dentre os dois valores oriundos da face oeste, menos o <var>b</var><sub><var>in</var></sub>. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face sul: marcado <var>b out</var>
+      </dt>
+      <dd>
+        Saída. O bit de empréstimo calculado para a diferença. Se os valores subtraídos como valores sem sinal produzirem um valor negativo, então esse bit será 1; caso contrário, será 0. Com largura de 1 bit.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Atributos
+    </h2>
+    <p>
+      Quando o componente for selecionado ou estiver sendo acrescentado,  <b class="tkeybd">Alt-0</b> até <b class="tkeybd">ALT-9</b> irão alterar o seu atributo <b class="property">Bits de Dados</b>.
+    </p>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Bits de Dados
+      </dt>
+      <dd>
+        A largura em bits dos valores a serem subtraídos e do resultado.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Comportamento da ferramenta Testar
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <h2>
+      Comportamento da ferramenta Texto
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <p>
+      <b>Voltar à</b> <a href="../index.html">Referência para bibliotecas</a>
+    </p>
+	</div>
+  </body>
+</html>

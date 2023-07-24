@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2021-09-08T16:29:25.000000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="pt">
+    <title>
+      Contador de Bits
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+    <h1>
+      <img  class="iconlibs" src="../../../../icons/6464/bitadder.png" alt="#########" width="32" height="32" align="middle"> <em>Contador de Bits</em>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Biblioteca:</strong>
+          </td>
+          <td>
+            <a href="index.html">Aritmética</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Introdução:</strong>
+          </td>
+          <td>
+            2.6.0
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Aparência:</strong>
+          </td>
+          <td valign="top">
+            <img class="appearancelibs" src="../../../../img-libs/bitadder.png" alt="#########" width="64" height="64">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>
+      Comportamento
+    </h2>
+    <p>
+      O componente determinará quantos bits em 1 estão em sua(s) entrada(s) e emitirá o número total de bits em 1 em sua saída. Por exemplo, para a entrada de 8 bits 10011101, a saída será a 5, uma vez que há cinco bits 1 na entrada (o primeiro, o último, e uma sequência de três bits no meio).
+    </p>
+    <p>
+      Se qualquer um dos bits de entrada for um valor flutuante ou erro, então a saída conterá bits de erro na saída correspondente à faixa de saídas possíveis dependendo se os valores de erro/flutuante forem contados como zeros ou uns. Por exemplo, se a entrada de 14 bits for 111x10110x1101, a saída deve ser pelo menos 9 (se cada "x" for interpretado como zero) e no máximo 11 (se eles forem interpretados como um). Assim, a saída será 10EE: os dois bits mais significativos serão 1 e 0, pois todos os inteiros entre 9 e 11 têm 1 e 0 como seus dois primeiros bits, mas os dois últimos bits serão EE já que os inteiros entre 9 e 11 variam dentro desses limites.
+    </p>
+    <h2>
+      Pinos
+    </h2>
+	 <div class="attliste">
+    <dl>
+      <dt class="lib">
+        Na face oeste:
+      </dt>
+      <dd>
+        As entradas cujos bits em 1 serão contados. O número de entradas será baseado no atributo Número de Entradas. Com largura em bits de acordo com o atributo <b class="property">Bits de Dados</b>.
+      </dd>
+      <dt class="lib">
+        Na face leste:
+      </dt>
+      <dd>
+        O número de bits de entrada iguais a 1. A largura em bits na saída será o número mínimo de bits para armazenar o maior valor possível (que seria o produto do atributo Bits de Dados pelo atributo Número de Entradas).
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Atributos
+    </h2>
+    <p>
+      Quando o componente for selecionado ou estiver sendo acrescentado, os dígito de <b class="tkeybd">0</b> a <b class="tkeybd">9</b> poderão alterar seu atributo <b class="property">Número de Entradas</b> e <b class="tkeybd">Alt-0</b> até <b class="tkeybd">ALT-9</b> irão alterar o seu atributo <b class="property">Bits de Dados</b>.
+    </p>
+	<div class="attliste">
+    <dl>
+      <dt class="lib">
+        Bits de dados
+      </dt>
+      <dd>
+        Largura em bits da(s) entrada(s).
+      </dd>
+      <dt class="lib">
+        Número de Entradas
+      </dt>
+      <dd>
+        Número de valores de entrada.
+      </dd>
+    </dl>
+	</div>
+    <h2>
+      Comportamento da ferramenta Testar
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <h2>
+      Comportamento da ferramenta Texto
+    </h2>
+    <p>
+      Nenhum.
+    </p>
+    <p>
+      <b>Voltar à</b> <a href="../index.html">Referência para bibliotecas</a>
+    </p>
+	</div>
+  </body>
+</html>

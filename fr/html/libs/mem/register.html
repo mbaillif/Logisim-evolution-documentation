@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2023-07-20T17:34:42.112000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Registre 
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/register.png" alt="#########" width="32" height="32"> 
+		<em>Registre</em>
+      </h1>
+  	  <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>Librairie :</b>
+            </td>
+            <td>
+              <a href="index.html">Memory</a>
+            </td>
+			<td rowspan="3">
+			<img class="appearancelibs" src="../../../../img-libs/hregister.png"alt="#########" >
+			</td>
+          </tr>
+          <tr>
+            <td>
+              <b>Introduction :</b>
+            </td>
+            <td>
+              2.0 Beta 1
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <b>Apparence :</b>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/lregister.png" alt="#########" >
+            </td>
+          </tr>
+		  <tr>
+		   <td>
+              
+            </td>
+            <td>
+              Logisim-clasique&nbsp;
+            </td>
+			</td>
+            <td>
+             Logisim-Evolution&nbsp;<br>Logisim-HolyCross&nbsp;
+            </td>
+		  </tr>
+		  
+		  
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+	    Un registre conserve une seule valeur multi-bit, qui est affichée en hexadécimal au dessus ou dans son rectangle, et est émise sur sa sortie <var>Q</var>. Lorsque l'entrée d'horloge (indiquée par un triangle) se déclenche la valeur stockée dans le registre est remplacée par la valeur de l'entrée <var>D</var>. Le moment exact de l'évènement de l'entrée d'horloge  est configuré via l'attribut <b class="property">Trigger</b>.
+      </p>
+      <p>
+	    L'entrée de réinitialisation <var>R</var> remet la valeur du registre à <b class="zerov">0</b> de manière asynchrone, c'est-à-dire que tant que la réinitialisation est à <b class="unov">1</b>, la valeur est fixée à <b class="zerov">0</b>, quelle que soit l'entrée de l'horloge.
+      </p>
+      <h2>
+        Pins
+      </h2>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Bord est : étiqueté <var>Q</var>
+          </dt>
+          <dd>
+            Sortie, Délivre la valeur actuellement stockée dans le registre. La largeur des bits correspond à l'attribut <b class="property">Largeur de données</b>.
+          </dd>
+          <dt class="lib">
+            Bord est : étiqueté <var>D</var>
+          </dt>
+          <dd>
+            Entrée Data: la valeur du registre passe à la valeur de l'entrée D au moment ou l'entrée d'horloge se déclenche selon les règles de l'attribut <b class="property">Trigger</b>
+			La largeur des bits correspond à l'attribut<b class="property">Largeur de données</b>.
+          </dd>
+          <dt class="lib">
+            Bord est : étiqueté <var>WE</var>
+          </dt>
+          <dd>
+            Entrée Enable: Lorsque cette valeur est égale à <b class="zerov">0</b>, les déclenchements d'horloge sont ignorés. La valeur actuelle continue d'apparaître sur la sortie. Les déclenchements d'horloge sont activés lorsque cette entrée est à <b class="unov">1</b> ou indéfinie <b class="uvalue">U</b>. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Bord ouest : indiqué par un triangle
+          </dt>
+          <dd>
+            Entrée clock : Au moment où il est déclenché selon les règles spécifiées par l'attribut <b class="property">Trigger</b>, la valeur du registre est mise à jour a partir de l'entrée <var>D</var>. Largeur de bit 1.
+          </dd>
+          <dt class="lib">
+            Bord sud : étiqueté <var>R</var>
+          </dt>
+          <dd>
+		   
+            Entrée Reset : Réinitialisation asynchrone : Lorsqu'elle est à <b class="zerov">0</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur du registre est ramenée à <b class="zerov">0</b>. Cela se produit de manière asynchrone, c'est-à-dire sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet. Largeur de bit 1.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+        Lorsque le composant est sélectionné ou en cours d'ajout, <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de données</b>.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Largeur donnée
+          </dt>
+          <dd>
+            La largeur de bit de la donnée stoquée par le registre.
+          </dd>
+          <dt class="lib">
+            Trigger
+          </dt>
+          <dd>
+		   Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>. <br><b class="vprop">Niveau haut</b> indique que la bascule doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="unov">1</b>.<br><b class="vprop">Niveau bas</b> indique qu'elle doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="zerov">0</b>.
+          </dd>
+          <dt class="lib">
+            Etiquette
+          </dt>
+          <dd>
+            Le texte de l'étiquette associée au composant.
+          </dd>
+          <dt class="lib">
+            Police des étiquettes 
+          </dt>
+          <dd>
+            La police de caractères avec laquelle l'étiquette doit être affichée.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        En cliquant sur le compteur, le clavier se concentre sur le composant (indiqué par un rectange rouge) et la saisie de chiffres hexadécimaux modifie la valeur stockée dans le régisre.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Permets de modifier l'étiquette associée au composant. 
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html#hlibmem">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>
