@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2023-07-25T12:32:00.325000000">
+    <meta name="changed" content="2023-07-25T12:32:00.325000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Floating Point Comparator
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/fpcomparator.png" alt="#########" width="32" height="32" align="middle"> <em>Floating Point Comparator</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Library:</strong>
+            </td>
+            <td>
+              <a href="index.html">Arithmetic</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduced:</strong>
+            </td>
+            <td>
+              3.5
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Appearance:</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/fpcomparator.png" alt="#########" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Behavior
+      </h2>
+      <p>
+       This component compares two floating-point values coming in via the west inputs .<br>and presents three output signals &gt; = &lt;. normally only one of these values is a <b class="unov">1</b> if an error is detected all outputs are a <b class="zerov">0</b> and and the error output output in the south, which is set to <b class="unov">1</b> if the component receives an error(<b class="evalue">E</b>) or undefined(<b class="uvalue">U</b>) signal or the floating-point values <var>NaN</var>
+      </p>
+      <h2>
+        Pins
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          West edge, north end:
+         </dt>
+        <dd>
+          Input: The first floating-point value to compare. Bit width matches the Data <b class="property">Float size</b> attribute.
+        </dd>
+        <dt class="lib">
+          West edge, south end:
+         </dt>
+        <dd>
+          Input: The second floating-point value to compare. Bit width matches the Data <b class="property">Float size</b> attribute.
+        </dd>
+        <dt class="lib">
+         East edge: labeled <var>&gt;</var>
+         </dt>
+        <dd>
+          Output: <b class="unov">1</b> if the first input is greater than the second input, <b class="zerov">0</b> if the first input is less than or equal the second input. The bit width is 1. 
+        </dd>
+		<dt class="lib">
+         East edge: labeled <var>=</var>
+         </dt>
+        <dd>
+          Output: <b class="unov">1</b> if the first input equals the second input, <b class="zerov">0</b> if the first input is not equal the second input. Bit width always 1.
+        </dd>
+		<dt class="lib">
+         East edge: labeled <var>&lt;</var>
+         </dt>
+        <dd>
+          Output: <b class="unov">1</b> if the first input is greater than the second input, <b class="zerov">0</b> if the first input is less than or equal the second input. The bit width is 1. 
+        </dd>
+        <dt class="lib">
+          South edge: 
+         </dt>
+        <dd>
+          OutPut: Error Set to  <b class="unov">1</b> if the negator receives an error (<b class="evalue">E</b>) or undefined (<b class="uvalue">U</b>) signal or the float value <var>NaN</var>
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributes
+      </h2>
+      <p>
+        When the component is selected or being multiply, <b class="tkeybd">Alt-0</b> throught <b class="tkeybd">Alt-9</b> alter its <b class="property">Float size</b> attribute. Only 32 or 64bits
+      </p>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Float size
+         </dt>
+        <dd>
+          The bit width of the values to be multiply and of the result. Only 32 or 64 bits
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Poke Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Text Tool Behavior
+      </h2>
+      <p>
+        None.
+      </p>
+      <p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
+      </p>
+    </div>
+  </body>
+</html>
