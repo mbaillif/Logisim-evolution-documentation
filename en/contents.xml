@@ -157,6 +157,12 @@
 			<tocitem target="arith_shifter" text="Shifter" image="icon_shifter" />
 			<tocitem target="arith_bitadder" text="Bit Adder" image="icon_bitadder" />
 			<tocitem target="arith_bitfinder" text="Bit Finder" image="icon_bitfinder" />
+			<tocitem target="arith_fpadder" text="Floating Point Adder" image="icon_fpadder" />
+			<tocitem target="arith_fpsubtractor" text="Floating Point Subtractor" image="icon_fpubtractor" />
+			<tocitem target="arith_fpmultiplier" text="Floating Point Multiplier" image="icon_fpmultiplier" />
+			<tocitem target="arith_fpdivider" text="Floating Point Divider" image="icon_fpdivider" />
+			<tocitem target="arith_fpnegator" text="Floating Point Negator" image="icon_fpnegator" />
+			<tocitem target="arith_fpcomparator" text="Floating Point Comparator" image="icon_fpcomparator" />
 		</tocitem>
 		<tocitem target="mem" text="Memory library">
 			<tocitem target="mem_flipflops" text="D/T/J-K/S-R Flip-Flop" image="icon_flipflops" />

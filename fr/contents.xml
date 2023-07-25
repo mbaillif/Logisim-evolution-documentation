@@ -158,6 +158,12 @@
 			<tocitem target="arith_shifter" image="icon_shifter" text="Régistre à décalage"/>
 			<tocitem target="arith_bitadder" image="icon_bitadder" text="Additionneur bit à bit"/>
 			<tocitem target="arith_bitfinder" image="icon_bitfinder" text="Recherche de bit"/>
+			<tocitem target="arith_fpadder" image="icon_fpadder" text="Additionneur à virgule flottante"/>
+			<tocitem target="arith_fpsubtractor" image="icon_fpsubtractor" text="Soustrateur à virgule flottante"/>
+			<tocitem target="arith_fpmultiplier" image="icon_fpmultiplier" text="Mutilpicateur  à virgule flottante"/>
+			<tocitem target="arith_fpdivider" image="icon_fpdivider" text="Diviseur  à virgule flottante"/>
+			<tocitem target="arith_fpnegator" image="icon_fpnegator" text="Inverseur  à virgule flottante"/>
+			<tocitem target="arith_fpcomparator" image="icon_fpcomparator" text="Comparateur  à virgule flottante"/>
 		</tocitem>
 		<tocitem target="mem" text="Librairies Mémoires">
 			<tocitem target="mem_flipflops" image="icon_flipflops" text="Bascule D/T/J-K/R-S"/>

@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2021-09-08T16:33:00.345000000">
+    <meta name="changed" content="2023-07-25T17:20:00.134000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -14,8 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img  class="iconlibs" src="../../../../icons/6464/bitadder.png" alt="#########" width="32" height="32" align="middle"> 
-		<em>Additionneur bit à bit</em>
+        <img class="iconlibs" src="../../../../icons/6464/bitadder.png" alt="#########" width="32" height="32" align="middle"> <em>Additionneur bit à bit</em>
       </h1>
       <table>
         <tbody>
@@ -52,47 +51,50 @@
         Le composant détermine combien de bits 1 se trouvent dans son ou ses entrées et émet le nombre total de bits 1 sur sa sortie. Par exemple, avec l'entrée 8 bits 10011101, la sortie sera 5, car il y a cinq bits 1 dans l'entrée (le premier, le dernier et une chaîne de trois bits au milieu).
       </p>
       <p>
-        Si l'un des bits d'entrée est une valeur flottante ou une valeur d'erreur, alors la sortie contiendra des bits d'erreur dans la sortie correspondant à la plage des sorties possibles selon que ces valeurs flottantes/erreurs sont comptées comme des zéros ou des uns. Par exemple, si l'entrée de 14 bits est 111x10110x1101, alors la sortie doit être d'au moins 9 (si les x sont interprétés comme des zéros) et d'au plus 11 (s'ils sont interprétés comme des uns). Ainsi, la sortie sera 10EE: les deux bits supérieurs seront 1 et 0 puisque tous les entiers entre 9 et 11 ont 1 et 0 comme deux bits supérieurs, mais les deux bits inférieurs sont EE puisque les entiers entre 9 et 11 varient dans ces bits.
+        Si l'un des bits d'entrée est une valeur flottante ou une valeur d'erreur, alors la sortie contiendra des bits d'erreur dans la sortie correspondant à la plage des sorties possibles selon que ces valeurs flottantes/erreurs sont comptées comme des zéros ou des uns. Par exemple, si l'entrée de 14 bits est 111x10110x1101, alors la sortie doit être d'au moins 9 (si les x sont interprétés comme des zéros) et d'au plus 11 (s'ils sont interprétés comme des uns). Ainsi, la sortie sera 10EE: les deux bits supérieurs seront 1 et 0 puisque tous les entiers entre 9 et 11 ont 1 et 0 comme deux
+        bits supérieurs, mais les deux bits inférieurs sont EE puisque les entiers entre 9 et 11 varient dans ces bits.
       </p>
       <h2>
         Pins
       </h2>
-      <dl>
-         <dt class="lib">
-          Bord ouest :
-        </dt>
-        <dd>
-          Les entrées dont les bits à 1 doivent être décomptés. Le nombre d'entrées est basé sur l'attribut <b class="property">Nombre d'entrées</b>. La largeur des donnée en bit correspond à l'attribut <b class="property">Largeur de donnée</b>.
-        </dd>
-         <dt class="lib">
-          Bord est :
-        </dt>
-        <dd>
-          Sortie, présente Le compte du nombre de bits d'entrée qui sont à 1. La largeur de donnée est calculée comme ceci: La largeur de donnée en bit de la sortie est le nombre minimum de bits pour stocker la valeur maximale possible qui serait le produit de l'attribut <b class="property">Largeur de donnée</b> et de l'attribut <b class="property">Nombre d'entrées</b>.
-        </dd>
-      </dl>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Bord ouest :
+          </dt>
+          <dd>
+            Les entrées dont les bits à 1 doivent être décomptés. Le nombre d'entrées est basé sur l'attribut <b class="property">Nombre d'entrées</b>. La largeur des données en bit correspond à l'attribut <b class="property">Largeur de donnée</b>.
+          </dd>
+          <dt class="lib">
+            Bord est :
+          </dt>
+          <dd>
+            Sortie : présente Le compte du nombre de bits d'entrée qui sont à 1. La largeur de donnée est calculée comme ceci: La largeur de donnée en bit de la sortie est le nombre minimum de bits pour stocker la valeur maximale possible qui serait le produit de l'attribut <b class="property">Largeur de donnée</b> et de l'attribut <b class="property">Nombre d'entrées</b>.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Attributs
       </h2>
       <p>
-        Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">0</b> à  <b class="tkeybd">9</b> modifient son attribut <b class="property">Nombre d'entrées</b> et <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Bits de données</b>.
+        Lorsque le composant est sélectionné ou en cours d'ajout, les chiffres <b class="tkeybd">0</b> à <b class="tkeybd">9</b> modifient son attribut <b class="property">Nombre d'entrées</b> et <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Bits de données</b>.
       </p>
-	  <div class="attliste">
-      <dl>
-         <dt class="lib">
-         Largeur de donnée
-        </dt>
-        <dd>
-          La largeur de donnée en bit de(s) l'entrée(s).
-        </dd>
-         <dt class="lib">
-          Nombre d'entrées
-        </dt>
-        <dd>
-          Le nombre de valeurs d'entrée.
-        </dd>
-      </dl>
-	  </div>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Largeur de donnée
+          </dt>
+          <dd>
+            La largeur des données en bit de(s) l'entrée(s).
+          </dd>
+          <dt class="lib">
+            Nombre d'entrées
+          </dt>
+          <dd>
+            Le nombre de valeurs d'entrée.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Comportement de l'outil pousser
       </h2>

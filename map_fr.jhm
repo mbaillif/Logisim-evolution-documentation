@@ -142,6 +142,12 @@
 	<mapID target="arith_shifter"       url="fr/html/libs/arith/shifter.html" />
 	<mapID target="arith_bitadder"      url="fr/html/libs/arith/bitadder.html" />
 	<mapID target="arith_bitfinder"     url="fr/html/libs/arith/bitfinder.html" />
+	<mapID target="arith_fpadder"         url="fr/html/libs/arith/fpadder.html" />
+	<mapID target="arith_fpsubtractor"    url="fr/html/libs/arith/fpsubtractor.html" />
+	<mapID target="arith_fpmultiplier"    url="fr/html/libs/arith/fpmultiplier.html" />
+	<mapID target="arith_fpdivider"       url="fr/html/libs/arith/fpdivider.html" />
+	<mapID target="arith_fpnegator"       url="fr/html/libs/arith/fpnegator.html" />
+	<mapID target="arith_fpcomparator"    url="fr/html/libs/arith/fpcomparator.html" />	
 	<mapID target="mem"                 url="fr/html/libs/mem/index.html" />
 	<mapID target="mem_flipflops"       url="fr/html/libs/mem/flipflops.html" />
 	<mapID target="mem_register"        url="fr/html/libs/mem/register.html" />

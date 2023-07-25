@@ -2,20 +2,19 @@
 <html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2021-08-21T16:23:10.000000000">
+    <meta name="created" content="2023-07-25T10:15:00.235000000">
+    <meta name="changed" content="2023-07-25T17:20:00.134000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
-       Mutiplicateur à virgule flottante
+      Multiplicateur à virgule flottante
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img  class="iconlibs" src="../../../../icons/6464/fpmultiplier.png" alt="#########" width="32" height="32" align="middle"> 
-		<em>Mutiplicateur à virgule flottante</em>
+        <img class="iconlibs" src="../../../../icons/6464/fpmultiplier.png" alt="#########" width="32" height="32" align="middle"> <em>Multiplicateur à virgule flottante</em>
       </h1>
       <table>
         <tbody>
@@ -40,7 +39,7 @@
               <strong>Apparence :</strong>
             </td>
             <td valign="top">
-              <img class="Apparencelibs" src="../../../../img-libs/multiplier.png" alt="#########" width="64" height="64">
+              <img class="Apparencelibs" src="../../../../img-libs/fpmultiplier.png" alt="#########" width="64" height="64">
             </td>
           </tr>
         </tbody>
@@ -49,56 +48,56 @@
         Comportement
       </h2>
       <p>
-        Ce composant multiplie deux valeurs à virgule flottante provenant des entrées ouest et émet le produit sur la sortie est. <br>
-        Si les données d'entrée contiennent des signaux non définis (<b class="uvalue">U</b>), d'erreur (<b class="evalue">E</b>) ou la valeur <var>NaN</var>, il émettra la valeur <var>NaN</var> et un <b class="unov">1</b> sur la sortie d'erreur au sud.
+        Ce composant multiplie deux valeurs à virgule flottante provenant des entrées ouest et émet le produit sur la sortie est.<br>
+        Si les données d'entrée contiennent des signaux non définis (<b class="uvalue">U</b>), d'erreur (<b class="evalue">E</b>) ou la valeur <var>NaN<sub>f</sub></var>, il émettra sur la sortie la valeur <var>NaN<sub>f</sub></var> et sur la sortie d'erreur au sud un <b class="unov">1</b>
       </p>
       <h2>
         Pins
       </h2>
-	  <div class="attliste">
-      <dl>
-        <dt class="lib">
-          Bord ouest, extrémité nord: 
-        </dt>
-        <dd>
-          Entrée : le multiplicande, c'est-à-dire le premier des deux nombres à multiplier. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
-        </dd>
-        <dt class="lib">
-          Bord ouest, extrémité sud: 
-        </dt>
-        <dd>
-          Entrée : Le multiplicateur,c'est-à-dire le deuxième des deux nombres à multiplier. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
-        </dd>
-        <dt class="lib">
-          Bord est
-        </dt>
-        <dd>
-          Sortie : Le produit des deux valeur du bord ouest.La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
-        </dd>
-        <dt class="lib">
-          Bord Sud
-        </dt>
-        <dd>
-          Sortie : Erreur, prend la valeur <b class="unov">1</b> si l'adfitionneur reçoit un signal d'erreur (<b class="evalue">E</b>), indéfini (<b class="uvalue">U</b>) ou les valeurs en virgule flottante <var>NaN</var>. La largeur de donnée est de 1.
-        </dd>
-      </dl>
-	  </div>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Bord ouest, extrémité nord:
+          </dt>
+          <dd>
+            Entrée : le multiplicande, c'est-à-dire le premier des deux nombres à multiplier. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
+          </dd>
+          <dt class="lib">
+            Bord ouest, extrémité sud:
+          </dt>
+          <dd>
+            Entrée : Le multiplicateur,c'est-à-dire le deuxième des deux nombres à multiplier. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
+          </dd>
+          <dt class="lib">
+            Bord est
+          </dt>
+          <dd>
+            Sortie : Le produit des deux valeurs du bord ouest.La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
+          </dd>
+          <dt class="lib">
+            Bord sud
+          </dt>
+          <dd>
+            Sortie : Erreur, prend la valeur <b class="unov">1</b> si le multiplicateur reçoit un signal d'erreur (<b class="evalue">E</b>), indéfini (<b class="uvalue">U</b>) ou les valeurs en virgule flottante <var>NaN<sub>f</sub></var>. La largeur de donnée est de 1.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Attributs
       </h2>
       <p>
-        Lorsque le composant est sélectionné ou en cours d'ajout, les touches Alt-0 à Alt-9 modifient son attribut <b class="property">Dimension flottant</b>.
+        Lorsque le composant est sélectionné ou en cours d'ajout, les touches <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Dimension flottant</b>.
       </p>
-	  <div class="attliste">
-      <dl>
-        <dt>
-          Dimension flottant
-        </dt>
-        <dd>
-          La largeur de donnée en bit du multiplicateur 32 ou 64 bits.
-        </dd>
-      </dl>
-	  </div>
+      <div class="attliste">
+        <dl>
+          <dt>
+            Dimension flottant
+          </dt>
+          <dd>
+            La largeur de donnée en bit du multiplicateur 32 ou 64 bits.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Comportement de l'outil pousser
       </h2>
@@ -106,7 +105,7 @@
         Aucun.
       </p>
       <h2>
-        Comportement de l'outil text 
+        Comportement de l'outil text
       </h2>
       <p>
         Aucun.

@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2021-09-08T16:33:00.345000000">
+    <meta name="changed" content="2023-07-25T17:20:00.134000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -14,8 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/bitfindr.png" alt="#########" width="32" height="32" align="middle"> 
-		<em>Recherche de bit</em>
+        <img class="iconlibs" src="../../../../icons/6464/bitfindr.png" alt="#########" width="32" height="32" align="middle"> <em>Recherche de bit</em>
       </h1>
       <table>
         <tbody>
@@ -49,8 +48,7 @@
         Comportement
       </h2>
       <p>
-        The component takes a multibit input and determines the the index of a bit, where the index is computed by counting from 0 as the lowest-order bit. Exactly which index it computes depends on the Type attribute, as illustrated by the examples in the below table for the 8-bit sample input 11010100.
-		Le composant prend une entrée multibit et détermine l'index d'un bit, où l'index est calculé en comptant à partir de 0 comme le bit d'ordre inférieur. L'indice exact qu'il calcule dépend de l'attribut Type, comme l'illustrent les exemples du tableau ci-dessous pour l'entrée échantillon de 8 bits 11010100.
+        Le composant prend une entrée multibit et détermine l'index d'un bit, où 0 est l'index du bit d'ordre inférieur. L'indice exact qu'il calcule dépend de l'attribut Type, comme l'illustrent les exemples du tableau ci-dessous pour l'entrée d’échantillon de 8 bits 11010100.
       </p>
       <blockquote>
         <table>
@@ -60,14 +58,14 @@
                 Type
               </th>
               <th>
-                Output for 11010100
+                Sortie Pour 11010100
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                Lowest-order 1
+                Orde le plus bas 1
               </td>
               <td align="center">
                 2
@@ -75,7 +73,7 @@
             </tr>
             <tr>
               <td>
-                Highest-order 1
+                Ordre le plus haut 1
               </td>
               <td align="center">
                 7
@@ -83,7 +81,7 @@
             </tr>
             <tr>
               <td>
-                Lowest-order 0
+                Orde le plus bas 0
               </td>
               <td align="center">
                 0
@@ -91,7 +89,7 @@
             </tr>
             <tr>
               <td>
-                Highest-order 0
+                ordre le plus haut 0
               </td>
               <td align="center">
                 5
@@ -101,64 +99,65 @@
         </table>
       </blockquote>
       <p>
-        For the lowest-order 1, the output is 2 because if you index the bits starting from 0 for the lowest-order bit, the first 1 you will find is at index 2. (The bits at indices 0 and 1 are both 0.) For the highest-order 1, the output is 7 because the topmost 1 bit is at index 7 (again counting from the lowest-order bit as 0).
-		Pour le 1 d'ordre inférieur, la sortie est 2 car si vous indexez les bits en partant de 0 pour le bit d'ordre inférieur, le premier 1 que vous trouverez se trouve à l'indice 2. (Les bits aux indices 0 et 1 sont tous les deux 0.) Pour le 1 d'ordre le plus élevé, la sortie est 7 parce que le bit 1 le plus élevé est à l'indice 7 (en comptant à nouveau à partir du bit d'ordre le plus bas comme 0).
+        Pour <b>Orde le plus bas 1</b> , le résultat est 2 car si vous indexez les bits à partir de 0 pour le bit de poids faible, le premier 1 que vous trouverez est à l'indice 2. Les bits aux indices 0 et 1 sont tous les deux 0.<br>
+        Pour <b>Ordre le plus haut 1</b>, le résultat est 7 car le 1 d'indice le plus élevé est à l'indice 7 en comptant à nouveau à partir du bit de poids faible comme 0.<br>
+        Pour <b>Orde le plus bas 0</b>, le résultat est 0 car le premier 0 est à l'indice 0 en comptant à nouveau à partir du bit de poids faible comme 0.<br>
+        Pour <b>Ordre le plus haut 0</b>, le résultat est 5 car le 0 d'indice le plus élevé est à l'indice 5 en comptant à nouveau à partir du bit de poids faible comme 0.<br>
       </p>
       <p>
-        The component's output on the south edge indicates whether the desired bit was found at all. In the above examples involving the input 11010100, the south output is 1 in all cases. But if the input were 00000000 and the component is to find the lowest-order 1, then the south output would be 0 — and the output on the east edge would be 0 as well.
-		La sortie du composant sur le bord sud indique si le bit désiré a été trouvé. Dans les exemples ci-dessus impliquant l'entrée 11010100, la sortie sud est 1 dans tous les cas. Mais si l'entrée était 00000000 et que le composant devait trouver le 1 d'ordre inférieur, alors la sortie sud serait 0 - et la sortie sur le bord est serait également 0.
+        La sortie du composant sur le bord sud indique si le bit désiré a été trouvé. Dans les exemples ci-dessus impliquant l'entrée 11010100, la sortie sud est à 1 dans tous les cas. Mais si l'entrée était 00000000 et que le composant devait trouver un 1 , alors la sortie sud serait à 0 - et la sortie sur le bord est serait également à 0.
       </p>
       <p>
-        If while searching for the desired value, a value that is neither 0 or 1 is found (the bit could be floating or an error value), then both outputs will consist entirely of error bits. Note that this occurs only if the problematic bit is encountered before finding the desired bit: For the input x1010100, the output would still be 2 if the lowest-order 1 is desired; but we would get error values if the component's type indicates to search for the highest-order 1 or the highest-order 0, since there is an erroneous bit in a higher-order bit than either the highest-order 0 or the highest-order 1.
-		Si, lors de la recherche de la valeur souhaitée, une valeur qui n'est ni 0 ni 1 est trouvée (le bit peut être flottant ou une valeur d'erreur), alors les deux sorties seront entièrement constituées de bits d'erreur. Notez que cela ne se produit que si le bit problématique est rencontré avant de trouver le bit souhaité : Pour l'entrée x1010100, la sortie serait toujours 2 si le 1 d'ordre inférieur est recherché ; mais nous obtiendrions des valeurs d'erreur si le type de composant indique de rechercher le 1 d'ordre supérieur ou le 0 d'ordre supérieur, puisqu'il y a un bit erroné dans un bit d'ordre supérieur au 0 ou au 1 d'ordre supérieur.
+        Si, lors de la recherche de la valeur souhaitée, une valeur qui n'est ni 0 ni 1 est trouvée, le bit peut être flottant ou une valeur d'erreur, alors les deux sorties seront entièrement constituées de bits d'erreur. Notez que cela ne se produit que si le bit problématique est rencontré avant de trouver le bit souhaité : Pour l'entrée x1010100, la sortie serait toujours 2 si le 1 d'ordre inférieur est recherché ; mais nous obtiendrions des valeurs d'erreur si le type de composant indique de rechercher le 1 d'ordre supérieur ou le 0 d'ordre supérieur, puisqu'il y a un bit erroné dans un
+        bit d'ordre supérieur.
       </p>
       <h2>
         Pins
       </h2>
-      <dl>
-         <dt class="lib">
-         Bord ouest
-        </dt>
-        <dd>
-          
-		  Entrée : L'entrée multibit qui doit être recherchée pour le bit désiré. 
-        </dd>
-         <dt class="lib">
-		  Bord est
-        </dt>
-        <dd>
-          Entrée : L'index du bit souhaité, en comptant à partir de 0 pour le bit de poids le plus faible. La largeur de donnée est le nombre minimal de bits pour stocker l'indice maximal possible, qui est inférieur d'un point à la valeur de l'attribut Largeur de données.
-        </dd>
-         <dt class="lib">
-          Bord sud
-        </dt>
-        <dd>
-          1 if the desired bit is found, 0 if all input bits are the inverse of the desired bit, and the error value if a non-0, non-1 value is found before the desired bit.
-		  Sortie :  1 si le bit souhaité est trouvé, 0 si tous les bits d'entrée sont l'inverse du bit souhaité, et la valeur d'erreur si une valeur non-0, non-1 est trouvée avant le bit souhaité.
-        </dd>
-      </dl>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Bord ouest
+          </dt>
+          <dd>
+            Entrée : L'entrée multibit dans laquelle on recherche le bit désiré.
+          </dd>
+          <dt class="lib">
+            Bord est
+          </dt>
+          <dd>
+            Entrée : L'index du bit souhaité, en comptant à partir de 0 pour le bit de poids le plus faible. La largeur de donnée est le nombre minimal de bits pour stocker l'indice maximal possible, qui est inférieur d'un point à la valeur de l'attribut Largeur de données.
+          </dd>
+          <dt class="lib">
+            Bord sud
+          </dt>
+          <dd>
+            1 if the desired bit is found, 0 if all input bits are the inverse of the desired bit, and the error value if a non-0, non-1 value is found before the desired bit. Sortie : 1 si le bit souhaité est trouvé, 0 si tous les bits d'entrée sont l'inverse du bit souhaité, et la valeur d'erreur(E) si une valeur erreur (E) est trouvée avant le bit souhaité.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Attributs
       </h2>
       <p>
         Lorsque le composant est sélectionné ou en cours d'ajout, les touches <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Largeur de donnée</b>.
       </p>
-	  <div class="attliste">
-      <dl>
-         <dt class="lib">
-          Largeur de donnée
-        </dt>
-        <dd>
-          La largeur de donnée en bit de l'entrée du composant.
-        </dd>
-         <dt class="lib">
-         Largeur de donnée</b>Type</b>
-        </dt>
-        <dd>
-          Indique le bit à rechercher - le 0 d'ordre inférieur, le 0 d'ordre supérieur, le 1 d'ordre inférieur ou le 1 d'ordre supérieur.
-        </dd>
-      </dl>
-	  </div>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Largeur de donnée
+          </dt>
+          <dd>
+            La largeur de donnée en bit de l'entrée du composant.
+          </dd>
+          <dt class="lib">
+            Type
+          </dt>
+          <dd>
+            Indique le bit à rechercher - le 0 d'ordre inférieur, le 0 d'ordre supérieur, le 1 d'ordre inférieur ou le 1 d'ordre supérieur.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Comportement de l'outil pousser
       </h2>
@@ -166,7 +165,7 @@
         Aucun.
       </p>
       <h2>
-        Comportement de l'outil text 
+        Comportement de l'outil text
       </h2>
       <p>
         Aucun.
