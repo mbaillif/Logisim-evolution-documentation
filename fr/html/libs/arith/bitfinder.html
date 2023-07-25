@@ -117,26 +117,24 @@
       </h2>
       <dl>
          <dt class="lib">
-         Bord ouest (entrée, la largeur des bits correspond à la Largeur de données attribuée)
+         Bord ouest
         </dt>
         <dd>
-          The multibit input that is to be searched for the desired bit.
-		  L'entrée multibit qui doit être recherchée pour le bit désiré.
+          
+		  Entrée : L'entrée multibit qui doit être recherchée pour le bit désiré. 
         </dd>
          <dt class="lib">
-          East edge (output, bit width computed as described below)
-		  Bord est (sortie, largeur de donnée calculée comme décrit ci-dessous)
+		  Bord est
         </dt>
         <dd>
-          L'index du bit souhaité, en comptant à partir de 0 pour le bit de poids le plus faible. La largeur de donnée est le nombre minimal de bits pour stocker l'indice maximal possible, qui est inférieur d'un point à la valeur de l'attribut Largeur de données.
+          Entrée : L'index du bit souhaité, en comptant à partir de 0 pour le bit de poids le plus faible. La largeur de donnée est le nombre minimal de bits pour stocker l'indice maximal possible, qui est inférieur d'un point à la valeur de l'attribut Largeur de données.
         </dd>
          <dt class="lib">
-          South edge (output, bit width 1)
-		  Bord sud (sortie, largeur de donnée en bit 1)
+          Bord sud
         </dt>
         <dd>
           1 if the desired bit is found, 0 if all input bits are the inverse of the desired bit, and the error value if a non-0, non-1 value is found before the desired bit.
-		  1 si le bit souhaité est trouvé, 0 si tous les bits d'entrée sont l'inverse du bit souhaité, et la valeur d'erreur si une valeur non-0, non-1 est trouvée avant le bit souhaité.
+		  Sortie :  1 si le bit souhaité est trouvé, 0 si tous les bits d'entrée sont l'inverse du bit souhaité, et la valeur d'erreur si une valeur non-0, non-1 est trouvée avant le bit souhaité.
         </dd>
       </dl>
       <h2>

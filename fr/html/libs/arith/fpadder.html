@@ -49,40 +49,50 @@
         Comportement
       </h2>
       <p>
-        Ce composant additionne deux valeurs en vigule flottante entrant par les entrées ouest et présente la somme sur la sortie est. 
-      </p>
-      <p>Si l'une des additions contient des bits flottants ou des bits d'erreur, le composant présente une sortie en erreur avec la valeur NaNf ou 7fc00000h.  Les bits ne sont pas en erreur E ou flottant U. 
+        Ce composant additionne deux valeurs à virgule flottante arrivant par les entrées ouest et émet la somme sur la sortie est.<br>
+        Si les données d'entrée contiennent des signaux non définis (<b class="uvalue">U</b>), d'erreur (<b class="evalue">E</b>) ou la valeur <var>NaN</var>, il émettra la valeur <var>NaN</var> et un <b class="unov">1</b> sur la sortie d'erreur au sud.
       </p>
       <h2>
         Pins
       </h2>
+	  <div class="attliste">
       <dl>
-        <dt>
+        <dt class="lib">
           Bord ouest, extrémité nord
         </dt>
         <dd>
-          Une des deux valeurs à additionner.
+           Entrée : L'une des deux valeurs en virgule flottante à additionner. La largeur de donnée en bits correspond à la propriété <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
+       <dt class="lib">
           Bord ouest, extrémité sud
         </dt>
         <dd>
-          L'autre des deux valeurs à additionner.
+          Entrée : L'autre des deux valeurs à virgule flottante à additionner. La largeur de donnée en bits correspond à la propriété <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
+        <dt class="lib">
           Bord est
         </dt>
         <dd>
-          La somme des deux valeurs en entrée.
+          Sortie : La somme des deux entrées. La largeur de donnée en bits correspond à la propriété <b class="property">Dimension flottant</b>.
+        </dd>
+		<dt class="lib">
+          Bord Sud
+        </dt>
+        <dd>
+          Sortie : Erreur, prend la valeur <b class="unov">1</b> si l'adfitionneur reçoit un signal d'erreur (<b class="evalue">E</b>), indéfini (<b class="uvalue">U</b>) ou les valeurs en virgule flottante <var>NaN</var>. La largeur de donnée est de 1.
         </dd>
       </dl>
+	  </div>
       <h2>
         Attributs
       </h2>
+	  <p>
+        Lorsque le composant est sélectionné ou en cours d'ajout, les touches Alt-0 à Alt-9 modifient son attribut <b class="property">Dimension flottant</b>.
+      </p>
 	   <div class="attliste">
 	   <dl>
         <dt>
-          <b class="property">Largeur de donnée</b>
+          <b class="property">Dimension flottant</b>
         </dt>
         <dd>
           La largeur de donnée en bit de l'additionneur 32 ou 64 bits.

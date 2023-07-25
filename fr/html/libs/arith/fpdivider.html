@@ -49,69 +49,56 @@
         Comportement
       </h2>
       <p>
-        This component divides two values coming in via the west inputs and outputs the quotient on the east output. The component is designed so that it can be cascaded with other dividers to provide support a dividend with more bits than is possible with a single divider: The upper input provides the upper <var>dataBits</var> bits of the dividend (if it is specified at all), and the <var>rem</var> bits provide the remainder, which can be fed as the <var>upper</var> input into another divider.
-      </p>
-      <p>
-        If the divisor is 0, then no division is performed (i.e., the divisor is assumed to be 1).
-      </p>
-      <p>
-        The divider essentially performs unsigned division. That is, the remainder will always be between 0 and <var>divisor</var>-1. The quotient will always be an integer so that
-      </p>
-      <center>
-        <var>quotient</var> * <var>divisor</var> + <var>remainder</var> = <var>dividend</var> .
-      </center>If, however, the <var>quotient</var> does not fit into <var>dataBits</var> bits, then only the lower <var>dataBits</var> bits will be reported. The component does not provide any method for accessing the upper <var>dataBits</var> bits.
-      <p>
-        If either of the operands contains some floating bits or some error bits, then the component's outputs will be either entirely floating or entirely error values.
+       Ce composant divise les valeurs flottantes du dividende (bord ouest - extrémité nord) par les valeurs flottantes du diviseur (bord ouest - extrémité sud) et produit les valeurs flottantes du quotient (bord est).<br> Si les données d'entrée contiennent des signaux non définis (<b class="uvalue">U</b>), d'erreur (<b class="evalue">E</b>) ou la valeur <var>NaN</var>, il émettra la valeur <var>NaN</var> et un <b class="unov">1</b> sur la sortie d'erreur au sud.
       </p>
       <h2>
         Pins
       </h2>
+	  <div class="attliste">
       <dl>
-        <dt>
-          West edge, north end (input, bit width matches Largeur de donnée attribute)
+        <dt class="lib">
+          Bord ouest, extrémité nord
         </dt>
         <dd>
-          The lower <var>dataBits</var> bits of the dividend (that is, the first operand for the division).
+          Entrée : Le dividende à virgule flottante. C'est-à-dire le premier opérande pour la division. La largeur de donnée en bits correspond à la propriété <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
-          West edge, south end (input, bit width matches Largeur de donnée attribute)
+        <dt class="lib">
+          Bord ouest, extrémité sud
         </dt>
         <dd>
-          The divisor (that is, the second operand for the division)
+          Entrée : le diviseur à virgule flottante. C'est-à-dire le deuxième opérande pour la division. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
-          North edge, labeled <var>upper</var> (input, bit width matches Largeur de donnée attribute)
+        
+        <dt class="lib">
+          Bord est
         </dt>
         <dd>
-          The upper <var>dataBits</var> bits of the dividend (that is, the first operand for the division).
+          Sortie : Le résultat de la division à virgule flottante. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
-          East edge (output, bit width matches Largeur de donnée attribute)
+        <dt class="lib">
+          Bord Sud
         </dt>
         <dd>
-          The lower <var>dataBits</var> bits of the quotient, as specified above.
-        </dd>
-        <dt>
-          South edge, labeled <var>rem</var> (output, bit width matches Largeur de donnée attribute)
-        </dt>
-        <dd>
-          The remainder of the division. This value will always be between 0 and <var>divisor</var>-1.
+          Sortie : Erreur, prend la valeur <b class="unov">1</b> si l'adfitionneur reçoit un signal d'erreur (<b class="evalue">E</b>), indéfini (<b class="uvalue">U</b>) ou les valeurs en virgule flottante <var>NaN</var>. La largeur de donnée est de 1.
         </dd>
       </dl>
+	  </div>
       <h2>
         Attributs
       </h2>
       <p>
-        When the component is selected or being added, Alt-0 through Alt-9 alter its <b class="vprop">Largeur de donnée</b> attribute.
+        Lorsque le composant est sélectionné ou en cours d'ajout, les touches Alt-0 à Alt-9 modifient son attribut <b class="property">Dimension flottant</b>.
       </p>
+	  <div class="attliste">
       <dl>
         <dt>
-          Largeur de donnée
+          <b class="property">Dimension flottant</b>
         </dt>
         <dd>
-          The bit width of the values to be divided and of the result.
+          La largeur de donnée en bit de l'additionneur 32 ou 64 bits.
         </dd>
       </dl>
+	  </div>
       <h2>
         Comportement de l'outil pousser
       </h2>

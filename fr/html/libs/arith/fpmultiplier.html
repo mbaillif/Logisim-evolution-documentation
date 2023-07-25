@@ -49,60 +49,56 @@
         Comportement
       </h2>
       <p>
-        This component multiplies two values coming in via the west inputs and outputs the product on the east output. The component is designed so that it can be cascaded with other multipliers to multiply a multiplicand with more bits than is possible with a single multiplier: The carry-in input provides a multi-bit value to be added into the product (if it is specified), and a carry-out output provides the upper half of the product result, which can be fed into another multiplier.
-      </p>
-      <p>
-        If the multiplicand, the multiplier, or the carry-in input contain some floating bits or some error bits, then the component will perform a partial multiplication. That is, it will compute as many low-order bits as possible. But above the floating or error bit, the result will have floating or error bits. Note that if the carry-in input is completely floating, then it will be assumed to be all-zeroes.
+        Ce composant multiplie deux valeurs à virgule flottante provenant des entrées ouest et émet le produit sur la sortie est. <br>
+        Si les données d'entrée contiennent des signaux non définis (<b class="uvalue">U</b>), d'erreur (<b class="evalue">E</b>) ou la valeur <var>NaN</var>, il émettra la valeur <var>NaN</var> et un <b class="unov">1</b> sur la sortie d'erreur au sud.
       </p>
       <h2>
         Pins
       </h2>
+	  <div class="attliste">
       <dl>
-        <dt>
-          West edge, north end (input, bit width matches Largeur de donnée attribute)
+        <dt class="lib">
+          Bord ouest, extrémité nord: 
         </dt>
         <dd>
-          The multiplicand (that is, the first of the two numbers to multiply).
+          Entrée : le multiplicande, c'est-à-dire le premier des deux nombres à multiplier. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
-          West edge, south end (input, bit width matches Largeur de donnée attribute)
+        <dt class="lib">
+          Bord ouest, extrémité sud: 
         </dt>
         <dd>
-          The multiplier (that is, the second of the two numbers to multiply).
+          Entrée : Le multiplicateur,c'est-à-dire le deuxième des deux nombres à multiplier. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
-          North edge, labeled <var>c in</var> (input, bit width matches Largeur de donnée attribute)
+        <dt class="lib">
+          Bord est
         </dt>
         <dd>
-          A carry value to add into the product. If all bits of the value are unknown (i.e., floating), then they are assumed to be 0.
+          Sortie : Le produit des deux valeur du bord ouest.La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
         </dd>
-        <dt>
-          East edge (output, bit width matches Largeur de donnée attribute)
+        <dt class="lib">
+          Bord Sud
         </dt>
         <dd>
-          The lower <var>dataBits</var> bits of the product of the two values coming in the west edge, plus the <var>c</var><sub><var>in</var></sub> value.
-        </dd>
-        <dt>
-          South edge, labeled <var>c out</var> (output, bit width matches Largeur de donnée attribute)
-        </dt>
-        <dd>
-          The upper <var>dataBits</var> bits of the product.
+          Sortie : Erreur, prend la valeur <b class="unov">1</b> si l'adfitionneur reçoit un signal d'erreur (<b class="evalue">E</b>), indéfini (<b class="uvalue">U</b>) ou les valeurs en virgule flottante <var>NaN</var>. La largeur de donnée est de 1.
         </dd>
       </dl>
+	  </div>
       <h2>
         Attributs
       </h2>
       <p>
-        When the component is selected or being added, Alt-0 through Alt-9 alter its <b class="vprop">Largeur de donnée</b> attribute.
+        Lorsque le composant est sélectionné ou en cours d'ajout, les touches Alt-0 à Alt-9 modifient son attribut <b class="property">Dimension flottant</b>.
       </p>
+	  <div class="attliste">
       <dl>
         <dt>
-          Largeur de donnée
+          Dimension flottant
         </dt>
         <dd>
-          The bit width of the values to be multiplied and of the result.
+          La largeur de donnée en bit du multiplicateur 32 ou 64 bits.
         </dd>
       </dl>
+	  </div>
       <h2>
         Comportement de l'outil pousser
       </h2>
