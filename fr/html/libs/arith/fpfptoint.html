@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2023-07-25T12:32:00.325000000">
+    <meta name="changed" content="2023-07-25T12:32:00.325000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Valeur flottante vers entier
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/fpfptoint.png" alt="#########" width="32" height="32" align="middle"> <em>Valeur flottante vers entier</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Arithmétique</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              3.5
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/fpfptoint.png" alt="#########" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+	   Ce composant renvoie une valeur entière sur la sortie est, qui correspond à la valeur en virgule flottante, arrondie au nombre entier le plus proche, qu'il reçoit sur l'entrée ouest. Si la donnée d'entrée contiens des signaux non définis (<b class="uvalue">U</b>), d'erreur (<b class="evalue">E</b>) ou la valeur <var>NaN<sub>f</sub></var>, il émettra sur la sortie la valeur <var>NaN<sub>f</sub></var> et sur la sortie d'erreur au sud un <b class="unov">1</b>
+      </p>
+      <h2>
+        Pins
+      </h2>
+	  <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Bord ouest :
+         </dt>
+        <dd>
+           Entrée : la valeurs à virgule flottante à convertir. La largeur des données en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
+        </dd>
+        <dt class="lib">
+          Bord est :
+         </dt>
+        <dd>
+         Sortie : Valeur entière correspondant à la valeur de l'entrée, arrondie à l'unité la plus proche ou reçoit les bits de poids faible de la largeur des données du résultat de la conversion. Est égal à 0 en cas d'erreur. La largeur des bits correspond à l'attribut <b class="property">Largeur des données</b>.
+        </dd>
+        <dt class="lib">
+          Bord sud : 
+         </dt>
+        <dd>
+          Sortie : Erreur, prend la valeur <b class="unov">1</b> si le composant reçoit un signal d'erreur (<b class="evalue">E</b>), indéfini (<b class="uvalue">U</b>) ou les valeurs en virgule flottante <var>NaN<sub>f</sub></var>. La largeur de donnée est de 1.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Attributs
+      </h2>
+      <p>
+       Lorsque le composant est sélectionné ou en cours d'ajout, les touches <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Dimension flottant</b>.  Seulement 32 ou 64 bits.
+      </p>
+	  <div class="attliste">
+      <dl>
+         <dt class="lib">
+          Largeur des données
+         </dt>
+        <dd>
+          La largeur de donnée en bit de la sortie.
+        </dd>
+		<dt class="lib">
+          Dimension flottant
+         </dt>
+        <dd>
+          La largeur de donnée en bit de composant 32 ou 64 bits.
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        None.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        None.
+      </p>
+      <p>
+         <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

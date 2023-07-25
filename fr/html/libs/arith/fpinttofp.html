@@ -7,28 +7,28 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
-      Integer to Floating Point
+      Entiers vers virgule flotante
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/fpinttofp.png" alt="#########" width="32" height="32" align="middle"> <em>Integer to Floating Point</em>
+        <img class="iconlibs" src="../../../../icons/6464/fpinttofp.png" alt="#########" width="32" height="32" align="middle"> <em>Entiers vers virgule flotante</em>
       </h1>
       <table>
         <tbody>
           <tr>
             <td>
-              <strong>Library:</strong>
+              <strong>Librairie :</strong>
             </td>
             <td>
-              <a href="index.html">Arithmetic</a>
+              <a href="index.html">Arithmétique</a>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>Introduced:</strong>
+              <strong>Introduction :</strong>
             </td>
             <td>
               3.5
@@ -36,7 +36,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <strong>Appearance:</strong>
+              <strong>Apparence :</strong>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/fpinttofp.png" alt="#########" width="64" height="64">
@@ -45,10 +45,11 @@
         </tbody>
       </table>
       <h2>
-        Behavior
+        Comportement
       </h2>
       <p>
-       This component returns an floating-poin value value on the east output, which corresponds to the integer value it receives on the west input.<br>It has an error output in the south, which is set to <b class="unov">1</b> if the component receives an error(<b class="evalue">E</b>) or undefined(<b class="uvalue">U</b>) signal.
+       Ce composant renvoie une valeur en virgule flottante sur la sortie est, qui correspond à la valeur entière qu'il reçoit sur l'entrée ouest.<br>
+Il dispose d'une sortie d'erreur au sud, qui est mise à <b class="unov">1</b> si le composant reçoit un signal error (<b class="evalue">E</b>) ou undefined(<b class="uvalue">U</b>).
       </p>
       <h2>
         Pins
@@ -56,44 +57,45 @@
 	  <div class="attliste">
       <dl>
         <dt class="lib">
-          West edge:
+          Bord ouest :
          </dt>
         <dd>
-          Input: Enter integer values to be converted. Bit width matches the Data <b class="property">Data Bits</b> attribute.
+         Entrée : Recoit la valeurs entières à convertir. La largeur de donnée en bits correspond à l'attribut <b class="property">argeur des données</b.
         </dd>
         <dt class="lib">
-          East edge:
+          Bord est :
          </dt>
         <dd>
-          Output: floating-point  value corresponding to the value of the input. Is <var>NaN<sub>f</sub></var> if there is an error. Bit width matches the Data <b class="property">Float size</b> attribute.
+          Sortie : Valeur en virgule flottante correspondant à la valeur de l'entrée se positionne sur <var>NaN<sub>f</sub></var> en cas d'erreur. La largeur des bits correspond à l'attribut <b class="property">Dimension flottant</b>.
         </dd>
         <dt class="lib">
-          South edge: 
+          Bord sud : 
          </dt>
         <dd>
-          OutPut: Error Set to  <b class="unov">1</b> if the component receives an error (<b class="evalue">E</b>) or undefined (<b class="uvalue">U</b>) signal or the floating-point values <var>NaN<sub>f</sub></var>
+          Sortie : Erreur, prend la valeur <b class="unov">1</b> si le convertisseur reçoit un signal d'erreur (<b class="evalue">E</b>), indéfini (<b class="uvalue">U</b>). La largeur de donnée est de 1.
         </dd>
       </dl>
 	  </div>
       <h2>
-        Attributes
+        Attributs
       </h2>
       <p>
-        When the component is selected or being added, <b class="tkeybd">Alt-0</b> throught <b class="tkeybd">Alt-9</b> alter its <b class="property">Float size</b> attribute. Only 32 or 64bits
+         Lorsque le composant est sélectionné ou en cours d'ajout, les touches <b class="tkeybd">Alt-0</b> à <b class="tkeybd">Alt-9</b> modifient son attribut <b class="property">Dimension flottant</b>. Seulement 32 ou 64 bits.
       </p>
 	  <div class="attliste">
       <dl>
-	  <dt class="lib">
-          Data Bits
+      <dl>
+         <dt class="lib">
+          Largeur des données
          </dt>
         <dd>
-          The bit width of the integer values.
+          La largeur de donnée en bit de l'entrée.
         </dd>
-        <dt class="lib">
-          Float size
+		<dt class="lib">
+          Dimension flottant
          </dt>
         <dd>
-          The bit width of the floating-point values. Only 32 or 64 bits
+          La largeur de donnée en bit du composant 32 ou 64 bits.
         </dd>
       </dl>
 	  </div>

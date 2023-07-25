@@ -2,19 +2,19 @@
 <html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2023-07-25T10:15:00.235000000">
-    <meta name="changed" content="2023-07-25T17:20:00.134000000">
+    <meta name="created" content="2023-07-25T12:32:00.325000000">
+    <meta name="changed" content="2023-07-25T12:32:00.325000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
-      Additionneur à virgule flottante
+      Comparateur à virgule flottante
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/fpadder.png" alt="#########" width="32" height="32" align="middle"> <em>Additionneur à virgule flottante</em>
+        <img class="iconlibs" src="../../../../icons/6464/fpcomparator.png" alt="#########" width="32" height="32" align="middle"> <em>Comparateur à virgule flottante</em>
       </h1>
       <table>
         <tbody>
@@ -39,7 +39,7 @@
               <strong>Apparence :</strong>
             </td>
             <td valign="top">
-              <img class="Apparencelibs" src="../../../../img-libs/fpadder.png" alt="#########" width="64" height="64">
+              <img class="appearancelibs" src="../../../../img-libs/fpcomparator.png" alt="#########" width="64" height="64">
             </td>
           </tr>
         </tbody>
@@ -48,8 +48,7 @@
         Comportement
       </h2>
       <p>
-        Ce composant additionne deux valeurs à virgule flottante arrivant par les entrées ouest et émet la somme sur la sortie est.<br>
-        Si les données d'entrée contiennent des signaux non définis (<b class="uvalue">U</b>), d'erreur (<b class="evalue">E</b>) ou la valeur <var>NaN<sub>f</sub></var>, il émettra sur la sortie la valeur <var>NaN<sub>f</sub></var> et sur la sortie d'erreur au sud un <b class="unov">1</b>
+        Ce composant compare deux valeurs à virgule flottante qui arrivent par les entrées ouest et présente trois signaux de sortie &gt; = &lt;. normalement, une seule de ces valeurs est à <b class="unov">1</b> si une erreur est détectée, toutes les sorties sont à <b class="zerov">0</b> et la sortie d'erreur au sud est à <b class="unov">1</b> si le composant reçoit un signal d'erreur (<b class="evalue">E</b>) ou non défini (<b class="uvalue">U</b>) ou les valeurs à virgule flottante <var>NaN<sub>f</sub></var>.
       </p>
       <h2>
         Pins
@@ -60,19 +59,31 @@
             Bord ouest, extrémité nord
           </dt>
           <dd>
-            Entrée : L'une des deux valeurs en virgule flottante à additionner. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
+            Entrée : La première valeur en virgule flottante à comparer. La largeur de donnée en bits correspond à la propriété <b class="property">Dimension flottant</b>.
           </dd>
           <dt class="lib">
             Bord ouest, extrémité sud
           </dt>
           <dd>
-            Entrée : L'autre des deux valeurs à virgule flottante à additionner. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
+            Entrée : La deuxième valeur en virgule flottante à comparer. La largeur de donnée en bits correspond à la propriété <b class="property">Dimension flottant</b>.
           </dd>
           <dt class="lib">
-            Bord est
+            Bord est : Etiquetée <var>&gt;</var>
           </dt>
           <dd>
-            Sortie : La somme des deux entrées. La largeur de donnée en bits correspond à l'attribut <b class="property">Dimension flottant</b>.
+            Sortie : <b class="unov">1</b> si la première entrée est supérieure à la seconde, <b class="zerov">0</b> si la première entrée est inférieure ou égale à la seconde. La largeur du bit est de 1.
+          </dd>
+          <dt class="lib">
+            Bord est : Etiquetée <var>=</var>
+          </dt>
+          <dd>
+            Sortie : <b class="unov">1</b> si la première entrée est égale à la seconde, <b class="zerov">0</b> si la première entrée n'est pas égale à la seconde. La largeur du bit est de 1.
+          </dd>
+          <dt class="lib">
+            Bord est : Etiquetée <var>&lt;</var>
+          </dt>
+          <dd>
+            Sortie : <b class="unov">1</b> si la première entrée est supérieure à la seconde, <b class="zerov">0</b> si la première entrée est inférieure ou égale à la seconde. La largeur du bit est de 1.
           </dd>
           <dt class="lib">
             Bord sud
@@ -102,13 +113,13 @@
         Comportement de l'outil pousser
       </h2>
       <p>
-        Aucun.
+        None.
       </p>
       <h2>
         Comportement de l'outil text
       </h2>
       <p>
-        Aucun.
+        None.
       </p>
       <p>
         <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
