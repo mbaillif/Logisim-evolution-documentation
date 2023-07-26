@@ -30,15 +30,32 @@
         </dt>
         <dd>
           <p>
-            --
+            Builds a circuit from a VHDL listing. The name must not match any existing circuits in the project. Opens a VHDL editor where you can create or modify a VHDL listing. 
           </p>
+          <p align="center">
+            <img src="../../../../img-guide/project-vhdl.png" alt="#########">
+          </p>Above the editing area, there are three icons:
+          <ul>
+            <li>
+              <img src="../../../../icons/6464/vhdlloade.png" alt="#########" width="32" height="32"> : Load a VHDL document.
+            </li>
+            <li>
+              <img src="../../../../icons/6464/vhdlsave.png" alt="#########" width="32" height="32"> : Save a VHDL document.
+            </li>
+            <li>
+              <img src="../../../../icons/6464/vhdlvalid.png" alt="#########" width="32" height="32"> : Check the VHDL document
+            </li>
+            <p>
+              <b class="note">Note</b>: For VHDL verification and simulation to work, third-party software must be installed and configured. Logisim will check for the presence of this software when saving or loading.
+            </p>
+          </ul>
         </dd>
-		<dt>
+        <dt>
           <strong>Import VHDL Entity...</strong>
         </dt>
         <dd>
           <p>
-            --
+            Adds a new circuit to the current project from a VHDL file. Read the note above.
           </p>
         </dd>
         <dt>
@@ -97,26 +114,6 @@
             If you've edited the circuit's appearance, this menu item reverts the appearance back to the default. The menu item is enabled only when editing the circuit's appearance. The appearance of the default appearance can be changed by the <b class="property">Use new box layout</b> property of the library.
           </p>
         </dd>
-        <!--
-		<dt>
-          <strong>View Toolbox</strong>
-        </dt>
-        <dd>
-          <p>
-            Changes the explorer pane to displaying a list of the project's circuits and the libraries that have been loaded.
-          </p>
-        </dd>
-		-->
-		<!--
-        <dt>
-          <strong>View Simulation Tree</strong>
-        </dt>
-        <dd>
-          <p>
-            Changes the explorer pane to displaying the hierarchy of subcircuits in the current simulation.
-          </p>
-        </dd>
-		-->
         <dt>
           <strong>Edit Circuit Layout</strong>
         </dt>

@@ -25,23 +25,40 @@
             Ajoute un nouveau circuit dans le projet en cours. Logisim insistera pour que vous spécifiiez un nom pour le nouveau circuit. Le nom ne doit correspondre à aucun circuit existant dans le projet.
           </p>
         </dd>
-		<dt>
+        <dt>
           <strong>Ajouter une entité VHDL..</strong>
         </dt>
         <dd>
           <p>
-            --
+            Construit un circuit à partir d'un descriptif en VHDL. Le nom ne doit correspondre à aucun circuit existant dans le projet. Ouvre pour cela un éditeur VHDL ou vous pouvez créer ou modifier un listing VHDL.
           </p>
+          <p align="center">
+            <img src="../../../../img-guide/project-vhdl.png" alt="#########">
+          </p>Au-dessus de la zone d'édition, il y a trois icônes :
+          <ul>
+            <li>
+              <img src="../../../../icons/6464/vhdlloade.png" alt="#########" width="32" height="32"> : Charger un document VHDL.
+            </li>
+            <li>
+              <img src="../../../../icons/6464/vhdlsave.png" alt="#########" width="32" height="32"> : Sauver le document VHDL
+            </li>
+            <li>
+              <img src="../../../../icons/6464/vhdlvalid.png" alt="#########" width="32" height="32"> : Vérifier le document VHDL
+            </li>
+            <p>
+              <b class="note">Note</b> : Pour que la vérification et la simulation VHDL fonctionnent, un logiciel tiers doit être installé et configuré. Logisim vérifiera à la sauvegarde ou au chargement la présence de ce logiciel.
+            </p>
+          </ul>
         </dd>
-		<dt>
-          <strong>Importer une entité VHDL..</strong>
+        <dt>
+          <strong>Importer une entité VHDL.</strong>
         </dt>
         <dd>
           <p>
-            --
+            Ajoute un nouveau circuit dans le projet en cours à partir d'un fichier VHDL. Lire la note ci-dessus.
           </p>
         </dd>
-		<dt>
+        <dt>
           <strong>Charger une librairie</strong>
         </dt>
         <dd>
@@ -97,26 +114,8 @@
             Si vous avez modifié l'apparence du circuit, cet élément de menu ramène l'apparence par défaut. L'élément de menu est activé uniquement lors de l'édition de l'apparence du circuit. L'aspect de l'apparence par défaut peut être modifié par la propriété <b class="property">Apparence</b> de la librairie.
           </p>
         </dd>
-<!--
-		<dt>
-          <strong>Afficher la barre d'outils</strong>
-        </dt>
-        <dd>
-          <p>
-            Modifie le volet de l'explorateur pour afficher une liste des circuits du projet et des bibliothèques chargées.
-          </p>
-        </dd>
         <dt>
-          <strong>Afficher l'arborescence de simulation</strong>
-        </dt>
-        <dd>
-          <p>
-            Modifie le volet de l'explorateur pour afficher la hiérarchie des sous-circuits dans la simulation en cours.
-          </p>
-        </dd>
--->
-        <dt>
-          <strong>Editer le dessin du Circuit</strong>
+          <strong>Modifier le dessin du Circuit</strong>
         </dt>
         <dd>
           <p>
@@ -124,7 +123,7 @@
           </p>
         </dd>
         <dt>
-          <strong>Editer l'apparence du circuit</strong>
+          <strong>Modifier l'apparence du circuit</strong>
         </dt>
         <dd>
           <p>
@@ -136,7 +135,7 @@
         </dt>
         <dd>
           <p>
-            <b class=note>Note :</b> Ce menu peut être désactivé dans certaines versions de logisim-evolution. Il peut être réactivé par des options de la ligne de commande.<br>
+            <b class="note">Note :</b> Ce menu peut être désactivé dans certaines versions de logisim-evolution. Il peut être réactivé par des options de la ligne de commande.<br>
             <br>
             Calcule une table de vérité et des expressions booléennes correspondant au circuit en cours, en les affichant dans la fenêtre <a href="../analyze/index.html">d'analyse combinatoire</a>. Le processus d'analyse ne sera valable que pour les circuits combinatoires. Une description complète du processus d’analyse est décrite dans la section <a href="../analyze/ana-open.html">Analyse combinatoire</a>.
           </p>
