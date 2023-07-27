@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2019-03-16T06:18:10.521000000">
-    <meta name="changed" content="2021-10-22T11:23:21.115000000">
+    <meta name="changed" content="2023-07-22T11:23:21.115000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
@@ -36,16 +36,14 @@
         <pre>java -jar <i><b>jarFileName</b> <b>--user-template plain -gates ansi -locale en</b></i>
 </pre>
       </blockquote>
-	  <blockquote>
-	     usage: Logisim-evolution [-b <file>] [--clear-prefs] [-f <args>] [-g <shape>] [-h] [-l <file>] [-m
-       <geometry>] [-n <args>] [--no-splash] [-o <lang>] [-s <args>] [-t <format>]
-       [--toplevel-circuit <name>] [-u <arg>] [-v] [-w <args>]
-	  </blockquote>
+      <blockquote>
+        usage: Logisim-evolution [-b &lt;file&gt;] [--clear-prefs] [-f &lt;args&gt;] [-g &lt;shape&gt;] [-h] [-l &lt;file&gt;] [-m &lt;geometry&gt;] [-n &lt;args&gt;] [--no-splash] [-o &lt;lang&gt;] [-s &lt;args&gt;] [-t &lt;format&gt;] [--toplevel-circuit &lt;name&gt;] [-u &lt;arg&gt;] [-v] [-w &lt;args&gt;]
+      </blockquote>
       <p>
         Supported options include the following.
       </p>
       <dl>
- <!--
+        <!--
        <dt>
           <tt>-plain</tt>
         </dt>
@@ -80,6 +78,26 @@
             <tbody>
               <tr>
                 <td>
+                  <tt>zh</tt> Chinese
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>en</tt> English
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>nl</tt> Dutch
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>fr</tt> French
+                </td>
+              </tr>
+              <tr>
+                <td>
                   <tt>de</tt> German
                 </td>
               </tr>
@@ -90,17 +108,17 @@
               </tr>
               <tr>
                 <td>
-                  <tt>en</tt> English
+                  <tt>it</tt> Italian
                 </td>
               </tr>
               <tr>
                 <td>
-                  <tt>es</tt> Spanish
+                  <tt>jp</tt> Japanese
                 </td>
               </tr>
               <tr>
                 <td>
-                  <tt>fr</tt> French
+                  <tt>pl</tt> Polisch
                 </td>
               </tr>
               <tr>
@@ -115,37 +133,13 @@
               </tr>
               <tr>
                 <td>
-                  <tt>it</tt> Italian
+                  <tt>es</tt> Spanish
                 </td>
               </tr>
-              <tr>
-                <td>
-                  <tt>nl</tt> Dutch
-                </td>
-              </tr>
-			  <tr>
-                <td>
-                  <tt>jp</tt> Japanese
-                </td>
-              </tr>
-			    <tr>
-                <td>
-                  <tt>pl</tt> Polisch
-                </td>
-              </tr>
+
             </tbody>
           </table>
         </dd>
- <!--
-        <dt>
-          <tt>-accents <i>[<b>yes</b>|<b>no</b>]</i></tt>
-        </dt>
-        <dd>
-          <p>
-            This is only relevant for languages that use characters outside the 7-bit ASCII character set; this would include languages using accented characters, and it would not include English. If <i>no</i>, characters outside the 7-bit ASCII character set are replaced with equivalents appropriate to the language; this would be useful for Java/OS combinations where such characters are not supported well.
-          </p>
-        </dd>
--->
         <dt>
           <tt>--clear-prefs</tt>
         </dt>
@@ -163,7 +157,7 @@
           </p>
         </dd>
         <dt>
-          <tt>-h, --help </tt>
+          <tt>-h, --help</tt>
         </dt>
         <dd>
           <p>
@@ -171,23 +165,13 @@
           </p>
         </dd>
         <dt>
-          <tt>-v, --version </tt>
+          <tt>-v, --version</tt>
         </dt>
         <dd>
           <p>
             Displays the Logisim version number and exit.
           </p>
         </dd>
-<!--
-        <dt>
-          <tt>-analyze</tt>
-        </dt>
-        <dd>
-          <p>
-            Displays the combinatorial analysis menus.
-          </p>
-        </dd>
--->
         <dt>
           <tt>-l, --load <i><b>filename</b></i></tt>
         </dt>
@@ -205,7 +189,7 @@
           </p>
         </dd>
         <dt>
-          <tt>-t, --tty </tt> [<b><i>table|speed|tty|halt|stats|binary|hex|csv|tabs</i></b>]
+          <tt>-t, --tty</tt> [<b><i>table|speed|tty|halt|stats|binary|hex|csv|tabs</i></b>]
         </dt>
         <dd>
           <p>
@@ -221,7 +205,7 @@
           </p>
         </dd>
         <dt>
-          <tt>-m, --geometry  [<b><i>widthxheight|widthxheight+X+Y</i></b>]</tt>
+          <tt>-m, --geometry [<b><i>widthxheight|widthxheight+X+Y</i></b>]</tt>
         </dt>
         <dd>
           <p>
@@ -229,7 +213,7 @@
             Example: -m 600x400+100+100
           </p>
         </dd>
-		<dt>
+        <dt>
           <tt>-n, --new-file-format <b><i>circ_input circ_output</i></b></tt>
         </dt>
         <dd>
@@ -238,26 +222,22 @@
           </p>
         </dd>
       </dl>
-      <h2>
-        Undocumented Options
-      </h2>
-      <dl>
-        <dt> 
-         <tt>-b, --test-circuit <b>testCircuitPathInput</b></tt>
+      <dt>
+          <tt>-b, --test-circuit <b><i>file</i></b> <b><i>path_to_circ</i></b></tt>
         </dt>
-        <dd>Open up a circ file and start the test bench within it. It returns Success or fail.</dd>
+        <dd>
+		<p>
+          Open up a circ file and start the test bench within it. It returns Success or fail.
+		  </p>
+        </dd>
         <dt>
-          <tt>-f, --test-fpga <b>inputpath</b> <b>Circuitimapfile</b> <b>cicuitimpname</b> <b>cicuitimpboard</b></tt>
+          <tt>-f, --test-fpga <b><i>circ_input</i></b> <b><i>circ_name</i></b> <b><i>board</i></b> <b><i>[tick frequency]</i></b> <b><i>[HDLONLY]</i></b></tt>
         </dt>
-        <dd>Test implementations design using circ_input file. The implementation circuit_name is the circuit choose to implement(FPGA_Top) and the board is the board name located in resources/logisim/boards/ without the ".xml" extension. The optional tick frequency is in Hz. The optional switch HDLONLY will only generate the HDL-description and will not perform synthesis, P&R, and Download. Arguments: <circ_input> <circuit_name> <board> [tick frequency] [HDLONLY]</dd>
-        <dt>
-          <tt>-test-circ-gen <b>testCircPathInput</b> <b>testCircPathOutput</b></tt>
-        </dt>
-        <dd></dd>
-        <dt>
-          <tt>-questa [<b><i>yes</b>|<b>no</i></b>]</tt>
-        </dt>
-        <dd></dd>
+        <dd>
+		<p>
+          Test implementations design using circ_input file. The implementation circuit_name is the circuit choose to implement(FPGA_Top) and the board is the board name located in resources/logisim/boards/ without the ".xml" extension. The optional tick frequency is in Hz. The optional switch HDLONLY will only generate the HDL-description and will not perform synthesis, P&amp;R, and Download. Arguments: &lt;circ_input&gt; &lt;circuit_name&gt; &lt;board&gt; [tick frequency] [HDLONLY]
+		  </p>
+        </dd>
       </dl>
       <p>
         <b>Next:</b> <a href="../index.html">User's Guide</a>.

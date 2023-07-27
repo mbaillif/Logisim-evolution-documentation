@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,16 +36,14 @@
         <pre>java -jar <i><b>jarFileName</b> </i><b>-plain -gates shaped -locale en</b>
 </pre>
       </blockquote>
-	   <blockquote>
-	     usage: Logisim-evolution [-b <file>] [--clear-prefs] [-f <args>] [-g <shape>] [-h] [-l <file>] [-m
-       <geometry>] [-n <args>] [--no-splash] [-o <lang>] [-s <args>] [-t <format>]
-       [--toplevel-circuit <name>] [-u <arg>] [-v] [-w <args>]
-	  </blockquote>
+      <blockquote>
+        usage: Logisim-evolution [-b &lt;file&gt;] [--clear-prefs] [-f &lt;args&gt;] [-g &lt;shape&gt;] [-h] [-l &lt;file&gt;] [-m &lt;geometry&gt;] [-n &lt;args&gt;] [--no-splash] [-o &lt;lang&gt;] [-s &lt;args&gt;] [-t &lt;format&gt;] [--toplevel-circuit &lt;name&gt;] [-u &lt;arg&gt;] [-v] [-w &lt;args&gt;]
+      </blockquote>
       <p>
         Les options prises en charge sont les suivantes.
       </p>
       <dl>
- <!--
+        <!--
         <dt>
           <tt>-plain</tt>
         </dt>
@@ -54,7 +52,7 @@
         </dt>
 -->
         <dt>
-           <tt>-u, --user-template [<b><i>empty|plain|filename</i></b>]</tt>
+          <tt>-u, --user-template [<b><i>empty|plain|filename</i></b>]</tt>
         </dt>
         <dd>
           <p>
@@ -80,17 +78,17 @@
             <tbody>
               <tr>
                 <td>
+                  <tt>en</tt> Anglais
+                </td>
+              </tr>
+              <tr>
+                <td>
                   <tt>de</tt> Allemand
                 </td>
               </tr>
               <tr>
                 <td>
-                  <tt>el</tt> Grec
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <tt>en</tt> Anglais
+                  <tt>zh</tt> Chinois
                 </td>
               </tr>
               <tr>
@@ -105,12 +103,7 @@
               </tr>
               <tr>
                 <td>
-                  <tt>pt</tt> Portugais
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <tt>ru</tt> Russe
+                  <tt>el</tt> Grec
                 </td>
               </tr>
               <tr>
@@ -120,27 +113,32 @@
               </tr>
               <tr>
                 <td>
+                  <tt>jp</tt> Japonais
+                </td>
+              </tr>
+              <tr>
+                <td>
                   <tt>nl</tt> Néerlandais
                 </td>
               </tr>
-			   <tr>
+              <tr>
                 <td>
-                  <tt>jp</tt> Japonais
+                  <tt>pl</tt> Polonais
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>pt</tt> Portugais
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <tt>ru</tt> Russe
                 </td>
               </tr>
             </tbody>
           </table>
         </dd>
- <!--
-        <dt>
-          <tt>-accents <i>[<b>yes</b>|<b>no</b>]</i></tt>
-        </dt>
-        <dd>
-          <p>
-            Cela ne concerne que les langues qui utilisent des caractères en dehors du jeu de caractères ASCII 7 bits; cela inclurait les langues utilisant des caractères accentués et n'inclurait pas l'anglais. Si <em>no</em> , les caractères en dehors du jeu de caractères ASCII 7 bits sont remplacés par des équivalents appropriés au langage; cela serait utile pour les combinaisons Java / OS où ces caractères ne sont pas bien pris en charge.
-          </p>
-        </dd>
--->
         <dt>
           <tt>--clear-prefs</tt>
         </dt>
@@ -158,7 +156,7 @@
           </p>
         </dd>
         <dt>
-         <tt>-h, --help </tt>
+          <tt>-h, --help</tt>
         </dt>
         <dd>
           <p>
@@ -166,25 +164,15 @@
           </p>
         </dd>
         <dt>
-          <tt>-v, --version </tt>
+          <tt>-v, --version</tt>
         </dt>
         <dd>
           <p>
             Affiche le numéro de version de Logisim et s'arrète.
           </p>
         </dd>
-<!--
         <dt>
-          <tt>-analyze</tt>
-        </dt>
-        <dd>
-          <p>
-            Affiche les menus analyse combinatoire.
-          </p>
-        </dd>
--->
-        <dt>
-         <tt>-l, --load <i><b>filename</b></i></tt>
+          <tt>-l, --load <i><b>filename</b></i></tt>
         </dt>
         <dd>
           <p>
@@ -200,7 +188,7 @@
           </p>
         </dd>
         <dt>
-          <tt>-t, --tty </tt> [<b><i>table|speed|tty|halt|stats|binary|hex|csv|tabs</i></b>]
+          <tt>-t, --tty</tt> [<b><i>table|speed|tty|halt|stats|binary|hex|csv|tabs</i></b>]
         </dt>
         <dd>
           <p>
@@ -211,10 +199,12 @@
           <tt>-w, --test-vector <i><b>circuitname</b> <b>vectorfile</b> <b>projectfile</b></i></tt>
         </dt>
         <dd>
-          Exécute les tests de <b>circuitname</b> dans <b>projectfile</b> en focntion des vecteurs dans <b>vectorfile</b>. Plus d'information dans <a href="../verify/test.html">Fenêtre Vecteur de test</a>
+          <p>
+            Exécute les tests de <b>circuitname</b> dans <b>projectfile</b> en focntion des vecteurs dans <b>vectorfile</b>. Plus d'information dans <a href="../verify/test.html">Fenêtre Vecteur de test</a>
+          </p>
         </dd>
         <dt>
-          <tt>-m, --geometry  [<b><i>widthxheight|widthxheight+X+Y</i></b>]</tt>
+          <tt>-m, --geometry [<b><i>widthxheight|widthxheight+X+Y</i></b>]</tt>
         </dt>
         <dd>
           <p>
@@ -222,7 +212,7 @@
             Exemple: -geom 600x400+100+100
           </p>
         </dd>
-		<dt>
+        <dt>
           <tt>-n, --new-file-format <b><i>circ_input circ_output</i></b></tt>
         </dt>
         <dd>
@@ -231,25 +221,23 @@
           </p>
         </dd>
       </dl>
-      <h2>
-        Options non documentées
-      </h2>
       <dl>
         <dt>
-           <tt>-b, --test-circuit <b>testCircuitPathInput</b></tt>
+          <tt>-b, --test-circuit <b><i>file</i></b> <b><i>path_to_circ</i></b></tt>
         </dt>
-        <dd>Open up a circ file and start the test bench within it. It returns Success or fail.</dd>
+        <dd>
+          <p>
+            Open up a circ file and start the test bench within it. It returns Success or fail.
+          </p>
+        </dd>
         <dt>
-           <tt>-f, --test-fpga <b>inputpath</b> <b>Circuitimapfile</b> <b>cicuitimpname</b> <b>cicuitimpboard</b></tt>
+          <tt>-f, --test-fpga <b><i>circ_input</i></b> <b><i>circ_name</i></b> <b><i>board</i></b> <b><i>[tick frequency]</i></b> <b><i>[HDLONLY]</i></b></tt>
         </dt>
-        <dd>Test implementations design using circ_input file. The implementation circuit_name is the circuit choose to implement(FPGA_Top) and the board is the board name located in resources/logisim/boards/ without the ".xml" extension. The optional tick frequency is in Hz. The optional switch HDLONLY will only generate the HDL-description and will not perform synthesis, P&R, and Download. Arguments: <circ_input> <circuit_name> <board> [tick frequency] [HDLONLY]</dd>
-        <dt>
-          <tt>-test-circ-gen <b>testCircPathInput</b> <b>testCircPathOutput</b></tt>
-        </dt>
-        <dd></dd>
-        <dt>
-          <tt>-questa [<b><i>yes</b>|<b>no</i></b>]</tt>
-        </dt>
+        <dd>
+          <p>
+            Test implementations design using circ_input file. The implementation circuit_name is the circuit choose to implement(FPGA_Top) and the board is the board name located in resources/logisim/boards/ without the ".xml" extension. The optional tick frequency is in Hz. The optional switch HDLONLY will only generate the HDL-description and will not perform synthesis, P&amp;R, and Download. Arguments: &lt;circ_input&gt; &lt;circuit_name&gt; &lt;board&gt; [tick frequency] [HDLONLY]
+          </p>
+        </dd>
       </dl>
       <p>
         <b>Suite:</b> <a href="../index.html">Guide de l'utilisateur</a>.
