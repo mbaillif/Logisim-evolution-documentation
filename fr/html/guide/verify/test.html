@@ -49,10 +49,10 @@
         Le format de fichier des vecteurs est simple. La première ligne contient les entêtes de colonnes qui correspondent au nom des signaux. Si la largeur en bit est plus grande que 1 alors il est nécessaire de le spécifier entre des crochets. Exemple <tt>C[8]</tt>. Les données de chaque situation de test sont dans les lignes suivantes. Les lignes vides sont ignorées. Tout ce qui suit un caractère "#" est un commentaire.
       </p>
       <p>
-        Les lignes restantes répertorient chaque valeur séparée par un espace ou une tabulation. Les valeurs peuvent être en hexadécimales, octal, binaire ou décimal signé. Les valeurs hexadécimal doivent avoir le préfixe <b><tt>"0x"</tt></b>. Les valeurs octales doivent avoir le préfixe <b><tt>"0o"</tt></b>. Les nombres binaires et décimaux se distinguent par le nombre de chiffres: les valeurs binaires doivent toujours avoir exactement autant de chiffres que la largeur de la colonne; les valeurs décimales ne doivent pas avoir de zéro en tête et peuvent avoir un signe négatif.
+        Les lignes restantes répertorient chaque valeur séparée par un espace ou une tabulation. Les valeurs peuvent être en hexadécimales, octal, binaire ou décimal signé. Les valeurs hexadécimal doivent avoir le préfixe <b><tt>"0x"</tt></b>. Les valeurs octales doivent avoir le préfixe <b><tt>"0o"</tt></b>. Les nombres binaires et décimaux se distinguent par le nombre de chiffres&nbsp;: les valeurs binaires doivent toujours avoir exactement autant de chiffres que la largeur de la colonne; les valeurs décimales ne doivent pas avoir de zéro en tête et peuvent avoir un signe négatif.
       </p>
       <p>
-        Voici un exemple de fichier vectoriel de test:
+        Voici un exemple de fichier vectoriel de test&nbsp;:
       </p>
       <blockquote>
         <pre>
@@ -67,7 +67,7 @@ A[4] B[4] O[4] C_in C_out
         Selon la représentation des valeurs hexadécimales, octales ou binaires, la lettre minuscule <tt>"x"</tt> permet de spécifier quatre, trois ou un bits «sans importance». Par exemple a valeur 101xx est une valeur binaire de cinq bits, avec les deux derniers bits non spécifiés, et 0x1ax5 est une valeur hexadécimale avec deux fois quatre bits non spécifiés. De tels jokers ne peuvent pas être utilisés en notation décimale.
       </p>
       <p>
-        <strong>Ligne de commande:</strong> Pour faciliter les tests automatisés, la fonctionnalité de vecteur de test peut être exécutée à partir de la ligne de commande, comme suit:
+        <strong>Ligne de commande&nbsp;:</strong> Pour faciliter les tests automatisés, la fonctionnalité de vecteur de test peut être exécutée à partir de la ligne de commande, comme suit:
       </p>
       <blockquote>
         <div class=forcode>
@@ -76,8 +76,8 @@ A[4] B[4] O[4] C_in C_out
       </blockquote>
 	  <p>
 	  Le résultat d'un test réussi sera dans la sortie standard (stdout) celui-ci par exemple
-	  <blockquote><pre>Loading test vector "testv1b.txt" ...
-Execution 4 vecteurs ...
+	  <blockquote><pre>Loading test vector "testv1b.txt"&hellip;
+Execution 4 vecteurs&hellip;
 1 
 2 
 3 
@@ -86,8 +86,8 @@ Execution 4 vecteurs ...
 Réussit: 4, Erreur: 0
 	  </pre></blockquote>
 	  et en cas d'échec
-	  <blockquote><pre>Loading test vector "testv1a.txt" ...
-Exécution 4 vectors  ...
+	  <blockquote><pre>Loading test vector "testv1a.txt"&hellip;
+Exécution 4 vectors&hellip;
 1 
 2 
 3 
@@ -106,7 +106,7 @@ Error on test vector 4:
 	   
 	  </p>
       <p>
-        <b>Suite:</b> <a href="../index.html">User's Guide</a>.
+        <b>Suite&nbsp;:</b> <a href="../index.html">User's Guide</a>.
       </p>
     </div>
   </body>

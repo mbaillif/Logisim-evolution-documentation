@@ -218,7 +218,7 @@ class GrayIncrementer extends InstanceFactory {
         } else { // else flip bit just above last 1
             int y = x ^ (x &amp; (x - 1)); // first compute the last 1
             y = (y &lt;&lt; 1) &amp; bits.getMask();
-            x = (y == 0 ? 0 : x ^ y);
+            x = (y == 0 ? 0&nbsp;: x ^ y);
         }
         return Value.createKnown(bits, x);
     }
@@ -228,7 +228,7 @@ class GrayIncrementer extends InstanceFactory {
         This example by itself is not enough to create a working JAR file; you must also provide a Library class, as illustrated on the next page.
       </p>
       <p>
-        <b>Suite:</b> <a href="library.html">Library Class</a>.
+        <b>Suite&nbsp;:</b> <a href="library.html">Library Class</a>.
       </p>
     </div>
   </body>

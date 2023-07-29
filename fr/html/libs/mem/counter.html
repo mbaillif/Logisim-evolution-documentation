@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <b>Librairie :</b>
+              <b>Librairie&nbsp;:</b>
             </td>
             <td>
               <a href="index.html">Memory</a>
@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <td>
-              <b>Introduction :</b>
+              <b>Introduction&nbsp;:</b>
             </td>
             <td>
               2.3.0
@@ -39,7 +39,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <b>Apparence :</b>
+              <b>Apparence&nbsp;:</b>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/counter.png" alt="#########" width="96" height="96">
@@ -203,43 +203,43 @@
             Si <b class="zerov">0</b> ou indéfini <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur du compteur est forcée à 0 de manière asynchrone, Sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Load : étiquette <var>M1 [load] M2 [Count]</var>
+            Entrée Load&nbsp;: étiquette <var>M1 [load] M2 [Count]</var>
           </dt>
           <dd>
             Lorsque cette entrée est à <b class="unov">1</b> le compteur chargera la valeur trouvée à l'entrée de données au prochain déclenchement de l'horloge. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée UpDown : étiquette <var>M4 [up] M4 [down]</var>
+            Entrée UpDown&nbsp;: étiquette <var>M4 [up] M4 [down]</var>
           </dt>
           <dd>
             Lorsque cette entrée est à <b class="unov">1</b> le compteur s'incréemente sur les évènments trigger et s'il est à <b class="zerov">0</b> il décrémente. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Count : étiquette <var>G5</var>
+            Entrée Count&nbsp;: étiquette <var>G5</var>
           </dt>
           <dd>
             Lorsque cette entrée est à <b class="unov">1</b> les évènements de l'horloge incrémentent ou décrémentent le compteur en accord avec l'état de la pin <b>UpDown</b>. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Clock : étiquette <var>2,3,5+/C6 2,4,5</var>
+            Entrée Clock&nbsp;: étiquette <var>2,3,5+/C6 2,4,5</var>
           </dt>
           <dd>
             Au moment où il est déclenché selon les règles spécifiées par l'attribut <b class="property">Trigger</b>, le compteur est incrémenté ou mis à jour comme indiqué par les entrées <b>load</b> et <b>count</b>. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Data : étiquette <var>1,6 D</var>
+            Entrée Data&nbsp;: étiquette <var>1,6 D</var>
           </dt>
           <dd>
             Lorsque l'horloge se déclenche alors que Load est à <b class="unov">1</b> ,la valeur du compteur passe à la valeur trouvée à cette entrée. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
           <dt class="lib">
-            Sortie Carry : étiquette <var>3CT=0x.. 4CT=0</var>
+            Sortie Carry&nbsp;: étiquette <var>3CT=0x.. 4CT=0</var>
           </dt>
           <dd>
             Lorsque l'entrée <var>UpDown</var> est à <b class="unov">1</b> cette sortie est à <b class="unov">1</b> si le compteur est à son maximum et lorsque l'entrée UpDown est à <b class="zerov">0</b> cette sortie est à <b class="unov">1</b> si le compteur est à <b class="zerov">0</b>. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Sortie OutPut : 
+            Sortie OutPut&nbsp;: 
           </dt>
           <dd>
             Émet la valeur actuellement stockée par le compteur. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
@@ -270,7 +270,7 @@
             Action en cas de dépassement
           </dt>
           <dd>
-            Le comportement lorsque le compteur tente d'augmenter au-delà de la valeur maximale ou de diminuer au-delà de 0. Quatre actions possibles sont prises en charge :
+            Le comportement lorsque le compteur tente d'augmenter au-delà de la valeur maximale ou de diminuer au-delà de 0. Quatre actions possibles sont prises en charge&nbsp;:
             <dl>
               <dt class="lib">
                 Reboucler
@@ -302,7 +302,7 @@
             Trigger
           </dt>
           <dd>
-            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
+            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs&nbsp;:<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
           </dd>
           <dt class="lib">
             Etiquette

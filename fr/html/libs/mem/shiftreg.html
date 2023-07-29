@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <b>Librairie :</b>
+              <b>Librairie&nbsp;:</b>
             </td>
             <td>
               <a href="index.html">Memory</a>
@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <td>
-              <b>Introduction :</b>
+              <b>Introduction&nbsp;:</b>
             </td>
             <td>
               2.3.0
@@ -39,7 +39,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <b>Apparence :</b>
+              <b>Apparence&nbsp;:</b>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/shiftreg.png" alt="#########">
@@ -76,49 +76,49 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            Entrée Clear : étiquette <var>R</var>
+            Entrée Clear&nbsp;: étiquette <var>R</var>
           </dt>
           <dd>
             Si <b class="zerov">0</b> ou indéfini <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur du régistre est forcée à 0 de manière asynchrone, Sans tenir compte de la valeur actuelle de l'entrée d'horloge et les autres entrées n'ont aucun effet. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            * Entrée Load : étiquette <var>M2 [load]</var>
+            * Entrée Load&nbsp;: étiquette <var>M2 [load]</var>
           </dt>
           <dd>
             Lorsque cette entrée est à <b class="unov">1</b> le registre chargera la valeur trouvée à l'entrée des données (<var>D0..Dn</var>) au prochain déclenchement de l'horloge. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Schift : étiquette <var>M1 [Schift]</var>
+            Entrée Schift&nbsp;: étiquette <var>M1 [Schift]</var>
           </dt>
           <dd>
             Lorsqu'elle est à <b class="unov">1</b> ou indéfini <b class="uvalue">U</b>, tous les étages avancent avec le déclenchement de l'horloge, mais si elle est à <b class="zerov">0</b>, il n'y a pas d'avance. Cette entrée est ignorée si l'entrée <var>Load</var> est à <b class="unov">1</b>. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Clock : étiquette <var>1-&gt;/C3</var>
+            Entrée Clock&nbsp;: étiquette <var>1-&gt;/C3</var>
           </dt>
           <dd>
             Au moment de ce déclenchement selon les règles spécifiées par l'attribut <b class="property">Trigger</b>, le composant peut faire décaler le registre ou charger de nouvelles valeurs comme indiqué par les entrées <var>load</var> et <var>Shift</var>. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Input : étiquette <var>1,3D</var>
+            Entrée Input&nbsp;: étiquette <var>1,3D</var>
           </dt>
           <dd>
             La valeur de cette entrée sera chargée dans le premier étage a déclenchement de l'horloge et si l'entrée <var>Shift</var> est à <b class="unov">1</b>. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
           <dt class="lib">
-            * Entrée D0..Dn : étiquette <var>2,3D</var>
+            * Entrée D0..Dn&nbsp;: étiquette <var>2,3D</var>
           </dt>
           <dd>
             Le nombre d'entrées est fonction de la propriété <b class="property">Nombre d'étages</b>. Ces valeurs sont chargées dans tous les étages lorsque l'horloge est déclenchée alors que l'entrée <var>load</var> est à <b class="unov">1</b>. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
           <dt class="lib">
-            * Sortie Q0..Qn :
+            * Sortie Q0..Qn&nbsp;:
           </dt>
           <dd>
             Le nombre de sorties est fonction de la pripriété <b class="property">Nombre d'étages</b>. Emets la valeur stockée dans chaque étage. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
           <dt class="lib">
-            Sortie Output :
+            Sortie Output&nbsp;:
           </dt>
           <dd>
             Emets la valeur stockée dans le dernier étage. La largeur des bits correspond à l'attribut <b class="property">Largeur de donnée</b>.

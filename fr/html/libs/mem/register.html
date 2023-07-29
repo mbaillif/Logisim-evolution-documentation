@@ -21,7 +21,7 @@
         <tbody>
           <tr>
             <td>
-              <b>Librairie :</b>
+              <b>Librairie&nbsp;:</b>
             </td>
             <td>
               <a href="index.html">Memory</a>
@@ -32,7 +32,7 @@
           </tr>
           <tr>
             <td>
-              <b>Introduction :</b>
+              <b>Introduction&nbsp;:</b>
             </td>
             <td>
               2.0 Beta 1
@@ -40,7 +40,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <b>Apparence :</b>
+              <b>Apparence&nbsp;:</b>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/lregister.png" alt="#########" >
@@ -77,36 +77,36 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            Bord est : étiqueté <var>Q</var>
+            Bord est&nbsp;: étiqueté <var>Q</var>
           </dt>
           <dd>
             Sortie, Délivre la valeur actuellement stockée dans le registre. La largeur des bits correspond à l'attribut <b class="property">Largeur de données</b>.
           </dd>
           <dt class="lib">
-            Bord est : étiqueté <var>D</var>
+            Bord est&nbsp;: étiqueté <var>D</var>
           </dt>
           <dd>
             Entrée Data: la valeur du registre passe à la valeur de l'entrée D au moment ou l'entrée d'horloge se déclenche selon les règles de l'attribut <b class="property">Trigger</b>
 			La largeur des bits correspond à l'attribut<b class="property">Largeur de données</b>.
           </dd>
           <dt class="lib">
-            Bord est : étiqueté <var>WE</var>
+            Bord est&nbsp;: étiqueté <var>WE</var>
           </dt>
           <dd>
             Entrée Enable: Lorsque cette valeur est égale à <b class="zerov">0</b>, les déclenchements d'horloge sont ignorés. La valeur actuelle continue d'apparaître sur la sortie. Les déclenchements d'horloge sont activés lorsque cette entrée est à <b class="unov">1</b> ou indéfinie <b class="uvalue">U</b>. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Bord ouest : indiqué par un triangle
+            Bord ouest&nbsp;: indiqué par un triangle
           </dt>
           <dd>
-            Entrée clock : Au moment où il est déclenché selon les règles spécifiées par l'attribut <b class="property">Trigger</b>, la valeur du registre est mise à jour a partir de l'entrée <var>D</var>. Largeur de bit 1.
+            Entrée clock&nbsp;: Au moment où il est déclenché selon les règles spécifiées par l'attribut <b class="property">Trigger</b>, la valeur du registre est mise à jour a partir de l'entrée <var>D</var>. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Bord sud : étiqueté <var>R</var>
+            Bord sud&nbsp;: étiqueté <var>R</var>
           </dt>
           <dd>
 		   
-            Entrée Reset : Réinitialisation asynchrone : Lorsqu'elle est à <b class="zerov">0</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur du registre est ramenée à <b class="zerov">0</b>. Cela se produit de manière asynchrone, c'est-à-dire sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet. Largeur de bit 1.
+            Entrée Reset&nbsp;: Réinitialisation asynchrone&nbsp;: Lorsqu'elle est à <b class="zerov">0</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur du registre est ramenée à <b class="zerov">0</b>. Cela se produit de manière asynchrone, c'est-à-dire sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet. Largeur de bit 1.
           </dd>
         </dl>
       </div>
@@ -128,7 +128,7 @@
             Trigger
           </dt>
           <dd>
-		   Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>. <br><b class="vprop">Niveau haut</b> indique que la bascule doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="unov">1</b>.<br><b class="vprop">Niveau bas</b> indique qu'elle doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="zerov">0</b>.
+		   Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs&nbsp;:<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>. <br><b class="vprop">Niveau haut</b> indique que la bascule doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="unov">1</b>.<br><b class="vprop">Niveau bas</b> indique qu'elle doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="zerov">0</b>.
           </dd>
           <dt class="lib">
             Etiquette

@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <b>Librairie :</b>
+              <b>Librairie&nbsp;:</b>
             </td>
             <td>
               <a href="index.html">Memory</a>
@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <td>
-              <b>Introduction :</b>
+              <b>Introduction&nbsp;:</b>
             </td>
             <td>
               2.3.0
@@ -39,7 +39,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <b>Apparence :</b>
+              <b>Apparence&nbsp;:</b>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/random.png" alt="#########">
@@ -61,7 +61,7 @@
         Comportement
       </h2>
       <p>
-        Ce composant itère à travers une séquence pseudo-aléatoire de nombres, qui avance au nombre suivant de la séquence chaque fois que l'horloge est déclenchée alors que le composant est activé. Techniquement parlant, l'algorithme utilisé pour calculer la séquence pseudo-aléatoire est un générateur congruentiel linéaire : À partir d'une graine <var>r</var><sub><small>0</small></sub>, le nombre suivant <var>r</var><sub><small>1</small></sub> est le nombre
+        Ce composant itère à travers une séquence pseudo-aléatoire de nombres, qui avance au nombre suivant de la séquence chaque fois que l'horloge est déclenchée alors que le composant est activé. Techniquement parlant, l'algorithme utilisé pour calculer la séquence pseudo-aléatoire est un générateur congruentiel linéaire&nbsp;: À partir d'une graine <var>r</var><sub><small>0</small></sub>, le nombre suivant <var>r</var><sub><small>1</small></sub> est le nombre
       </p>
       <center>
         <var>r</var><sub><small>1</small></sub> = (25,214,903,917 <var>r</var><sub><small>0</small></sub> + 11) mod 2<sup><small>48</small></sup>
@@ -93,19 +93,19 @@
             <b class="unovv">1</b> la sortie sera initialisée sur le premier nombre de la série. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Enable : étiquette <var>EM</var>
+            Entrée Enable&nbsp;: étiquette <var>EM</var>
           </dt>
           <dd>
             Le composant est activé lorsque cette entrée est  à <b class="unov">1</b> ou indéfini <b class="uvalue">U</b>, mais si elle est à <b class="zerov">0</b>, l'entrée d'horloge est ignorée. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Entrée Clock : étiqueté avec un triangle.
+            Entrée Clock&nbsp;: étiqueté avec un triangle.
           </dt>
           <dd>
             Au moment où cette action est déclenchée comme spécifié par l'attribut <b class="property">Trigger</b>, le composant passe au numéro suivant dans sa séquence. Largeur de bit 1.
           </dd>
           <dt class="lib">
-            Sortie Output :
+            Sortie Output&nbsp;:
           </dt>
           <dd>
             Émets la valeur actuellement stockée par le composant.
@@ -136,7 +136,7 @@
             Trigger
           </dt>
           <dd>
-            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
+            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs&nbsp;:<br><b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>. <br><b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
           </dd>
           <dt class="lib">
             Etiquette

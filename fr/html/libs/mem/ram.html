@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <b>Librairie :</b>
+              <b>Librairie&nbsp;:</b>
             </td>
             <td>
               <a href="index.html">Memory</a>
@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <td>
-              <b>Introduction :</b>
+              <b>Introduction&nbsp;:</b>
             </td>
             <td>
               2.0 Beta 1
@@ -39,7 +39,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <b>Apparence :</b>
+              <b>Apparence&nbsp;:</b>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/ram.png" alt="#########">
@@ -113,19 +113,19 @@
             <var>Clear</var>
           </dt>
           <dd>
-            Entrée : Cette broche n'est présente que si la propriété <b class="property">Broche d'effacement</b> est positionnée sur <b class="vprop">Oui</b>. Lorsque ce paramètre est à <b class="unov">1</b>, toutes les valeurs en mémoire sont fixées à <b class="zerov">0</b>, quelles que soient les autres entrées.
+            Entrée&nbsp;: Cette broche n'est présente que si la propriété <b class="property">Broche d'effacement</b> est positionnée sur <b class="vprop">Oui</b>. Lorsque ce paramètre est à <b class="unov">1</b>, toutes les valeurs en mémoire sont fixées à <b class="zerov">0</b>, quelles que soient les autres entrées.
           </dd>
           <dt class="lib">
             <var>Adresse</var>
           </dt>
           <dd>
-            Bus entrée : Sélectionne la position de la mémoire à laquelle le circuit accède actuellement.
+            Bus entrée&nbsp;: Sélectionne la position de la mémoire à laquelle le circuit accède actuellement.
           </dd>
           <dt class="lib">
             <var>Store</var>
           </dt>
           <dd>
-            Entrée : Lorsqu'elle est activée, elle autorise le stockage des données à la position définie par la valeur présente sur le bus Adresse. Selon les valeurs de la propriété <b class="property">Trigger</b> elle est active à <b class="unov">1</b> sur les valeurs <b class="vprop">Front montant/Front descendant</b> avec la synchronisation par le signal d'horloge. Elle est active à <b class="unov">1</b> sur la valeur <b class="vprop">Niveau haut</b> et à <b class="zerov">0</b> sur la valeur <b class="vprop">Niveau bas</b> indépendamment du signal d'horloge.<br>
+            Entrée&nbsp;: Lorsqu'elle est activée, elle autorise le stockage des données à la position définie par la valeur présente sur le bus Adresse. Selon les valeurs de la propriété <b class="property">Trigger</b> elle est active à <b class="unov">1</b> sur les valeurs <b class="vprop">Front montant/Front descendant</b> avec la synchronisation par le signal d'horloge. Elle est active à <b class="unov">1</b> sur la valeur <b class="vprop">Niveau haut</b> et à <b class="zerov">0</b> sur la valeur <b class="vprop">Niveau bas</b> indépendamment du signal d'horloge.<br>
             <p>
               Ci-dessous vous pouvez observer un tableau qui présente les différents cas de déclenchement de l'écriture en mémoire en fonction de l'état des différentes propriétés du composant.
             </p>
@@ -199,7 +199,7 @@
             <var>Load</var>
           </dt>
           <dd>
-            Entrée : Cette broche n'est présente que si la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par byte</b>.<br>
+            Entrée&nbsp;: Cette broche n'est présente que si la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par byte</b>.<br>
             Lorsqu'elle est active, elle autorise l'émission des données de la position définie par la valeur présente sur le bus Adresse.
             <p>
               Ci-dessous vous pouvez observer un tableau qui présente les différents cas de lecture de la mémoire vers le port de sortie en fonction de l'état des différentes propriétés du composant.
@@ -338,38 +338,38 @@
             <var>Clock</var>
           </dt>
           <dd>
-            Entrée : Cette broche n'est présente que si la propriété <b class="property">Trigger</b> est positionnée sur <b class="vprop">Front montant/Front Descendant</b> et dans les autres cas si la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par ligne</b>. Au moment de son déclenchement, la mémoire enregistrera ou présentera les données. Le mode de déclenchement est défini par les paramètres de la propriété <b class="property">Trigger</b>.<br>
+            Entrée&nbsp;: Cette broche n'est présente que si la propriété <b class="property">Trigger</b> est positionnée sur <b class="vprop">Front montant/Front Descendant</b> et dans les autres cas si la propriété <b class="property">Activation</b> est positionnée sur <b class="vprop">Par ligne</b>. Au moment de son déclenchement, la mémoire enregistrera ou présentera les données. Le mode de déclenchement est défini par les paramètres de la propriété <b class="property">Trigger</b>.<br>
             Observez les deux tableaux au-dessus.
           </dd>
           <dt class="lib">
             <var>LE0</var> à <var>LE7</var>
           </dt>
           <dd>
-            Entrée : Ces broches ne sont présentes que si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b>. Leur nombre (2,4,8) dépend de la propriété <b class="vprop">Nombre de lignes</b> . Chaque broche active une des lignes d'entrée.
+            Entrée&nbsp;: Ces broches ne sont présentes que si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b>. Leur nombre (2,4,8) dépend de la propriété <b class="vprop">Nombre de lignes</b> . Chaque broche active une des lignes d'entrée.
           </dd>
           <dt class="lib">
             <var>Input</var>
           </dt>
           <dd>
-            Bus Entrée : Ce bus n'est présent que si la propriété <b class="property">Type de bus de données</b> est positionnée sur <b class="vprop">deux bus omnidirectionnels</b>. Il reçoit les données qui seront écrites dans la mémoire à la position spécifiée par la valeur des broches d'adresse au déclenchement du trigger. Voir tableaux au-dessus.
+            Bus Entrée&nbsp;: Ce bus n'est présent que si la propriété <b class="property">Type de bus de données</b> est positionnée sur <b class="vprop">deux bus omnidirectionnels</b>. Il reçoit les données qui seront écrites dans la mémoire à la position spécifiée par la valeur des broches d'adresse au déclenchement du trigger. Voir tableaux au-dessus.
           </dd>
           <dt class="lib">
             <var>Input0</var> à <var>Input7</var>
           </dt>
           <dd>
-            Bus Entrée : Ces bus ne sont présent que si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b> et que la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">simple</b>. Leur fonction est la même que l'entrée Input avec cette différence, Input0 pointe sur la position mémoire Adresse, Input1 pointe sur adresse + 1, Input2 pointe sur adresse + 2 et ainsi de suite. Chaque ligne d'entrée a un signal d'autorisation associée LE0..LE7.
+            Bus Entrée&nbsp;: Ces bus ne sont présent que si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b> et que la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">simple</b>. Leur fonction est la même que l'entrée Input avec cette différence, Input0 pointe sur la position mémoire Adresse, Input1 pointe sur adresse + 1, Input2 pointe sur adresse + 2 et ainsi de suite. Chaque ligne d'entrée a un signal d'autorisation associée LE0..LE7.
           </dd>
           <dt class="lib">
             <var>Data</var>
           </dt>
           <dd>
-            Bus Sortie : Ce bus n'est présent que si la propriété <b class="property">Type de bus de données</b> est positionnée sur <b class="vprop">deux bus omnidirectionnels</b>. Il émet les données qui seront lues à la position spécifiée par la valeur des broches d'adresse au déclenchement. Voir tableaux au-dessus.
+            Bus Sortie&nbsp;: Ce bus n'est présent que si la propriété <b class="property">Type de bus de données</b> est positionnée sur <b class="vprop">deux bus omnidirectionnels</b>. Il émet les données qui seront lues à la position spécifiée par la valeur des broches d'adresse au déclenchement. Voir tableaux au-dessus.
           </dd>
           <dt class="lib">
             <var>Data0</var> à <var>Data7</var>
           </dt>
           <dd>
-            Bus Sortie : Ces bus ne sont présent si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b> et que la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">simple</b>. Leur fonction est la même que la sortie Data avec cette différence, Data0 émet les données de la position mémoire spécifiée par la valeur des broches d'adresse, Data1 émet adresse + 1, Data2 émet adresse + 2 et ainsi de suite.<br>
+            Bus Sortie&nbsp;: Ces bus ne sont présent si la propriété <b class="property">Activation</b> est réglée sur <b class="vprop">Par ligne</b> et que la propriété <b class="property">Nombre de lignes</b> est différente de <b class="vprop">simple</b>. Leur fonction est la même que la sortie Data avec cette différence, Data0 émet les données de la position mémoire spécifiée par la valeur des broches d'adresse, Data1 émet adresse + 1, Data2 émet adresse + 2 et ainsi de suite.<br>
             La propriété <b class="property">Autoriser les accès non alignés ?</b> détermine si une erreur est générée quand l'adresse n'est pas alignée sur un multiple du nombre de lignes.<br>
             <br>
             <center>
@@ -403,14 +403,14 @@
           </dt>
           <dd>
             Détermine de quelle manière les données sont présentées au composant.<br>
-            <b class="vprop">Par byte</b> : Un seul bus de donnée est présent.<br>
+            <b class="vprop">Par byte</b>&nbsp;: Un seul bus de donnée est présent.<br>
             <b class="vprop">Par ligne</b> une ou plusieurs lignes de données composent le bus de donnée. Elles ont chacune un signal de sélection propre. La propriété <b class="property">Nombre de lignes</b> permet d'en définir le nombre (1,2,4,8).
           </dd>
           <dt class="lib">
             Type de RAM
           </dt>
           <dd>
-            Détermine comment est modifié le contenu de la mémoire en cas de redémarrage de la simulation :<br>
+            Détermine comment est modifié le contenu de la mémoire en cas de redémarrage de la simulation&nbsp;:<br>
             <b class="vprop">Non Volatile</b> le contenu de la mémoire n'est pas modifié.<br>
             <b class="vprop">Volatile</b>; Le contenu de la RAM est réinitialisé à zéro ou aléatoirement ( selon les options de projet <a href="opts-simulate.html">L'onglet Simulation</a>).
           </dd>
@@ -436,7 +436,7 @@
             Trigger
           </dt>
           <dd>
-            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs :<br>
+            Configure la façon dont l'entrée d'horloge est interprétée. Les valeurs&nbsp;:<br>
             <b class="vprop">Front montant</b> indique que le composant doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>.<br>
             <b class="vprop">Front descendant</b> indique qu'il doit mettre à jour sa valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.<br>
             <b class="vprop">Niveau haut</b> indique que la mémoire doit mettre à jour en continu lorsque l'entrée load est à <b class="unov">1</b>.<br>
@@ -455,15 +455,15 @@
           </dt>
           <dd>
             Détermine le comportement du composant si la lecture et l'écriture sont activées en même temps.<br>
-            <b class="vprop">Lecture après écriture</b> : La donnée de la case mémoire pointée par <b class="vprop">Adresse</b> sera écrite et ensuite lue et transmise en sortie.<br>
-            <b class="vprop">Ecriture après lecture</b> : La donnée de la case mémoire pointée par <b class="vprop">Adresse</b> sera transmise en sortie et ensuite la valeur de la case mémoire sera modifiée par la donnée entrante.
+            <b class="vprop">Lecture après écriture</b>&nbsp;: La donnée de la case mémoire pointée par <b class="vprop">Adresse</b> sera écrite et ensuite lue et transmise en sortie.<br>
+            <b class="vprop">Ecriture après lecture</b>&nbsp;: La donnée de la case mémoire pointée par <b class="vprop">Adresse</b> sera transmise en sortie et ensuite la valeur de la case mémoire sera modifiée par la donnée entrante.
           </dd>
           <dt class="lib">
             Type de bus de donnée
           </dt>
           <dd>
             Détermine l'architecture du bus de donnée. Les valeurs:<br>
-            <b class="vprop">Bus bidirectionel</b> : Un bus est présent pour l'entrée et la sortie des données. Il faudra utiliser des buffers contrôlés pour gérer la circulation des données. <b class="vprop">Bus omnidirectionel</b> : Deux bus un en entré et un en sorti sont présent.
+            <b class="vprop">Bus bidirectionel</b>&nbsp;: Un bus est présent pour l'entrée et la sortie des données. Il faudra utiliser des buffers contrôlés pour gérer la circulation des données. <b class="vprop">Bus omnidirectionel</b>&nbsp;: Deux bus un en entré et un en sorti sont présent.
           </dd>
           <dt class="lib">
             Etiquette

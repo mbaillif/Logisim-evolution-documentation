@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <strong>Librairie :</strong>
+              <strong>Librairie&nbsp;:</strong>
             </td>
             <td>
               <a href="index.html">Arithmétique</a>
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td>
-              <strong>Introduction :</strong>
+              <strong>Introduction&nbsp;:</strong>
             </td>
             <td>
               2.3.0
@@ -36,7 +36,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <strong>Apparence :</strong>
+              <strong>Apparence&nbsp;:</strong>
             </td>
             <td valign="top">
               <img class="Apparencelibs" src="../../../../img-libs/shifter.png" alt="#########" width="64" height="64">
@@ -52,10 +52,10 @@
       </p>
       <ul>
         <li>
-          <b>Gauche logique</b>: Tous les bits de <var>data</var> sont décalés vers le haut <var>dist</var> places, les <var>dist</var> places inférieures étant remplies de 0. Par exemple, 11001011 logiquement décalé deux fois vers la gauche donne 00101100. (Les deux premières sont perdues).
+          <b>Gauche logique</b>&nbsp;: Tous les bits de <var>data</var> sont décalés vers le haut <var>dist</var> places, les <var>dist</var> places inférieures étant remplies de 0. Par exemple, 11001011 logiquement décalé deux fois vers la gauche donne 00101100. (Les deux premières sont perdues).
         </li>
         <li>
-          <b>Logique droite</b>: Tous les bits de <var>data</var> sont décalés vers le bas de <var>dist</var> places, les <var>dist</var> places supérieures étant remplies de 0. Par exemple, 11001011 logiquement décalé deux fois vers la droite donne 00110010. (Les deux inférieurs sont perdus).
+          <b>Logique droite</b>&nbsp;: Tous les bits de <var>data</var> sont décalés vers le bas de <var>dist</var> places, les <var>dist</var> places supérieures étant remplies de 0. Par exemple, 11001011 logiquement décalé deux fois vers la droite donne 00110010. (Les deux inférieurs sont perdus).
         </li>
         <li>
           <b>Arithmétique droite</b>: Tous les bits de <var>data</var> sont décalés vers le bas de <var>dist</var> places, les <var>dist</var> places supérieures étant remplies de répétitions de n'importe quel bit supérieur de <var>data</var>. Par exemple, 11001011 Arithmétiquement décalé vers la droite deux fois est 11110010.
@@ -76,22 +76,22 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            Bord ouest, extrémité nord:
+            Bord ouest, extrémité nord&nbsp;:
           </dt>
           <dd>
-            Entrée : La valeur à décaler. La largeur des données en bit correspond à l'attribut <b class="property">Largeur de donnée</b>.
+            Entrée&nbsp;: La valeur à décaler. La largeur des données en bit correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
           <dt class="lib">
-            Bord ouest, extrémité sud:
+            Bord ouest, extrémité sud&nbsp;:
           </dt>
           <dd>
-            Entrée : Le nombre de bits par lequel décaler l'entrée <var>data</var>. La largeur du bit est calculée comme suit. Cette entrée doit avoir autant de bits que le nombre minimum pour indiquer n'importe quelle distance de décalage de 0 jusqu'à un de moins que les bits de données ; c'est-à-dire qu'elle doit être le plafond du logarithme de base-2 des bits de données. Par exemple, si les bits de données étaient 8, cette entrée nécessiterait 3 bits, mais si elle était 9, elle nécessiterait 4 bits.
+            Entrée&nbsp;: Le nombre de bits par lequel décaler l'entrée <var>data</var>. La largeur du bit est calculée comme suit. Cette entrée doit avoir autant de bits que le nombre minimum pour indiquer n'importe quelle distance de décalage de 0 jusqu'à un de moins que les bits de données ; c'est-à-dire qu'elle doit être le plafond du logarithme de base-2 des bits de données. Par exemple, si les bits de données étaient 8, cette entrée nécessiterait 3 bits, mais si elle était 9, elle nécessiterait 4 bits.
           </dd>
           <dt class="lib">
-            Bord est :
+            Bord est&nbsp;:
           </dt>
           <dd>
-            Sotie : Le résultat du décalage de la valeur d'entrée par la distance d'entrée. La largeur des données en bit correspond à l'attribut <b class="property">Largeur de donnée</b>.
+            Sotie&nbsp;: Le résultat du décalage de la valeur d'entrée par la distance d'entrée. La largeur des données en bit correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
         </dl>
       </div>

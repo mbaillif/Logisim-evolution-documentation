@@ -21,7 +21,7 @@
         <tbody>
           <tr>
             <td>
-              <strong>Librairie :</strong>
+              <strong>Librairie&nbsp;:</strong>
             </td>
             <td>
               <a href="index.html">Câblage</a>
@@ -29,7 +29,7 @@
           </tr>
           <tr>
             <td>
-              <strong>Introduction :</strong>
+              <strong>Introduction&nbsp;:</strong>
             </td>
             <td>
               2.7.0
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <strong>Apparence :</strong>
+              <strong>Apparence&nbsp;:</strong>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/transmis.png" alt="#########" width="64" height="64">
@@ -175,7 +175,7 @@
         * Si <b>source</b> est Haute impédance (<b class="uvalue">U</b>), <b>drain</b> est Haute impédance (<b class="uvalue">U</b>) autrement <b>drain</b> est en erreur (<b class="evalue">E</b>).
       </p>
       <p>
-        Note :Étant donné que Logisim utilise les marqueurs <b class="uvalue">U</b> (haute impédance) et <b class="evalue">E</b> (Erreur) j'ai utilisé les mêmes dans les illustrations plutôt que Z (haute impédance) et X (Erreur) plus communs dans d'autres documents.
+        Note&nbsp;: Étant donné que Logisim utilise les marqueurs <b class="uvalue">U</b> (haute impédance) et <b class="evalue">E</b> (Erreur) j'ai utilisé les mêmes dans les illustrations plutôt que Z (haute impédance) et X (Erreur) plus communs dans d'autres documents.
       </p>
       <p>
         Si l'attribut <b class="property">Largeur de donnée</b> est supérieur à 1, l'entrée <b>gate</b> est toujours d'un seul bit, mais sa valeur est appliquée simultanément à chacun des bits de l'entrée <b>source</b> .
@@ -189,25 +189,25 @@
 	  <div class="attliste">
       <dl>
         <dt class="lib">
-          Bord est : la source. 
+          Bord est&nbsp;: la source. 
         </dt>
         <dd>
           En entrée, l'état sera transmis à la sortie si elle est déclenchée par l'entrée <b>n-gate</b> et <b>p-gate</b> . La largeur en bit est définie par l'attribut <b class="property">Largeur  données</b>.
         </dd>
         <dt class="lib">
-          Bord  nord : P-gate
+          Bord  nord&nbsp;: P-gate
         </dt>
         <dd>
           En entrées, commande la transmission. Normalement on applique des valeurs de commande opposée sur ces entrées. La largeur en bit est de 1.
         </dd>
 		<dt class="lib">
-          Bord sud : N-gate
+          Bord sud&nbsp;: N-gate
         </dt>
         <dd>
           En entrée, commande la transmission. Normalement on applique des valeurs de commande opposée sur ces entrées. La largeur en bit est de 1.
         </dd>
         <dt class="lib">
-          Bord ouest : Le drain
+          Bord ouest&nbsp;: Le drain
         </dt>
         <dd>
           La sortie du composant, qui correspondra à l'entrée source si p-gate est <b class="zerov">0</b> et n-gate est <b class="unov">1</b>, ou sera flottante (<b class="uvalue">U</b>) si p-gate est <b class="unov">1</b> et n-gate est <b class="zerov">0</b>. Pour toutes les autres valeurs de p-gate et n-gate, la sortie est une valeur d'erreur (<b class="evalue">E</b>). La largeur en bit est définie par l'attribut <b class="property">Largeur de donnée</b>.

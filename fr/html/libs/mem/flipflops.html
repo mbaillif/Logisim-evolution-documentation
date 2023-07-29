@@ -21,7 +21,7 @@
         <tbody>
           <tr>
             <td>
-              <b>Librairie :</b>
+              <b>Librairie&nbsp;:</b>
             </td>
             <td>
               <a href="index.html">Memory</a>
@@ -29,7 +29,7 @@
           </tr>
           <tr>
             <td>
-              <b>Introduction :</b>
+              <b>Introduction&nbsp;:</b>
             </td>
             <td>
               2.0 Beta 1
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <b>Apparence :</b>
+              <b>Apparence&nbsp;:</b>
             </td>
           </tr>
         </tbody>
@@ -61,8 +61,8 @@
           </tr>
           <tr>
             <th valign="middle" align="left">
-              Logisim Evolution :<br>
-              Logisim HolyCross :
+              Logisim Evolution&nbsp;:<br>
+              Logisim HolyCross&nbsp;:
             </th>
             <td>
               <img class="appearancelibs" src="../../../../img-libs/hdflipflops.png" alt="#########">
@@ -326,25 +326,25 @@
       <ul>
         <li>
           <p>
-            <b>Bascule D :</b> Lorsque l'horloge se déclenche, à cet instant la valeur mémorisée par la bascule devient la valeur de l'entrée <var>D</var> (<em>Data</em>).
+            <b>Bascule D&nbsp;:</b> Lorsque l'horloge se déclenche, à cet instant la valeur mémorisée par la bascule devient la valeur de l'entrée <var>D</var> (<em>Data</em>).
           </p>
         </li>
         <li>
           <p>
-            <b>Bascule T :</b> Lorsque l'horloge se déclenche et que l'entrée <var>T</var> (<em>Toggle</em>) est à <b class="unov">1</b>, la valeur mémorisée par la bascule est inversée. Si l'entrée <var>T</var> (<em>Toggle</em>) est à <b class="zerov">0</b> la valeur n'est pas modifiée.
+            <b>Bascule T&nbsp;:</b> Lorsque l'horloge se déclenche et que l'entrée <var>T</var> (<em>Toggle</em>) est à <b class="unov">1</b>, la valeur mémorisée par la bascule est inversée. Si l'entrée <var>T</var> (<em>Toggle</em>) est à <b class="zerov">0</b> la valeur n'est pas modifiée.
           </p>
         </li>
         <li>
           <p>
-            <b>Bascule J-K :</b> Lorsque l'horloge se déclenche, la valeur mémorisée par la bascule est inversée si les entrées <var>J</var> et <var>K</var> sont toutes deux à <b class="unov">1</b>. La valeur n'est pas modifiée si les deux entrées sont à <b class="zerov">0</b>. Si elles
+            <b>Bascule J-K&nbsp;:</b> Lorsque l'horloge se déclenche, la valeur mémorisée par la bascule est inversée si les entrées <var>J</var> et <var>K</var> sont toutes deux à <b class="unov">1</b>. La valeur n'est pas modifiée si les deux entrées sont à <b class="zerov">0</b>. Si elles
             sont différentes, la valeur devient <b class="unov">1</b> si l'entrée <var>J</var> est à <b class="unov">1</b> et <b class="zerov">0</b> si l'entrée <var>K</var> est à <b class="unov">1</b>.
           </p>
         </li>
         <li>
           <p>
-            <b>Bascule R-S :</b> Lorsque l'horloge se déclenche, la valeur mémorisée par la bascule reste inchangée si <var>R</var> et <var>S</var> sont tous deux à <b class="zerov">0</b>, devient <b class="zerov">0</b> si l'entrée R (Reset) est à <b class="unov">1</b>, et devient
+            <b>Bascule R-S&nbsp;:</b> Lorsque l'horloge se déclenche, la valeur mémorisée par la bascule reste inchangée si <var>R</var> et <var>S</var> sont tous deux à <b class="zerov">0</b>, devient <b class="zerov">0</b> si l'entrée R (Reset) est à <b class="unov">1</b>, et devient
             <b class="unov">1</b> si l'entrée S (Set) est à <b class="unov">1</b>.Dans la réalité le comportement est indéterminé si les deux entrées sont à <b class="unov">1</b>. Dans Logisim, la valeur dans la bascule reste inchangée.<br>
-            <b class="note">Note</b> : Pour cette bascule, ne pas confondre les entrées <var>R S</var> sur le côté ouest synchrone et les entrées R S au nord et au sud asynchrone.
+            <b class="note">Note</b>&nbsp;: Pour cette bascule, ne pas confondre les entrées <var>R S</var> sur le côté ouest synchrone et les entrées R S au nord et au sud asynchrone.
           </p>
         </li>
       </ul>
@@ -361,41 +361,41 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            Bord ouest : marqué par un triangle ou le label <var>E</var>
+            Bord ouest&nbsp;: marqué par un triangle ou le label <var>E</var>
           </dt>
           <dd>
-            Entrée d'horloge : Ce signal déclenche la mise à jour de la valeur de la bascule en fonction des entrées sur le côté ouest. Le mode de déclenchement est déterminé par la propriété <b class="property">Trigger</b> : <b class="vprop">Front montant, Front descendant, Niveau bas, Niveau haut</b>.
+            Entrée d'horloge&nbsp;: Ce signal déclenche la mise à jour de la valeur de la bascule en fonction des entrées sur le côté ouest. Le mode de déclenchement est déterminé par la propriété <b class="property">Trigger</b>&nbsp;: <b class="vprop">Front montant, Front descendant, Niveau bas, Niveau haut</b>.
           </dd>
           <dt class="lib">
-            Bord ouest : autre(s) broche(s) étiquetée(s)
+            Bord ouest&nbsp;: autre(s) broche(s) étiquetée(s)
           </dt>
           <dd>
             Ces entrées contrôlent la façon dont la valeur de la bascule change pendant le déclenchement de l'horloge (voir l'entrée d'horloge et la propriété <b class="property">Trigger</b>). Leur comportement exact dépend du type de la bascule ; les tableaux ci-dessus résument leur comportement.
           </dd>
           <dt class="lib">
-            Bord est : étiqueté <var>Q</var>, extrémité nord
+            Bord est&nbsp;: étiqueté <var>Q</var>, extrémité nord
           </dt>
           <dd>
-            Sortie : Délivre la valeur actuellement stockée par la bascule.
+            Sortie&nbsp;: Délivre la valeur actuellement stockée par la bascule.
           </dd>
           <dt class="lib">
             Bord est, extrémité sud
           </dt>
           <dd>
-            Sortie : Délivre le complément de la valeur actuellement stockée par la bascule.
+            Sortie&nbsp;: Délivre le complément de la valeur actuellement stockée par la bascule.
           </dd>
           <dt class="lib">
-            Bord sud : extrémité est ou centre
+            Bord sud&nbsp;: extrémité est ou centre
           </dt>
           <dd>
-            Reset entrée asynchrone : Lorsqu'elle est à <b class="zerov">0</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur de la bascule est ramenée à <b class="zerov">0</b>. Cela se produit de manière asynchrone,
+            Reset entrée asynchrone&nbsp;: Lorsqu'elle est à <b class="zerov">0</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Tant qu'elle est à <b class="unov">1</b>, la valeur de la bascule est ramenée à <b class="zerov">0</b>. Cela se produit de manière asynchrone,
             c'est-à-dire sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet.
           </dd>
           <dt class="lib">
-            Bordure sud : extrémité ouest ou bord nord
+            Bordure sud&nbsp;: extrémité ouest ou bord nord
           </dt>
           <dd>
-            Set entrée asynchrone : Lorsqu'elle est à <b class="unov">1</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Lorsqu'elle est à <b class="unov">1</b>, la valeur de la bascule est fixée à <b class="unov">1</b>. Cela se produit de manière asynchrone, c'est-à-dire
+            Set entrée asynchrone&nbsp;: Lorsqu'elle est à <b class="unov">1</b> ou indéfinie <b class="uvalue">U</b>, cette entrée n'a aucun effet. Lorsqu'elle est à <b class="unov">1</b>, la valeur de la bascule est fixée à <b class="unov">1</b>. Cela se produit de manière asynchrone, c'est-à-dire
             sans tenir compte de la valeur actuelle de l'entrée d'horloge. Tant que cette entrée est à <b class="unov">1</b>, les autres entrées n'ont aucun effet, à l'exception de l'entrée de réinitialisation asynchrone, qui est prioritaire.
           </dd>
         </dl>
@@ -409,7 +409,7 @@
             Trigger
           </dt>
           <dd>
-            Configure la façon dont l'entrée de l'horloge est interprétée. Les réglages :<br><b class="vprop">Front montant</b> indique que la bascule doit mettre à jour la valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>.<br>
+            Configure la façon dont l'entrée de l'horloge est interprétée. Les réglages&nbsp;:<br><b class="vprop">Front montant</b> indique que la bascule doit mettre à jour la valeur à l'instant où l'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>.<br>
 			<b class="vprop">Front descendant</b> indique qu'elle doit mettre à jour la valeur à l'instant où l'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.<br>
 			<b class="vprop">Niveau haut</b> indique que la bascule doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="unov">1</b>. <br>
 			<b class="vprop">Niveau bas</b> indique qu'elle doit mettre à jour en continu lorsque l'entrée d'horloge est à <b class="zerov">0</b>. Notez que les deux dernières options ne sont pas disponibles pour les bascules T et J-K.

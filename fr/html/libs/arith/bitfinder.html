@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <strong>Librairie :</strong>
+              <strong>Librairie&nbsp;:</strong>
             </td>
             <td>
               <a href="index.html">Arithmétique</a>
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td>
-              <strong>Introduction :</strong>
+              <strong>Introduction&nbsp;:</strong>
             </td>
             <td>
               2.6.1
@@ -36,7 +36,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <strong>Apparence :</strong>
+              <strong>Apparence&nbsp;:</strong>
             </td>
             <td valign="top">
               <img class="Apparencelibs" src="../../../../img-libs/bitfindr.png" alt="#########" width="64" height="64">
@@ -108,7 +108,7 @@
         La sortie du composant sur le bord sud indique si le bit désiré a été trouvé. Dans les exemples ci-dessus impliquant l'entrée 11010100, la sortie sud est à 1 dans tous les cas. Mais si l'entrée était 00000000 et que le composant devait trouver un 1 , alors la sortie sud serait à 0 - et la sortie sur le bord est serait également à 0.
       </p>
       <p>
-        Si, lors de la recherche de la valeur souhaitée, une valeur qui n'est ni 0 ni 1 est trouvée, le bit peut être flottant ou une valeur d'erreur, alors les deux sorties seront entièrement constituées de bits d'erreur. Notez que cela ne se produit que si le bit problématique est rencontré avant de trouver le bit souhaité : Pour l'entrée x1010100, la sortie serait toujours 2 si le 1 d'ordre inférieur est recherché ; mais nous obtiendrions des valeurs d'erreur si le type de composant indique de rechercher le 1 d'ordre supérieur ou le 0 d'ordre supérieur, puisqu'il y a un bit erroné dans un
+        Si, lors de la recherche de la valeur souhaitée, une valeur qui n'est ni 0 ni 1 est trouvée, le bit peut être flottant ou une valeur d'erreur, alors les deux sorties seront entièrement constituées de bits d'erreur. Notez que cela ne se produit que si le bit problématique est rencontré avant de trouver le bit souhaité&nbsp;: Pour l'entrée x1010100, la sortie serait toujours 2 si le 1 d'ordre inférieur est recherché ; mais nous obtiendrions des valeurs d'erreur si le type de composant indique de rechercher le 1 d'ordre supérieur ou le 0 d'ordre supérieur, puisqu'il y a un bit erroné dans un
         bit d'ordre supérieur.
       </p>
       <h2>
@@ -120,19 +120,19 @@
             Bord ouest
           </dt>
           <dd>
-            Entrée : L'entrée multibit dans laquelle on recherche le bit désiré.
+            Entrée&nbsp;: L'entrée multibit dans laquelle on recherche le bit désiré.
           </dd>
           <dt class="lib">
             Bord est
           </dt>
           <dd>
-            Entrée : L'index du bit souhaité, en comptant à partir de 0 pour le bit de poids le plus faible. La largeur de donnée est le nombre minimal de bits pour stocker l'indice maximal possible, qui est inférieur d'un point à la valeur de l'attribut Largeur de données.
+            Entrée&nbsp;: L'index du bit souhaité, en comptant à partir de 0 pour le bit de poids le plus faible. La largeur de donnée est le nombre minimal de bits pour stocker l'indice maximal possible, qui est inférieur d'un point à la valeur de l'attribut Largeur de données.
           </dd>
           <dt class="lib">
             Bord sud
           </dt>
           <dd>
-            1 if the desired bit is found, 0 if all input bits are the inverse of the desired bit, and the error value if a non-0, non-1 value is found before the desired bit. Sortie : 1 si le bit souhaité est trouvé, 0 si tous les bits d'entrée sont l'inverse du bit souhaité, et la valeur d'erreur(E) si une valeur erreur (E) est trouvée avant le bit souhaité.
+            1 if the desired bit is found, 0 if all input bits are the inverse of the desired bit, and the error value if a non-0, non-1 value is found before the desired bit. Sortie&nbsp;: 1 si le bit souhaité est trouvé, 0 si tous les bits d'entrée sont l'inverse du bit souhaité, et la valeur d'erreur(E) si une valeur erreur (E) est trouvée avant le bit souhaité.
           </dd>
         </dl>
       </div>
