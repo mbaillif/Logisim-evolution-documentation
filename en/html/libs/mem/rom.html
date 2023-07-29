@@ -21,15 +21,18 @@
         <tbody>
           <tr>
             <td>
-              <strong>Library:</strong>
+              <b>Library:</b>
             </td>
             <td>
               <a href="index.html">Memory</a>
             </td>
+            <td rowspan="3">
+              <img class="appearancelibshaut" src="../../../../img-libs/romlh.png" alt="#########">
+            </td>
           </tr>
           <tr>
             <td>
-              <strong>Introduced:</strong>
+              <b>Introduced:</b>
             </td>
             <td>
               2.1.0
@@ -37,10 +40,10 @@
           </tr>
           <tr>
             <td valign="top">
-              <strong>Appearance:</strong>
+              <b>Appearance:</b>
             </td>
             <td valign="top">
-              <img class="appearancelibs" src="../../../../img-libs/rom.png" alt="#########"  width="64" height="64">
+              <img class="appearancelibs" src="../../../../img-libs/rom.png" alt="#########">
             </td>
           </tr>
         </tbody>
@@ -59,32 +62,32 @@
       </p>
       <h2>
         Pins
-      </h2>
+      </h2><img class="pinslib" src="../../../../img-libs/rompins.png" alt="#########">
       <dl>
         <dt>
-          <var>A</var> on west edge (input, bit width matches Address Bit Width attribute)
+          <var>Adress</var>
         </dt>
         <dd>
-          Selects which of the values are currently being accessed by the circuit.
+          Input: Selects which of the values are currently being accessed by the circuit. The bit width  is equal to <b class="property">Address Bit Width</b>
         </dd>
         <dt>
-          <var>D</var> on east edge (input/output, bit width matches Data Bit Width attribute)
+          <var>Data</var>
         </dt>
         <dd>
-          Outputs the value at the currently selected address at the <var>D</var> pin if <var>sel</var> is 1 or floating. If <var>sel</var> is 0, then <var>D</var> will be floating.
+          Outputs the value at the currently selected address at the <var>Adress</var> pin. The bit width  is equal to <b class="property">Data Bit Width</b> <!--if <var>sel</var> is 1 or floating. If <var>sel</var> is 0, then <var>D</var> will be floating. -->
         </dd>
-        <dt>
+<!--        <dt>
           <var>sel</var> on south edge (input, bit width 1)
         </dt>
         <dd>
           If you have just one ROM module, ignore this input. If you have multiple ROM modules in parallel, you can use this input to enable or disable the entire ROM module, based on whether the value is 1 or 0. In other words, when this is 0, no value is emitted on the <var>D</var> output.
         </dd>
-      </dl>
+-->      </dl>
       <h2>
         Attributes
       </h2>
       <p>
-        When the component is selected or being added, the digits '0' through '9' alter its <q>Address Bit Width</q> attribute and Alt-0 through Alt-9 alter its <q>Data Bit Width</q> attribute.
+        When the component is selected or being added, the digits  <b class="tkeybd">0</b> through <b class="tkeybd">9</b> alter its <q>Address Bit Width</q> attribute and <b class="tkeybd">Alt-0</b> through <b class="tkeybd">Alt-9</b> alter its <q>Data Bit Width</q> attribute.
       </p>
       <dl>
         <dt>
