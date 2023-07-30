@@ -15,7 +15,7 @@ The folder "img-guide" contains the images of the guide without translation requ
 
 The "img-libs" folder contains the images of the library without translation needed.
 
-The files of, el,en,fr,he,pt,ru,it,nl,ja,zh are the linguistic parts of the documentation 
+The files of,el,en,fr,he,pt,ru,it,nl,ja,zh are the linguistic parts of the documentation 
 
 In each of these linguistic files, we find : 
 an "img-guide" folder containing the images of the library with the required translation.
@@ -25,3 +25,33 @@ An "html" folder containing the html documentation files for the language define
 There are also two : 
 contents.xml : is used by javahelp to build the guide tree
 jindexer-stops.txt : this file specifies the words that should not be included in the full text search of the help.
+
+To activate a language in the help, check the following points:
+- In the file: \src\main\resources\resources\logisim\settings.properties 
+               Check that the language abbreviation is present: currently (2023): de el en es fr pt ru it nl ja pl zh
+ 
+- In the file: \src\main\resources\resources\logisim\strings\gui\gui.properties
+               Let the key:  helpsetUrl=doc/doc_xx.hs ; where xx = the language abbreviation
+ 
+ - In the path: \src\main\resources\doc
+  - In file: doc_xx.hs ; where xx = the language abbreviation. 
+             you can copy from doc_en.hs and modify it 
+             line  13:      <mapref location="map_xx.jhm" />
+             line  17:    <view xml:lang="xx" mergetype="javax.help.UniteAppendMerge">
+             line  21:       <data>xx/contents.xml</data>
+             line  28:     <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_xx</data>
+
+  - In the file: map_xx.jhm ; where xx = the language abbreviation.
+                 you can copy from map_en.jhm and modify it 
+                 Replace the paths in en\.. with the language paths xx\..
+	             Example: <mapID target="guide"               url="xx/html/guide/index.html" />
+	
+  - In the path: \src\main\resources\doc\xx ; where xx = the language abbreviation.
+    A file: contents.xml  
+	        that you can copy from  \src\main\resources\doc\en and translate into the language.
+	
+	A file: jhindexer-stops.txt 
+	        which is language-specific and contains words we don't want to use as keywords.
+			
+  - In the path: \src\main\resources\doc\xx 
+                 all translated html document structures.

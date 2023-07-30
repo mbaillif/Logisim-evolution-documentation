@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<!--
+
 <!DOCTYPE helpset
   PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp HelpSet Version 2.0//EN"
-         "http://java.sun.com/products/javahelp/helpset_2_0.dtd"> -->
+         "http://java.sun.com/products/javahelp/helpset_2_0.dtd">
 <helpset version="2.0">
    <!-- title --> 
    <title>Logisim - Help</title>
@@ -42,7 +42,7 @@
      *  The toolbar has a back arrow, a forward arrow, and
      *  a home button that has a user-defined image.
    -->
-   <presentation default=true>
+   <presentation default="true">
        <name>main window</name>
        <location x="200" y="10" />
        <toolbar>

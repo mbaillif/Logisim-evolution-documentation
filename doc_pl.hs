@@ -1,4 +1,5 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+
 <!DOCTYPE helpset
   PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp HelpSet Version 2.0//EN"
          "http://java.sun.com/products/javahelp/helpset_2_0.dtd">
@@ -13,18 +14,18 @@
    </maps>
 	
    <!-- views --> 
-   <view xml:lang="it" mergetype="javax.help.UniteAppendMerge">
+   <view xml:lang="en" mergetype="javax.help.UniteAppendMerge">
       <name>TOC</name>
       <label>Table Of Contents</label>
       <type>javax.help.TOCView</type>
-      <data>it/contents.xml</data>
+      <data>en/contents.xml</data>
    </view>
 
   <view>
     <name>Search</name>
     <label>Search</label>
     <type>javax.help.SearchView</type>
-    <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_en</data>
+    <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_pl</data>
   </view>
 
 	<view>
