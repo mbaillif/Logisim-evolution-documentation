@@ -48,19 +48,19 @@
         Behavior
       </h2>
       <p>
-        Outputs 0 normally; but when the user is pressing the the button using the Poke Tool, the output is 1.
+        By default, its output is <b class="zerov">0</b>, and when the button is pressed it changes to <b class="unov">1</b>. This behavior can be reversed by modifying the <b class="property">Logic Level</b> property .
       </p>
       <h2>
         Pins
       </h2>
       <p>
-        A button has only one pin, a 1-bit output, which is 0 except when the user is pressing the button using the Poke Tool, when it is 1.
+        A button has only one pin, a 1-bit output.
       </p>
       <h2>
         Attributes
       </h2>
       <p>
-        When the component is selected or being added, the arrow keys alter its <q>Facing</q> attribute.
+        When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
       </p>
       <div class="attliste">
         <dl>
@@ -75,6 +75,12 @@
           </dt>
           <dd>
             The color with which to display the button.
+          </dd>
+		  <dt class="lib">
+            Logic Level
+          </dt>
+          <dd>
+            Determines whether the output is a <b class="unov">1</b> or a <b class="zerov">0</b> when the button is pressed.
           </dd>
           <dt class="lib">
             Label
@@ -100,13 +106,19 @@
           <dd>
             The color with which to draw the label.
           </dd>
+		  <dt class="lib">
+            Label Visible
+          </dt>
+          <dd>
+            Determines whether the label is visible or not.
+          </dd>
         </dl>
       </div>
       <h2>
         Poke Tool Behavior
       </h2>
       <p>
-        When the mouse button is pressed, the component's output will be 1. Upon releasing the mouse button, the output reverts back to 0.
+        When the mouse button is pressed, the component output is adjusted according to the <b class="property">Logic level</b> property.
       </p>
       <h2>
         Text Tool Behavior

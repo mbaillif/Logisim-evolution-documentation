@@ -9,15 +9,15 @@
    <!-- maps --> 
    <maps>
      <homeID>top</homeID>
-     <mapref location="map_nl.jhm" />
+     <mapref location="map_en.jhm" />
    </maps>
 	
    <!-- views --> 
-   <view xml:lang="ru" mergetype="javax.help.UniteAppendMerge">
+   <view xml:lang="en" mergetype="javax.help.UniteAppendMerge">
       <name>TOC</name>
       <label>Table Of Contents</label>
       <type>javax.help.TOCView</type>
-      <data>ru/contents.xml</data>
+      <data>en/contents.xml</data>
    </view>
 
   <view>

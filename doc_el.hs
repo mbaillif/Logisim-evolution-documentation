@@ -9,22 +9,22 @@
    <!-- maps --> 
    <maps>
      <homeID>top</homeID>
-     <mapref location="map_el.jhm" />
+     <mapref location="map_en.jhm" />
    </maps>
 	
    <!-- views --> 
-   <view xml:lang="el" mergetype="javax.help.UniteAppendMerge">
+   <view xml:lang="em" mergetype="javax.help.UniteAppendMerge">
       <name>TOC</name>
       <label>Table Of Contents</label>
       <type>javax.help.TOCView</type>
-      <data>el/contents.xml</data>
+      <data>em/contents.xml</data>
    </view>
 
   <view>
     <name>Search</name>
     <label>Search</label>
     <type>javax.help.SearchView</type>
-    <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_el</data>
+    <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_en</data>
   </view>
 
 	<view>

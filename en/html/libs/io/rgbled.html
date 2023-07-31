@@ -48,22 +48,20 @@
         Behavior
       </h2>
       <p>
-        Displays the value of its input by coloring the LED (as specified by its Color attribute) or not depending on whether the input is 1 or 0.
-      </p>
-      <p>
-        (The LED component is basically redundant with an output pin, except for a somewhat different appearance. Some users, though, thought it would be nice to include.)
+        Displays the value of its input by coloring the LED according to whether the inputs are  <b class="unov">1</b> or <b class="zerov">0</b>. Floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>) are considered off values.
       </p>
       <h2>
         Pins
       </h2>
       <p>
-        A LED has only one pin, a 1-bit input which is used to determine whether to display the LED colored (when the input is 1) or darkened (when the input is anything else).
+        An RGB LED has three pins. The combination of the bits of these inputs determines whether to display the LED colored.
+		
       </p>
       <h2>
         Attributes
       </h2>
       <p>
-        When the component is selected or being added, the arrow keys alter its <q>Facing</q> attribute.
+         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
       </p>
       <div class="attliste">
         <dl>
@@ -74,16 +72,10 @@
             The location of the input pin relative to the component.
           </dd>
           <dt class="lib">
-            Color
-          </dt>
-          <dd>
-            The color to display when the input value is 1.
-          </dd>
-          <dt class="lib">
             Active On High?
           </dt>
           <dd>
-            If <q>yes</q>, then the LED is colored when the input is 1. If <q>no</q>, it is colored when the input is 0.
+             If <var>yes</var>, then the LED is colored when the input is <b class="unov">1</b>. If <var>no</var>, it is not colored when the input is  <b class="zerov">0</b>.
           </dd>
           <dt class="lib">
             Label

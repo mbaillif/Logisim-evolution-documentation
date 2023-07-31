@@ -16,21 +16,21 @@
    <!-- views --> 
    <view xml:lang="fr" mergetype="javax.help.UniteAppendMerge">
       <name>TOC</name>
-      <label>Table Of Contents</label>
+      <label>Table des matieres</label>
       <type>javax.help.TOCView</type>
       <data>fr/contents.xml</data>
    </view>
 
   <view>
     <name>Search</name>
-    <label>Search</label>
+    <label>Chercher</label>
     <type>javax.help.SearchView</type>
     <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_fr</data>
   </view>
 
 	<view>
 		<name>Favorites</name>
-		<label>Favorites</label>
+		<label>Favoris<label>
 		<type>javax.help.FavoritesView</type>
 	</view> 
 

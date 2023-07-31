@@ -35,11 +35,14 @@ To activate a language in the help, check the following points:
  
  - In the path: \src\main\resources\doc
   - In file: doc_xx.hs ; where xx = the language abbreviation. 
-             you can copy from doc_en.hs and modify it 
+             you can copy from doc_en.hs and modify it and translate <Label> .... </label>
              line  13:      <mapref location="map_xx.jhm" />
+			 line  19:    <label>Table Of Contents</label>
              line  17:    <view xml:lang="xx" mergetype="javax.help.UniteAppendMerge">
              line  21:       <data>xx/contents.xml</data>
+             line  26:    <label>Search</label>
              line  28:     <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_xx</data>
+             line  33:    <label>Favoris<label>
 
   - In the file: map_xx.jhm ; where xx = the language abbreviation.
                  you can copy from map_en.jhm and modify it 

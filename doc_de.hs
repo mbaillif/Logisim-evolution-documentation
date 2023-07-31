@@ -22,14 +22,14 @@
 
   <view>
     <name>Search</name>
-    <label>Search</label>
+    <label>Suche</label>
     <type>javax.help.SearchView</type>
     <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_de</data>
   </view>
 
 	<view>
 		<name>Favorites</name>
-		<label>Favorites</label>
+		<label>Favoriten</label>
 		<type>javax.help.FavoritesView</type>
 	</view> 
 

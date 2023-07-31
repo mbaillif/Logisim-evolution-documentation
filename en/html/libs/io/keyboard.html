@@ -39,7 +39,7 @@
               <strong>Appearance:</strong>
             </td>
             <td valign="top">
-              <img class="appearancelibslarge" src="../../../../img-libs/keyboard.png" alt="#########" width="128" height="64">
+              <img src="../../../../img-libs/keyboard.png" alt="#########" >
             </td>
           </tr>
         </tbody>
@@ -62,34 +62,34 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            West edge, marked by a triangle (input, bit width 1)
+            West edge, marked by a triangle
           </dt>
           <dd>
-            Clock - when triggered while the read-enable pin isn't 0, the leftmost character from the buffer is deleted, and the outputs are updated to reflect the buffer's new status.
+            Input: Clock - when triggered while the read-enable pin isn't <b class="zerov">0</b>, the leftmost character from the buffer is deleted, and the outputs are updated to reflect the buffer's new status. Bit width 1.
           </dd>
           <dt class="lib">
-            South edge, leftmost pin (input, bit width 1)
+            South edge, leftmost pin
           </dt>
           <dd>
-            Read Enable - when 1 (or floating or error), a clock edge will consume the leftmost character from the buffer. The clock input is ignored when Read Enable is 0.
+            Input: Read Enable - when <b class="unov">1</b> (or floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>), a clock edge will consume the leftmost character from the buffer. The clock input is ignored when Read Enable is <b class="zerov">0</b>. Bit width 1.
           </dd>
           <dt class="lib">
-            South edge, second pin from left (input, bit width 1)
+            South edge, second pin from left
           </dt>
           <dd>
-            Clear - when 1, the buffer is emptied and does not accept further characters.
+            Input: Clear - when <b class="unov">1</b>, the buffer is emptied and does not accept further characters. Bit width 1.
           </dd>
           <dt class="lib">
-            South edge, second pin from right (output, bit width 1)
+            South edge, second pin from right
           </dt>
           <dd>
-            Available - this is 1 when the buffer contains at least one character and 0 when the buffer is empty.
+            Output: Available - this is <b class="unov">1</b> when the buffer contains at least one character and <b class="zerov">0</b> when the buffer is empty. Bit width 1
           </dd>
           <dt class="lib">
-            South edge, rightmost pin (output, bit width 7)
+            South edge, rightmost pin 
           </dt>
           <dd>
-            Data - the 7-bit ASCII code for the leftmost character in the buffer, or 0 if the buffer is empty.
+            Output: Data - the 7-bit ASCII code for the leftmost character in the buffer, or 0 if the buffer is empty. Bit width 7.
           </dd>
         </dl>
       </div>
@@ -107,7 +107,7 @@
           Trigger
         </dt>
         <dd>
-          If the value is <q>Rising Edge,</q> then when the clock input changes from 0 to 1, the leftmost character is consumed (when enabled by the Read Enable input). If it is <q>Falling Edge,</q>, then this happens when the clock input changes from 1 to 0.
+          If the value is <var>Rising Edge</var>, then when the clock input changes from <b class="zerov">0</b> to <b class="unov">1</b>, the leftmost character is consumed when enabled by the Read Enable input. If it is <var>Falling Edge</var>, then this happens when the clock input changes from <b class="unov">1</b> to <b class="zerov">0</b>.
         </dd>
       </dl>
     </div>
@@ -124,7 +124,7 @@
       Text Tool Behavior
     </h2>
     <p>
-      None.
+      Allows the label associated with the component to be edited.
     </p>
     <p>
       <b>Back to</b> <a href="../index.html">Library Reference</a>

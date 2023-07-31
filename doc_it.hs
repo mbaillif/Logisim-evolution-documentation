@@ -13,11 +13,11 @@
    </maps>
 	
    <!-- views --> 
-   <view xml:lang="it" mergetype="javax.help.UniteAppendMerge">
+   <view xml:lang="en" mergetype="javax.help.UniteAppendMerge">
       <name>TOC</name>
       <label>Table Of Contents</label>
       <type>javax.help.TOCView</type>
-      <data>it/contents.xml</data>
+      <data>en/contents.xml</data>
    </view>
 
   <view>

@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2023-07-29T06:18:42.262000000">
+    <meta name="changed" content="2023-07-30T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
@@ -48,22 +48,19 @@
         Behavior
       </h2>
       <p>
-        Displays the value of its input by coloring the LED (as specified by its Color attribute) or not depending on whether the input is 1 or 0.
-      </p>
-      <p>
-        (The LED component is basically redundant with an output pin, except for a somewhat different appearance. Some users, though, thought it would be nice to include.)
+        Displays the value of its input by coloring the LED as specified by its <b class="property">On Color</b> attribute and <b class="property">Off Color</b> depending on whether the input is <b class="unov">1</b> or <b class="zerov">0</b>. Floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>) are considered off values.
       </p>
       <h2>
         Pins
       </h2>
       <p>
-        A LED has only one pin, a 1-bit input which is used to determine whether to display the LED colored (when the input is 1) or darkened (when the input is anything else).
+        An LED has just one pin, a 1-bit input which is used to determine how the LED is to be colored.
       </p>
       <h2>
         Attributes
       </h2>
       <p>
-        When the component is selected or being added, the arrow keys alter its <q>Facing</q> attribute.
+         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
       </p>
       <div class="attliste">
         <dl>
@@ -74,16 +71,22 @@
             The location of the input pin relative to the component.
           </dd>
           <dt class="lib">
-            Color
+            On Color
           </dt>
           <dd>
-            The color to display when the input value is 1.
+            Color to be displayed when input value is active
+          </dd>
+		  <dt class="lib">
+            Off Color
+          </dt>
+          <dd>
+            Color to be displayed when input value is not active
           </dd>
           <dt class="lib">
             Active On High?
           </dt>
           <dd>
-            If <q>yes</q>, then the LED is colored when the input is 1. If <q>no</q>, it is colored when the input is 0.
+            If <var>yes</var>, then the LED is active when the input is <b class="unov">1</b>. If <var>no</var>, it is not active when the input is  <b class="zerov">0</b>.
           </dd>
           <dt class="lib">
             Label

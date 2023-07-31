@@ -56,16 +56,16 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            West edge, north pin (output, bit width matches Bit Width attribute)
+            West edge, north pin :
           </dt>
           <dd>
-            Indicates knob's <var>x</var>-coordinate, to be interpreted as an unsigned integer whose value will never be 0. Thus, a value of 1 represents the far left, and the maximum value for the bit width indicates the far right. When the knob is at rest (in the center), the value has the bit pattern 10...00.
+            Output: Indicates knob's <var>x</var>-coordinate, to be interpreted as an unsigned integer whose value will never be 0. Thus, a value of 1 represents the far left, and the maximum value for the bit width indicates the far right. When the knob is at rest (in the center), the value has the bit pattern 10...00.  Bit width matches Bit Width attribute
           </dd>
           <dt class="lib">
-            West edge, south pin (output, bit width matches Bit Width attribute)
+            West edge, south pin
           </dt>
           <dd>
-            Indicates knob's <var>y</var>-coordinate, whose value ranges as with the <var>x</var>-coordinate pin. When the knob is pulled to the top, this output's value is 1, and when the knob is pulled to the bottom, the output is the maximum value for the bit width selected.
+            Output: Indicates knob's <var>y</var>-coordinate, whose value ranges as with the <var>x</var>-coordinate pin. When the knob is pulled to the top, this output's value is 1, and when the knob is pulled to the bottom, the output is the maximum value for the bit width selected. bit width matches Bit Width attribute
           </dd>
         </dl>
       </div>
@@ -73,10 +73,16 @@
         Attributes
       </h2>
       <p>
-        When the component is selected or being added, Alt-2 through Alt-5 alter its <q>Bit Width</q> attribute.
+         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attributeand <b class="tkeybd">Alt-2</b> through <b class="tkeybd">Alt-5</b> alter its <b class="property">Bit Width</b> attribute.
       </p>
       <div class="attliste">
         <dl>
+          <dt class="lib">
+            Facing
+          </dt>
+          <dd>
+            The location of the output pin relative to the component. 
+          </dd>
           <dt class="lib">
             Bit Width
           </dt>
@@ -88,6 +94,12 @@
           </dt>
           <dd>
             The knob's color as it is drawn on the screen.
+          </dd>
+          <dt class="lib">
+           Background
+          </dt>
+          <dd>
+            Case color as drawn on screen.
           </dd>
         </dl>
       </div>
@@ -101,7 +113,7 @@
         Text Tool Behavior
       </h2>
       <p>
-        None.
+        Allows the label associated with the component to be edited.
       </p>
       <p>
         <b>Back to</b> <a href="../index.html">Library Reference</a>
