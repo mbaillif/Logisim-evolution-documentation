@@ -48,60 +48,61 @@
         Behavior
       </h2>
       <p>
-        Displays the values of its eight one-bit inputs. <q>Segments</q> are either colored or light gray depending on the inputs. The correspondence is as follows.
+        Displays the values of its eight one-bit inputs. Coloring the <var>Segments</var> as specified by its <b class="property">On Color</b> attribute and <b class="property">Off Color</b> depending on whether the input is <b class="unov">1</b> or <b class="zerov">0</b>. The correspondence is as follows. 
       </p>
       <center>
         <img class="notscal" src="../../../../img-libs/io-segs.png" alt="#########">
-      </center>(Manufacturers vary as to how they map inputs to segments; the correspondence used here is based on Texas Instruments' TIL321.)
+      </center>Manufacturers vary as to how they map inputs to segments; the correspondence used here is based on Texas Instruments' TIL321.
       <h2>
         Pins
       </h2>
+	  All pins are inputs.
       <div class="attliste">
         <dl>
           <dt class="lib">
-            North edge, first from left (input, bit width 1)
+            North edge, first from left
           </dt>
           <dd>
             Controls the middle horizontal segment.
           </dd>
           <dt class="lib">
-            North edge, second from left (input, bit width 1)
+            North edge, second from left
           </dt>
           <dd>
             Controls the upper vertical segment on the left side.
           </dd>
           <dt class="lib">
-            North edge, third from left (input, bit width 1)
+            North edge, third from left
           </dt>
           <dd>
             Controls the upper horizontal segment.
           </dd>
           <dt class="lib">
-            North edge, fourth from left (input, bit width 1)
+            North edge, fourth from left
           </dt>
           <dd>
             Controls the upper vertical segment on the right side.
           </dd>
           <dt class="lib">
-            South edge, first from left (input, bit width 1)
+            South edge, first from left
           </dt>
           <dd>
             Controls the lower vertical segment on the left side.
           </dd>
           <dt class="lib">
-            South edge, second from left (input, bit width 1)
+            South edge, second from left
           </dt>
           <dd>
             Controls the bottom horizontal segment.
           </dd>
           <dt class="lib">
-            South edge, third from left (input, bit width 1)
+            South edge, third from left
           </dt>
           <dd>
             Controls the lower vertical segment on the right side.
           </dd>
           <dt class="lib">
-            South edge, fourth from left (input, bit width 1)
+            South edge, fourth from left
           </dt>
           <dd>
             Controls the decimal point.
@@ -135,13 +136,13 @@
             <b class="property">Active On High?</b>
           </dt>
           <dd>
-            If <q>yes</q>, then the segments light when the corresponding input is 1. If <q>no</q>, they light when the corresponding input is 0.
+            If <var>yes</var>, then the segments light when the corresponding input is  <b class="unov">1</b>. If <var>no</var>, they light when the corresponding input is <b class="zerov">0</b>.
           </dd>
           <dt class="lib">
             <b class="property">Has deciaml point:</b>
           </dt>
           <dd>
-            If <q>yes</q> the decimal point is available, if <q>no</q> the decimal point is hidden.
+            If <var>yes</var> the decimal point is available, if <var>no</var> the decimal point is hidden.
           </dd>
           <dt class="lib">
             <b class="property">Label</b>

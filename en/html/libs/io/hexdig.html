@@ -48,24 +48,25 @@
         Behavior
       </h2>
       <p>
-        Using a seven-segment display, shows the hexadecimal digit corresponding to the four-bit input. If any of the inputs are not 0/1 (either floating or error), then the display stays blank (all segments off). A separate one-bit input controls the display of the decimal point.
+        Using a seven-segment display, shows the hexadecimal digit corresponding to the four-bit input. If any of the inputs are not  <b class="unov">1</b>/<b class="unov">1</b> (either floating or error), then the display stays blank (all segments off). A separate one-bit input controls the display of the decimal point.
       </p>
       <h2>
         Pins
       </h2>
+	   All pins are inputs.
       <div class="attliste">
         <dl>
           <dt class="lib">
-            South edge, first from left (input, bit width 4)
+            South edge, first from left
           </dt>
           <dd>
-            This input is interpreted as an unsigned four-bit number, and the corresponding hexadecimal digit is displayed.
+            This input is interpreted as an unsigned four-bit number, and the corresponding hexadecimal digit is displayed. bit width 4
           </dd>
           <dt class="lib">
-            South edge, second from left (input, bit width 1)
+            South edge, second from left
           </dt>
           <dd>
-            Controls the decimal point. If this is left unconnected, the decimal point remains off.
+            Controls the decimal point. If this is left unconnected, the decimal point remains off. Bit width 1
           </dd>
         </dl>
       </div>
@@ -96,7 +97,7 @@
             <b class="property">Has deciaml point:</b>
           </dt>
           <dd>
-            If <q>yes</q> the decimal point is available, if <q>no</q> the decimal point is hidden.
+            If <var>yes</var> the decimal point is available, if <var>no</var> the decimal point is hidden.
           </dd>
           <dt class="lib">
             <b class="property">Label</b>
@@ -134,7 +135,7 @@
         Text Tool Behavior
       </h2>
       <p>
-        None.
+        Allows the label associated with the component to be edited.
       </p>
       <p>
         <b>Back to</b> <a href="../index.html">Library Reference</a>

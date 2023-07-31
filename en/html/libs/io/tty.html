@@ -57,28 +57,28 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            West edge, upper pin (input, bit width 7)
+            West edge, upper pin
           </dt>
           <dd>
-            Data - this is the ASCII value of the next character to be entered into the terminal.
+            Input : Data - this is the ASCII value of the next character to be entered into the terminal.  Bit width 7.
           </dd>
           <dt class="lib">
-            West edge, lower pin marked by triangle (input, bit width 1)
+            West edge, lower pin marked by triangle
           </dt>
           <dd>
-            Clock - when triggered while the write-enable pin isn't 0, the current ASCII value on the Data input is processed by the terminal.
+            Input: Clock - when triggered while the write-enable pin isn't  <b class="zerov">0</b>, the current ASCII value on the Data input is processed by the terminal. Bit width 1.
           </dd>
           <dt class="lib">
-            South edge, leftmost pin (input, bit width 1)
+            South edge, leftmost pin
           </dt>
           <dd>
-            Write Enable - when 1 (or floating or error), a clock edge will result in processing a new character from the data input. The clock and data inputs are ignored when Write Enable is 0.
+            Input: Write Enable - when <b class="unov">1</b> (or floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>)), a clock edge will result in processing a new character from the data input. The clock and data inputs are ignored when Write Enable is  <b class="zerov">0</b>. Bit width 1.
           </dd>
           <dt class="lib">
-            South edge, second pin from left (input, bit width 1)
+            South edge, second pin from left
           </dt>
           <dd>
-            Clear - when 1, the terminal is cleared of all data, and all other inputs are ignored.
+            Input: Clear - when <b class="unov">1</b>, the terminal is cleared of all data, and all other inputs are ignored. Bit width 1.
           </dd>
         </dl>
       </div>
@@ -103,7 +103,7 @@
             Trigger
           </dt>
           <dd>
-            If the value is <q>Rising Edge,</q> then when the clock input changes from 0 to 1, the data input is processed (when enabled by the write-enable and clear inputs). If it is <q>Falling Edge,</q>, then this happens when the clock input changes from 1 to 0.
+            If the value is <var>Rising Edge,</var> then when the clock input changes from  <b class="zerov">0</b> to <b class="unov">1</b>, the data input is processed (when enabled by the write-enable and clear inputs). If it is <var>Falling Edge,</var>, then this happens when the clock input changes from <b class="unov">1</b> to  <b class="zerov">0</b>.
           </dd>
           <dt class="lib">
             Color
