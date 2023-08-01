@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2021-05-21T06:18:42.262000000">
+    <meta name="changed" content="2023-07-29T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
@@ -31,7 +31,7 @@
               <strong>Introduced:</strong>
             </td>
             <td>
-               ----
+              ----
             </td>
           </tr>
           <tr>
@@ -39,7 +39,7 @@
               <strong>Appearance:</strong>
             </td>
             <td valign="top">
-              <img class="appearancelibslarge"  src="../../../../img-libs/dipswitch.png" alt="#########"  width="128" height="64">
+              <img class="appearancelibslarge" src="../../../../img-libs/dipswitch.png" alt="#########" width="128" height="64">
             </td>
           </tr>
         </tbody>
@@ -48,63 +48,71 @@
         Behavior
       </h2>
       <p>
-        Outputs 0 normally; but when the user is pressing the the button using the Poke Tool, the output is 1.
+        Outputs  set to <b class="zerov">0</b> normally; when one of the switches is pressed with the Poke tool, the output switches toggle from <b class="zerov">0</b> to <b class="unov">1</b> or <b class="unov">1</b> to <b class="zerov">0</b>
       </p>
       <h2>
         Pins
       </h2>
       <p>
-        A button has only one pin, a 1-bit output, which is 0 except when the user is pressing the button using the Poke Tool, when it is 1.
+        A dip switch has as many outputs as specified by the  <b class="property">Number of Switch</b> property. Normally set to 0.
       </p>
       <h2>
         Attributes
       </h2>
       <p>
-        When the component is selected or being added, the arrow keys alter its <q>Facing</q> attribute.
+         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
       </p>
-      <dl>
-        <dt>
-          Facing
-        </dt>
-        <dd>
-          The location of the output pin relative to the component.
-        </dd>
-        <dt>
-          Color
-        </dt>
-        <dd>
-          The color with which to display the button.
-        </dd>
-        <dt>
-          Label
-        </dt>
-        <dd>
-          The text within the label associated with the component.
-        </dd>
-        <dt>
-          Label Location
-        </dt>
-        <dd>
-          The location of the label relative to the component.
-        </dd>
-        <dt>
-          Label Font
-        </dt>
-        <dd>
-          The font with which to render the label.
-        </dd>
-        <dt>
-          Label Color
-        </dt>
-        <dd>
-          The color with which to draw the label.
-        </dd>
-      </dl>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Facing
+          </dt>
+          <dd>
+            The location of the output pin relative to the component.
+          </dd>
+         <dt class="lib">
+            Label
+          </dt>
+		  <dd>
+             The text within the label associated with the component.
+          </dd>
+         <dt class="lib">
+            Label Location
+          </dt>
+          <dd>
+            The location of the label relative to the component.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font with which to render the label.
+          </dd>
+          <dt class="lib">
+            Label Color
+          </dt>
+		  <dd>
+		    The color with which to draw the label. 
+		  </dd>
+		  <dt class="lib">
+            Label Visible
+          </dt>
+          <dd>
+            Determines whether the label is visible or not.
+          </dd>
+		  <dt class="lib">
+            Number of switch
+          </dt>
+		  <dd>
+            determines the number of switches in the component.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Poke Tool Behavior
       </h2>
       <p>
-        When the mouse button is pressed, the component's output will be 1. Upon releasing the mouse button, the output reverts back to 0.
+        When one of the switches is pressed with the Poke tool, the output switches toggle from <b class="zerov">0</b> to <b class="unov">1</b> or <b class="unov">1</b> to <b class="zerov">0</b>
       </p>
       <h2>
         Text Tool Behavior
@@ -113,7 +121,7 @@
         Allows the label associated with the component to be edited.
       </p>
       <p>
-        <p><b>Back to</b> <a href="../index.html">Library Reference</a></p>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
       </p>
     </div>
   </body>

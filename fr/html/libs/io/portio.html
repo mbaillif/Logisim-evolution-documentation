@@ -7,14 +7,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
-      Dip switch
+      Port I/O
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/dipswitch.png" alt="#########" width="32" height="32" align="middle"> <em>Dip switch</em>
+        <img class="iconlibs" src="../../../../icons/6464/portio.png" alt="#########" width="32" height="32" align="middle"> <em>Port I/O</em>
       </h1>
       <table>
         <tbody>
@@ -31,7 +31,7 @@
               <strong>Introduced:</strong>
             </td>
             <td>
-              ----
+              3.2.0
             </td>
           </tr>
           <tr>
@@ -39,7 +39,7 @@
               <strong>Appearance:</strong>
             </td>
             <td valign="top">
-              <img class="appearancelibslarge" src="../../../../img-libs/dipswitch.png" alt="#########" width="128" height="64">
+              <img class="appearancelibs" src="../../../../img-libs/portio.png" alt="#########" width="64" height="64">
             </td>
           </tr>
         </tbody>
@@ -48,19 +48,19 @@
         Behavior
       </h2>
       <p>
-        Outputs  set to <b class="zerov">0</b> normally; when one of the switches is pressed with the Poke tool, the output switches toggle from <b class="zerov">0</b> to <b class="unov">1</b> or <b class="unov">1</b> to <b class="zerov">0</b>
+       
       </p>
       <h2>
         Pins
       </h2>
       <p>
-        A dip switch has as many outputs as specified by the  <b class="property">Number of Switch</b> property. Normally set to 0.
+       
       </p>
       <h2>
         Attributes
       </h2>
       <p>
-         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
+        When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
       </p>
       <div class="attliste">
         <dl>
@@ -70,13 +70,13 @@
           <dd>
             The location of the output pin relative to the component.
           </dd>
-         <dt class="lib">
+          <dt class="lib">
             Label
           </dt>
-		  <dd>
-             The text within the label associated with the component.
+          <dd>
+            The text within the label associated with the component.
           </dd>
-         <dt class="lib">
+          <dt class="lib">
             Label Location
           </dt>
           <dd>
@@ -91,9 +91,9 @@
           <dt class="lib">
             Label Color
           </dt>
-		  <dd>
-		    The color with which to draw the label. 
-		  </dd>
+          <dd>
+            The color with which to draw the label.
+          </dd>
 		  <dt class="lib">
             Label Visible
           </dt>
@@ -101,10 +101,19 @@
             Determines whether the label is visible or not.
           </dd>
 		  <dt class="lib">
-            Number of switch
+            Number of pins
           </dt>
-		  <dd>
-            determines the number of switches in the component.
+          <dd>
+            Determines the number of pins in the component
+          </dd>
+		   <dt class="lib">
+            Port type
+          </dt>
+          <dd>
+            <var>Input only</var>All pins are inputs.<br>
+			<var>Output only</var>All pins are output.<br>
+			<var>Output single enable</var>Pins can be inputs or outputs, with an enable input to authorize the output.<br>
+			<var>Output per-bit enable</var>Pins can be inputs or outputs, with one enable input per output bit to authorize the output.
           </dd>
         </dl>
       </div>
@@ -112,7 +121,7 @@
         Poke Tool Behavior
       </h2>
       <p>
-        When one of the switches is pressed with the Poke tool, the output switches toggle from <b class="zerov">0</b> to <b class="unov">1</b> or <b class="unov">1</b> to <b class="zerov">0</b>
+        When the mouse button is pressed, the component output is adjusted according to the <b class="property">Logic level</b> property.
       </p>
       <h2>
         Text Tool Behavior
@@ -121,7 +130,7 @@
         Allows the label associated with the component to be edited.
       </p>
       <p>
-        <b>Back to</b> <a href="../index.html#hlibio">Library Reference</a>
+        <b>Back to</b> <a href="../index.html">Library Reference</a>
       </p>
     </div>
   </body>

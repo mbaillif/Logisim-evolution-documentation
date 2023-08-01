@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2021-05-21T06:18:42.262000000">
+    <meta name="changed" content="2023-07-29T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
@@ -39,8 +39,7 @@
               <strong>Appearance:</strong>
             </td>
             <td valign="top">
-              <img class="appearancelibs" src="../../../../img-libs/rgbled.png" alt="#########" width="64" height="64"> 
-			   <img class="appearancelibs" src="../../../../img-libs/rgbledoff.png" alt="#########" width="64" height="64">
+              <img class="appearancelibs" src="../../../../img-libs/rgbled.png" alt="#########" width="64" height="64"> <img class="appearancelibs" src="../../../../img-libs/rgbledoff.png" alt="#########" width="64" height="64">
             </td>
           </tr>
         </tbody>
@@ -49,82 +48,76 @@
         Behavior
       </h2>
       <p>
-        Displays the value of its input by coloring the LED (as specified by its Color attribute) or not depending on whether the input is 1 or 0.
-      </p>
-      <p>
-        (The LED component is basically redundant with an output pin, except for a somewhat different appearance. Some users, though, thought it would be nice to include.)
+        Displays the value of its input by coloring the LED according to whether the inputs are  <b class="unov">1</b> or <b class="zerov">0</b>. Floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>) are considered off values.
       </p>
       <h2>
         Pins
       </h2>
       <p>
-        A LED has only one pin, a 1-bit input which is used to determine whether to display the LED colored (when the input is 1) or darkened (when the input is anything else).
+        An RGB LED has three pins. The combination of the bits of these inputs determines whether to display the LED colored.
+		
       </p>
       <h2>
         Attributes
       </h2>
       <p>
-        When the component is selected or being added, the arrow keys alter its <q>Facing</q> attribute.
+         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
       </p>
-      <dl>
-        <dt>
-          Facing
-        </dt>
-        <dd>
-          The location of the input pin relative to the component.
-        </dd>
-        <dt>
-          Color
-        </dt>
-        <dd>
-          The color to display when the input value is 1.
-        </dd>
-        <dt>
-          Active On High?
-        </dt>
-        <dd>
-          If <q>yes</q>, then the LED is colored when the input is 1. If <q>no</q>, it is colored when the input is 0.
-        </dd>
-        <dt>
-          Label
-        </dt>
-        <dd>
-          The text within the label associated with the component.
-        </dd>
-        <dt>
-          Label Location
-        </dt>
-        <dd>
-          The location of the label relative to the component.
-        </dd>
-        <dt>
-          Label Font
-        </dt>
-        <dd>
-          The font with which to render the label.
-        </dd>
-        <dt>
-          Label Color
-        </dt>
-        <dd>
-          The color with which to draw the label.
-        </dd>
-      </dl>
-      <h2>
-        Poke Tool Behavior
-      </h2>
-      <p>
-        None.
-      </p>
-      <h2>
-        Text Tool Behavior
-      </h2>
-      <p>
-        Allows the label associated with the component to be edited.
-      </p>
-      <p>
-        <p><b>Back to</b> <a href="../index.html">Library Reference</a></p>
-      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Facing
+          </dt>
+          <dd>
+            The location of the input pin relative to the component.
+          </dd>
+          <dt class="lib">
+            Active On High?
+          </dt>
+          <dd>
+             If <var>yes</var>, then the LED is colored when the input is <b class="unov">1</b>. If <var>no</var>, it is not colored when the input is  <b class="zerov">0</b>.
+          </dd>
+          <dt class="lib">
+            Label
+          </dt>
+          <dd>
+            The text within the label associated with the component.
+          </dd>
+          <dt class="lib">
+            Label Location
+          </dt>
+          <dd>
+            The location of the label relative to the component.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font with which to render the label.
+          </dd>
+          <dt class="lib">
+            Label Color
+          </dt>
+          <dd>
+            The color with which to draw the label.
+          </dd>
+        </dl>
+        <h2>
+          Poke Tool Behavior
+        </h2>
+        <p>
+          None.
+        </p>
+        <h2>
+          Text Tool Behavior
+        </h2>
+        <p>
+          Allows the label associated with the component to be edited.
+        </p>
+        <p>
+          <b>Back to</b> <a href="../index.html">Library Reference</a>
+        </p>
+      </div>
     </div>
   </body>
 </html>

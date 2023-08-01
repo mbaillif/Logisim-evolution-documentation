@@ -2,19 +2,19 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2023-07-30T06:18:42.262000000">
+    <meta name="created" content="2023-08-01T06:18:10.521000000">
+    <meta name="changed" content="2023-08-01T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
-      LED
+      LED Bar
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/led.png" alt="#########" width="32" height="32" align="middle"> <em>LED</em>
+        <img class="iconlibs" src="../../../../icons/6464/ledbar.png" alt="#########" width="32" height="32" align="middle"> <em>LED Bar</em>
       </h1>
       <table>
         <tbody>
@@ -39,7 +39,7 @@
               <strong>Appearance:</strong>
             </td>
             <td valign="top">
-              <img class="appearancelibs" src="../../../../img-libs/led.png" alt="#########" width="64" height="64"> <img class="appearancelibs" src="../../../../img-libs/ledoff.png" alt="#########" width="64" height="64">
+              <img class="appearancelibs" src="../../../../img-libs/ledbar.png" alt="#########" >
             </td>
           </tr>
         </tbody>
@@ -48,27 +48,39 @@
         Behavior
       </h2>
       <p>
-        Displays the value of its input by coloring the LED as specified by its <b class="property">On Color</b> attribute and <b class="property">Off Color</b> depending on whether the input is <b class="unov">1</b> or <b class="zerov">0</b>. Floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>) are considered off values.
+	  LEDs will display the value of their inputs by coloring the LED as specified by its <b class="property">On Color</b> and <b class="property">Off Color</b> attribute, depending on whether the input is <b class="unov">1</b> or  <b class="zerov">0</b>. Floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>) values are considered disabled.<br>
+	  If a clock is present in the circuit, it is possible to simulate light loss in terms of clock ticks.
       </p>
       <h2>
         Pins
       </h2>
       <p>
-        An LED has just one pin, a 1-bit input which is used to determine how the LED is to be colored.
+        The led bar has either a pin per led to the south or north, or a bus to the east or west, depending on the property parameters Select <b class="property">Location</b>. 
       </p>
       <h2>
         Attributes
       </h2>
-      <p>
-         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attribute.
-      </p>
+      
       <div class="attliste">
         <dl>
-          <dt class="lib">
-            Facing
+		  <dt class="lib">
+            Input Format
           </dt>
           <dd>
-            The location of the input pin relative to the component.
+            <var>Separated</var>: Each led on the bar will have its own pin.<br>
+            <var>On Wire</var>: The bar is driven by a bus with a bit width equal to the <b class="property">Segment property</b>.
+          </dd>
+		  <dt class="lib">
+            Segments
+          </dt>
+          <dd>
+            Determines the number of LEDs on the bar
+          </dd>
+		  <dt class="lib">
+            Select Location
+          </dt>
+          <dd>
+            Determine which side the pines or the bus will be on
           </dd>
           <dt class="lib">
             On Color
@@ -82,13 +94,13 @@
           <dd>
             Color to be displayed when input value is not active
           </dd>
-          <dt class="lib">
-            Active On High?
+		  <dt class="lib">
+            Light-Persitence
           </dt>
           <dd>
-            If <var>yes</var>, then the LED is active when the input is <b class="unov">1</b>. If <var>no</var>, it is not active when the input is  <b class="zerov">0</b>.
+            If this value is greater than 1, the LED will remain colored for the duration of the indicated clicks. Requires a hrologe in the circuit.
           </dd>
-          <dt class="lib">
+		  <dt class="lib">
             Label
           </dt>
           <dd>
@@ -123,10 +135,10 @@
           Text Tool Behavior
         </h2>
         <p>
-          Allows the label associated with the component to be edited.
+          None.
         </p>
         <p>
-          <b>Back to</b> <a href="../index.html#hlibio">Library Reference</a>
+          <b>Back to</b> <a href="../index.html">Library Reference</a>
         </p>
       </div>
     </div>
