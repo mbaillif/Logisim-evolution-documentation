@@ -12,41 +12,41 @@
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
-     <div class="maindiv">
+    <div class="maindiv">
       <h1>
         Kontextmenüs und Dateien
       </h1>
-	  <h2>
+      <h2>
         Kontextmenüs
       </h2>
       <p>
         Abgesehen von den üblichen Punkten enthält das Kontextmenü für Speicherbauelemente vier weitere Optionen:
       </p>
       <dl>
-	    <dt>
+        <dt>
           <b>Inhalt bearbeiten...:</b>
         </dt>
         <dd>
-		  Öffnet den <a href="mem-hex.html">Hex-Editor</a> um den Speicherinhalt zu bearbeiten.
+          Öffnet den <a href="mem-hex.html">Hex-Editor</a> um den Speicherinhalt zu bearbeiten.
         </dd>
-		<dt>
-		  <b>Inhalt löschen:</b>
-		</dt>
-		<dd>
-		  Setzt alle Werte im Speicher auf 0.
-		</dd>
-		<dt>
-		  <b>Speicherabbild laden...:</b>
-		</dt>
-		<dd>
-		  Setzt alle Werte des Speichers auf die Werte aus einer Datei. Das Dateiformat ist weiter unten beschrieben.
-		</dd>
-		<dt>
-		  <b>Speicherabbild speichern...:</b>
-		</dt>
-		<dd>
-		   Speichert alle Daten aus dem Speicher in dem unten beschriebenen Dateiformat.
-		</dd>
+        <dt>
+          <b>Inhalt löschen:</b>
+        </dt>
+        <dd>
+          Setzt alle Werte im Speicher auf 0.
+        </dd>
+        <dt>
+          <b>Speicherabbild laden...:</b>
+        </dt>
+        <dd>
+          Setzt alle Werte des Speichers auf die Werte aus einer Datei. Das Dateiformat ist weiter unten beschrieben.
+        </dd>
+        <dt>
+          <b>Speicherabbild speichern...:</b>
+        </dt>
+        <dd>
+          Speichert alle Daten aus dem Speicher in dem unten beschriebenen Dateiformat.
+        </dd>
       </dl>
       <h2>
         Die Dateiformate
@@ -77,15 +77,7 @@
           <b><a href="mem-vascii.html">Ascii byte escape big-endian</a></b><br>
           <b><a href="mem-vascii.html">Ascii byte escape little-endian</a></b> ASCII-kodierte Datei mit Escape-Code, wie in C für nicht druckbare Zeichen.
         </li>
-        </ul>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-<!--	  
+      </ul><!--      
         Das Dateiformat für Speicherabbilder wurde bewußt einfach gehalten. Dies erlaubt es Ihnen, eigene Programme, wie z.B. einen Assembler, zu schreiben, das Speicherabbilder erzeugt. Als ein Beispiel für das Dateiformat können wir den Fall eines Speichers mit 256 Byte betrachten, dessen fünf erste Speicherstellen auf 2, 3, 0, 20 und -1 gesetzt sind, während alle folgenden Speicherstellen Nullen enthalten. Ein entsprechendes Speicherabbild sieht dann wie folgt aus:
       </p>
       <blockquote>
