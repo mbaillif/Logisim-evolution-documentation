@@ -1,6 +1,6 @@
 /* 
 This CSS document is suitable for use in java help v2.0
-There is a compromise between css rules and html properties for it to work
+There is a compromise between css rules and html .propertys for it to work
 java-help supports version 1 of CSS
 */
 
@@ -63,8 +63,7 @@ img.iconlibs{
 }
 /* For img apparence of the library cards  */
 img.appearancelibs{
-	height:64px;
-	width:64px;
+	
 	vertical-align:middle;
 }
 /* For img apparence large of the library cards  */
@@ -76,8 +75,7 @@ img.appearancelibslarge{
 }
 /* For img apparence upper of the library cards  */
 img.appearancelibshaut{
-	height:128;
-	width:64;
+	
 	vertical-align:middle;
 
 }
@@ -131,10 +129,16 @@ b.button {
     font-size:12px;	
 }
 
-/* for reference to properties /library */
-b.propertie {
+/* for reference to property /library */
+b.property {
 	color:#00008B;
 	font-weight:bold;
+}
+
+/* for reference to property value or pin */
+b.vprop {
+	color:#00008B;
+	font-weight:normal;
 }
 
 /* for reference to keyboard/mouse keys */
@@ -240,6 +244,7 @@ td.space {
 	text-align:center;
 }
 
+
 /* cell in title truth tables*/
 th.tspace {
 	background-color:#e0e0e0;
@@ -247,7 +252,11 @@ th.tspace {
 	width:20px;
 	text-align:center;
 }
-
+th.tspace1 {
+	background-color:#e0e0e0;
+	padding:3;
+	text-align:center;
+}
 
 td.tzerov {
 	color:#008000;
@@ -282,6 +291,11 @@ td.tspace {
 	background-color:#e0e0e0;
 	width:28px;
 	text-align:center;
+}
+/* cell in title tables */
+td.ttspace {
+	background-color:#e0e0e0;
+	padding:3;
 }
 
 /* cell  tables */
