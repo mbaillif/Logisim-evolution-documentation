@@ -6,7 +6,7 @@ echo  9 pl   9 pt   a pt   b ru
 echo  x quit
 echo -
 set REP=en
-choice /c 0123456789abx /m "Select language number" /t 5 /d 2
+choice /c 0123456789abx /m "Select language number" /t 10 /d 2
 if ERRORLEVEL 13 goto :END
 if ERRORLEVEL 12 set REP=ru
 if ERRORLEVEL 11 set REP=pt

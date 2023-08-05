@@ -24,12 +24,12 @@
     <name>Search</name>
     <label>Chercher</label>
     <type>javax.help.SearchView</type>
-    <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_en</data>
+    <data engine="com.sun.java.help.search.DefaultSearchEngine">search_lookup_fr</data>
   </view>
 
 	<view>
 		<name>Favorites</name>
-		<label>Favorites</label>
+		<label>Favoris</label>
 		<type>javax.help.FavoritesView</type>
 	</view> 
 
@@ -43,7 +43,8 @@
    -->
    <presentation default="true">
        <name>main window</name>
-       <location x="200" y="10" />
+       <size width=1000 height=1000 />
+	   <location x=200 y=200 />
        <toolbar>
            <helpaction>javax.help.BackAction</helpaction>
            <helpaction>javax.help.ForwardAction</helpaction>
