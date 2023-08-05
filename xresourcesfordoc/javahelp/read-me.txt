@@ -1,0 +1,1 @@
+In this folder you'll find the jsearch-indexer.jar program.It is used to build keyword search indexes for logisim's Javahelp.It is also necessary to have the lib folder and its contents.example windows: java -jar hsviewer.jar -helpset ..\..\doc_he.hsUsage: [-helpset name | -classpath path | -hsURL spec | -ID id | -contentViewer viewerclass]
