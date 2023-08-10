@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
 <html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2019-01-15T06:18:42.262000000">
+    <meta name="created" content="2023-08-10T26:35:22.126000000">
+    <meta name="changed" content="2023-08-10T26:35:22.126000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -12,13 +12,12 @@
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
-    ¨
     <div class=codediv>
       <h1>
         Library Class
       </h1>
       <p>
-        The access point for the JAR library is a class that extends the <code>Library</code> class. The library's main job is to list the tools that are available through the library; most often, the tools are all tools to add the various components defined - that is, instances of the <code>AddTool</code> class working with different component factories.
+        Le point d'accès à la bibliothèque JAR est une classe qui étend la classe <code>Library</code>. La principale tâche de la bibliothèque est de dresser la liste des outils disponibles dans la bibliothèque ; le plus souvent, les outils sont tous des outils permettant d'ajouter les différents composants définis - c'est-à-dire des instances de la classe <code>AddTool</code> fonctionnant avec différentes 'factories' de composants.
       </p>
       <h2>
         Components
@@ -31,19 +30,20 @@ import java.util.List;
 import com.cburch.logisim.tools.AddTool;
 import com.cburch.logisim.tools.Library;
 
-/** The library of components that the user can access. */
+/** La bibliothèque de composants à laquelle l'utilisateur peut accéder. */
 public class Components extends Library {
-    /** The list of all tools contained in this library. Technically,
-     * libraries contain tools, which is a slightly more general concept
-     * than components; practically speaking, though, you'll most often want
-     * to create AddTools for new components that can be added into the circuit.
-     */
+    
+   /** La liste de tous les outils contenus dans cette bibliothèque. 
+     * Techniquement, les bibliothèques contiennent des outils, ce qui est
+ 	 * un concept un peu plus général que les composants ; en pratique, 
+	 * cependant, vous voudrez le plus souvent créer des AddTools pour 
+	 * les nouveaux composants qui peuvent être ajoutés au circuit. */
     private List&lt;AddTool&gt; tools;
     
-    /** Constructs an instance of this library. This constructor is how
-     * Logisim accesses first when it opens the JAR file: It looks for
-     * a no-arguments constructor method of the user-designated class.
-     */
+	/** Construit une instance de cette bibliothèque. C'est par ce 
+	  * constructeur que Logisim accède en premier lorsqu'il ouvre 
+	  *	le fichier JAR : Il recherche une méthode de construction 
+	  *	sans argument de la classe désignée par l'utilisateur. */
     public Components() {
         tools = Arrays.asList(new AddTool[] {
                 new AddTool(new GrayIncrementer()),
@@ -52,12 +52,13 @@ public class Components extends Library {
         });
     }
     
-    /** Returns the name of the library that the user will see. */ 
+    /** Renvoie le nom de la bibliothèque que l'utilisateur verra. */ 
     public String getDisplayName() {
         return "Gray Tools";
     }
     
-    /** Returns a list of all the tools available in this library. */
+    /** Renvoie une liste de tous les outils disponibles dans cette
+      *	bibliothèque. */
     public List&lt;AddTool&gt; getTools() {
         return tools;
     }

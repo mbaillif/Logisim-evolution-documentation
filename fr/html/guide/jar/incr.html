@@ -2,8 +2,8 @@
 <html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2019-01-15T06:18:42.262000000">
+    <meta name="created" content="2023-08-10T26:35:22.126000000">
+    <meta name="changed" content="2023-08-10T26:35:22.126000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -12,18 +12,18 @@
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
-    <div class=codediv>
+    <div class="codediv">
       <h1>
-        Gray Code Incrementer
+        Incrémenteur de code Gray
       </h1>
       <p>
-        Each component included in a library is defined by creating a subclass of <code>InstanceFactory</code> found in the <code>com.cburch.logisim.instance</code> package. This subclass has all the code involved
+        Chaque composant inclus dans une bibliothèque est défini en créant une sous-classe de <code>InstanceFactory</code> trouvée dans le paquetage <code>com.cburch.logisim.instance</code>. Cette sous-classe contient tout le code nécessaire
       </p>
       <p>
-        (Here we're describing the API for the current version of Logisim. You may find some libraries developed for older versions of Logisim, in which components were developed by defining two classes, one extending <code>Component</code> and another extending <code>ComponentFactory</code>. Version 2.3.0 introduced the much simpler <code>InstanceFactory</code> API; the older technique is deprecated.)
+        Nous décrivons ici l'API de la version actuelle de Logisim. Vous pouvez trouver des bibliothèques développées pour d'anciennes versions de Logisim, dans lesquelles les composants étaient développés en définissant deux classes, l'une étendant <code>Component</code>et l'autre <code>ComponentFactory</code> . La version 2.3.0 a introduit l'API <code>InstanceFactory</code> beaucoup plus simple ; l'ancienne technique est obsolète.
       </p>
       <p>
-        Three Logisim packages define most of the classes relevant to defining component libraries.
+        Trois packages Logisim définissent la plupart des classes nécessaires à la définition des bibliothèques de composants.
       </p>
       <dl>
         <dt>
@@ -31,7 +31,7 @@
         </dt>
         <dd>
           <p>
-            Contains classes specifically related to defining components, including the <code>InstanceFactory</code>, <code>InstanceState</code>, <code>InstancePainter</code>, and <code>Instance</code> classes.
+            Contient des classes spécifiquement liées à la définition des composants, y compris l'<code>InstanceFactory</code>, <code>InstanceState</code>, <code>InstancePainter</code>, et <code>Instance</code> classes.
           </p>
         </dd>
         <dt>
@@ -39,7 +39,7 @@
         </dt>
         <dd>
           <p>
-            Contains classes related to data elements associated with components, such as the <code>Bounds</code> class for representing bounding rectangles or the <code>Value</code> class for representing values that can exist on a wire.
+            Contient des classes relatives aux éléments de données associés aux composants, tels que les éléments suivants : <code>Bounds</code> class pour représenter les rectangles de délimitation ou la <code>Value</code> class pour représenter les valeurs qui peuvent exister sur un fil.
           </p>
         </dd>
         <dt>
@@ -47,18 +47,18 @@
         </dt>
         <dd>
           <p>
-            Contains classes related to the library definition.
+            Contient les classes liées à la définition de la bibliothèque.
           </p>
         </dd>
       </dl>
       <h2>
-        About Gray codes
+        À propos des codes Gray
       </h2>
       <p>
-        Before we go on, let me briefly describe the Gray code on which these examples are based. It's not really important to understanding how these examples work, so you can safely skip to the code below if you wish - particularly if you already know Gray codes.
+        Avant de poursuivre, permettez-moi de décrire brièvement le code Gray sur lequel ces exemples sont basés. Ce n'est pas vraiment important pour comprendre le fonctionnement de ces exemples, vous pouvez donc passer directement au code ci-dessous si vous le souhaitez - en particulier si vous connaissez déjà les codes Gray.
       </p>
       <p>
-        Gray code is a technique (named after Frank Gray) for iterating through <var>n</var>-bit sequences with only one bit changed for each step. As an example, consider the 4-bit Gray code listed below.
+        Le code de Gray est une technique (nommée d'après Frank Gray) qui permet de parcourir des séquences de <var>n</var> bits en ne changeant qu'un seul bit à chaque étape. À titre d'exemple, considérons le code de Gray à 4 bits ci-dessous.
       </p>
       <blockquote>
         <table>
@@ -102,16 +102,16 @@
         </table>
       </blockquote>
       <p>
-        Each value has the bit underlined that will change for the next value in the sequence. For example, after 0000 comes 0001, in which the final bit has been toggled, so the final bit is underlined.
+        Pour chaque valeur, le bit souligné est celui qui sera modifié pour la valeur suivante dans la séquence. Par exemple, après 0000 vient 0001, dans lequel le dernier bit a été basculé, donc le dernier bit est souligné.
       </p>
       <p>
-        Logisim's built-in components don't include anything working with Gray codes. But electronics designers find Gray codes useful sometimes. One particularly notable instance of Gray codes is along the axes in Karnaugh maps.
+        Les composants intégrés de Logisim ne comprennent rien qui fonctionne avec des codes Gray. Mais les concepteurs d'électronique trouvent parfois le code de Gray utile. Un exemple particulièrement remarquable de codes de Gray se trouve le long des axes dans les tables de Karnaugh.
       </p>
       <h2>
         GrayIncrementer
       </h2>
       <p>
-        This is a minimal example illustrating the essential elements to defining a component. This particular component is an incrementer, which takes an multibit input and produces the next Gray code following it in sequence.
+        Il s'agit d'un exemple minimal illustrant les éléments essentiels de la définition d'un composant. Ce composant particulier est un incrémenteur, qui prend une entrée multibits et produit le code Gray suivant dans la séquence.
       </p>
       <pre>package com.cburch.gray;
 
@@ -125,85 +125,98 @@ import com.cburch.logisim.instance.InstanceState;
 import com.cburch.logisim.instance.Port;
 import com.cburch.logisim.instance.StdAttr;
 
-/** This component takes a multibit input and outputs the value that follows it
- * in Gray Code. For instance, given input 0100 the output is 1100. */
+/** Ce composant prend une entrée multibits et émet la valeur qui la suit en code
+  * Gray. Par exemple, pour une entrée 0100, la sortie est 1100 */
 class GrayIncrementer extends InstanceFactory {
-    /* Note that there are no instance variables. There is only one instance of
-     * this class created, which manages all instances of the component. Any
-     * information associated with individual instances should be handled
-     * through attributes. For GrayIncrementer, each instance has a "bit width"
-     * that it works with, and so we'll have an attribute. */
+    /* Notez qu'il n'y a pas de variables d'instance. Une seule instance de 
+     * cette classe est créée, qui gère toutes les instances du composant. 
+     * Toute information associée à des instances individuelles doit être 
+     * gérée au moyen d'attributs. Pour GrayIncrementer, chaque instance a une
+     * "largeur de bit" avec laquelle elle travaille, et nous aurons donc cet 
+         attribut. */
 
-    /** The constructor configures the factory. */
+    /** Le constructeur configure le factory. */
     GrayIncrementer() {
         super("Gray Code Incrementer");
-        
-        /* This is how we can set up the attributes for GrayIncrementers. In
-         * this case, there is just one attribute - the width - whose default
-         * is 4. The StdAttr class defines several commonly occurring
-         * attributes, including one for "bit width." It's best to use those
-         * StdAttr attributes when appropriate: A user can then select several
-         * components (even from differing factories) with the same attribute
-         * and modify them all at once. */
+                
+        /* C'est ainsi que nous pouvons définir les attributs des GrayIncrementers.
+         * Dans ce cas, il n'y a qu'un seul attribut - la largeur - dont la valeur
+         * par défaut est 4. La classe StdAttr définit plusieurs attributs 
+         * courants, dont un pour la "largeur de bit". Il est préférable 
+         * d'utiliser ces attributs StdAttr lorsque cela est nécessaire : 
+         * Un utilisateur peut alors sélectionner plusieurs composants 
+         * (même provenant de différents factory) avec le même attribut et les 
+         *  modifier tous en même temps. */
         setAttributes(new Attribute[] { StdAttr.WIDTH },
                 new Object[] { BitWidth.create(4) });
         
-        /* The "offset bounds" is the location of the bounding rectangle
-         * relative to the mouse location. Here, we're choosing the component to
-         * be 30x30, and we're anchoring it relative to its primary output
-         * (as is typical for Logisim), which happens to be in the center of the
-         * east edge. Thus, the top left corner of the bounding box is 30 pixels
-         * west and 15 pixels north of the mouse location. */
+        /* Le "décalage des limites" est l'emplacement du rectangle englobant par 
+         * rapport à l'emplacement de la souris. Ici, nous choisissons un 
+         * composant de 30x30, et nous l'ancrons par rapport à sa sortie principale
+         * (comme c'est typiquement le cas pour Logisim), qui se trouve être au
+         * centre du bord est. Ainsi, le coin supérieur gauche de la boîte 
+         * englobante se trouve à 30 pixels à l'ouest et à 15 pixels au nord de 
+         * l'emplacement de la souris. */
+                
         setOffsetBounds(Bounds.create(-30, -15, 30, 30));
         
-        /* The ports are locations where wires can be connected to this
-         * component. Each port object says where to find the port relative to
-         * the component's anchor location, then whether the port is an
-         * input/output/both, and finally the expected bit width for the port.
-         * The bit width can be a constant (like 1) or an attribute (as here).
-         */
+        /* Les ports sont des emplacements où des fils peuvent être connectés 
+         * à ce composant. Chaque objet port indique où trouver le port par 
+         * rapport à l'emplacement d'ancrage du composant, puis si le port est
+         * une entrée/sortie/les deux, et enfin la largeur de bit attendue 
+         * pour le port. La largeur de bit peut être une constante (comme 1) 
+         * ou un attribut (comme ici). */
+                                   
         setPorts(new Port[] {
                 new Port(-30, 0, Port.INPUT, StdAttr.WIDTH),
                 new Port(0, 0, Port.OUTPUT, StdAttr.WIDTH),
             });
     }
 
-    /** Computes the current output for this component. This method is invoked
-     * any time any of the inputs change their values; it may also be invoked in
-     * other circumstances, even if there is no reason to expect it to change
-     * anything. */
+    /** Calcule la sortie actuelle pour ce composant.
+      * Cette méthode est invoquée chaque fois que l'une des entrées change de
+      *     valeur ; elle peut également être invoquée dans d'autres circonstances,
+      *     même s'il n'y a aucune raison de s'attendre à ce qu'elle change 
+      * quoi que ce soit. */
     public void propagate(InstanceState state) {
-        // First we retrieve the value being fed into the input. Note that in
-        // the setPorts invocation above, the component's input was included at
-        // index 0 in the parameter array, so we use 0 as the parameter below.
+        
+        /* Tout d'abord, nous récupérons la valeur introduite dans l'entrée. 
+         * Notez que dans l'invocation setPorts ci-dessus, l'entrée du 
+         * composant était incluse à l'index 0 dans le tableau de paramètres, 
+         * nous utilisons donc 0 comme paramètre ci-dessous. */
         Value in = state.getPort(0);
         
-        // Now compute the output. We've farmed this out to a helper method,
-        // since the same logic is needed for the library's other components.
+        /* Maintenant, calculez la sortie. Nous avons confié cette tâche à 
+         * une méthode helper, car la même logique est nécessaire pour les 
+         * autres composants de la bibliothèque. */
         Value out = nextGray(in);
         
-        // Finally we propagate the output into the circuit. The first parameter
-        // is 1 because in our list of ports (configured by invocation of
-        // setPorts above) the output is at index 1. The second parameter is the
-        // value we want to send on that port. And the last parameter is its
-        // "delay" - the number of steps it will take for the output to update
-        // after its input.
+        /* Enfin, nous propageons la sortie dans le circuit. Le premier 
+         * paramètre est 1 car dans notre liste de ports (configurée par 
+         * l'invocation de setPorts ci-dessus) la sortie est à l'index 1.
+         * Le deuxième paramètre est la valeur que nous voulons envoyer 
+         * sur ce port. Et le dernier paramètre est son "délai" - 
+         * le nombre d'étapes nécessaires pour que la sortie soit mise à jour 
+         * après son entrée. */
         state.setPort(1, out, out.getWidth() + 1);
     }
 
-    /** Says how an individual instance should appear on the canvas. */
+    /** Indique comment une instance individuelle doit apparaître sur 
+            le canevas. */
     public void paintInstance(InstancePainter painter) {
-        // As it happens, InstancePainter contains several convenience methods
-        // for drawing, and we'll use those here. Frequently, you'd want to
-        // retrieve its Graphics object (painter.getGraphics) so you can draw
-        // directly onto the canvas.
+        
+        /* Il se trouve que InstancePainter contient plusieurs méthodes de 
+         * commodité pour le dessin, et nous les utiliserons ici. Souvent, vous
+         * voudrez récupérer l'objet Graphics (painter.getGraphics) afin de 
+         * dessiner directement sur le canevas.
         painter.drawRectangle(painter.getBounds(), "G+1");
         painter.drawPorts();
     }
     
-    /** Computes the next gray value in the sequence after prev. This static
-     * method just does some bit twiddling; it doesn't have much to do with
-     * Logisim except that it manipulates Value and BitWidth objects. */
+    /** Calcule la valeur du code de Gray suivante dans la séquence après la
+      * précédente. Cette méthode statique ne fait que manipuler des bits ;
+      * elle n'a pas grand-chose à voir avec Logisim, si ce n'est qu'elle 
+      * manipule les objets Value et BitWidth. */
     static Value nextGray(Value prev) {
         BitWidth bits = prev.getBitWidth();
         if(!prev.isFullyDefined()) return Value.createError(bits);
@@ -218,14 +231,14 @@ class GrayIncrementer extends InstanceFactory {
         } else { // else flip bit just above last 1
             int y = x ^ (x &amp; (x - 1)); // first compute the last 1
             y = (y &lt;&lt; 1) &amp; bits.getMask();
-            x = (y == 0 ? 0&nbsp;: x ^ y);
+            x = (y == 0 ? 0 : x ^ y);
         }
         return Value.createKnown(bits, x);
     }
 }
 </pre>
       <p>
-        This example by itself is not enough to create a working JAR file; you must also provide a Library class, as illustrated on the next page.
+        Cet exemple ne suffit pas à créer un fichier JAR fonctionnel ; vous devez également fournir une classe Library, comme illustré à la page suivante.
       </p>
       <p>
         <b>Suite&nbsp;:</b> <a href="library.html">Library Class</a>.

@@ -2,25 +2,26 @@
 <html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2019-01-15T06:18:42.262000000">
+    <meta name="created" content="2023-08-10T26:35:22.126000000">
+    <meta name="changed" content="2023-08-10T26:35:22.126000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
-      Simple Gray Code Counter
+       Compteur de codes Gray simple
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class=codediv>
       <h1>
-        Simple Gray Code Counter
+        Compteur de codes Gray simple
       </h1>
       <p>
-        Often we want components that aren't exclusively combinational in nature - that is, we want the component to have some memory. There is an important subtlety in defining such components: You can't have the component itself store the state, because an individual component can appear many times in the same circuit. It can't appear directly within a circuit multiple times, but it can appear multiple times if it appears in a subcircuit that is used several times.
+       Souvent, nous voulons des composants qui ne sont pas exclusivement de nature combinatoire - c'est-à-dire que nous voulons que le composant ait une certaine mémoire. La définition de ces composants comporte une subtilité importante : Vous ne pouvez pas faire en sorte que le composant lui-même stocke l'état, parce qu'un composant individuel peut apparaître plusieurs fois dans le même circuit. Il ne peut pas apparaître plusieurs fois directement dans un circuit, mais il peut apparaître plusieurs fois s'il apparaît dans un sous-circuit qui est utilisé plusieurs fois.
       </p>
       <p>
-        The solution is to create a new class for representing the object's current state, and to associate instances of this with the component through the parent circuit's state. In this example, which implements an edge-triggered 4-bit Gray code counter, we define a <code>CounterData</code> class to represent the counter's state, in addition to the <code>InstanceFactory</code> subclass as illustrated previously. The <code>CounterData</code> object remembers both the counter's current value, as well as the last clock input seen (to detect rising edges).
+        La solution consiste à créer une nouvelle classe pour représenter l'état actuel de l'objet, et d'en associer des instances au composant par l'intermédiaire de l'état du circuit parent.       
+		The solution is to create a new class for representing the object's current state, and to associate instances of this with the component through the parent circuit's state. Dans cet exemple, qui met en œuvre un compteur de code Gray 4 bits déclenché par front, nous définissons une classe <code>CounterData</code> pour représenter l'état du compteur, en plus de la sous-classe <code>InstanceFactory</code>, comme illustré précédemment. L'objet <code>CounterData</code> mémorise à la fois la valeur actuelle du compteur et la dernière entrée d'horloge vue (pour détecter les fronts montants).
       </p>
       <h2>
         CounterData
@@ -32,17 +33,18 @@ import com.cburch.logisim.data.Value;
 import com.cburch.logisim.instance.InstanceData;
 import com.cburch.logisim.instance.InstanceState;
 
-/** Represents the state of a counter. */
+/** Représente l'état d'un compteur. */
 class CounterData implements InstanceData, Cloneable {
-    /** Retrieves the state associated with this counter in the circuit state,
-     * generating the state if necessary.
+    
+	/** Récupère l'état associé à ce compteur dans l'état du circuit,
+     * générer l'etat si nécessaire.
      */
     public static CounterData get(InstanceState state, BitWidth width) {
         CounterData ret = (CounterData) state.getData();
         if(ret == null) {
-            // If it doesn't yet exist, then we'll set it up with our default
-            // values and put it into the circuit state so it can be retrieved
-            // in future propagations.
+		    /** S'il n'existe pas encore, nous le configurerons avec nos valeurs 
+			  * par défaut et le mettrons à l'état de circuit afin qu'il puisse 
+			  * être récupéré lors de futures propagations. */
             ret = new CounterData(null, Value.createKnown(width, 0));
             state.setData(ret);
         } else if(!ret.value.getBitWidth().equals(width)) {
@@ -51,41 +53,44 @@ class CounterData implements InstanceData, Cloneable {
         return ret;
     }
 
-    /** The last clock input value observed. */
+    /** La dernière valeur d'entrée d'horloge observée. */
     private Value lastClock;
     
-    /** The current value emitted by the counter. */
+    /** La valeur courante émise par le compteur. */
     private Value value;
 
-    /** Constructs a state with the given values. */
+    /** Construit un état avec les valeurs données. */
     public CounterData(Value lastClock, Value value) {
         this.lastClock = lastClock;
         this.value = value;
     }
 
-    /** Returns a copy of this object. */
+    /** Renvoie une copie de cet objet. */
     public Object clone() {
-        // We can just use what super.clone() returns: The only instance variables are
-        // Value objects, which are immutable, so we don't care that both the copy
-        // and the copied refer to the same Value objects. If we had mutable instance
-        // variables, then of course we would need to clone them.
+        /** Nous pouvons simplement utiliser ce que super.clone() renvoie : 
+		  * Les seules variables d'instance sont les objets Value, qui sont 
+		  * immuables, de sorte que nous ne nous soucions pas que la copie 
+		  *	et le copié fassent référence aux mêmes objets Value. 
+		  *	Si nous avions des variables d'instance mutables, nous aurions 
+		  *	bien sûr besoin de les cloner. */
         try { return super.clone(); }
         catch(CloneNotSupportedException e) { return null; }
     }
     
-    /** Updates the last clock observed, returning true if triggered. */
+    /** Met à jour la dernière horloge observée, en renvoyant true si elle 
+	  * est déclenchée. */
     public boolean updateClock(Value value) {
         Value old = lastClock;
         lastClock = value;
         return old == Value.FALSE &amp;&amp; value == Value.TRUE;
     }
     
-    /** Returns the current value emitted by the counter. */
+    /** Renvoie la valeur courante émise par le compteur.  */
     public Value getValue() {
         return value;
     }
     
-    /** Updates the current value emitted by the counter. */
+    /** Met à jour la valeur courante émise par le compteur. */
     public void setValue(Value value) {
         this.value = value;
     }
