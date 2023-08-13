@@ -113,7 +113,7 @@
       <p>
         Il s'agit d'un exemple minimal illustrant les éléments essentiels de la définition d'un composant. Ce composant particulier est un incrémenteur, qui prend une entrée multibits et produit le code Gray suivant dans la séquence.
       </p>
-      <pre>package com.cburch.gray;
+      <pre class="code">package com.cburch.gray;
 
 import com.cburch.logisim.data.Attribute;
 import com.cburch.logisim.data.BitWidth;
@@ -125,47 +125,47 @@ import com.cburch.logisim.instance.InstanceState;
 import com.cburch.logisim.instance.Port;
 import com.cburch.logisim.instance.StdAttr;
 
-/** Ce composant prend une entrée multibits et émet la valeur qui la suit en code
-  * Gray. Par exemple, pour une entrée 0100, la sortie est 1100 */
+<b class="comment">/** Ce composant prend une entrée multibits et émet la valeur qui la suit en code
+  * Gray. Par exemple, pour une entrée 0100, la sortie est 1100 */</b>
 class GrayIncrementer extends InstanceFactory {
-    /* Notez qu'il n'y a pas de variables d'instance. Une seule instance de 
+    <b class="comment">/* Notez qu'il n'y a pas de variables d'instance. Une seule instance de 
      * cette classe est créée, qui gère toutes les instances du composant. 
      * Toute information associée à des instances individuelles doit être 
      * gérée au moyen d'attributs. Pour GrayIncrementer, chaque instance a une
      * "largeur de bit" avec laquelle elle travaille, et nous aurons donc cet 
-         attribut. */
+         attribut. */</b>
 
-    /** Le constructeur configure le factory. */
+    <b class="comment">/** Le constructeur configure le factory. */</b>
     GrayIncrementer() {
         super("Gray Code Incrementer");
                 
-        /* C'est ainsi que nous pouvons définir les attributs des GrayIncrementers.
+       <b class="comment"> /* C'est ainsi que nous pouvons définir les attributs des GrayIncrementers.
          * Dans ce cas, il n'y a qu'un seul attribut - la largeur - dont la valeur
          * par défaut est 4. La classe StdAttr définit plusieurs attributs 
          * courants, dont un pour la "largeur de bit". Il est préférable 
          * d'utiliser ces attributs StdAttr lorsque cela est nécessaire : 
          * Un utilisateur peut alors sélectionner plusieurs composants 
          * (même provenant de différents factory) avec le même attribut et les 
-         *  modifier tous en même temps. */
+         *  modifier tous en même temps. */</b>
         setAttributes(new Attribute[] { StdAttr.WIDTH },
                 new Object[] { BitWidth.create(4) });
         
-        /* Le "décalage des limites" est l'emplacement du rectangle englobant par 
+        <b class="comment">/* Le "décalage des limites" est l'emplacement du rectangle englobant par 
          * rapport à l'emplacement de la souris. Ici, nous choisissons un 
          * composant de 30x30, et nous l'ancrons par rapport à sa sortie principale
          * (comme c'est typiquement le cas pour Logisim), qui se trouve être au
          * centre du bord est. Ainsi, le coin supérieur gauche de la boîte 
          * englobante se trouve à 30 pixels à l'ouest et à 15 pixels au nord de 
-         * l'emplacement de la souris. */
+         * l'emplacement de la souris. */</b>
                 
         setOffsetBounds(Bounds.create(-30, -15, 30, 30));
         
-        /* Les ports sont des emplacements où des fils peuvent être connectés 
+        <b class="comment">/* Les ports sont des emplacements où des fils peuvent être connectés 
          * à ce composant. Chaque objet port indique où trouver le port par 
          * rapport à l'emplacement d'ancrage du composant, puis si le port est
          * une entrée/sortie/les deux, et enfin la largeur de bit attendue 
          * pour le port. La largeur de bit peut être une constante (comme 1) 
-         * ou un attribut (comme ici). */
+         * ou un attribut (comme ici). */</b>
                                    
         setPorts(new Port[] {
                 new Port(-30, 0, Port.INPUT, StdAttr.WIDTH),
@@ -173,47 +173,47 @@ class GrayIncrementer extends InstanceFactory {
             });
     }
 
-    /** Calcule la sortie actuelle pour ce composant.
+    <b class="comment">/** Calcule la sortie actuelle pour ce composant.
       * Cette méthode est invoquée chaque fois que l'une des entrées change de
       *     valeur ; elle peut également être invoquée dans d'autres circonstances,
       *     même s'il n'y a aucune raison de s'attendre à ce qu'elle change 
-      * quoi que ce soit. */
+      * quoi que ce soit. */</b>
     public void propagate(InstanceState state) {
         
-        /* Tout d'abord, nous récupérons la valeur introduite dans l'entrée. 
+        <b class="comment">/* Tout d'abord, nous récupérons la valeur introduite dans l'entrée. 
          * Notez que dans l'invocation setPorts ci-dessus, l'entrée du 
          * composant était incluse à l'index 0 dans le tableau de paramètres, 
-         * nous utilisons donc 0 comme paramètre ci-dessous. */
+         * nous utilisons donc 0 comme paramètre ci-dessous. */</b>
         Value in = state.getPort(0);
         
-        /* Maintenant, calculez la sortie. Nous avons confié cette tâche à 
+        <b class="comment">/* Maintenant, calculez la sortie. Nous avons confié cette tâche à 
          * une méthode helper, car la même logique est nécessaire pour les 
-         * autres composants de la bibliothèque. */
+         * autres composants de la bibliothèque. */</b>
         Value out = nextGray(in);
         
-        /* Enfin, nous propageons la sortie dans le circuit. Le premier 
+       <b class="comment"> /* Enfin, nous propageons la sortie dans le circuit. Le premier 
          * paramètre est 1 car dans notre liste de ports (configurée par 
          * l'invocation de setPorts ci-dessus) la sortie est à l'index 1.
          * Le deuxième paramètre est la valeur que nous voulons envoyer 
          * sur ce port. Et le dernier paramètre est son "délai" - 
          * le nombre d'étapes nécessaires pour que la sortie soit mise à jour 
-         * après son entrée. */
+         * après son entrée. */</b>
         state.setPort(1, out, out.getWidth() + 1);
     }
 
-    /** Indique comment une instance individuelle doit apparaître sur 
-            le canevas. */
+    <b class="comment">/** Indique comment une instance individuelle doit apparaître sur 
+            le canevas. */</b>
     public void paintInstance(InstancePainter painter) {
         
-        /* Il se trouve que InstancePainter contient plusieurs méthodes de 
+        <b class="comment">/* Il se trouve que InstancePainter contient plusieurs méthodes de 
          * commodité pour le dessin, et nous les utiliserons ici. Souvent, vous
          * voudrez récupérer l'objet Graphics (painter.getGraphics) afin de 
-         * dessiner directement sur le canevas.
+         * dessiner directement sur le canevas. */</b>
         painter.drawRectangle(painter.getBounds(), "G+1");
         painter.drawPorts();
     }
     
-    /** Calcule la valeur du code de Gray suivante dans la séquence après la
+    <b class="comment">/** Calcule la valeur du code de Gray suivante dans la séquence après la
       * précédente. Cette méthode statique ne fait que manipuler des bits ;
       * elle n'a pas grand-chose à voir avec Logisim, si ce n'est qu'elle 
       * manipule les objets Value et BitWidth. */
@@ -226,10 +226,10 @@ class GrayIncrementer extends InstanceFactory {
         ct = (ct &gt;&gt; 4) ^ ct;
         ct = (ct &gt;&gt; 2) ^ ct;
         ct = (ct &gt;&gt; 1) ^ ct;
-        if((ct &amp; 1) == 0) { // if parity is even, flip 1's bit
+        if((ct &amp; 1) == 0) { <b class="comment">// si la parité est paire, retourner le bit de 1</b>
             x = x ^ 1;
         } else { // else flip bit just above last 1
-            int y = x ^ (x &amp; (x - 1)); // first compute the last 1
+            int y = x ^ (x &amp; (x - 1)); <b class="comment">// calculer d'abord le dernier 1</b>
             y = (y &lt;&lt; 1) &amp; bits.getMask();
             x = (y == 0 ? 0 : x ^ y);
         }

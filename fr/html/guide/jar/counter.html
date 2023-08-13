@@ -22,7 +22,7 @@
       <h2>
         GrayCounter
       </h2>
-      <pre>package com.cburch.gray;
+      <pre class="code">package com.cburch.gray;
 
 import java.net.URL;
 
@@ -40,10 +40,10 @@ import com.cburch.logisim.instance.Port;
 import com.cburch.logisim.instance.StdAttr;
 import com.cburch.logisim.util.GraphicsUtil;
 import com.cburch.logisim.util.StringUtil;
-
+<b class="comment">
 /** Fabrique un compteur qui itère sur les codes Gray. Ce compteur présente 
   * plusieurs caractéristiques supplémentaires par rapport à la classe 
-  *	SimpleGrayCounter. /*
+  *	SimpleGrayCounter. /* </b>
 class GrayCounter extends InstanceFactory {
     public GrayCounter() {
         super("Gray Counter");
@@ -53,31 +53,31 @@ class GrayCounter extends InstanceFactory {
                 new Port(  0, 0, Port.OUTPUT, StdAttr.WIDTH),
         });
 
-        /** Nous aurons des attributs de largeur, d'étiquette et de police 
-		  * d'étiquette. Ces deux derniers attributs nous permettent d'associer 
-		  *	une étiquette au composant (bien que nous ayons également besoin de 
-		  *	configureNewInstance pour configurer l'emplacement de l'étiquette).*/
+         <b class="comment">/** Nous aurons des attributs de largeur, d'étiquette et de police 
+           * d'étiquette. Ces deux derniers attributs nous permettent d'associer 
+           * une étiquette au composant (bien que nous ayons également besoin de 
+           * configureNewInstance pour configurer l'emplacement de l'étiquette).*/</b>
         setAttributes(
                 new Attribute[] { StdAttr.WIDTH, StdAttr.LABEL, StdAttr.LABEL_FONT },
                 new Object[] { BitWidth.create(4), "", StdAttr.DEFAULT_LABEL_FONT });
 
-        /** L'invocation de la méthode suivante permet de manipuler l'état 
-		  * de l'instance à l'aide de l'outil Poke. */
+        <b class="comment">/** L'invocation de la méthode suivante permet de manipuler l'état 
+          * de l'instance à l'aide de l'outil Poke. */</b>
         setInstancePoker(CounterPoker.class);
 
-        /** Les deux lignes suivantes font en sorte que la fenêtre de l'explorateur 
-		  * affiche une icône personnalisée représentant le type de composant. 
-		  *	Il s'agit d'une image de 16x16. */
+        <b class="comment">/** Les deux lignes suivantes font en sorte que la fenêtre de l'explorateur 
+          * affiche une icône personnalisée représentant le type de composant. 
+          *	Il s'agit d'une image de 16x16. */</b>
         URL url = getClass().getClassLoader().getResource("com/cburch/gray/counter.gif");
         if(url != null) setIcon(new ImageIcon(url));
     }
     
-	/** La méthode configureNewInstance est invoquée à chaque fois qu'une nouvelle 
+<b class="comment">	/** La méthode configureNewInstance est invoquée à chaque fois qu'une nouvelle 
 	  * instance est créée. Dans la superclasse, la méthode ne fait rien, puisque 
 	  * la nouvelle instance est déjà bien configurée par défaut. Mais il arrive 
 	  *	que l'on doive faire quelque chose de particulier pour chaque instance, 
 	  *	c'est pourquoi il faut surcharger la méthode. Dans ce cas, nous devons 
- 	  *	configurer l'emplacement de son étiquette. */
+ 	  *	configurer l'emplacement de son étiquette. */</b>
     protected void configureNewInstance(Instance instance) {
         Bounds bds = instance.getBounds();
         instance.setTextField(StdAttr.LABEL, StdAttr.LABEL_FONT,
@@ -86,9 +86,9 @@ class GrayCounter extends InstanceFactory {
     }
 
     public void propagate(InstanceState state) {
-	    /** C'est la même chose que pour SimpleGrayCounter, sauf que nous utilisons
- 		  * l'attribut StdAttr.WIDTH pour déterminer la largeur de bit avec laquelle
- 		  *	nous devons travailler. */
+        <b class="comment">/** C'est la même chose que pour SimpleGrayCounter, sauf que nous utilisons
+          * l'attribut StdAttr.WIDTH pour déterminer la largeur de bit avec laquelle
+          *	nous devons travailler. */</b>
         BitWidth width = state.getAttributeValue(StdAttr.WIDTH);
         CounterData cur = CounterData.get(state, width);
         boolean trigger = cur.updateClock(state.getPort(0));
@@ -97,9 +97,9 @@ class GrayCounter extends InstanceFactory {
     }
 
     public void paintInstance(InstancePainter painter) {
-	    /** Il s'agit essentiellement de la même chose que pour SimpleGrayCounter,
-  		  * à l'exception de l'invocation de painter.drawLabel pour dessiner 
-		  *	l'étiquette. */
+        <b class="comment">/** Il s'agit essentiellement de la même chose que pour SimpleGrayCounter,
+          * à l'exception de l'invocation de painter.drawLabel pour dessiner 
+          *	l'étiquette. */</b>
         painter.drawBounds();
         painter.drawClock(0, Direction.EAST);
         painter.drawPort(1);
@@ -120,7 +120,7 @@ class GrayCounter extends InstanceFactory {
       <h2>
         CounterPoker
       </h2>
-      <pre>package com.cburch.gray;
+      <pre class="code">package com.cburch.gray;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -135,24 +135,24 @@ import com.cburch.logisim.instance.InstancePoker;
 import com.cburch.logisim.instance.InstanceState;
 import com.cburch.logisim.instance.StdAttr;
 
-/** Lorsque l'utilisateur clique sur un compteur à l'aide de l'outil Poke,
+<b class="comment">/** Lorsque l'utilisateur clique sur un compteur à l'aide de l'outil Poke,
   * un objet CounterPoker est créé et cet objet gère tous les événements de
   *	l'utilisateur. Notez que CounterPoker est une classe spécifique à 
   *	GrayCounter, et qu'elle doit être une sous-classe de InstancePoker dans
-  *	le paquetage com.cburch.logisim.instance. */
+  *	le paquetage com.cburch.logisim.instance. */</b>
 public class CounterPoker extends InstancePoker {
     public CounterPoker() {}
 
-    /** Détermine si l'endroit où la souris a été pressée doit entraîner 
-	  * le déclenchement d'un poke.  */
+    <b class="comment">/** Détermine si l'endroit où la souris a été pressée doit entraîner 
+      * le déclenchement d'un poke.  */</b>
     public boolean init(InstanceState state, MouseEvent e) {
         return state.getInstance().getBounds().contains(e.getX(), e.getY());
-            // Anywhere in the main rectangle initiates the poke. The user might
-            // have clicked within a label, but that will be outside the bounds.
+            <b class="comment">// N'importe quel endroit du rectangle principal déclenche le poke.  L'utilisateur peut 
+            //avoir cliqué à l'intérieur d'une étiquette, mais celle-ci sera en dehors des limites.</b>
     }
 
-    /** Dessine un indicateur indiquant que le curseur est sélectionné. Ici, 
-	  * nous allons  dessiner un rectangle rouge autour de la valeur. */
+     <b class="comment">/** Dessine un indicateur indiquant que le curseur est sélectionné. Ici, 
+       * nous allons  dessiner un rectangle rouge autour de la valeur. */</b>
     public void paint(InstancePainter painter) {
         Bounds bds = painter.getBounds();
         BitWidth width = painter.getAttributeValue(StdAttr.WIDTH);
@@ -167,26 +167,27 @@ public class CounterPoker extends InstancePoker {
         g.setColor(Color.BLACK);
     }
 
-    /** Traite une touche en l'ajoutant simplement à la fin de la valeur actuelle. */
+    <b class="comment">/** Traite une touche en l'ajoutant simplement à la fin de la valeur actuelle. */</b>
     public void keyTyped(InstanceState state, KeyEvent e) {
-        // convert it to a hex digit; if it isn't a hex digit, abort.
+         <b class="comment">/* le convertit en chiffre hexadécimal ; s'il ne s'agit pas
+           d'un chiffre hexadécimal, l'opération est interrompue.*/</b>
         int val = Character.digit(e.getKeyChar(), 16);
         BitWidth width = state.getAttributeValue(StdAttr.WIDTH);
         if(val &lt; 0 || (val &amp; width.getMask()) != val) return;
 
-        // calculer la valeur suivante
+        <b class="comment">/* calculer la valeur suivante*/</b>
         CounterData cur = CounterData.get(state, width);
         int newVal = (cur.getValue().toIntValue() * 16 + val) &amp; width.getMask();
         Value newValue = Value.createKnown(width, newVal);
         cur.setValue(newValue);
         state.fireInvalidated();
 
-        /** Vous pourriez être tenté de propager la valeur immédiatement ici, 
-		  * en utilisant state.setPort. Cependant, le circuit peut actuellement 
-		  * se propager dans un autre thread, et l'appel direct de setPort 
-		  *	pourrait interférer avec cela. L'utilisation de fireInvalidated 
-		  *	notifie le thread de propagation à Invoquer Propager sur le 
-		  *	compteur à sa prochaine occasion.
+        <b class="comment">/** Vous pourriez être tenté de propager la valeur immédiatement ici, 
+          * en utilisant state.setPort. Cependant, le circuit peut actuellement 
+          * se propager dans un autre thread, et l'appel direct de setPort 
+          * pourrait interférer avec cela. L'utilisation de fireInvalidated 
+          * notifie le thread de propagation à Invoquer Propager sur le 
+          * compteur à sa prochaine occasion.</b>
     }
 }
 </pre>

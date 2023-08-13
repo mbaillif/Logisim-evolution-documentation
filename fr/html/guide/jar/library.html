@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
-    <div class=codediv>
+    <div class="codediv">
       <h1>
         Library Class
       </h1>
@@ -22,7 +22,7 @@
       <h2>
         Components
       </h2>
-      <pre>package com.cburch.gray;
+      <pre class="code">package com.cburch.gray;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,20 +30,20 @@ import java.util.List;
 import com.cburch.logisim.tools.AddTool;
 import com.cburch.logisim.tools.Library;
 
-/** La bibliothèque de composants à laquelle l'utilisateur peut accéder. */
+<b class="comment">/** La bibliothèque de composants à laquelle l'utilisateur peut accéder. */</b>
 public class Components extends Library {
     
-   /** La liste de tous les outils contenus dans cette bibliothèque. 
+   <b class="comment">/** La liste de tous les outils contenus dans cette bibliothèque. 
      * Techniquement, les bibliothèques contiennent des outils, ce qui est
- 	 * un concept un peu plus général que les composants ; en pratique, 
-	 * cependant, vous voudrez le plus souvent créer des AddTools pour 
-	 * les nouveaux composants qui peuvent être ajoutés au circuit. */
+     * un concept un peu plus général que les composants ; en pratique, 
+     * cependant, vous voudrez le plus souvent créer des AddTools pour 
+     * les nouveaux composants qui peuvent être ajoutés au circuit. */</b>
     private List&lt;AddTool&gt; tools;
     
-	/** Construit une instance de cette bibliothèque. C'est par ce 
-	  * constructeur que Logisim accède en premier lorsqu'il ouvre 
-	  *	le fichier JAR : Il recherche une méthode de construction 
-	  *	sans argument de la classe désignée par l'utilisateur. */
+        <b class="comment">/** Construit une instance de cette bibliothèque. C'est par ce 
+          * constructeur que Logisim accède en premier lorsqu'il ouvre 
+          *     le fichier JAR : Il recherche une méthode de construction 
+          *     sans argument de la classe désignée par l'utilisateur. */</b>
     public Components() {
         tools = Arrays.asList(new AddTool[] {
                 new AddTool(new GrayIncrementer()),
@@ -52,13 +52,13 @@ public class Components extends Library {
         });
     }
     
-    /** Renvoie le nom de la bibliothèque que l'utilisateur verra. */ 
+    <b class="comment">/** Renvoie le nom de la bibliothèque que l'utilisateur verra. */</b> 
     public String getDisplayName() {
         return "Gray Tools";
     }
     
-    /** Renvoie une liste de tous les outils disponibles dans cette
-      *	bibliothèque. */
+    <b class="comment">/** Renvoie une liste de tous les outils disponibles dans cette
+      * bibliothèque. */</b>
     public List&lt;AddTool&gt; getTools() {
         return tools;
     }
