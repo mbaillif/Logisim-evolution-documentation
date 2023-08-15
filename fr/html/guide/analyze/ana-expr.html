@@ -17,7 +17,7 @@
         Créer des expressions
       </h1>
       <p>
-        Pour chaque variable de sortie, la fenêtre d'analyse combinatoire maintient deux structures&nbsp;: la colonne concernée dans la table de vérité et une expression booléenne. Chaque structure définit comment la sortie dépend de ses entrées. Vous pouvez éditer soit la table de vérité soit l'expression. L'un ou l'autre sera automatiquement mis à jour pour rester consistant.
+        Pour chaque variable de sortie, la fenêtre d'analyse combinatoire maintient deux structures&nbsp;: la colonne concernée dans la table de vérité et une expression booléenne. Chaque structure définit comment la sortie dépend de ses entrées. Vous pouvez éditer soit la table de vérité, soit l'expression. L'un ou l'autre sera automatiquement mis à jour pour rester consistant.
       </p>
       <p>
         Comme nous allons le voir sur la page suivante, les expressions booléennes sont particulièrement utiles dans la mesure ou la fenêtre d'analyse combinatoire utilisera ces dernières quand il sera nécessaire d'élaborer le circuit correspondant à la configuration courante.
@@ -32,40 +32,40 @@
         <img src="../../../img-guide/analyze-expression.png" alt="#########">
       </p>
 	  <p>
-	    L'onglet <b class="button">Expressions</b> vous permet de visualiser et éditer l'expression courante pour chaque variable de sortie. Il présente un sélecteur <b class="button">Notation&nbsp;:</b> et une liste des expressions mathématiques du circuit.
+	    L'onglet <b class="button">Expressions</b> vous permet de visualiser et éditer l'expression courante pour chaque variable de sortie. Il présente un sélecteur de <b class="button">Notation&nbsp;:</b> et une liste des expressions mathématiques du circuit.
       <p>
-        Le sélecteur <b class="button" id="not">Notation&nbsp;:</b> modifie le mode de notation des expressions de sortie. Il vous permet cinq types de notation&nbsp;:
+        Le sélecteur de <b class="button" id="not">Notation&nbsp;:</b> modifie le mode de notation des expressions de sortie. Il vous permet cinq types de notation&nbsp;:
       </p>
       <dl>
         <dt>
           <b class="button">Mathématique</b>&nbsp;:
         </dt>
         <dd>
-          Le surligné représente la négation, Le &#x2219; la fonction ET et le + la fonction OR. &#x2295; la fonction XOR
+          Le surligné représente la négation, Le <var>&#x2219;</var> la fonction ET et le <var>+</var> la fonction OR. le <var>&#x2295;</var> la fonction XOR
         </dd>
         <dt>
           <b class="button">Logique</b>&nbsp;:
         </dt>
         <dd>
-          Le ¬ représente la négation, le &#x2227; la fonction ET et le &#x2228; la fonction OU. &#x22bb; la fonction XOR.
+          Le <var>¬</var> représente la négation, le <var>&#x2227;</var> la fonction ET et le <var>&#x2228;</var> la fonction OU. le <var>&#x22bb;</var> la fonction XOR.
         </dd>
         <dt>
           <b class="button">Logique alternative</b>&nbsp;:
         </dt>
         <dd>
-          Le ~ représente la négation, Le &#x2227; la fonction ET et le &#x2228; la fonction OR. &#x2262; la fonction XOR
+          Le <var>~</var> représente la négation, Le <var>&#x2227;</var> la fonction ET et le <var>&#x2228;</var> la fonction OR. le <var>&#x2262;</var> la fonction XOR
         </dd>
         <dt>
           <b class="button">Programmation avec des booléens</b>&nbsp;:
         </dt>
         <dd>
-          Le ! représente la négation, Le &amp;&amp; la fonction ET et le || la fonction OR. != la fonction XOR
+          Le <var>!</var> représente la négation, Le <var>&amp;&amp;</var> la fonction ET et le <var>||</var> la fonction OR. le <var>!=</var> la fonction XOR
         </dd>
         <dt>
           <b class="button">Programmation avec des bits</b>&nbsp;:
         </dt>
         <dd>
-          Le ~ représente la négation, Le &amp; la fonction ET et le | la fonction OR. ^ la fonction XOR
+          Le <var>~</var> représente la négation, Le <var>&amp;</var> la fonction ET et le <var>|</var> la fonction OR. le <var>^</var> la fonction XOR
         </dd>
       </dl>
       <p>
@@ -198,7 +198,7 @@
         </table>
       </div>
       <p>
-        le sélecteur <b class="button">Notation&nbsp;:</b> à la la même propriété que celui du panneau <a href="#not">Expression (voir plus haut)</a>
+        le sélecteur <b class="button">Notation&nbsp;:</b> à la même propriété que celui du panneau <a href="#not">Expression (voir plus haut)</a>
       </p>
       <p>
         la table de Karnaugh apparaîtra au centre du panneau. Vous pouvez cliquer la table de Karnaugh pour changer les valeurs correspondantes dans la table de vérité. La table de Karnaugh affichera également les termes sélectionnés pour l'expression minimisée avec un rectangle arrondi superposé semi-transparent.
@@ -207,7 +207,7 @@
         En dessous, vous trouverez l'expression minimisée elle-même, formatée de la même manière que dans l'onglet Expression. Logisim utilise l'algorithme de Quine-McCluskey pour élaborer l'expression minimisée. Ceci est équivalent à une table de Karnaugh, mais appliqué à un nombre quelconque de variables en entrée.
       </p>
       <p>
-        Le bouton <b class="button">Définir comme expression</b> vous permets de définir l'expression minimisée comme l'expression correspondant à la variable. Comme les modifications à la table de vérité induisent l'expression minimisée pour la colonne en question ceci ne sera habituellement pas nécessaire, mais si vous entrez une expression dans l'onglet Expression, alors c'est une possibilité intéressante de basculer dans l'expression minimisée correspondante.
+        Le bouton <b class="button">Définir comme expression</b> vous permet de définir l'expression minimisée comme l'expression correspondant à la variable. Comme les modifications à la table de vérité induisent l'expression minimisée pour la colonne en question, ceci ne sera habituellement pas nécessaire, mais si vous entrez une expression dans l'onglet Expression, alors c'est une possibilité intéressante de basculer dans l'expression minimisée correspondante.
       </p>
       <p>
         <b>Suite&nbsp;:</b> <a href="ana-gen.html">Générer un circuit</a>.

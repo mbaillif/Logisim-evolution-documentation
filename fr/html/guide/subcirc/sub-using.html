@@ -41,13 +41,13 @@
         Plusieurs autres composant affichent des astuces pour des broches incorporées, le <a href="../../libs/mem/flipflops.html">flip-flop</a>, par exemple, en survolant avec la souris une broche l'usage de la broche sera affiché dans une <b>infobulle</b>.
       </p>
       <p>
-        Chaque broche d'un circuit doit être soit une entrée soit une sortie. Beaucoup de puces fabriquées ont des broches bidirectionnelles. Vous ne pouvez pas construire de telles puces dans Logisim (au moins, dans la version actuelle).
+        Chaque broche d'un circuit doit être soit une entrée, soit une sortie. Beaucoup de puces fabriquées ont des broches bidirectionnelles. Vous ne pouvez pas construire de telles puces dans Logisim (au moins, dans la version actuelle).
       </p>
       <p>
         Logisim maintiendra les différents états de chaque sous-circuit apparaissant dans un circuit. Par exemple, si un circuit contient des flip-flops et que ce circuit est utilisé plusieurs fois, chaque flip-flop du sous-circuit aura sa propre valeur dans la simulation du circuit plus grand.
       </p>
       <p>
-        Maintenant que le multiplexeur 4-to-1 est défini, nous pouvons l'utiliser dans d'autres circuits. Logisim n'a pas de limite dans la profondeur d'imbrication des circuits entre eux. Bien qu'il n'autorise pas un circuit à s'intégrer dans lui même !
+        Maintenant que le multiplexeur 4-to-1 est défini, nous pouvons l'utiliser dans d'autres circuits. Logisim n'a pas de limite dans la profondeur d'imbrication des circuits entre eux. Bien qu'il n'autorise pas un circuit à s'intégrer dans lui-même !
       </p>
       <p>
         <b class=note>Note&nbsp;:</b> Il n'y a rien de mal à éditer un circuit qui est déjà utilisé dans un autre circuit, ceci est tout à fait commun. Cependant si vous modifiez une broche (ajout, suppression ou déplacement) les modifications seront aussi portées dans le circuit le contenant. Ainsi si vous modifiez n'importe quelle broche d'un sous-circuit vous devez aussi modifier le câblage de tous les circuits l'utilisant comme un sous-circuit.
