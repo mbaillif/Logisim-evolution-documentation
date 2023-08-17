@@ -103,10 +103,10 @@
         particulier, les composants "Broche" du schéma d'un circuit définissent les contacts qui apparaissent sur le symbole du sous-circuit lorsqu'il est utilisé dans un autre circuit. Dans une telle construction, les valeurs envoyées et reçues à ces emplacements sur le symbole du sous-circuit sont liées aux broches dans le schéma du sous-circuit.
       </p>
       <h2>
-        Pins
+        Broches
       </h2>
       <p>
-        Un composant "broche" ne possède qu’une pin, qui sera une entrée pour lui si la broche est une connexion de sortie du schéma, et qui sera une sortie si la broche est une connexion d’entrée du schéma. Dans les deux cas, sa largeur en bit correspond à l'attribut <b class="property">Largeur de donnée</b> et son emplacement est spécifié par l'attribut <b class="property">Orientation</b>.
+        Un composant "broche" ne possède qu’une broche, qui sera une entrée pour lui si la broche est une connexion de sortie du schéma, et qui sera une sortie si la broche est une connexion d’entrée du schéma. Dans les deux cas, sa largeur en bit correspond à l'attribut <b class="property">Largeur de donnée</b> et son emplacement est spécifié par l'attribut <b class="property">Orientation</b>.
       </p>
       <h2>
         Attributs
@@ -138,7 +138,7 @@
             Trois états ?
           </dt>
           <dd>
-            Pour une broche d’entrée, cette option détermine si l’utilisateur peut demander à la pin d’émettre des valeurs flottantes (<b class="uvalue">U</b>). L'attribut n'est utile que dans l'interface utilisateur pour la simulation. Cela n'a aucun effet sur le comportement de la broche lorsque la disposition du circuit est utilisée comme sous-circuit. Pour une broche de sortie, l'attribut n'a aucun effet.
+            Pour une broche d’entrée, cette option détermine si l’utilisateur peut demander à la broche d’émettre des valeurs flottantes (<b class="uvalue">U</b>). L'attribut n'est utile que dans l'interface utilisateur pour la simulation. Cela n'a aucun effet sur le comportement de la broche lorsque la disposition du circuit est utilisée comme sous-circuit. Pour une broche de sortie, l'attribut n'a aucun effet.
           </dd>
           <dt class="lib">
             Comportement
@@ -207,7 +207,7 @@
         </ul>
 		</p>
         <p>
-          Si, toutefois, l’utilisateur visualise l’état d’un sous-circuit comme décrit dans le <a href="../../guide/subcirc/sub-debug.html">débogage de Sous-circuits</a> du <em>Guide de l'utilisateur</em> , alors la valeur de la pin est pilotée par la valeur que le sous-circuit reçoit du circuit de hiérarchie supérieur. L'utilisateur ne peut pas modifier la valeur sans rompre ce lien entre l'état du sous-circuit et l'état du circuit contenant, et Logisim demandera à l'utilisateur de vérifier que la rupture de ce lien est réellement souhaitée.
+          Si, toutefois, l’utilisateur visualise l’état d’un sous-circuit comme décrit dans le <a href="../../guide/subcirc/sub-debug.html">débogage de Sous-circuits</a> du <em>Guide de l'utilisateur</em> , alors la valeur de la broche est pilotée par la valeur que le sous-circuit reçoit du circuit de hiérarchie supérieur. L'utilisateur ne peut pas modifier la valeur sans rompre ce lien entre l'état du sous-circuit et l'état du circuit contenant, et Logisim demandera à l'utilisateur de vérifier que la rupture de ce lien est réellement souhaitée.
         </p>
         <h2>
           Comportement de l'outil text

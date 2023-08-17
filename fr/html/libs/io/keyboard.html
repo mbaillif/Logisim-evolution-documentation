@@ -1,34 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="en">
+<html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
     <meta name="changed" content="2023-07-29T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Language" content="fr">
     <title>
-      Keyboard
+      Clavier
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/keyboard.png" alt="#########" width="32" height="32" align="middle"> <em>Keyboard</em>
+        <img class="iconlibs" src="../../../../icons/6464/keyboard.png" alt="#########" width="32" height="32" align="middle"> <em>Clavier</em>
       </h1>
       <table>
         <tbody>
           <tr>
             <td>
-              <strong>Library:</strong>
+              <strong>Librairie :</strong>
             </td>
             <td>
-              <a href="index.html">Input/Output</a>
+              <a href="index.html">Entrée/Sortie</a>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>Introduced:</strong>
+              <strong>Introduction :</strong>
             </td>
             <td>
               2.2.0
@@ -36,7 +36,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <strong>Appearance:</strong>
+              <strong>Apparence :</strong>
             </td>
             <td valign="top">
               <img src="../../../../img-libs/keyboard.png" alt="#########" >
@@ -45,89 +45,89 @@
         </tbody>
       </table>
       <h2>
-        Behavior
+        Comportement
       </h2>
       <p>
-        This component allows the circuit to read keys typed from the keyboard - as long as the keys are representable in the 7-bit ASCII code. After clicking the component using the poke tool, the user can type characters, which accumulate in a buffer. At all times, the ASCII value for the leftmost character in the buffer is sent out the rightmost output. When the clock input is triggered, the leftmost character disappears from the buffer and the new leftmost character is sent on the rightmost output.
+        Ce composant permet au circuit de lire les touches tapées sur le clavier à condition que les touches soient représentables dans le code ASCII 7 bits. Après avoir cliqué sur le composant à l'aide de l'outil pousser, l'utilisateur peut taper des caractères qui s'accumulent dans une mémoire tampon. À tout moment, la valeur ASCII du caractère le plus à gauche dans la mémoire tampon est envoyée à la sortie <var>Données</var>. Lorsque l'entrée d'horloge est déclenchée, le caractère le plus à gauche disparaît de la mémoire tampon et le nouveau caractère le plus à gauche est envoyé sur la sortie <var>Données</var>.
       </p>
       <p>
-        The supported characters for the buffer include all the printable ASCII characters, as well as space, newline, backspace, and control-L. In addition, the left-arrow and right-arrow keys move the cursor within the buffer, and the delete key deletes the character to the right of the cursor (if any).
+        Les caractères pris en charge pour la mémoire tampon comprennent tous les caractères ASCII imprimables, ainsi que l'espace, le retour à la ligne, l'espacement arrière et le contrôle L. En outre, les touches flèche gauche et flèche droite permettent de déplacer le curseur dans la mémoire tampon, et la touche effacer supprime le caractère à droite du curseur (s'il y en a un).
       </p>
       <p>
-        The component is asynchronous in the sense that when the buffer is empty and the user types a character, that character is sent immediately as an output, without any wait for a clock pulse.
+        Le composant est asynchrone en ce sens que lorsque la mémoire tampon est vide et que l'utilisateur tape un caractère, ce caractère est envoyé immédiatement en sortie, sans attendre une impulsion d'horloge.
       </p>
       <h2>
-        Pins
+        Broches
       </h2>
       <div class="attliste">
         <dl>
           <dt class="lib">
-            West edge, marked by a triangle
+            Bord ouest, marqué par un triangle
           </dt>
           <dd>
-            Input: Clock - when triggered while the read-enable pin isn't <b class="zerov">0</b>, the leftmost character from the buffer is deleted, and the outputs are updated to reflect the buffer's new status. Bit width 1.
+            Entrée: Horloge - lorsqu'elle est déclenchée alors que la broche de <var>Validation de la lecture</var> n'est pas à  <b class="zerov">0</b>, le caractère le plus à gauche de la mémoire tampon est supprimé et les sorties sont mises à jour pour refléter le nouvel état de la mémoire tampon. Largeur de donnée en bit 1.
           </dd>
           <dt class="lib">
-            South edge, leftmost pin
+            Bord sud, broche la plus à gauche
           </dt>
           <dd>
-            Input: Read Enable - when <b class="unov">1</b> (or floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>), a clock edge will consume the leftmost character from the buffer. The clock input is ignored when Read Enable is <b class="zerov">0</b>. Bit width 1.
+            Entrée : Validation de la lecture - si <b class="unov">1</b> (ou flottant (<b class="uvalue">U</b>) ou erreur (<b class="evalue">E</b>), un front d'horloge consommera le caractère le plus à gauche du tampon. L'entrée d'horloge est ignorée lorsque la validation de lecture est à <b class="zerov">0</b>. Largeur de deonnée en bit 1.
           </dd>
           <dt class="lib">
-            South edge, second pin from left
+            Bord sud, deuxième broche en partant de la gauche
           </dt>
           <dd>
-            Input: Clear - when <b class="unov">1</b>, the buffer is emptied and does not accept further characters. Bit width 1.
+            Input: Effacer - à <b class="unov">1</b>, la mémoire tampon est vidée et n'accepte plus de caractères. Largeur de deonnée en bit 1.
           </dd>
           <dt class="lib">
-            South edge, second pin from right
+            Bord sud, deuxième broche en partant de la droite
           </dt>
           <dd>
-            Output: Available - this is <b class="unov">1</b> when the buffer contains at least one character and <b class="zerov">0</b> when the buffer is empty. Bit width 1
+            Sortie : Disponible - <b class="unov">1</b> lorsque la mémoire tampon contient au moins un caractère et <b class="zerov">0</b> lorsque la mémoire tampon est vide. Largeur de deonnée en bit 1.
           </dd>
           <dt class="lib">
-            South edge, rightmost pin 
+            Bord sud, broche la plus à droite 
           </dt>
           <dd>
-            Output: Data - the 7-bit ASCII code for the leftmost character in the buffer, or 0 if the buffer is empty. Bit width 7.
+            Sortie : Données - le code ASCII 7 bits du caractère le plus à gauche dans la mémoire tampon, ou 0 si la mémoire tampon est vide. Largeur de donnée en bit 7.
           </dd>
         </dl>
       </div>
       <h2>
-        Attributes
+        Attributs
       </h2>
       <dl>
         <dt class="lib">
-          Buffer Length
+          Taille du tampon
         </dt>
         <dd>
-          The number of characters that the buffer can hold at once.
+          Nombre de caractères que la mémoire tampon peut contenir en une seule fois.
         </dd>
         <dt class="lib">
           Trigger
         </dt>
         <dd>
-          If the value is <var>Rising Edge</var>, then when the clock input changes from <b class="zerov">0</b> to <b class="unov">1</b>, the leftmost character is consumed when enabled by the Read Enable input. If it is <var>Falling Edge</var>, then this happens when the clock input changes from <b class="unov">1</b> to <b class="zerov">0</b>.
+          Si la valeur est <var>Front montant</var>, lorsque l'entrée d'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>, le caractère le plus à gauche est consommé lorsqu'il est activé par l'entrée Validation de la lecture. S'il s'agit d'un <var>front descendant</var>, cela se produit lorsque l'entrée d'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>.
         </dd>
       </dl>
     </div>
     <h2>
-      Poke Tool Behavior
+      Comportement de l'outil pousser
     </h2>
     <p>
-      Pressing the mouse button into the component gives keyboard focus to the component, and a vertical-bar cursor will be displayed.
+      En appuyant sur le bouton de la souris dans le composant, le clavier se concentre sur le composant et un curseur à barre verticale s'affiche.
     </p>
     <p>
-      Each character typed will then be inserted into the buffer, as long as the buffer hasn't reached its capacity and the character is one of those that the component supports: the printable characters within the 7-bit ASCII code, as well as space, backspace, newline, and control-L. Additionally, the user may type the left-arrow and right-arrow keys to change the location of the cursor within the buffer, and the user may type the delete key to delete the buffer character (if any) just to the right of the cursor.
+      Chaque caractère tapé est alors inséré dans la mémoire tampon, à condition que celle-ci n'ait pas atteint sa capacité et que le caractère soit l'un de ceux pris en charge par le composant : les caractères imprimables du code ASCII à 7 bits, ainsi que l'espace, l'espacement arrière, le retour à la ligne et le contrôle L. En outre, l'utilisateur peut taper les touches flèche gauche et flèche droite pour modifier l'emplacement du curseur dans la mémoire tampon, et il peut taper la touche effacer pour supprimer le caractère de la mémoire tampon (s'il y en a un) juste à droite du curseur.
     </p>
     <h2>
-      Text Tool Behavior
+      Comportement de l'outil text 
     </h2>
     <p>
-      Allows the label associated with the component to be edited.
+      Permet de modifier l'étiquette associée au composant.
     </p>
     <p>
-      <b>Back to</b> <a href="../index.html">Library Reference</a>
+      <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
     </p>
   </body>
 </html>

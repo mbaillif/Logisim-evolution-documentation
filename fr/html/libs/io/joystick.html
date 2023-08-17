@@ -1,34 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="en">
+<html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
     <meta name="changed" content="2023-07-29T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Language" content="fr">
     <title>
-      Joystick
+      Manette
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/joystick.png" alt="#########" width="32" height="32" align="middle"> <em>Joystick</em>
+        <img class="iconlibs" src="../../../../icons/6464/joystick.png" alt="#########" width="32" height="32" align="middle"> <em>Manette</em>
       </h1>
       <table>
         <tbody>
           <tr>
             <td>
-              <strong>Library:</strong>
+              <strong>Librairie :</strong>
             </td>
             <td>
-              <a href="index.html">Input/Output</a>
+              <a href="index.html">Entrée/Sortie</a>
             </td>
           </tr>
           <tr>
             <td>
-              <strong>Introduced:</strong>
+              <strong>Introduction :</strong>
             </td>
             <td>
               2.2.0
@@ -36,7 +36,7 @@
           </tr>
           <tr>
             <td valign="top">
-              <strong>Appearance:</strong>
+              <strong>Apparence :</strong>
             </td>
             <td valign="top">
               <img class="appearancelibs" src="../../../../img-libs/joystick.png" alt="#########" width="64" height="64">
@@ -45,78 +45,78 @@
         </tbody>
       </table>
       <h2>
-        Behavior
+        Comportement
       </h2>
       <p>
-        The user can drag the red knob within the rounded-square area, and the outputs update to indicate the knob's current <var>x</var>- and <var>y</var>-coordinates. This is meant to emulate the joysticks known from the days of classical arcade games.
+       L'utilisateur peut faire glisser le bouton rouge à l'intérieur du carré arrondi et les sorties se mettent à jour pour indiquer les coordonnées <var>x</var> et <var>y</var> du bouton. Il s'agit d'émuler les manettes connues à l'époque des jeux d'arcade classiques.
       </p>
       <h2>
-        Pins
+        Broches
       </h2>
       <div class="attliste">
         <dl>
           <dt class="lib">
-            West edge, north pin :
+            Bord ouest, broche nord
           </dt>
           <dd>
-            Output: Indicates knob's <var>x</var>-coordinate, to be interpreted as an unsigned integer whose value will never be 0. Thus, a value of 1 represents the far left, and the maximum value for the bit width indicates the far right. When the knob is at rest (in the center), the value has the bit pattern 10...00.  Bit width matches Bit Width attribute
+            Sortie: coordonnée x - Indique la coordonnée <var>x</var> du bouton, à interpréter comme un entier non signé dont la valeur ne sera jamais 0. Ainsi, une valeur de 1 représente l'extrême ouest (gauche), et la valeur maximale de la largeur de bit indique l'extrême est (droite). Lorsque le bouton est au repos (au centre), la valeur a la forme en binaire 10xx00. La largeur des données en bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
           <dt class="lib">
-            West edge, south pin
+            Bord ouest, broche sud
           </dt>
           <dd>
-            Output: Indicates knob's <var>y</var>-coordinate, whose value ranges as with the <var>x</var>-coordinate pin. When the knob is pulled to the top, this output's value is 1, and when the knob is pulled to the bottom, the output is the maximum value for the bit width selected. bit width matches Bit Width attribute
+            Sortie: coordonnée y - Indique la coordonnée y du bouton. La valeur varie de la même manière que pour la coordonnée X.	Lorsque le bouton est tiré au maximum vers le nord (haut), la valeur de cette sortie est 1, et lorsque le bouton est tiré au maximum vers le sud (bas), la sortie est la valeur maximale pour la largeur de bit sélectionnée. La largeur des données en bits correspond à l'attribut <b class="property">Largeur de donnée</b>.
           </dd>
         </dl>
       </div>
       <h2>
-        Attributes
+        Attributs
       </h2>
       <p>
-         When the component is selected or being added, the <b class="tkeybd">arrow</b> keys alter its <b class="property">Facing</b> attributeand <b class="tkeybd">Alt-2</b> through <b class="tkeybd">Alt-5</b> alter its <b class="property">Bit Width</b> attribute.
+         Lorsque le composant est sélectionné ou en cours d'ajout, les <b class="tkeybd">touches fléchées</b> modifient son attribut <b class="property">Orientation</b> et les touches <b class="tkeybd">Alt-2</b> a <b class="tkeybd">Alt-5</b> modifient son attribut <b class="property">Largeur de donnée</b>.
       </p>
       <div class="attliste">
         <dl>
           <dt class="lib">
-            Facing
+            Orientation
           </dt>
           <dd>
-            The location of the output pin relative to the component. 
+            L'emplacement des broches de sortie par rapport au composant. 
           </dd>
           <dt class="lib">
-            Bit Width
+            Largeur de donnée
           </dt>
           <dd>
-            The number of bits used to indicate each of the knob's coordinates.
+            Définis la largeur de donnée en bit pour l'indication des coordonnées.
           </dd>
           <dt class="lib">
-            Color
+            Couleur
           </dt>
           <dd>
-            The knob's color as it is drawn on the screen.
+            Couleur du bouton tel qu'il est dessiné à l'écran.
           </dd>
           <dt class="lib">
-           Background
+           Couleur de fond
           </dt>
           <dd>
-            Case color as drawn on screen.
+            Couleur du boîtier telle qu'il apparaît à l'écran.
           </dd>
         </dl>
       </div>
       <h2>
-        Poke Tool Behavior
+        Comportement de l'outil pousser
       </h2>
       <p>
-        Pressing the mouse button while within the joystick area moves the knob to that location and updates the outputs. Dragging the mouse continues to move the knob and update the outputs, keeping the knob within the joystick's area. Releasing the mouse button reverts the knob back to its rest position.
+        En maintenant enfoncer le <b class="tkeybd">bouton gauche</b> de la souris dans la zone de la manette, le bouton de celle-ci va suivre le curseur de la souris et les sorties sont mises à jour au fur et à  mesure des déplacements. En relâchant le bouton de la souris, le bouton de la manette retourne à sa position de repos.
       </p>
       <h2>
-        Text Tool Behavior
+        Comportement de l'outil text 
       </h2>
       <p>
-        None.
+        Aucun.
       </p>
       <p>
-        <b>Back to</b> <a href="../index.html">Library Reference</a>
+        <b>Retour à</b> <a href="../index.html">Référence de la bibliothèque</a>
       </p>
     </div>
   </body>

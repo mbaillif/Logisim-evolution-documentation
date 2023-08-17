@@ -65,7 +65,7 @@
             West edge, south pin
           </dt>
           <dd>
-            Output: Indicates knob's <var>y</var>-coordinate, whose value ranges as with the <var>x</var>-coordinate pin. When the knob is pulled to the top, this output's value is 1, and when the knob is pulled to the bottom, the output is the maximum value for the bit width selected. bit width matches Bit Width attribute
+            Output: Indicates knob's <var>y</var>-coordinate, The value varies in the same way as for the <var>X</var> coordinate. when the knob is pulled all the way north (up), this output's value is 1, and when the knob is pulled all the way south (down), the output is the maximum value for the bit width selected. bit width matches Bit Width attribute
           </dd>
         </dl>
       </div>
@@ -107,7 +107,7 @@
         Poke Tool Behavior
       </h2>
       <p>
-        Pressing the mouse button while within the joystick area moves the knob to that location and updates the outputs. Dragging the mouse continues to move the knob and update the outputs, keeping the knob within the joystick's area. Releasing the mouse button reverts the knob back to its rest position.
+        By holding down the <b class="tkeybd">left mouse button</b> in the joystick area, the joystick button follows the mouse cursor, and the outputs are updated as you move. When the mouse button is released, the joystick button returns to its rest position.
       </p>
       <h2>
         Text Tool Behavior

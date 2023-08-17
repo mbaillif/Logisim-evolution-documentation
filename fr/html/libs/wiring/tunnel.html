@@ -65,7 +65,7 @@
 		Le buffer contrôlé émet une sortie flottante puisque son entrée de commande est <b class="zerov">0</b>. Normalement cela conduit le fil en provenance du buffer contrôlé à être bleu, mais ici, il est vert clair. Ceci est correct, car il est relié au travers du tunnel à la broche du bas qui est à <b class="unov">1</b>. Si le contrôle du buffer passe à <b class="unov">1</b>, le tunnel transportera cette valeur sur les autres points et elle sera en conflit avec le <b class="unov">1</b> de la broche du bas déclenchant une erreur. On voit alors des fils rouges (<b class="evalue">E</b>) traverser les trois tunnels comme dans l'exemple.
       </p>
       <h2>
-        Pins
+        Broches
       </h2>
       <p>
         Un tunnel n’a qu’une seule broche dont la largeur de donnée en bit correspond à l’attribut <b class="property">Largeur de donnée</b> du tunnel. Ce composant n'est ni une entrée ni une sortie. Les tunnels de même label sont simplement interconnectés de manière transparente comme des fils.
