@@ -7,14 +7,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
-      LED Matrix
+      Matrice de LED
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/dotmat.png" alt="#########"> <em>LED Matrix</em>
+        <img class="iconlibs" src="../../../../icons/6464/dotmat.png" alt="#########"> <em>Matrice de LED</em>
       </h1>
       <table>
         <tbody>
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td>
-              <strong>Introduction ::</strong>
+              <strong>Introduction :</strong>
             </td>
             <td>
               2.2.0
@@ -48,35 +48,48 @@
         Comportement
       </h2>
       <p>
-        Displays a small grid of pixels, whose values are determined by the current inputs. The grid can have up to 32 rows and 32 columns.
+        Affiche une petite grille de pixels dont les valeurs sont déterminées par l'état des entrées. La grille peut comporter jusqu'à 32 lignes et 32 colonnes.
       </p>
       <h2>
         Broches
       </h2>
       <div class="attliste">
         <p>
-          The interface to the component varies depending on the value of the Input Format attribute. It has three possible values.
+          L'interface du composant varie en fonction de la valeur de l'attribut <b class="property">Input Format</b>. Trois valeurs sont possibles.
         </p>
         <div class="attliste">
           <dl>
             <dt class="lib">
-              Columns
+              Colonnes
             </dt>
             <dd>
-              The inputs are lined along the component's south edge, with one multibit input for each column of the matrix. Each input has as many bits as there are rows in the matrix, with the low-order bit corresponding to the southmost pixel in the column. A 1 indicates to light the corresponding pixel, while a 0 indicates to keep the pixel dim. If any of the bits for a column are either floating or error values, then all pixels in the column are lit.
+              <p>
+                Les entrées sont alignées le long du bord sud du composant, avec une entrée multibits pour chaque colonne de la matrice. Chaque entrée comporte autant de bits qu'il y a de lignes dans la matrice, le bit de poids faible correspondant au pixel le plus au sud de la colonne. Un <b class="unov">1</b> indique qu'il faut allumer le pixel correspondant, tandis qu'un <b class="zerov">0</b> indique qu'il faut le laisser dans l'ombre. Si l'un des bits d'une colonne est une valeur flottante (<b class="uvalue">U</b>) ou une valeur d'erreur (<b class="evalue">E</b>), les pixels
+                correspondants seront rouges.
+              </p>
             </dd>
             <dt class="lib">
-              Rows
+              Lignes
             </dt>
             <dd>
-              The inputs are lined along the component's west edge, with one multibit input for each row of the matrix. Each input has as many bits as there are columns in the matrix, with the low-order bit corresponding to the rightmost pixel in the row. As with the Columns format, a 1 indicates to light the corresponding pixel, and a 0 indicates to keep the pixel dim. If any bits for a row are floating or error values, then all pixels in the row are lit.
+              <p>
+                Les entrées sont alignées le long du bord ouest du composant, avec une entrée multibits pour chaque rangée de la matrice. Chaque entrée comporte autant de bits qu'il y a de colonnes dans la matrice, le bit de poids faible correspondant au pixel le plus à droite de la ligne. Comme pour le format Colonnes, un <b class="unov">1</b> indique qu'il faut allumer le pixel correspondant, et un <b class="zerov">0</b> indique qu'il faut laisser le pixel dans l'ombre. Si l'un des bits d'une colonne est une valeur flottante (<b class="uvalue">U</b>) ou une valeur d'erreur (<b class=
+                "evalue">E</b>), les pixels correspondants seront rouges.
+              </p>
             </dd>
             <dt class="lib">
-              Select Rows/Columns
+              Sélection Lignes/Colonnes
             </dt>
             <dd>
-              There are two inputs on the component's west edge. The upper multibit input has as many bits as there are columns in the matrix, with the low-order bit corresponding to the rightmost column. The lower multibit input has as many bits as there are rows in the matrix, with the low-order bit corresponding to the bottom row. If any bits in either input are floating or error values, all pixels in the matrix are lit. Normally, though, a pixel at a particular row-column location is lit if the corresponding column bit in the upper input is 1 and the corresponding row bit in the lower
-              input is 1. For example, for a 5x7 matrix, if the first input is 01010 and the second is 0111010, then the second and fourth columns are lit for the second, third, fourth, and sixth rows; the result appears to be a pair of exclamation points. (This input format may seem unintuitive, but LED matrixes are sold commercially with exactly this interface. Lite-On sells such components, for example.)
+              <p>
+                Il y a deux entrées sur le bord ouest du composant. L'entrée multibits supérieure comporte autant de bits qu'il y a de colonnes dans la matrice, le bit de poids faible correspondant à la colonne la plus à droite. L'entrée multibits inférieure comporte autant de bits qu'il y a de lignes dans la matrice, le bit de poids faible correspondant à la ligne inférieure. Si l'un des bits de l'une des entrées est une valeur flottante (<b class="uvalue">U</b>) ou une valeur d'erreur (<b class="evalue">E</b>), les pixels correspondants seront rouges.
+              </p>
+              <p>
+                Normalement, un pixel situé à un emplacement particulier est allumé si le bit de la colonne correspondante dans l'entrée supérieure est à <b class="unov">1</b> et si le bit de la ligne correspondante dans l'entrée inférieure est à <b class="unov">1</b>.
+              </p>
+              <p>
+                Par exemple, pour une matrice 5x7, si la première entrée est 01010 et la seconde 0111010, les deuxième et quatrième colonnes sont allumées pour les deuxième, troisième, quatrième et sixième lignes ; le résultat semble être une paire de points d'exclamation. (Ce format d'entrée peut sembler peu intuitif, mais des matrices de LED sont vendues dans le commerce avec exactement cette interface. par exemple Lite-On vend de tels composants). <img class="notscal" src="../../../../img-libs/dotmatex.png" alt="#########">
+              </p>
             </dd>
           </dl>
         </div>
@@ -86,90 +99,90 @@
         <div class="attliste">
           <dl>
             <dt class="lib">
-              Input Format
+              Format de l'entrée
             </dt>
             <dd>
-              Selects how the pins correspond to pixels, as outlined above.
+              Sélectionne la manière dont les broches correspondent aux pixels, comme indiqué ci-dessus.
             </dd>
             <dt class="lib">
-              Matrix Columns
+              Colonnes
             </dt>
             <dd>
-              Selects how many columns are in the matrix, which may range from 1 up to 32.
+              Sélectionne le nombre de colonnes de la matrice, qui peut aller de 1 à 32.
             </dd>
             <dt class="lib">
-              Matrix Rows
+              Lignes
             </dt>
             <dd>
-              Selects how many rows are in the matrix, which may range from 1 up to 32.
-            </dd>
-			<dt class="lib">
-              Select Location
-            </dt>
-            <dd>
-              
+              Sélectionne le nombre de lignes de la matrice, qui peut aller de 1 à 32.
             </dd>
             <dt class="lib">
-              On Color
+              Sélectionner l'emplacement
             </dt>
             <dd>
-              Selects the color of a pixel when it is <q>lit.</q>
+              Déterminer de quel côté se trouvent les bus, en haut ou en bas, à gauche ou à droite.
             </dd>
             <dt class="lib">
-              Off Color
+              Couleur allumée
             </dt>
             <dd>
-              Selects the color of a pixel when it is <q>dim.</q>
+              Couleur à afficher lorsque le pixel est allumé.
             </dd>
             <dt class="lib">
-              Light Persistence
+              Couleur éteinte
             </dt>
             <dd>
-              When this is other than 0, a pixel that is <q>lit</q> remains lit for the given number of clock ticks after the component's inputs indicate that the pixel should become <q>dim.</q>
+              Couleur à afficher lorsque le pixel est éteint.
             </dd>
             <dt class="lib">
-              Dot Shape
+              Persistance lumineuse
             </dt>
             <dd>
-              The square option means that each pixel is drawn as a 10x10 square, filling the component with no gaps between pixels. The circle option means that each pixel is drawn as a diameter-8 circle, with gaps between each circle. The circle option is more difficult to interpret, but it more closely approximates the off-the-shelf LED matrix components.
+              Si cette valeur est supérieure à 1, la LED restera colorée pendant la durée des clics indiqués. Nécessite une horloge dans le circuit.
             </dd>
-			<dt class="lib">
-            <b class="property">Étiquette</b>
-          </dt>
-          <dd>
-            Le texte de l'étiquette associée au composant.
-          </dd>
-          <dt class="lib">
-            <b class="property">Emplacement de l'étiquette</b>
-          </dt>
-          <dd>
-            L'emplacement de l'étiquette par rapport au composant.
-          </dd>
-          <dt class="lib">
-            <b class="property">Police de l'étiquette</b>
-          </dt>
-          <dd>
-            La police de caractères avec laquelle l'étiquette doit être affichée.
-          </dd>
-          <dt class="lib">
-            <b class="property">Étiquette visible</b>
-          </dt>
-          <dd>
-            Display or not the label.
-          </dd>
+            <dt class="lib">
+              Forme d'un pixel
+            </dt>
+            <dd>
+              L'option carrée signifie que chaque pixel est dessiné comme un carré de 10x10, remplissant le composant sans espace entre les pixels. L'option cercle signifie que chaque pixel est dessiné comme un cercle de diamètre 8, avec des espaces entre chaque cercle. L'option cercle est plus difficile à interpréter, mais elle se rapproche davantage des composants matriciels à DEL disponibles sur le marché.
+            </dd>
+            <dt class="lib">
+              <b class="property">Étiquette</b>
+            </dt>
+            <dd>
+              Le texte de l'étiquette associée au composant.
+            </dd>
+            <dt class="lib">
+              <b class="property">Emplacement de l'étiquette</b>
+            </dt>
+            <dd>
+              L'emplacement de l'étiquette par rapport au composant.
+            </dd>
+            <dt class="lib">
+              <b class="property">Police de l'étiquette</b>
+            </dt>
+            <dd>
+              La police de caractères avec laquelle l'étiquette doit être affichée.
+            </dd>
+            <dt class="lib">
+              Étiquette Visible
+            </dt>
+            <dd>
+              Détermine si l'étiquette est visible ou non.
+            </dd>
           </dl>
         </div>
         <h2>
           Comportement de l'outil pousser
         </h2>
         <p>
-          None.
+          Aucun.
         </p>
         <h2>
-          Comportement de l'outil text 
+          Comportement de l'outil text
         </h2>
         <p>
-          None.
+          Aucun.
         </p>
         <p>
           <b>Retour à</b> <a href="../index.html#hlibio">Référence de la bibliothèque</a>

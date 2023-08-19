@@ -7,14 +7,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
-      7-Segment Display
+      Afficheur 7-Segments
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/7seg.png" alt="#########" width="32" height="32" align="middle"> <em>7-Segment Display</em>
+        <img class="iconlibs" src="../../../../icons/6464/7seg.png" alt="#########" width="32" height="32" align="middle"> <em>Afficheur 7-Segments</em>
       </h1>
       <table>
         <tbody>
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td>
-              <strong>Introduction ::</strong>
+              <strong>Introduction :</strong>
             </td>
             <td>
               2.1.3
@@ -48,143 +48,91 @@
         Comportement
       </h2>
       <p>
-        Displays the values of its eight one-bit inputs. Coloring the <var>Segments</var> as specified by its <b class="property">On Color</b> attribute and <b class="property">Off Color</b> depending on whether the input is <b class="unov">1</b> or <b class="zerov">0</b>. The correspondence is as follows. 
+        Affiche les valeurs de ses huit entrées d'un bit. Colore les segments comme spécifié par son attribut <b class="property">Couleur allumée</b> et <b class="property">Couleur éteinte</b> selon que l'entrée est <b class="unov">1</b> ou <b class="zerov">0</b>. Les valeurs flottantes (<b class="uvalue">U</b>) ou d'erreur (<b class="evalue">E</b>) sont considérées comme l'état désactivé.
       </p>
       <center>
         <img class="notscal" src="../../../../img-libs/io-segs.png" alt="#########">
-      </center>Manufacturers vary as to how they map inputs to segments; the correspondence used here is based on Texas Instruments' TIL321.
+      </center>Les fabricants varient quant à la manière dont ils font correspondre les entrées aux segments ; la correspondance utilisée ici est basée sur le TIL321 de Texas Instruments.
       <h2>
         Broches
-      </h2>
-	  All pins are inputs.
-      <div class="attliste">
-        <dl>
-          <dt class="lib">
-            North edge, first from left
-          </dt>
-          <dd>
-            Controls the middle horizontal segment.
-          </dd>
-          <dt class="lib">
-            North edge, second from left
-          </dt>
-          <dd>
-            Controls the upper vertical segment on the left side.
-          </dd>
-          <dt class="lib">
-            North edge, third from left
-          </dt>
-          <dd>
-            Controls the upper horizontal segment.
-          </dd>
-          <dt class="lib">
-            North edge, fourth from left
-          </dt>
-          <dd>
-            Controls the upper vertical segment on the right side.
-          </dd>
-          <dt class="lib">
-            South edge, first from left
-          </dt>
-          <dd>
-            Controls the lower vertical segment on the left side.
-          </dd>
-          <dt class="lib">
-            South edge, second from left
-          </dt>
-          <dd>
-            Controls the bottom horizontal segment.
-          </dd>
-          <dt class="lib">
-            South edge, third from left
-          </dt>
-          <dd>
-            Controls the lower vertical segment on the right side.
-          </dd>
-          <dt class="lib">
-            South edge, fourth from left
-          </dt>
-          <dd>
-            Controls the decimal point.
-          </dd>
-        </dl>
-      </div>
-      <h2>
-        Attributs
-      </h2>
-      <div class="attliste">
-        <dl>
-          <dt class="lib">
-            <b class="property">On Color</b>
-          </dt>
-          <dd>
-            The color with which to draw the display segments and decimal point when they are on. (red by default).
-          </dd>
-          <dt class="lib">
-            <b class="property">Off Color</b>
-          </dt>
-          <dd>
-            The color with which to draw the display segments and decimal point when they are off. (grey By default).
-          </dd>
-          <dt class="lib">
-            <b class="property">Background</b>
-          </dt>
-          <dd>
-            The color with which to draw the display's background (transparent by default).
-          </dd>
-          <dt class="lib">
-            <b class="property">Active On High?</b>
-          </dt>
-          <dd>
-            If <var>yes</var>, then the segments light when the corresponding input is  <b class="unov">1</b>. If <var>no</var>, they light when the corresponding input is <b class="zerov">0</b>.
-          </dd>
-          <dt class="lib">
-            <b class="property">Has deciaml point:</b>
-          </dt>
-          <dd>
-            If <var>yes</var> the decimal point is available, if <var>no</var> the decimal point is hidden.
-          </dd>
-          <dt class="lib">
-            <b class="property">Étiquette</b>
-          </dt>
-          <dd>
-            Le texte de l'étiquette associée au composant.
-          </dd>
-          <dt class="lib">
-            <b class="property">Emplacement de l'étiquette</b>
-          </dt>
-          <dd>
-            L'emplacement de l'étiquette par rapport au composant.
-          </dd>
-          <dt class="lib">
-            <b class="property">Police de l'étiquette</b>
-          </dt>
-          <dd>
-            La police de caractères avec laquelle l'étiquette doit être affichée.
-          </dd>
-          <dt class="lib">
-            <b class="property">Étiquette visible</b>
-          </dt>
-          <dd>
-            Display or not the label.
-          </dd>
-        </dl>
-      </div>
-      <h2>
-        Comportement de l'outil pousser
-      </h2>
-      <p>
-        None.
-      </p>
-      <h2>
-        Comportement de l'outil text 
-      </h2>
-      <p>
-        None.
-      </p>
-      <p>
-        <b>Retour à</b> <a href="../index.html#hlibio">Référence de la bibliothèque</a>
-      </p>
+      </h2>Toutes les broches sont des entrées.<br>
+      Quatre entrées au nord et quatre entrées au sud, cablées comme sur le schéma ci-dessus. Notez sur le bord sud, quatrième broche à partir de la gauche le point décimal.
     </div>
+    <h2>
+      Attributs
+    </h2>
+    <div class="attliste">
+      <dl>
+        <dt class="lib">
+          <b class="property">Couleur allumée</b>
+        </dt>
+        <dd>
+          La couleur avec laquelle les segments d'affichage et le point décimal sont dessinés lorsqu'ils sont activés. (rouge par défaut).
+        </dd>
+        <dt class="lib">
+          <b class="property">Couleur éteinte</b>
+        </dt>
+        <dd>
+          La couleur avec laquelle les segments d'affichage et le point décimal sont dessinés lorsqu'ils sont éteints. (gris par défaut).
+        </dd>
+        <dt class="lib">
+          <b class="property">Couleur du fond</b>
+        </dt>
+        <dd>
+          La couleur de l'arrière-plan de l'écran (transparent par défaut).
+        </dd>
+        <dt class="lib">
+          <b class="property">Actif si haut ?</b>
+        </dt>
+        <dd>
+          Si <var>oui</var>, les segments s'allument lorsque l'entrée correspondante est à <b class="unov">1</b>. Si <var>non</var>, ils s'allument lorsque l'entrée correspondante est à <b class="zerov">0</b>.
+        </dd>
+        <dt class="lib">
+          <b class="property">Affiche le point décimal</b>
+        </dt>
+        <dd>
+          Si <var>oui</var>, le point décimal est disponible, si <var>non</var>, le point décimal est caché.
+        </dd>
+        <dt class="lib">
+          <b class="property">Étiquette</b>
+        </dt>
+        <dd>
+          Le texte de l'étiquette associée au composant.
+        </dd>
+        <dt class="lib">
+          <b class="property">Emplacement de l'étiquette</b>
+        </dt>
+        <dd>
+          L'emplacement de l'étiquette par rapport au composant.
+        </dd>
+        <dt class="lib">
+          <b class="property">Police de l'étiquette</b>
+        </dt>
+        <dd>
+          La police de caractères avec laquelle l'étiquette doit être affichée.
+        </dd>
+        <dt class="lib">
+          <b class="property">Étiquette visible</b>
+        </dt>
+        <dd>
+          Afficher ou non l'étiquette.
+        </dd>
+      </dl>
+    </div>
+    <h2>
+      Comportement de l'outil pousser
+    </h2>
+    <p>
+      Aucun.
+    </p>
+    <h2>
+      Comportement de l'outil text
+    </h2>
+    <p>
+      Permet de modifier l'étiquette associée au composant.
+    </p>
+    <p>
+      <b>Retour à</b> <a href="../index.html#hlibio">Référence de la bibliothèque</a>
+    </p>
   </body>
 </html>

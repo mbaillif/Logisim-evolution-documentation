@@ -60,7 +60,7 @@
             West edge, upper pin
           </dt>
           <dd>
-            Input : Data - this is the ASCII value of the next character to be entered into the terminal.  Bit width 7.
+            Input : Data - this is the ASCII value of the next character to be entered into the terminal. Bit width 7.
           </dd>
           <dt class="lib">
             West edge, lower pin marked by triangle
@@ -103,7 +103,7 @@
             Trigger
           </dt>
           <dd>
-            If the value is <var>Rising Edge,</var> then when the clock input changes from  <b class="zerov">0</b> to <b class="unov">1</b>, the data input is processed (when enabled by the write-enable and clear inputs). If it is <var>Falling Edge,</var>, then this happens when the clock input changes from <b class="unov">1</b> to  <b class="zerov">0</b>.
+            Provided the Write <var>Enable</var> signal is <b class="unov">1</b>, determines whether the data input is processed on a rising edge of the clock signal (when the <var>clock</var> input changes from <b class="zerov">0</b> to <b class="unov">1</b>) or on a falling edge (when the clock input changes from <b class="unov">1</b> to <b class="zerov">0</b>).
           </dd>
           <dt class="lib">
             Color

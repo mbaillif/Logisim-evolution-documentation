@@ -48,7 +48,7 @@
         Behavior
       </h2>
       <p>
-        Displays the values of its eight one-bit inputs. Coloring the <var>Segments</var> as specified by its <b class="property">On Color</b> attribute and <b class="property">Off Color</b> depending on whether the input is <b class="unov">1</b> or <b class="zerov">0</b>. The correspondence is as follows. 
+        Displays the values of its eight one-bit inputs. Coloring the <var>Segments</var> as specified by its <b class="property">On Color</b> attribute and <b class="property">Off Color</b> depending on whether the input is <b class="unov">1</b> or <b class="zerov">0</b>. The correspondence is as follows. Floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>) are considered off values.
       </p>
       <center>
         <img class="notscal" src="../../../../img-libs/io-segs.png" alt="#########">
@@ -56,58 +56,9 @@
       <h2>
         Pins
       </h2>
-	  All pins are inputs.
+	  All pins are inputs.<br>
+      Four inputs to the north and four inputs to the south, wired as shown in the diagram above. Note on the south edge, fourth pin from the left, the decimal point.
       <div class="attliste">
-        <dl>
-          <dt class="lib">
-            North edge, first from left
-          </dt>
-          <dd>
-            Controls the middle horizontal segment.
-          </dd>
-          <dt class="lib">
-            North edge, second from left
-          </dt>
-          <dd>
-            Controls the upper vertical segment on the left side.
-          </dd>
-          <dt class="lib">
-            North edge, third from left
-          </dt>
-          <dd>
-            Controls the upper horizontal segment.
-          </dd>
-          <dt class="lib">
-            North edge, fourth from left
-          </dt>
-          <dd>
-            Controls the upper vertical segment on the right side.
-          </dd>
-          <dt class="lib">
-            South edge, first from left
-          </dt>
-          <dd>
-            Controls the lower vertical segment on the left side.
-          </dd>
-          <dt class="lib">
-            South edge, second from left
-          </dt>
-          <dd>
-            Controls the bottom horizontal segment.
-          </dd>
-          <dt class="lib">
-            South edge, third from left
-          </dt>
-          <dd>
-            Controls the lower vertical segment on the right side.
-          </dd>
-          <dt class="lib">
-            South edge, fourth from left
-          </dt>
-          <dd>
-            Controls the decimal point.
-          </dd>
-        </dl>
       </div>
       <h2>
         Attributes

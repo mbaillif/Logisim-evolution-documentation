@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td>
-              <strong>Introduction ::</strong>
+              <strong>Introduction :</strong>
             </td>
             <td>
               2.2.0
@@ -48,8 +48,8 @@
         Comportement
       </h2>
       <p>
-        This component implements a very simple dumb terminal. It receives a sequence of ASCII codes and displays each printable character. When the current row becomes full, the cursor moves to the following line, possibly scrolling all current rows up if the cursor was already in the bottom row. The only supported control sequences are: backspace (ASCII 8), which deletes the last character in the final row, unless the final row is already empty; newline (ASCII 10), which moves the cursor to the beginning of the following line, scrolling if necessary; and form-feed (ASCII 12, typed as
-        control-L), which clears the screen.
+        Ce composant implémente un terminal muet très simple. Il reçoit une séquence de codes ASCII et affiche chaque caractère imprimable. Lorsque la ligne actuelle est pleine, le curseur passe à la ligne suivante, en faisant éventuellement défiler toutes les lignes actuelles vers le haut si le curseur se trouvait déjà dans la ligne inférieure. Les seules séquences de contrôle prises en charge sont : le retour arrière (ASCII 8), qui supprime le dernier caractère de la dernière ligne, à moins que celle-ci ne soit déjà vide ; la nouvelle ligne (ASCII 10), qui déplace le curseur au début de la
+        ligne suivante, en le faisant défiler si nécessaire ; et le saut de page (ASCII 12, tapé sous la forme contrôle-L), qui efface l'écran.
       </p>
       <h2>
         Broches
@@ -57,28 +57,28 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            West edge, upper pin
+            Bord Ouest, broche supérieure
           </dt>
           <dd>
-            Input : Data - this is the ASCII value of the next character to be entered into the terminal.  Bit width 7.
+            Entrée : Données - il s'agit de la valeur ASCII du prochain caractère à entrer dans le terminal. Largeur de donnée en bit 7.
           </dd>
           <dt class="lib">
-            West edge, lower pin marked by triangle
+            Bordure Ouest, pointe inférieure marquée d'un triangle
           </dt>
           <dd>
-            Input: Clock - when triggered while the write-enable pin isn't  <b class="zerov">0</b>, the current ASCII value on the Data input is processed by the terminal. Bit width 1.
+            Input : Horloge - lorsqu'elle est déclenchée alors que la broche d'activation de l'écriture n'est pas à <b class="zerov">0</b> , la valeur ASCII actuelle sur l'entrée Data est traitée par le terminal. Largeur de donnée en bit 1.
           </dd>
           <dt class="lib">
-            South edge, leftmost pin
+            Bord Sud, broche la plus à gauche
           </dt>
           <dd>
-            Input: Write Enable - when <b class="unov">1</b> (or floating (<b class="uvalue">U</b>) or error (<b class="evalue">E</b>)), a clock edge will result in processing a new character from the data input. The clock and data inputs are ignored when Write Enable is  <b class="zerov">0</b>. Bit width 1.
+            Entrée : Validation de l'écriture - lorsque <b class="unov">1</b> (ou flottant (<b class="uvalue">U</b>) ou erreur (<b class="evalue">E</b>), un front d'horloge entraîne le traitement d'un nouveau caractère à partir de l'entrée de données. Les entrées d'horloge et de données sont ignorées lorsque la validation d'écriture est à <b class="zerov">0</b>. Largeur de donnée en bit 1.
           </dd>
           <dt class="lib">
-            South edge, second pin from left
+            Bord Sud, deuxième broche en partant de la gauche
           </dt>
           <dd>
-            Input: Clear - when <b class="unov">1</b>, the terminal is cleared of all data, and all other inputs are ignored. Bit width 1.
+            Entrée: Effacer - à <b class="unov">1</b>, le terminal est effacé de toutes les données et toutes les autres entrées sont ignorées. Largeur de bit 1.
           </dd>
         </dl>
       </div>
@@ -88,34 +88,34 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            Rows
+            Lignes
           </dt>
           <dd>
-            The number of rows displayed in the terminal.
+            Le nombre de lignes affichées dans le terminal.
           </dd>
           <dt class="lib">
-            Columns
+            Colonnes
           </dt>
           <dd>
-            The maximum number of characters displayed in each row of terminal.
+            Nombre maximum de caractères affichés dans chaque ligne du terminal.
           </dd>
           <dt class="lib">
             Trigger
           </dt>
           <dd>
-            If the value is <var>Rising Edge,</var> then when the clock input changes from  <b class="zerov">0</b> to <b class="unov">1</b>, the data input is processed (when enabled by the write-enable and clear inputs). If it is <var>Falling Edge,</var>, then this happens when the clock input changes from <b class="unov">1</b> to  <b class="zerov">0</b>.
+            À condition que le signal de <var>Validation de l'écriture</var> soit à <b class="unov">1</b>, détermine si l'entrée de donnée est traitée sur un front montant du signal d'<var>horloge</var> (lorsque l'entrée d'horloge passe de <b class="zerov">0</b> à <b class="unov">1</b>) ou sur un front descendant (lorsque l'entrée d'horloge passe de <b class="unov">1</b> à <b class="zerov">0</b>).
           </dd>
           <dt class="lib">
-            Color
+            Couleur
           </dt>
           <dd>
-            The color with which to draw the text appearing in the terminal.
+            La couleur avec laquelle le texte apparaissant dans le terminal doit être dessiné.
           </dd>
           <dt class="lib">
-            Background
+            Couleur du fond
           </dt>
           <dd>
-            The color with which to draw the terminal's background.
+            La couleur avec laquelle l'arrière-plan du terminal doit être dessiné.
           </dd>
         </dl>
       </div>
@@ -123,17 +123,14 @@
         Comportement de l'outil pousser
       </h2>
       <p>
-        None.
+        Aucun.
       </p>
       <h2>
-        Comportement de l'outil text 
+        Comportement de l'outil text
       </h2>
       <p>
-        None.
-      </p>
-
-        <b>Retour à</b> <a href="../index.html#hlibio">Référence de la bibliothèque</a>
-
+        Aucun.
+      </p><b>Retour à</b> <a href="../index.html#hlibio">Référence de la bibliothèque</a>
     </div>
   </body>
 </html>

@@ -55,7 +55,7 @@
       </h2>
       <div class="attliste">
         <p>
-          The interface to the component varies depending on the value of the Input Format attribute. It has three possible values.
+          The interface to the component varies depending on the value of the <b class="property">Input Format</b> attribute. It has three possible values.
         </p>
         <div class="attliste">
           <dl>
@@ -63,20 +63,31 @@
               Columns
             </dt>
             <dd>
-              The inputs are lined along the component's south edge, with one multibit input for each column of the matrix. Each input has as many bits as there are rows in the matrix, with the low-order bit corresponding to the southmost pixel in the column. A 1 indicates to light the corresponding pixel, while a 0 indicates to keep the pixel dim. If any of the bits for a column are either floating or error values, then all pixels in the column are lit.
+              <p>
+                The inputs are lined along the component's south edge, with one multibit input for each column of the matrix. Each input has as many bits as there are rows in the matrix, with the low-order bit corresponding to the southmost pixel in the column. A <b class="unov">1</b> indicates to light the corresponding pixel, while a <b class="zerov">0</b> indicates to keep the pixel dim. If any of the bits for a column are either floating (<b class="uvalue">U</b>) or error values (<b class="evalue">E</b>), the corresponding pixels are red.
+              </p>
             </dd>
             <dt class="lib">
               Rows
             </dt>
             <dd>
-              The inputs are lined along the component's west edge, with one multibit input for each row of the matrix. Each input has as many bits as there are columns in the matrix, with the low-order bit corresponding to the rightmost pixel in the row. As with the Columns format, a 1 indicates to light the corresponding pixel, and a 0 indicates to keep the pixel dim. If any bits for a row are floating or error values, then all pixels in the row are lit.
+              <p>
+                The inputs are lined along the component's west edge, with one multibit input for each row of the matrix. Each input has as many bits as there are columns in the matrix, with the low-order bit corresponding to the rightmost pixel in the row. As with the Columns format, a <b class="unov">1</b> indicates to light the corresponding pixel, and a <b class="zerov">0</b> indicates to keep the pixel dim. If any bits for a row are floating (<b class="uvalue">U</b>) or error values (<b class="evalue">E</b>), the corresponding pixels are red.
+              </p>
             </dd>
             <dt class="lib">
               Select Rows/Columns
             </dt>
             <dd>
-              There are two inputs on the component's west edge. The upper multibit input has as many bits as there are columns in the matrix, with the low-order bit corresponding to the rightmost column. The lower multibit input has as many bits as there are rows in the matrix, with the low-order bit corresponding to the bottom row. If any bits in either input are floating or error values, all pixels in the matrix are lit. Normally, though, a pixel at a particular row-column location is lit if the corresponding column bit in the upper input is 1 and the corresponding row bit in the lower
-              input is 1. For example, for a 5x7 matrix, if the first input is 01010 and the second is 0111010, then the second and fourth columns are lit for the second, third, fourth, and sixth rows; the result appears to be a pair of exclamation points. (This input format may seem unintuitive, but LED matrixes are sold commercially with exactly this interface. Lite-On sells such components, for example.)
+              <p>
+                There are two inputs on the component's west edge. The upper multibit input has as many bits as there are columns in the matrix, with the low-order bit corresponding to the rightmost column. The lower multibit input has as many bits as there are rows in the matrix, with the low-order bit corresponding to the bottom row. If any bits in either input are floating (<b class="uvalue">U</b>) or error values (<b class="evalue">E</b>), the corresponding pixels are red.
+              </p>
+              <p>
+                Normally, though, a pixel at a particular row-column location is lit if the corresponding column bit in the upper input is <b class="unov">1</b> and the corresponding row bit in the lower input is <b class="unov">1</b>.
+              </p>
+              <p>
+                For example, for a 5x7 matrix, if the first input is 01010 and the second is 0111010, then the second and fourth columns are lit for the second, third, fourth, and sixth rows; the result appears to be a pair of exclamation points. (This input format may seem unintuitive, but LED matrixes are sold commercially with exactly this interface. Lite-On sells such components, for example.) <img class="notscal" src="../../../../img-libs/dotmatex.png" alt="#########">
+              </p>
             </dd>
           </dl>
         </div>
@@ -103,11 +114,11 @@
             <dd>
               Selects how many rows are in the matrix, which may range from 1 up to 32.
             </dd>
-			<dt class="lib">
+            <dt class="lib">
               Select Location
             </dt>
             <dd>
-              Determine which side the pines will be on. 
+              Determine which side the pines will be on.
             </dd>
             <dt class="lib">
               On Color
@@ -133,30 +144,30 @@
             <dd>
               The square option means that each pixel is drawn as a 10x10 square, filling the component with no gaps between pixels. The circle option means that each pixel is drawn as a diameter-8 circle, with gaps between each circle. The circle option is more difficult to interpret, but it more closely approximates the off-the-shelf LED matrix components.
             </dd>
-			<dt class="lib">
-            <b class="property">Label</b>
-          </dt>
-          <dd>
-            The text within the label associated with the component.
-          </dd>
-          <dt class="lib">
-            <b class="property">Label Location</b>
-          </dt>
-          <dd>
-            The location of the label relative to the component.
-          </dd>
-          <dt class="lib">
-            <b class="property">Label Font</b>
-          </dt>
-          <dd>
-            The font with which to render the label.
-          </dd>
-          <dt class="lib">
-            <b class="property">Label visible</b>
-          </dt>
-          <dd>
-            Display or not the label.
-          </dd>
+            <dt class="lib">
+              <b class="property">Label</b>
+            </dt>
+            <dd>
+              The text within the label associated with the component.
+            </dd>
+            <dt class="lib">
+              <b class="property">Label Location</b>
+            </dt>
+            <dd>
+              The location of the label relative to the component.
+            </dd>
+            <dt class="lib">
+              <b class="property">Label Font</b>
+            </dt>
+            <dd>
+              The font with which to render the label.
+            </dd>
+            <dt class="lib">
+              <b class="property">Label visible</b>
+            </dt>
+            <dd>
+              Display or not the label.
+            </dd>
           </dl>
         </div>
         <h2>

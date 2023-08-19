@@ -7,14 +7,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
-      Hex Digit Display
+      Afficheur hexadécimal
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/hexdig.png" alt="#########"> <em>Hex Digit Display</em>
+        <img class="iconlibs" src="../../../../icons/6464/hexdig.png" alt="#########"> <em>Afficheur hexadécimal</em>
       </h1>
       <table>
         <tbody>
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td>
-              <strong>Introduction ::</strong>
+              <strong>Introduction :</strong>
             </td>
             <td>
               2.2.0
@@ -48,25 +48,25 @@
         Comportement
       </h2>
       <p>
-        Using a seven-segment display, shows the hexadecimal digit corresponding to the four-bit input. If any of the inputs are not  <b class="unov">1</b>/<b class="unov">1</b> (either floating or error), then the display stays blank (all segments off). A separate one-bit input controls the display of the decimal point.
+        Un afficheur à sept segments indique le chiffre hexadécimal correspondant à l'entrée de quatre bits. Si l'une des entrées n'est pas <b class="unov">1</b> flottante (<b class="uvalue">U</b>) ou erreur (<b class="evalue">E</b>), l'affichage reste vide (tous les segments sont éteints). Une entrée séparée d'un bit contrôle l'affichage du point décimal.
       </p>
       <h2>
         Broches
       </h2>
-	   All pins are inputs.
+	   Toutes les broches sont des entrées.
       <div class="attliste">
         <dl>
           <dt class="lib">
-            South edge, first from left
+            Bord sud, premier à partir de la gauche
           </dt>
           <dd>
-            This input is interpreted as an unsigned four-bit number, and the corresponding hexadecimal digit is displayed. bit width 4
+            Ce bus d'entrée est interprétée comme un nombre non signé de quatre bits et le chiffre hexadécimal correspondant est affiché. largeur de donnée en bit 4.
           </dd>
           <dt class="lib">
-            South edge, second from left
+            Bord sud, deuxième en partant de la gauche
           </dt>
           <dd>
-            Controls the decimal point. If this is left unconnected, the decimal point remains off. Bit width 1
+            Entrée : Contrôle le point décimal. S'il n'est pas connecté, le point décimal reste désactivé. Largeur de donnée en bit 1.
           </dd>
         </dl>
       </div>
@@ -76,28 +76,28 @@
       <div class="attliste">
         <dl>
           <dt class="lib">
-            <b class="property">On Color.</b>
+            <b class="property">Couleur allumée</b>
           </dt>
           <dd>
-            The color with which to draw the display segments and decimal point when they are on. (red by default).
+            La couleur avec laquelle les segments d'affichage et le point décimal sont dessinés lorsqu'ils sont activés. (rouge par défaut).
           </dd>
           <dt class="lib">
-            <b class="property">Off Color.</b>
+            <b class="property">Couleur éteinte</b>
           </dt>
           <dd>
-            The color with which to draw the display segments and decimal point when they are off. (grey By default).
+            La couleur avec laquelle les segments d'affichage et le point décimal sont dessinés lorsqu'ils sont éteints. (gris par défaut).
           </dd>
           <dt class="lib">
-            <b class="property">Background</b>
+            <b class="property">Couleur du fond</b>
           </dt>
           <dd>
-            The color with which to draw the display's background (transparent by default).
+            La couleur de l'arrière-plan de l'écran (transparent par défaut).
           </dd>
           <dt class="lib">
-            <b class="property">Has deciaml point:</b>
+            <b class="property">Affiche le point décimal</b>
           </dt>
           <dd>
-            If <var>yes</var> the decimal point is available, if <var>no</var> the decimal point is hidden.
+            Si <var>oui</var>, le point décimal est disponible, si <var>non</var>, le point décimal est caché.
           </dd>
           <dt class="lib">
             <b class="property">Étiquette</b>
@@ -121,7 +121,7 @@
             <b class="property">Étiquette visible</b>
           </dt>
           <dd>
-            Display or not the label.
+            Afficher ou non l'étiquette.
           </dd>
         </dl>
       </div>
@@ -129,7 +129,7 @@
         Comportement de l'outil pousser
       </h2>
       <p>
-        None.
+        Aucun.
       </p>
       <h2>
         Comportement de l'outil text 
