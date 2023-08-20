@@ -39,7 +39,7 @@
               <strong>Apparence :</strong>
             </td>
             <td valign="top">
-              <img class="appearancelibs" src="../../../../img-libs/rgbvideo.png" alt="#########" >
+              <img class="appearancelibs" src="../../../../img-libs/rgbvideo.png" alt="#########">
             </td>
           </tr>
         </tbody>
@@ -48,94 +48,100 @@
         Comportement
       </h2>
       <p>
-       
+        Cet élément simule un afficheur couleur jusque de 2 à 256 pixels de côté. Sur un bus au sud, il reçoit les informatiosn de couleur qui seront appliquées au pixel, adressé par deux bus porteurs des informations de position, au moment du front montant de l'horloge.
+      </p>
+      <p>
+        A l'initialisation de la simulation, l'écran est coloré en jaune. Le signal reset permet d'effacer l'écran et il sera noir.
+      </p>
+      <p>
+        L'attribut <b class="property">Modèle de couleur</b> propose plusieurs schémas de couleur, RGB 15,16,24 bits des schémas de sélection par palette comme Xterm16 ou 256 et un affichage en niveaux de gris. Ceci va déterminer la largeur de donnée en bit de l'entrée <var>Données</var>.
       </p>
       <h2>
         Broches
       </h2>
       <p>
-       The pines are to the south and presented in order from east to west.
+        Les broches sont au sud et présentés dans l'ordre d'est en ouest.
       </p>
-	  <div class="attliste">
+      <div class="attliste">
         <dl>
           <dt class="lib">
-            First from left
+            En partant de l'est (gauche)
           </dt>
           <dd>
-            Input: Reset 
+            Entrée: Reset - Si 1 efface l'ensemble de l'écran. Largeur de donnée en bit 1.
           </dd>
-		  <dt class="lib">
-            Second with a triangle
+          <dt class="lib">
+            Deuxième avec un triangle
           </dt>
           <dd>
-            Input: Clock 
+            Entrée: Horloge - Au front montant le pixel adressé sera mis à jour en concordance avec les informations de couleur et de position. Largeur de donnée en bit 1.
           </dd>
-		  <dt class="lib">
-            Third
+          <dt class="lib">
+            Troisième
           </dt>
           <dd>
-            Input: Write Enable
+            Entrée : Ecriture autorisée - Si à 1 l'entrée d'horloge déclenche la mise à jour du pixel. Largeur de donnée en bit 1.
           </dd>
-		  <dt class="lib">
-            Fourth
+          <dt class="lib">
+            Quatrième
           </dt>
           <dd>
-            Input: X coordinate
+            Entrée : Coordonée x - Valeur numérique non signée qui précise la coordonée x (horisontale) du pixel à traiter. La valeur 0 est le pixel le plus à l'est (gauche). Largeur de donnée en bit en fonction de l'attribut <b class="property">Largeur</b>
           </dd>
-		  <dt class="lib">
-            Fifth
+          <dt class="lib">
+            Cinquème
           </dt>
           <dd>
-            Input: Y coordinate
+            Entrée : Corodonée y - Valeur numérique non signée qui précise la coordonée y (vertical) le pixel à traiter. La valeur 0 est le pixel le plus au nord (haut). Largeur de donnée en bit en fonction de l'attribut <b class="property">Hauteur</b>.
           </dd>
-		  <dt class="lib">
-            The last one on the right
+          <dt class="lib">
+            La dernière à droite
           </dt>
           <dd>
-            Input: Data
+            Entrée : Donnée - Définis la couleur du pixel a traiter selon les règles de l'attribut <b class="property">Modèle de couleur</b>.
           </dd>
-		 </dl>
-		</div>
+        </dl>
+      </div>
       <h2>
         Attributs
       </h2>
-       <div class="attliste">
+      <div class="attliste">
         <dl>
           <dt class="lib">
-            Cursor
+            Curseur
           </dt>
           <dd>
-            If a cursor is visible on the screen
+            Si un curseur est visible à l'écran.
           </dd>
-		  <dt class="lib">
+          <dt class="lib">
             Reset Comportement
           </dt>
           <dd>
-            Whether the reset signal is synchronous with the clock or not.
+            Le signal de réinitialisation est synchrone ou non avec l'horloge.
           </dd>
-		  <dt class="lib">
-            Color Model
+          <dt class="lib">
+            Modèle de couleur
           </dt>
           <dd>
-            The data model of the color data bus (3x5bits, 3x8bits...)
+            Le modèle de données du bus de données couleur (3x5bits, 3x8bits...)
           </dd>
-		  <dt class="lib">
-            Width in pixels
+          <dt class="lib">
+            Largeur
           </dt>
           <dd>
-            
+            Largeur de l'écran en pixels.
           </dd>
-		  <dt class="lib">
-            Height
+          <dt class="lib">
+            Hauteur
           </dt>
           <dd>
-            Height in pixels
+            Hauteur de l'écran en pixels.
           </dd>
-		  <dt class="lib">
-            Scale
+          <dt class="lib">
+            Échelle
           </dt>
           <dd>
-            Determines the magnification factor
+            Détermine le facteur d'agrandissement
           </dd>
         </dl>
       </div>
@@ -143,13 +149,13 @@
         Comportement de l'outil pousser
       </h2>
       <p>
-        None.
+        Aucun.
       </p>
       <h2>
-        Comportement de l'outil text 
+        Comportement de l'outil text
       </h2>
       <p>
-        None.
+        Aucun.
       </p>
       <p>
         <b>Retour à</b> <a href="../index.html#hlibio">Référence de la bibliothèque</a>

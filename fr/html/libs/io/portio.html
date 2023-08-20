@@ -49,22 +49,22 @@
       </h2>
       <p>
         <p>
-		Ce composant peut présenter un ou deux bus de donnée en entrée et/ou en sortie selon le paramètrage de la l'attribut Type de port. Il s'apparente beaucoup au composant broche avec la particularité de pouvoir associer des entrées et de sorties mais il ne permet pas l'interconnection avec des sous-circuits.
+		Ce composant peut présenter un ou deux bus de donnée en entrée et/ou en sortie selon le paramétrage de la l'attribut <b class="property">Type de port</b>. Il s'apparente beaucoup au composant broche avec la particularité de pouvoir associer des entrées et de sorties, mais il ne permet pas l'interconnexion avec des sous-circuits.
 		</p>
 		<dl>
             <dt class="lib">
               Entrées seulement
             </dt>
             <dd>
-			Le coposant se comporte comme une broche d'entrée multibit dans le schema du circuit.<br>
+			Le composant se comporte comme une broche d'entrée multibit dans le schéma du circuit.<br>
 			<img class="notscal" src="../../../../img-libs/portioin.png" alt="#########"><br>
-			Il est possible de cliquer avec l'outil pousser sur les broches de l'image du connecteur pour en changer l'état. Celles-ci passeront alternativement de l'état 0 a 1 puis indéfini (gris). Ce changement est illustré pas la couleur du carré représentant la broche. Le bus de sortie reflétera ce changement sur ses lignes.
+			Il est possible de cliquer avec l'outil pousser sur les broches de l'image du connecteur pour en changer l'état. Celles-ci passeront alternativement de l'état <b class="zerov">0</b> a <b class="unov">1</b> puis indéfini (gris). Ce changement est illustré pas la couleur du carré représentant la broche. Le bus de sortie reflétera ce changement sur ses lignes.
 			</dd>
 			<dt class="lib">
               Sortie seulement
             </dt>
             <dd>
-			  Le coposant se comporte comme une broche de sortie multibit dans le schema du circuit.<br>
+			  Le composant se comporte comme une broche de sortie multibit dans le schéma du circuit.<br>
 			<img class="notscal" src="../../../../img-libs/portioout.png" alt="#########"><br>
 			  Il présente simplement l'état des lignes du bus par les carrés de couleur.
 			</dd>
@@ -72,20 +72,20 @@
               E/S (activation globale)
             </dt>
             <dd>
-			Le coposant se comporte comme une broche de entrée/sortie multibit dans le schema du circuit.<br>
+			Le composant se comporte comme une broche d'entrée/sortie multibit dans le schéma du circuit.<br>
 			<img class="notscal" src="../../../../img-libs/portioenafull.png" alt="#########"><br>
-			Quand la broche de sélection du buffer controlé est a 0, il se comporte comme dans sa configuration Entrées seulement. Vous pouvez modifier l'état des broches de l'image du conecteur de la même manière.<br>
-			Quand la broche de sélection du buffer controlé est a 1, l'état du bus sera reporté sur les broches du dessins du connecteur. Attention au conflit avec les sélections que vous auriez apporté sur ces broches.<br>
+			Quand la broche de sélection du buffer contrôlé est à <b class="zerov">0</b>, il se comporte comme dans sa configuration Entrées seulement. Vous pouvez modifier l'état des broches de l'image du connecteur de la même manière que pour cette configuration.<br>
+			Quand la broche de sélection du buffer contrôlé est à <b class="unov">1</b>, l'état du bus sera reporté sur les broches du dessin du connecteur. Attention au conflit avec les sélections que vous auriez apporté sur ces broches.<br>
 			<img class="notscal" src="../../../../img-libs/portioschema.png" alt="#########"><br>
-			On peut imaginer le schema d'une broche de ce composant comme ce qui est présenté ci-dessus.
+			On peut imaginer le schéma d'une broche de ce composant comme ce qui est présenté ci-dessus.
 			</dd>
 			<dt class="lib">
               E/S (activation bit par bit)
             </dt>
             <dd>
-			Le coposant se comporte comme une broche de entrée/sortie multibit dans le schema du circuit.<br>
+			Le composant se comporte comme une broche d'entrée/sortie multibit dans le schéma du circuit.<br>
 			<img class="notscal" src="../../../../img-libs/portioenabb.png" alt="#########"><br>
-			Le coportement est le même que précédement avec la possibilité de sélectioner bit par bit la sortie.
+			Le comportement est le même que précédemment avec la possibilité d'autoriser bit par bit la sortie.
 			</dd>
 		</dl>
 		
@@ -93,10 +93,10 @@
         Broches
       </h2>
       <p>
-        Note : Attention ici quand on parle d'entrée il s'agit d'une entrée vers le composant Port I/O et quand on parle de sortie il s'agit d'une sortie du composant Port I/O contrairement au rest du text.
+        <b class="note">Note :</b> Attention ici quand on parle d'entrée il s'agit d'une entrée vers le composant Port I/O et quand on parle de sortie il s'agit d'une sortie du composant Port I/O contrairement au reste du texte.
       </p>
 	  <p>
-	    Port I/O présente ses broches différement selon la configuration de la propriété  Type de port. Vous pouvez l'observer sur les figures ci-dessus.<br>
+	    Port I/O présente ses broches différemment selon la configuration de la propriété  <b class="property">Type de port</b>. Vous pouvez l'observer sur les figures ci-dessus.<br>
   	  </p>
 	  <div class="attliste">
         <dl>
@@ -104,19 +104,19 @@
             Bord Nord, avec un buffer pointant vers le haut.
           </dt>
           <dd>
-            Sortie : Bus de sortie du port. Largeur de données en bit selon l'attribut Nombre de broches.
+            Sortie : Bus de sortie du port. Largeur de données en bit selon l'attribut <b class="property">Nombre de broches</b>.
           </dd>
           <dt class="lib">
             Bord Nord, avec un buffer pointant vers le bas.
           </dt>
           <dd>
-            Entrée : Bus d'entrle du port. Largeur de données en bit selon l'attribut Nombre de broches.
+            Entrée : Bus d'entrée du port. Largeur de données en bit selon l'attribut <b class="property">Nombre de broches</b>.
           </dd>
 		  <dt class="lib">
-            Bord Nord vers l'ouest du buffer controlé pointant vers le bas.
+            Bord Nord vers l'ouest du buffer contrôlé pointant vers le bas.
           </dt>
           <dd>
-            Entrée : Autorisation - Signal autorisant l'entrée des données. Largeur de données en bit 1 si la propriété Type de port est E/S (activation globale) et largeur de données en bit selon l'attribut Nombre de broches si la propriété Type de port est E/S (activation bit par bit).
+            Entrée : Autorisation - Signal autorisant l'entrée des données. Largeur de données en bit 1 si la propriété <b class="property">Type de port</b> est <var>E/S (activation globale)</var> et largeur de données en bit selon l'attribut <b class="property">Nombre de broches</b> si la propriété <b class="property">Type de port</b> est <var>E/S (activation bit par bit)</var>.
           </dd>
         </dl>
 	  <h2>
@@ -173,10 +173,10 @@
             Type de port
           </dt>
           <dd>
-            <var>Entrée uniquement</var>Toute les broches sont des entrée dans le schema du circuit.<br>
-			<var>Sortie uniquement</var>Toute les broches sont des sortie dans le schema du circuit.<br>
-			<var>Validation unique de la sortie</var>peuvent être des entrées ou des sorties, avec une entrée de validation pour autoriser la sortie.<br>
-			<var>Activation de la sortie par bit</var> peuvent être des entrées ou des sorties, avec une entrée de validation par bit de sortie pour autoriser la sortie.
+            <var>Entrée uniquement</var> Toute les broches sont des entrées dans le schéma du circuit.<br>
+			<var>Sortie uniquement</var> Toute les broches sont des sorties dans le schéma du circuit.<br>
+			<var>Validation unique de la sortie</var> Les broches peuvent être des entrées ou des sorties, avec une entrée de validation pour autoriser la sortie.<br>
+			<var>Activation de la sortie par bit</var> Les broches peuvent être des entrées ou des sorties, avec une entrée de validation bit par bit pour autoriser la sortie.
           </dd>
         </dl>
       </div>
@@ -184,13 +184,13 @@
         Comportement de l'outil pousser
       </h2>
       <p>
-        When the mouse button is pressed, the component output is adjusted according to the <b class="property">Logic level</b> property.
+        Un <b class="tkeybd">clic gauche</b> sur un des carrés représentant un contacte du port modifie l'état de la sortie correspondante en conséquence.
       </p>
       <h2>
         Comportement de l'outil text 
       </h2>
       <p>
-        Permet de modifier l'étiquette associée au composant.
+        Permets de modifier l'étiquette associée au composant.
       </p>
       <p>
         <b>Retour à</b> <a href="../index.html#hlibio">Référence de la bibliothèque</a>

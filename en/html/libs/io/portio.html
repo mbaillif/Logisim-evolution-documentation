@@ -48,8 +48,45 @@
         Behavior
       </h2>
       <p>
-       
+       This component can have one or two input and/or output data buses, depending on the setting of the <b class="property">Port Type</b> attribute. It is very similar to the pin component, with the particularity of being able to associate inputs and outputs, but it does not allow interconnection with sub-circuits.
       </p>
+	  <dl>
+            <dt class="lib">
+              Inputs only
+            </dt>
+            <dd>
+			The component behaves like a multibit input pin in the circuit diagram.<br>
+			<img class="notscal" src="../../../../img-libs/portioin.png" alt="#########"><br>
+			You can use the push tool to click on the pins in the connector image to change their state. These will go alternately from state <b class="zerov">0</b> to <b class="unov">1</b> and then undefined (grey). This change is illustrated by the color of the square representing the pin. The output bus will reflect this change on its lines.
+			</dd>
+			<dt class="lib">
+              Output only
+            </dt>
+            <dd>
+			  The component behaves like a multibit output pin in the circuit diagram.<br>
+			<img class="notscal" src="../../../../img-libs/portioout.png" alt="#########"><br>
+			  It simply shows the status of the bus lines using colored squares.
+			</dd>
+			<dt class="lib">
+              I/O (single enable)
+            </dt>
+            <dd>
+			The component behaves like a multibit input/output pin in the circuit diagram.<br>
+			<img class="notscal" src="../../../../img-libs/portioenafull.png" alt="#########"><br>
+			When the selection pin of the controlled buffer is <b class="zerov">0</b>, it behaves as in its Inputs-only configuration. You can change the state of the conector image pins in the same way.<br>
+			When the buffer selection pin is set to <b class="unov">1</b>, the bus status will be transferred to the connector's design pins. Beware of conflicts with selections you may have made on these pins.<br>
+			<img class="notscal" src="../../../../img-libs/portioschema.png" alt="#########"><br>
+			You can imagine the pin layout of this component as shown above.
+			</dd>
+			<dt class="lib">
+              I/O (per-bit enable)
+            </dt>
+            <dd>
+			The component behaves like a multibit input/output pin in the circuit diagram.<br>
+			<img class="notscal" src="../../../../img-libs/portioenabb.png" alt="#########"><br>
+			The behaviour is the same as before, with the possibility of selecting the output bit by bit.
+			</dd>
+		</dl>
       <h2>
         Pins
       </h2>
@@ -110,10 +147,10 @@
             Port type
           </dt>
           <dd>
-            <var>Input only</var>All pins are inputs.<br>
-			<var>Output only</var>All pins are output.<br>
-			<var>Output single enable</var>Pins can be inputs or outputs, with an enable input to authorize the output.<br>
-			<var>Output per-bit enable</var>Pins can be inputs or outputs, with one enable input per output bit to authorize the output.
+            <var>Input only</var> All pins are inputs.<br>
+			<var>Output only</var> All pins are output.<br>
+			<var>Output single enable</var> Pins can be inputs or outputs, with an enable input to authorize the output.<br>
+			<var>Output per-bit enable</var> Pins can be inputs or outputs, with one enable input per output bit to authorize the output.
           </dd>
         </dl>
       </div>
@@ -121,7 +158,7 @@
         Poke Tool Behavior
       </h2>
       <p>
-        When the mouse button is pressed, the component output is adjusted according to the <b class="property">Logic level</b> property.
+        A <b class="tkeybd">left-click</b> on one of the squares representing a port contact modifies the state of the corresponding output accordingly.
       </p>
       <h2>
         Text Tool Behavior
