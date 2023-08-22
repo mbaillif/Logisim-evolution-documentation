@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2023-08-20T32:36:22.532000000">
+    <meta name="changed" content="2023-08-20T32:36:22.532000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      PLA
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/pla0.png" alt="#########" width="32" height="32"> 
+		<em>PLA</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Input/Output-Extra</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.15 in Logisim ITA Component
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/pla0.png" alt="#########" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+	  Le Réseau logique programmable (PLA) va présenter sur sa sortie le résultat d'une fonction logique combinatoir. Si une des entrées est en erreur (E) ou indéfini (U) il présentera sur les sorties concernées l'état d'erreur (E) . Ce composant resemble a une ROM et vous devez entrez la programation de manière très similaire. <!--Il est possible d'exporter et d'importer la programation à partir d'un fichier. -->
+	  Il existe dans la libririe Entrée/Sortie un composant PLA différent plus organisé comme une ROM. 
+      </p>
+	  <p>
+	  Après avoir définis le nombre de lignes en entrée avec l'attribut Largeur de donnée en entrée et le nombre de lignes en sortie avec l'attribut Largeur de donnée en sortie vous pouvez activer cette fenètre en cliquant sur la propriété <b class="property">Contenu</b>ou en effectuant un clic droit sur le PLA pour ouvrir le menu contextuel et sélectionnez le menu <b class=menu>|&nbsp;| Modifier le contenu |</b>. 
+	  </p>
+	  <p>
+	   <img class="notscal" src="../../../img-libs/plaeditor2.png" alt="#########"><br>
+	  </p>
+	  <p>
+	    
+	  </p>
+      <h2>
+        Broches
+      </h2>
+      <div class="attliste">
+      <dl>
+	   <dt class="lib">
+          A l'est 
+        </dt>
+        <dd>
+		  Entrée : Un bus d'entrée qui recoit les valeurs pour la fonction programmée. Il aura une largeur de donnée en bit egal à la propriété <b class="property">Largeur de donnée entrée</b>
+        </dd>
+		<dt class="lib">
+          A l'ouest
+        </dt>
+        <dd>
+		  Sortie : Un bus de sortie qui fournis le résultat de la fonction programmée. Il aura une largeur de donnée en bit egal à la propriété <b class="property">Largeur de donnée sortie</b>
+        </dd>
+	  </dl>
+	  </div>
+      <h2>
+        Attributs
+      </h2>
+     <div class="attliste">
+      <dl>
+        <dt class="lib">
+          Largeur de donnée en entrée
+        </dt>
+        <dd>
+		  Définis la largeur de donnée en bit de l'entrée.
+        </dd>
+        <dt class="lib">
+         Nombre de porte ET
+        </dt>
+        <dd>
+          Définis le nombre de porte ET, le nombre de mintermes qui seront utilisés pour la fournir la solution des fonctions.
+        </dd>
+        <dt class="lib">
+          Largeur de donnée en sortie
+        </dt>
+        <dd>
+          Définis la largeur de donnée en bit de la sortie.
+        </dd>
+        <dt class="lib">
+          Etiquette
+        </dt>
+        <dd>
+          Le texte de l'étiquette associée à la porte.
+        </dd>
+		<dt class="lib">
+          Police de l'étiquette
+        </dt>
+        <dd>
+          La police avec laquelle l'étiquette doit être rendue.
+        </dd>
+        <dt class="lib">
+          Etiquette visible
+        </dt>
+        <dd>
+          Si l'étiquette est affichée ou non.
+        </dd>
+        <dt class="lib">
+          Contenu
+        </dt>
+        <dd>
+          Ouvre la fenètre de programmation du contenu.
+        </dd>
+		 <dt class="lib">
+          Polarité du sélect
+        </dt>
+        <dd>
+          Détermine si le siganl Select active le PLA au niveau haut (1) ou au niveau bas (0)
+        </dd>
+      </dl>
+	  </div>
+      <h2>
+        Comportement de l'outil pousser 
+      </h2>
+      <p>
+        bla bla
+      </p>
+      <h2>
+        Comportement de l'outil text 
+      </h2>
+      <p>
+        Permets de modifier l'étiquette associée au composant.
+      </p>
+      <p>
+        <p><b>Retour à</b> <a href="../index.html#hlibioextra">Référence de la bibliothèque</a></p>
+      </p>
+    </div>
+  </body>
+</html>

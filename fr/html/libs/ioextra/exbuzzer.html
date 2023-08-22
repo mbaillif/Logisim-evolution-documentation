@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2023-08-20T32:36:22.532000000">
+    <meta name="changed" content="2023-08-20T32:36:22.532000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Buzzer
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        <img class="iconlibs" src="../../../../icons/6464/buzzer.png" alt="#########" width="32" height="32"> <em>Buzzer</em>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Librairie :</strong>
+            </td>
+            <td>
+              <a href="index.html">Input/Output Extra</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Introduction :</strong>
+            </td>
+            <td>
+              2.15 in Logisim ITA Component
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Apparence :</strong>
+            </td>
+            <td valign="top">
+              <img class="appearancelibs" src="../../../../img-libs/buzzer.png" alt="#########" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Comportement
+      </h2>
+      <p>
+        Ce composant permet de générer un son sur les hautparleurs de votre système. Une des entrées définit la fréquence, une autre le volume et la dernière active ou désactiver le son. Il est possible de choisir la forme d'onde en paramétrant l'attribut <b class="property">Type de signal</b>.
+      </p>
+      <h2>
+        Broches
+      </h2>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Au nord
+          </dt>
+          <dd>
+            Bus d'entrée : Rapport cyclique - Valeur numérique non signée qui déterminera le rapport cyclique de l'onde. Largeur de donnée en bit 8.
+          </dd>
+          <dt class="lib">
+            A l'ouest en haut
+          </dt>
+          <dd>
+            Bus d'entrée : Fréquence - Valeur numérique non signée qui déterminera la fréquence du son en Hz ou dHz en accord avec la propriété <b class="property">Fréquence</b>. Largeur de donnée en bit 14.
+          </dd>
+          <dt class="lib">
+            A l'ouest au centre
+          </dt>
+          <dd>
+            Entrée : Select - Si cette entrée est à <b class="unov">1</b> le son est activé et à <b class="zerov">0</b> il est stoppé. Largeur de donnée 1.
+          </dd>
+          <dt class="lib">
+            A l'ouest en bas
+          </dt>
+          <dd>
+            Bud d'entrée : Volume - Permet de régler le volume du son. La largeur de donnée est définie par l'attribut <b class="property">Largeur de donnée volume</b>.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Attributs
+      </h2>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Orientation
+          </dt>
+          <dd>
+            L'emplacement des broches d'entrée par rapport au composant.
+          </dd>
+          <dt class="lib">
+            Sélectionner l'emplacement
+          </dt>
+          <dd>
+            L'emplacement de la broche Rapport cyclique rapport aux autres broches.
+          </dd>
+          <dt class="lib">
+            Fréquence
+          </dt>
+          <dd>
+            Définis la fréquence du son en Hertz ou décihertz en en accord avec la propriété <b class="property">Fréquence</b>. La valeur minimale est 20Hz et maximal 20'000Hz.
+          </dd>
+          <dt class="lib">
+            Largeur de donnée volume
+          </dt>
+          <dd>
+            La largeur de donnée en bit du bus de réglage du volume.
+          </dd>
+          <dt class="lib">
+            Etiquette
+          </dt>
+          <dd>
+            Le texte de l'étiquette associée au composant.
+          </dd>
+          <dt class="lib">
+            Police de l'étiquette
+          </dt>
+          <dd>
+            La police avec laquelle l'étiquette doit être rendue.
+          </dd>
+          <dt class="lib">
+            Type de signal
+          </dt>
+          <dd>
+            Permets de sélectionner la forme d'onde du signal. Les choix sont : sinusoïdal, carré, triangulaire, dent de scie, bruit blanc.
+          </dd>
+          <dt class="lib">
+            Canal
+          </dt>
+          <dd>
+            Permet la sélection des canaux de sortie, gauche, droite ou les deux.
+          </dd>
+          <dt class="lib">
+            Degré de lissage
+          </dt>
+          <dd>
+            Niveau du filtre passe-bas appliqué au signal.
+          </dd>
+          <dt class="lib">
+            Fenêtre de lissage
+          </dt>
+          <dd>
+            Nombre d'échantillons nécessaire au calcul du filtre.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Comportement de l'outil pousser
+      </h2>
+      <p>
+        Aucun.
+      </p>
+      <h2>
+        Comportement de l'outil text
+      </h2>
+      <p>
+        Permet de modifier l'étiquette associée au composant.
+      </p>
+      <p>
+        <b>Retour à</b> <a href="../index.html#hlibioextra">Référence de la bibliothèque</a>
+      </p>
+    </div>
+  </body>
+</html>

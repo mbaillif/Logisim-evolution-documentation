@@ -2,8 +2,8 @@
 <html lang="fr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2021-08-23T06:18:10.521000000">
-    <meta name="changed" content="2021-08-23T06:18:42.262000000">
+    <meta name="created" content="2023-08-20T06:18:10.521000000">
+    <meta name="changed" content="2023-08-20T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -50,8 +50,24 @@
       <p>
 	    Le <b>Réseau logique programmable</b> (PLA) va présenter sur sa sortie le résultat d'une fonction logique combinatoir. Si une des entrées est en erreur (<b class="evalue">E</b>) ou indéfini (<b class="uvalue">U</b>) il considérera que toutes ses entrées sont à <b class="unov">1</b>. Ce composant resemble a une ROM et vous devez entrez la programation de manière très similaire. Il est possible d'exporter et d'importer la programation à partir d'un fichier.<br>  
 
-		Il existe dans la <b class="property">libririe Entrée/Sortie (extra)</b> un coposant PLA qui représente mieux le fonctionnement interne de ceux-ci.  
+		Il existe dans la <b class="property">libririe Entrée/Sortie (extra)</b> un composant PLA qui représente mieux le fonctionnement interne de ceux-ci.  
       </p>
+	  <p>
+	     Après avoir définis le nombre de lignes en entrée avec l'attribut <b class="property">Largeur de donnée en entrée</b> et le nombre de lignes en sortie avec l'attribut <b class="property">Largeur de donnée en sortie</b> vous pouvez ouvrir cette fenètre en effectuant un clic droit sur le PLA pour ouvrir le menu contextuel et sélectionnez le menu <b class=menu>|&nbsp;Modifier le programme PLA&nbsp;|</b>.
+		<p>
+	    <img class="notscal" src="../../../img-libs/plaeditor.png" alt="#########"><br>
+		</p>
+	  </p>
+	  <p>
+	    Cliquez sur le bouton <b class="button">&nbsp;Ajouter&nbsp;</b> ligne cela créera la première ligne de votre programme. Vous pouvez deja ajouter d'autres ligne ou le faire au fur et à mesure de l'écriture.<br>
+		Le bouton <b class="button">&nbsp;Supprimer&nbsp;</b> permet d'effacer la ligne. Vous observez les colonnes de bouton pour programmer les entrées et les colonnes de boutons pour programmer les sorties. Si vous cliquez dessus ils afficherons alternativement 0,1,x. 0 et 1 représente le niveau logique et x signifie sans importance.</p><p>
+		Par exemple dans la première ligne de la figure ci-dessus vous voyer la combinaison 0.x.x pour les entrées et 0.0.0 pour les sorties. Cela signifie que si l'entree 2 est à 0 les entrées 1 et 0 n'ont pas d'importance et on délivrera sur les sorties la valeur 0.0.0<br> La colonne commentaire permet de rajouter un texte qui sera visible sur le PLA quand la combinaison de la ligne est active.
+	  </p>
+	  <p>
+	    Les boutons <b class="button">&nbsp;Exporter&nbsp;</b> et <b class="button">&nbsp;Importer&nbsp;</b> pemetent respectivement d'exporter le programme ou de l'importer depuis un fichier.<br> 
+		Le bouton <b class="button">&nbsp;OK&nbsp;</b> confirme l'enregistrement du programme et ferme la fenêtre.<br>
+		Le bouton <b class="button">&nbsp;Annuler&nbsp;</b> oublie le programme et ferme la fenêtre.<br>
+	  </p>
 	  <h2>
         Broches (en supposant que le composant est orienté vers l'est)
       </h2>
@@ -75,7 +91,7 @@
         Attributs
       </h2>
       <p>
-	     Lorsque le composant est sélectionné ou en cours d'ajout, les touches fléchées modifient son attribut <b class="property">Orientation</b>.
+	     Lorsque le composant est sélectionné ou en cours d'ajout, les touches <b class="tkeybd">fléchées</b> modifient son attribut <b class="property">Orientation</b>.
       </p>
 	  <div class="attliste">
 	  <dl>
@@ -101,7 +117,7 @@
           Program
         </dt>
         <dd>
-		  Ouvre le fenètre de programation 
+		  Ouvre le fenètre de programation du contenu.
         </dd>
 		<dt class="lib">
             Étiquette
@@ -121,7 +137,7 @@
         Comportement de l'outil pousser 
       </h2>
       <p>
-        Aucun. 
+        Aucun.
       </p>
       <h2>
         Comportement de l'outil text 
@@ -130,7 +146,7 @@
 	    Permets de modifier l'étiquette associée au composant.
       </p>
       <p>
-        <b>Back to</b> <a href="../index.html#hlibgates">Library Reference</a>
+        <b>Retour à</b> <a href="../index.html#hlibgates">Référence de la bibliothèque</a>
       </p>
     </div>
   </body>

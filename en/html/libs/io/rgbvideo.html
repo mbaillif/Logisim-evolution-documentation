@@ -48,8 +48,14 @@
         Behavior
       </h2>
       <p>
-       
+       This element simulates a color display up to 2 to 256 pixels wide. On a bus to the south, it receives the color information that will be applied to the pixel, addressed by two buses carrying position information, at the rising edge of the clock.
       </p>
+	  <p>
+	   When the simulation is initialized, the screen is colored yellow. The reset signal clears the screen and it will be black.
+	  </p>
+	  <p>
+	   The <b class="property">Color Model</b> attribute offers several color schemes, RGB 15,16,24 bits, palette selection schemes such as Xterm16 or 256, and a grayscale display. This will determine the bit width of the <var>data</var> input.
+	  </p>
       <h2>
         Pins
       </h2>
@@ -62,37 +68,37 @@
             First from left
           </dt>
           <dd>
-            Input: Reset 
+            Input: Reset - If 1, clears the entire screen. Data width in bit 1.
           </dd>
 		  <dt class="lib">
             Second with a triangle
           </dt>
           <dd>
-            Input: Clock 
+            Input: Clock - On the rising edge, the addressed pixel is updated in accordance with the color and position information. Data width in bit 1.
           </dd>
 		  <dt class="lib">
             Third
           </dt>
           <dd>
-            Input: Write Enable
+            Input: Write Enable - If 1, clock input triggers pixel update. Data width in bit 1.
           </dd>
 		  <dt class="lib">
             Fourth
           </dt>
           <dd>
-            Input: X coordinate
+            Input: X coordinate - Unsigned numerical value specifying the x coordinate (horisontal) of the pixel to be processed. Value 0 is the easternmost (left) pixel. Data width in bits as a function of the <b class="property">Width</b> attribute
           </dd>
 		  <dt class="lib">
             Fifth
           </dt>
           <dd>
-            Input: Y coordinate
+            Input: Y coordinate - Unsigned numerical value specifying the y (vertical) coordinate of the pixel to be processed. Value 0 is the northernmost (top) pixel. Data width in bits according to the <b class="property">Height</b> attribute.
           </dd>
 		  <dt class="lib">
             The last one on the right
           </dt>
           <dd>
-            Input: Data
+            Input: Data - Defines the color of the pixel to be processed according to the rules of the <b class="property">Color Model</b> attribute.
           </dd>
 		 </dl>
 		</div>
@@ -105,7 +111,7 @@
             Cursor
           </dt>
           <dd>
-            If a cursor is visible on the screen
+            If a cursor is visible on the screen.
           </dd>
 		  <dt class="lib">
             Reset Behavior
@@ -117,25 +123,25 @@
             Color Model
           </dt>
           <dd>
-            The data model of the color data bus (3x5bits, 3x8bits...)
+            The data model of the color data bus (3x5bits, 3x8bits...).
           </dd>
 		  <dt class="lib">
             Width in pixels
           </dt>
           <dd>
-            
+            Screen width in pixels.
           </dd>
 		  <dt class="lib">
             Height
           </dt>
           <dd>
-            Height in pixels
+            Screen height in pixels.
           </dd>
 		  <dt class="lib">
             Scale
           </dt>
           <dd>
-            Determines the magnification factor
+            Determines the magnification factor.
           </dd>
         </dl>
       </div>
