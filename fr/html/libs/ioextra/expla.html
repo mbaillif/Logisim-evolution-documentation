@@ -49,17 +49,24 @@
         Comportement
       </h2>
       <p>
-	  Le Réseau logique programmable (PLA) va présenter sur sa sortie le résultat d'une fonction logique combinatoir. Si une des entrées est en erreur (E) ou indéfini (U) il présentera sur les sorties concernées l'état d'erreur (E) . Ce composant resemble a une ROM et vous devez entrez la programation de manière très similaire. <!--Il est possible d'exporter et d'importer la programation à partir d'un fichier. -->
+	  Le Réseau logique programmable (PLA) va présenter sur sa sortie le résultat d'une fonction logique combinatoir. Si une des entrées est en erreur (<b class="evalue">E</b>) ou indéfini (<b class="uvalue">U</b>) il présentera sur les sorties concernées l'état d'erreur (<b class="evalue">E</b>).<!--Il est possible d'exporter et d'importer la programation à partir d'un fichier. -->
 	  Il existe dans la libririe Entrée/Sortie un composant PLA différent plus organisé comme une ROM. 
       </p>
 	  <p>
-	  Après avoir définis le nombre de lignes en entrée avec l'attribut Largeur de donnée en entrée et le nombre de lignes en sortie avec l'attribut Largeur de donnée en sortie vous pouvez activer cette fenètre en cliquant sur la propriété <b class="property">Contenu</b>ou en effectuant un clic droit sur le PLA pour ouvrir le menu contextuel et sélectionnez le menu <b class=menu>|&nbsp;| Modifier le contenu |</b>. 
+	  Après avoir définis le nombre de lignes en entrée avec l'attribut <b class="property">Largeur de donnée en entrée</b> et le nombre de lignes en sortie avec l'attribut <b class="property">Largeur de donnée en sortie</b> vous pouvez activer cette fenètre en cliquant sur la propriété <b class="property">Contenu</b> u en effectuant un clic droit sur le PLA pour ouvrir le menu contextuel et sélectionnez le menu <b class="menu">|&nbsp;| Modifier le contenu |</b>. 
 	  </p>
 	  <p>
 	   <img class="notscal" src="../../../img-libs/plaeditor2.png" alt="#########"><br>
 	  </p>
 	  <p>
-	    
+	  Ce circuit permet la somme des minterms d'une fonction. Dans la matrice de gauche pouvez cliquer sur les intersection pour connecter les valeurs ou leur complément aux portes AND.
+	  </p>
+	  <p>
+	  Par exemple dans la figure ci-dessus la première ligne à gauche est programmée pour effectuer le minterms de <span style="text-decoration: overline">AAA </span> <img class="intxt1" src="../../../img-libs/mint0.png" alt="#########"> et pour la seconde ligne <img class="intxt1" src="../../../img-libs/mint1.png" alt="#########">. 
+	  <br>Le panneau représente une version simplifier du schema, vous devez comprendre le résultat de la programmation des deux premières lignes comme celui-ci</p><p>
+	  <img class="notscal" src="../../../img-libs/plaeditor3.png" alt="#########"><</p>
+	  <p>
+	  Dans la la matrice de droite vous cliquez aux intersections pour définir les resultats dont vous désierez realiser la somme aux portes OR. Comme précédement le panneau simplifie le schema et il faut voir des portes OR avec de multiple entrées.
 	  </p>
       <h2>
         Broches

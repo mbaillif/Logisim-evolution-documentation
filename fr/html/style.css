@@ -33,6 +33,12 @@ img.intxt {
 	vertical-align:middle;
 	margin:2px;
 }
+
+img.intxt1 {
+	height:16;
+	vertical-align:middle;
+	margin:2px;
+}
 /* For img in bullet */
 img.inbullet {
 	height:32;
