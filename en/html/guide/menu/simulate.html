@@ -105,18 +105,19 @@
             Starts automatically ticking the clock. This will have an effect only if the circuit contains any clock devices (in the Wiring library). The option is disabled by default.
           </p>
         </dd>
-        <dt>
+        <dt id="ftic" name="ftic">
           <strong>Auto Tick Frequency</strong>
         </dt>
         <dd>
           <p>
             Allows you to select how often ticks occur. For example, 8 Hz means that ticks will occur eight times a second. A tick is the base unit of measurement for the speed of clocks.
           </p>
-          <p align="center">
+          <p align="center" >
             <img class="notscal" src="../../../../img-guide/clock.png" alt="#########">
           </p><b class="note">Example:</b> Tic hight = 2, Tic low = 2, Clock = tic frequency / ( 2 + 2)
           <p>
-            <b class="note">Note:</b> that the clock cycle speed will be slower than the tick speed: The fastest possible clock will have a one-tick up cycle and a one-tick down cycle; such a clock would have up/down cycle rate of 4 Hz if the ticks occur at 8 Hz.
+            <b class="note">Note:</b> that the clock cycle speed will be slower than the tick speed: The fastest possible clock will have a one-tick up cycle and a one-tick down cycle; such a clock would have up/down cycle rate of 4 Hz if the ticks occur at 8 Hz.<br>
+			The number of ticks per cycle is defined in the <b class="property">High and Low Duration</b> attributes of the clock component.
           </p>
         </dd>
         <dt>

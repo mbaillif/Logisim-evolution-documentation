@@ -178,6 +178,14 @@
     <mapID target="disassembler"        url="en/html/libs/soc/disassembler.html" />
     <mapID target="socsimcontrol"       url="en/html/libs/soc/socsimcontrol.html" />
 	
+    <mapID target="ioex_switch"         url="en/html/libs/ioextra/exswitch.html" />	
+	<mapID target="ioex_buzzer"         url="en/html/libs/ioextra/exbuzzer.html" />	
+	<mapID target="ioex_slider"         url="en/html/libs/ioextra/exslider.html" />	
+	<mapID target="ioex_digitalscop"    url="en/html/libs/ioextra/exdigosc.html" />	
+	<mapID target="ioex_plarom"         url="en/html/libs/ioextra/explarom.html" />	
+	
+	
+	
 <!-- Icon help tree -->
 	<mapID target="icon_poke"        url="icons/1616/poke.png" />
 	<mapID target="icon_edit"        url="icons/1616/select.png" />
@@ -251,17 +259,18 @@
 	<mapID target="icon_generic"     url="icons/1616/tcl.png" />	
 	<mapID target="icon_binbcd"      url="icons/1616/bfh.png" />	
 	<mapID target="icon_bcdtoseven"  url="icons/1616/bfh.png" />	
+
 	<mapID target="icon_switch"      url="icons/1616/switch.png" />	
 	<mapID target="icon_buzzer"      url="icons/1616/buzzer.png" />	
 	<mapID target="icon_slider"      url="icons/1616/slider.png" />	
 	<mapID target="icon_digitalscope"    url="icons/1616/digitalscope.png" />	
-	<mapID target="icon_pla2"        url="icons/1616/pla2.png" />	
+	<mapID target="icon_pla2"        url="icons/1616/pla0.png" />	
+	
 	<mapID target="up_icon"          url="icons/1616/rgbvideo.png" />	
-	<mapID target="socbus_icon"      url="icons/1616/rgbvideo.png" />		
+	<mapID target="socbus_icon"      url="icons/1616/socbus.png" />		
 
 	<mapID target="icon_vhdl"        url="icons/1616/vhdl.png" />
     <mapID target="up_icon"          url="icons/1616/up.png"/>
     <mapID target="socbus_icon"      url="icons/1616/socbus.png"/>
-	
 
 </map>

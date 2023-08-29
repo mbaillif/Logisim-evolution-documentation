@@ -49,24 +49,24 @@
         Comportement
       </h2>
       <p>
-	  Le Réseau logique programmable (PLA) va présenter sur sa sortie le résultat d'une fonction logique combinatoir. Si une des entrées est en erreur (<b class="evalue">E</b>) ou indéfini (<b class="uvalue">U</b>) il présentera sur les sorties concernées l'état d'erreur (<b class="evalue">E</b>).<!--Il est possible d'exporter et d'importer la programation à partir d'un fichier. -->
-	  Il existe dans la libririe Entrée/Sortie un composant PLA différent plus organisé comme une ROM. 
+	  Le Réseau logique programmable (PLA) va présenter sur sa sortie le résultat d'une fonction logique combinatoire. Si une des entrées est en erreur (<b class="evalue">E</b>) ou indéfini (<b class="uvalue">U</b>) il présentera sur les sorties concernées l'état d'erreur (<b class="evalue">E</b>).<!--Il est possible d'exporter et d'importer la programation à partir d'un fichier. -->
+	  Il existe dans la librairie Entrée/Sortie un composant PLA différent plus organisé comme une ROM. 
       </p>
 	  <p>
-	  Après avoir définis le nombre de lignes en entrée avec l'attribut <b class="property">Largeur de donnée en entrée</b> et le nombre de lignes en sortie avec l'attribut <b class="property">Largeur de donnée en sortie</b> vous pouvez activer cette fenètre en cliquant sur la propriété <b class="property">Contenu</b> u en effectuant un clic droit sur le PLA pour ouvrir le menu contextuel et sélectionnez le menu <b class="menu">|&nbsp;| Modifier le contenu |</b>. 
+	  Après avoir défini le nombre de lignes en entrée avec l'attribut <b class="property">Largeur de donnée en entrée</b> et le nombre de lignes en sortie avec l'attribut <b class="property">Largeur de donnée en sortie</b> vous pouvez activer cette fenêtre en cliquant sur la propriété <b class="property">Contenu</b> en effectuant un clic droit sur le PLA pour ouvrir le menu contextuel et sélectionnez le menu <b class="menu">|&nbsp;| Modifier le contenu |</b>. 
 	  </p>
 	  <p>
 	   <img class="notscal" src="../../../img-libs/plaeditor2.png" alt="#########"><br>
 	  </p>
 	  <p>
-	  Ce circuit permet la somme des minterms d'une fonction. Dans la matrice de gauche pouvez cliquer sur les intersection pour connecter les valeurs ou leur complément aux portes AND.
+	  Ce circuit est réaliser pour calculer la somme des minterms d'une fonction . Dans la matrice de gauche,vous pouvez cliquer sur les intersections pour connecter les valeurs ou leur complément aux portes AND pour construir les minterms.
 	  </p>
 	  <p>
-	  Par exemple dans la figure ci-dessus la première ligne à gauche est programmée pour effectuer le minterms de <span style="text-decoration: overline">AAA </span> <img class="intxt1" src="../../../img-libs/mint0.png" alt="#########"> et pour la seconde ligne <img class="intxt1" src="../../../img-libs/mint1.png" alt="#########">. 
-	  <br>Le panneau représente une version simplifier du schema, vous devez comprendre le résultat de la programmation des deux premières lignes comme celui-ci</p><p>
-	  <img class="notscal" src="../../../img-libs/plaeditor3.png" alt="#########"><</p>
+	  Par exemple dans la figure ci-dessus la première ligne à gauche est programmée pour effectuer le minterms de </span> <img class="intxt1" src="../../../../img-libs/mint0.png" alt="#########"> et pour la seconde ligne <img class="intxt1" src="../../../../img-libs/mint1.png" alt="#########">. 
+	  <br>Le panneau représente une version simplifiée du schéma, vous devez comprendre le résultat de la programmation des deux premières lignes comme celui-ci</p><p>
+	  <img class="notscal" src="../../../../img-libs/plaeditor3.png" alt="#########"></p>
 	  <p>
-	  Dans la la matrice de droite vous cliquez aux intersections pour définir les resultats dont vous désierez realiser la somme aux portes OR. Comme précédement le panneau simplifie le schema et il faut voir des portes OR avec de multiple entrées.
+	  Dans la matrice de droite, vous cliquez aux intersections pour préciser les fonctions dont vous désirez realiser la somme avec les portes OR. Comme précédemment le panneau simplifie le schema et il faut voir des portes OR avec de multiples entrées.
 	  </p>
       <h2>
         Broches
@@ -77,13 +77,13 @@
           A l'est 
         </dt>
         <dd>
-		  Entrée : Un bus d'entrée qui recoit les valeurs pour la fonction programmée. Il aura une largeur de donnée en bit egal à la propriété <b class="property">Largeur de donnée entrée</b>
+		  Entrée : Un bus d'entrée qui reçoit les valeurs pour la fonction programmée. Il aura une largeur de donnée en bit égal à la propriété <b class="property">Largeur de donnée entrée</b>.
         </dd>
 		<dt class="lib">
           A l'ouest
         </dt>
         <dd>
-		  Sortie : Un bus de sortie qui fournis le résultat de la fonction programmée. Il aura une largeur de donnée en bit egal à la propriété <b class="property">Largeur de donnée sortie</b>
+		  Sortie : Un bus de sortie qui fournit le résultat de la fonction programmée. Il aura une largeur de donnée en bit égal à la propriété <b class="property">Largeur de donnée sortie</b>.
         </dd>
 	  </dl>
 	  </div>
@@ -99,10 +99,10 @@
 		  Définis la largeur de donnée en bit de l'entrée.
         </dd>
         <dt class="lib">
-         Nombre de porte ET
+         Nombre de portes ET
         </dt>
         <dd>
-          Définis le nombre de porte ET, le nombre de mintermes qui seront utilisés pour la fournir la solution des fonctions.
+          Définis le nombre de portes ET, c'est le nombre de mintermes utilisés pour la fournir la solution des fonctions.
         </dd>
         <dt class="lib">
           Largeur de donnée en sortie
@@ -111,7 +111,7 @@
           Définis la largeur de donnée en bit de la sortie.
         </dd>
         <dt class="lib">
-          Etiquette
+          Étiquette
         </dt>
         <dd>
           Le texte de l'étiquette associée à la porte.
@@ -123,7 +123,7 @@
           La police avec laquelle l'étiquette doit être rendue.
         </dd>
         <dt class="lib">
-          Etiquette visible
+          Étiquette visible
         </dt>
         <dd>
           Si l'étiquette est affichée ou non.
@@ -138,7 +138,7 @@
           Polarité du sélect
         </dt>
         <dd>
-          Détermine si le siganl Select active le PLA au niveau haut (1) ou au niveau bas (0)
+          Détermine si le signal Select active le PLA au niveau haut (1) ou au niveau bas (0)
         </dd>
       </dl>
 	  </div>
@@ -146,7 +146,7 @@
         Comportement de l'outil pousser 
       </h2>
       <p>
-        bla bla
+        Aucun.
       </p>
       <h2>
         Comportement de l'outil text 

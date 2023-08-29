@@ -13,62 +13,61 @@
   </head>
   <body>
     <div class="maindiv">
-	 <h1>
+      <h1>
         Onglet Options
       </h1>
-	  <p>
-	   Dans ce panneau vous pouvez sélectionner les différents modes de capture des signaux et en certains paramètres.
-	   </p>
-	   <p>
-	   <img src="../../../../img-guide/chronoexempl.png" alt="#########"><br>
-	   Circuit utilisé pour les exemples ci-dessous.
-	  </p>
-	  <p>
-	    Logisim fournit trois modes d'enregistrement et une option de capture des détails :
-		<dl>
-		<dt><b>Mode stop-motion / sans les détails fins :</b></dt>
-        <dl>Les données ne sont capturées que lorsque tous les signaux se sont stabilisés, masquant ainsi toute fluctuation transitoire du signal pouvant survenir au cours de la propagation.  Chaque valeur capturée est enregistrée comme si elle était restée stable pendant la valeur du champ <b>Échelle de temps</b>.
-		<p>
-		 <img src="../../../../img-guide/chronostmono10.png" alt="#########">
-		</p>
-		<p>
-		Dans l'enregistrement ci-dessus, nous avions paramétré une valeur de 10ms dans le champ <b>Échelle de temps</b>. On peut observer dans le diagramme la phase d'initialisation qui occupe les premières 10ms, les 10ms suivantes correspondent à l'attente avant notre premier clic sur l'entrée i1 et ensuite 10ms pour chaque clic. Nous avons effectué 6 clics, peu importe le temps réel entre les clics. C'est la valeur du champ <b>Échelle de temps</b> qui fixe cela.
-		</p>
-		</dl>
-		<dt><b>Mode stop-motion / avec les détails fins :</b></dt><dl>Les données sont capturées chaque fois que la valeur d'un signal change, y compris les fluctuations transitoires du signal qui peuvent se produire pendant la propagation. Les fluctuations transitoires sont enregistrées comme si le délai de la porte était de la valeur du champ <b>Retard de la porte</b>, et les signaux stables sont enregistrés comme s'ils étaient maintenus stables pendant la valeur du champ <b>Échelle de temps</b>.
-		<p>
-		 <img src="../../../../img-guide/chronostmono20.png" alt="#########">
-		</p>
-		<p>
-		Dans l'enregistrement ci-dessus nous avions paramétré une valeur de 10ms dans le champ <b>Échelle de temps</b> et 500us dans le délai de <b>Retard de la porte</b>. Le diagramme est pratiquement le même, mais on peut observer qu'un signal est présent sur la sortie s0 et que l'initialisation a été un peu plus longue, la transitoire produite par la porte And en réaction au retard généré sur sa seconde entrée par les trois portes Not a été enregistré et il est présent a chaque transition descendante de l'entrée i1. Ici aussi peu importe le temps réel que nous avons passé entre les clics.     
-		</p>
-		</dl>
-		<dt><b>Mode en continu sans les détails fins :</b></dt>
-		<dl>Les données sont capturées en continu, chaque fois que le simulateur est activé. Les fluctuations transitoires du signal sont ignorées. Chaque seconde de temps réel est enregistrée comme la valeur du champ <b>Échelle de temps</b> de temps de circuit simulé.
-		<p>
-		 <img src="../../../../img-guide/chronostmono30.png" alt="#########">
-		</p>
-		
-		<p>
-		Dans l'enregistrement ci-dessus nous avions paramétré une valeur de 1.0ms dans le champ <b>Échelle de temps</b> ensuite un clic sur l'entrée s1 a modifié celle-ci immédiatement après la réinitialisation de la simulation, puis environs 4 secondes plus tard un autre clic, puis 2 secondes plus tard encore un clic. On observe que les secondes réelles ont été enregistrées comme des millisondes de la simulation.
-		</p>
-		</dl>
-		<dt><b>Mode en continu / avec les détails fins :</b></dt>
-		<dl>Les données sont capturées en continu, chaque fois que le simulateur est activé. Les fluctuations transitoires du signal sont capturées. Chaque seconde de temps réel est enregistrée comme la valeur du champ <b>Echelle de temps</b> de temps de circuit simulé.</dl>
-	  </p>
-	  <p>
-		 <img src="../../../../img-guide/chronostmono40.png" alt="#########">
-		</p>
-		<p>
-		Dans l'enregistrement ci-dessus nous avions paramétré une valeur de 1.0ms dans le champ <b>Echelle de temps</b> ensuite un clic sur l'entrée s1 a modifié celle-ci immédiatement après la réinitialisation de la simulation, puis environs 1,5 seconde plus tard un autre clic, puis 3 secondes plus tard encore un clic. On observe que les secondes réelles ont été enregistrées comme des millisondes de la simulation et que la sortie s0 a été enregistrée avec la transitoire de la porte And.
-		</p>
       <p>
-        <b>Suivant : </b> <a href="options1.html">Onglet Options</a>.
+        Dans ce panneau vous pouvez sélectionner les différents modes de capture des signaux et en certains paramètres. Logisim fournit trois modes d'enregistrement des données.
       </p>
-    </div>
-  </body>
-</html>
-<!--
+      <ul>
+        <li>
+          <a href="options.html#stopmotion">Mode stop-motion</a>.
+        </li>
+        <li>
+          <a href="options1.html">Mode en continu</a>.
+        </li>
+        <li>
+          <a href="options2.html">Mode cadencé</a>.
+        </li>
+      </ul>
+      <p>
+        <img src="../../../../img-guide/chronoexempl1.png" alt="#########"><br>
+        Le circuit ci-dessus sera utilisé pour produire les exemples ci-dessous.
+      </p>
+      <h2 id="stopmotion">
+        Mode stop-motion / sans les détails fins :
+      </h2>
+      <p>
+        <img src="../../../img-guide/timtopt1.png" alt="#########">
+      </p>
+      <p>
+        Les données ne sont capturées que lorsque tous les signaux se sont stabilisés, masquant ainsi toute fluctuation transitoire du signal pouvant survenir au cours de la propagation. Chaque valeur capturée est enregistrée comme si elle était restée stable pendant la valeur du champ <b>Échelle de temps</b>.
+      </p>
+      <p>
+        <img src="../../../../img-guide/chronostmono10.png" alt="#########">
+      </p>
+      <p>
+        Dans l'enregistrement ci-dessus, nous avions paramétré une valeur de 10ms dans le champ <b>Échelle de temps</b>. On peut observer dans ce diagramme la phase d'initialisation qui occupe les premières 10ms, les 10ms suivantes correspondent à l'attente avant notre premier clic sur l'entrée i1 et ensuite 10ms pour chaque clic. Nous avons effectué 6 clics, peu importe le temps réel entre les clics. C'est la valeur du champ <b>Échelle de temps</b> qui fixe cela.
+      </p>
+      <h2>
+        Mode stop-motion / avec les détails fins :
+      </h2>
+      <p>
+        <img src="../../../img-guide/timtopt2.png" alt="#########">
+      </p>
+	  <p>
+	  Les données sont capturées chaque fois que la valeur d'un signal change, y compris les fluctuations transitoires du signal qui peuvent se produire pendant la propagation. Les fluctuations transitoires sont enregistrées comme si le délai de transmission des porte étaient de la valeur du champ <b>Retard de la porte</b>, et les signaux stables sont enregistrés comme s'ils étaient maintenus stables pendant la valeur du champ <b>Échelle de temps</b>.
+	  </p>
+      <p>
+        <img src="../../../../img-guide/chronostmono20.png" alt="#########">
+      </p>
+      <p>
+        Dans l'enregistrement ci-dessus nous avions paramétré une valeur de 10ms dans le champ <b>Échelle de temps</b> et 500us dans le délai de <b>Retard de la porte</b>. Le diagramme est pratiquement le même, mais on peut observer qu'un signal est présent sur la sortie s0 et que l'initialisation a été un peu plus longue, la transitoire produite par la porte AND en réaction au retard généré sur sa seconde entrée par les trois portes NOT a été enregistré et il est présent a chaque transition descendante de l'entrée i1. Ici aussi peu importe le temps réel que nous avons passé entre les clics.
+      </p>
+      <p>
+        <b>Suivant :</b> <a href="options1.html">Onglet Options Mode en continu</a>.
+      </p>
+    </div><!--
   // [ ] Stop-motion mode [ time_scale: 5ms ]
   //   [ ] Coarse-grained summary
   //     Data is captured only when all signals have stabilized, hiding any
@@ -100,3 +99,5 @@
   //     and each clock cycle is recorded as if it took {10ms} per cycle ({5ms}
   //     per tick).
  -->
+  </body>
+</html>

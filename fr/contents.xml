@@ -208,12 +208,11 @@
 		-->
 		
 		<tocitem target="ioex" text="Input/Output-Extra">
-			<tocitem target="ioex_proggen" text="Progr. generator" image="ioex_***********" />
-			<tocitem target="ioex_switch" text="switch" image="ioex_***********" />
-			<tocitem target="ioex_buzzer" text="Buzzer" image="ioex_***********" />
-			<tocitem target="ioex_slider" text="Slider" image="ioex_***********" />
-			<tocitem target="ioex_digitalscop" text="Digital oscilloscope" image="ioex_***********" />
-			<tocitem target="ioex_plarom" text="Programmable logic array ROM" image="ioex_***********" />
+			<tocitem target="ioex_switch" text="Switch" image="icon_switch" />
+			<tocitem target="ioex_buzzer" text="Buzzer" image="icon_buzzer" />
+			<tocitem target="ioex_slider" text="Slider" image="icon_slider" />
+			<tocitem target="ioex_digitalscop" text="Digital oscilloscope" image="icon_digitalscope" />
+			<tocitem target="ioex_plarom" text="Programmable logic array" image="icon_pla2" />
 		</tocitem>
 <!-- not documented 
 		<tocitem target="soc" text = "SOC library">

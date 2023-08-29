@@ -7,36 +7,36 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
-      Onglet Option Mode en continu
+      Onglet Option Mode cadencé
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class="maindiv">
 	 <h1>
-       Onglet Option Mode en continu
+       Onglet Option Mode cadencé
      </h1>	
   
        <p>
-	   <b>Précédent : </b>  <a href="options.html#stopmotion">Mode stop-motion</a>.
+	   <b>Précédent : </b>  <a href="options1.html">Onglet Option Mode en continu</a>..
 	   </p>
 	   <p>
-        <img src="../../../../img-guide/chronoexempl1.png" alt="#########"><br>
+        <img src="../../../../img-guide/chronoexempl2.png" alt="#########"><br>
         Le circuit ci-dessus sera encore utilisé pour produire les exemples ci-dessous.
       </p>
-		<h2>Mode en continu sans les détails fins :</h2>
+		<h2>Mode en cadencé sans les détails fins :</h2>
 		<p>
-		 <img src="../../../img-guide/timtopt3.png" alt="#########">
+		 <img src="../../../img-guide/timtopt5.png" alt="#########">
 		</p>
 		<p>
-		Les données sont capturées en continu, chaque fois que le simulateur est activé. Les fluctuations transitoires du signal sont ignorées. Chaque seconde de temps réel est enregistrée comme la valeur du champ <b>Échelle de temps</b> de temps de circuit simulé.
+		Les données sont capturées en fonction d'un signal d'horloge précisé par le champ Source d'horloge.
+		Les données sont capturées à chaque transition de l'horloge définis par le champ Capture de l'horloge, le fluctuations qui peuvent se produire entre les transistions ou pendant la propagation sont ignorées. Chaque <a href="../menu/simulate.html#ftic">tic</a> des cycles d'hologes est enregistré comme s'il prenait la valeur du champ <b>Échelle de temps</b>. 
 		</p>
 		<p>
-		 <img src="../../../../img-guide/chronostmono30.png" alt="#########">
+		 <img src="../../../../img-guide/chronostmono50.png" alt="#########">
 		</p>
-		
 		<p>
-		Dans l'enregistrement ci-dessus nous avions paramétré une valeur de 1.0ms dans le champ <b>Échelle de temps</b> ensuite un clic sur l'entrée s1 a modifié celle-ci immédiatement après la réinitialisation de la simulation, puis environs 4 secondes plus tard un autre clic, puis 2 secondes plus tard encore un clic. On observe que les secondes réelles ont été enregistrées comme des millisondes de la simulation.
+		Dans l'enregistrement ci-dessus nous avions paramétré une valeur de 1.0ms dans le champ <b>Échelle de temps</b> 
 		</p>
 		<h2>
 		Mode en continu / avec les détails fins :

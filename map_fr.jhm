@@ -168,7 +168,7 @@
     <mapID target="io_Port_IO"          url="fr/html/libs/io/Port_io.html" />	
 	<mapID target="io_Repetar"          url="fr/html/libs/io/repetar.html" />	
 	<mapID target="io_videorvb"         url="fr/html/libs/io/videorvb.html" />
-	<mapID target="tcl"                 url="fr/html/libs/tcl/index.html" />
+	<mapID target="tcl"                 url="fr/html/libs/tcl/index.html" /> 
     <mapID target="tcl_reds_console"    url="fr/html/libs/tcl/reds_console.html" />
     <mapID target="tcl_generic"         url="fr/html/libs/tcl/generic.html" />
     <mapID target="soc"                 url="fr/html/libs/soc/index.html" />
@@ -177,6 +177,11 @@
     <mapID target="assembler"           url="fr/html/libs/soc/assembler.html" />
     <mapID target="disassembler"        url="fr/html/libs/soc/disassembler.html" />
     <mapID target="socsimcontrol"       url="fr/html/libs/soc/socsimcontrol.html" />
+	<mapID target="ioex_switch"         url="fr/html/libs/ioextra/exswitch.html" />	
+	<mapID target="ioex_buzzer"         url="fr/html/libs/ioextra/exbuzzer.html" />	
+	<mapID target="ioex_slider"         url="fr/html/libs/ioextra/exslider.html" />	
+	<mapID target="ioex_digitalscop"    url="fr/html/libs/ioextra/exdigosc.html" />	
+	<mapID target="ioex_plarom"         url="fr/html/libs/ioextra/explarom.html" />
 	
 <!-- Icon help tree -->
 	<mapID target="icon_poke"        url="icons/1616/poke.png" />
@@ -251,13 +256,15 @@
 	<mapID target="icon_generic"     url="icons/1616/tcl.png" />	
 	<mapID target="icon_binbcd"      url="icons/1616/bfh.png" />	
 	<mapID target="icon_bcdtoseven"  url="icons/1616/bfh.png" />	
+
 	<mapID target="icon_switch"      url="icons/1616/switch.png" />	
 	<mapID target="icon_buzzer"      url="icons/1616/buzzer.png" />	
 	<mapID target="icon_slider"      url="icons/1616/slider.png" />	
 	<mapID target="icon_digitalscope"    url="icons/1616/digitalscope.png" />	
-	<mapID target="icon_pla2"        url="icons/1616/pla2.png" />	
+	<mapID target="icon_pla2"        url="icons/1616/pla0.png" />	
+	
 	<mapID target="up_icon"          url="icons/1616/rgbvideo.png" />	
-	<mapID target="socbus_icon"      url="icons/1616/rgbvideo.png" />		
+	<mapID target="socbus_icon"      url="icons/1616/socbus.png" />		
 
 	<mapID target="icon_vhdl"        url="icons/1616/vhdl.png" />
     <mapID target="up_icon"          url="icons/1616/up.png"/>

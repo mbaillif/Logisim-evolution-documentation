@@ -105,10 +105,10 @@
             Active les horloges. Cela n'aura d'effet que si le circuit contient des composants d'horloge (dans la bibliothèque de câblage). L'option est désactivée par défaut.
           </p>
         </dd>
-        <dt>
+        <dt id="ftic" name="ftic">
           <strong>Fréquence des tics</strong>
         </dt>
-        <dd>
+		<dd>
           <p>
             Vous permet de sélectionner la fréquence des impulsions. Par exemple, 8 Hz signifie que les tics se produiront huit fois par seconde. Un <b>tic</b> est l'unité de mesure de base pour la vitesse des horloges.
           </p>
@@ -116,7 +116,8 @@
             <img class="notscal" src="../../../../img-guide/clock.png" alt="#########">
           </p><b class="note">Exemple&nbsp;:</b> Tic haut = 2, Tic bas = 2, Clock = Fréquence tic / (2 + 2)
           <p>
-            <b class="note">Note&nbsp;:</b> La fréquence des périodes d'horloge sera plus lente que la vitesse d'activation (tic): l'horloge la plus rapide possible aura un cycle haut à un tic et un cycle bas à un tic. Une telle horloge aurait une fréquence de 4 Hz (un cycle complet haut/bas) si la fréquence des tics est à 8 Hz.
+            <b class="note">Note&nbsp;:</b> La fréquence des périodes d'horloge sera plus lente que la vitesse d'activation (tic): l'horloge la plus rapide possible aura un cycle haut à un tic et un cycle bas à un tic. Une telle horloge aurait une fréquence de 4 Hz (un cycle complet haut/bas) si la fréquence des tics est à 8 Hz.<br>
+			Le nombre de <b>tic</b> par cycle est définis dans les attributs <b class="property">Durée haute, Durée Basse</b> du composant horloge.
           </p>
         </dd>
         <dt>
