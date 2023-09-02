@@ -216,7 +216,7 @@ class GrayIncrementer extends InstanceFactory {
     <b class="comment">/** Calcule la valeur du code de Gray suivante dans la séquence après la
       * précédente. Cette méthode statique ne fait que manipuler des bits ;
       * elle n'a pas grand-chose à voir avec Logisim, si ce n'est qu'elle 
-      * manipule les objets Value et BitWidth. */
+      * manipule les objets Value et BitWidth. */</b>
     static Value nextGray(Value prev) {
         BitWidth bits = prev.getBitWidth();
         if(!prev.isFullyDefined()) return Value.createError(bits);
