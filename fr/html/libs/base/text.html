@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2018-10-23T06:18:42.262000000">
+    <meta name="changed" content="2023-09-04T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -14,7 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../img-guide/text.png" alt="#########"> <em>Outil Text</em>
+        <img class="iconlibs" src="../../../../icons/6464/tooltext.png" alt="#########" width="32" height="32"> <em>Outil Text</em>
       </h1>
       <table>
         <tbody>
@@ -40,64 +40,124 @@
         Comportement
       </h2>
       <p>
-        L'outil texte vous permet de créer et de modifier des étiquettes associées à des composants. Les composants qui prennent en charge les étiquettes sont indiqués dans la section «Comportement de l'outil de texte» de leur documentation. À partir de la version actuelle, les composants suivants des bibliothèques intégrées prennent en charge les étiquettes.
+        L'outil texte a deux fonctions, il permet de déposer une étiquette qui peut qui peut être placée n'importe où dans le circuit il suffit de cliquer a l'emplacement désiré et d'entrer le texte, et il permet aussi de créer et de modifier des étiquettes associées à des composants. Les composants qui prennent en charge les étiquettes sont indiqués dans la section «Comportement de l'outil de texte» de leur documentation. À partir de la version actuelle (3.9), les composants suivants des bibliothèques intégrées prennent en charge les étiquettes.
       </p>
       <blockquote>
         <table>
           <tbody>
             <tr>
               <td valign="top">
-                <strong>Base library</strong>
+                <strong>librairie Câblage</strong>
               </td>
               <td>
-                <a href="../wiring/pin.html">Pin</a><br>
-                <a href="../wiring/clock.html">Clock</a><br>
-                <a href="label.html">Label</a><br>
-                <a href="../wiring/probe.html">Probe</a>
+                <a href="../wiring/pin.html">Broche</a><br>
+                <a href="../wiring/probe.html">Sonde</a><br>
+                <a href="../wiring/tunnel.html">Tunnel</a><br>
+                <a href="../wiring/clock.html">Horloge</a>
               </td>
             </tr>
             <tr>
               <td valign="top">
-                <strong>Memory library</strong>
+                <strong>Librairie Porte logique</strong>
               </td>
               <td>
-                <a href="../mem/flipflops.html">D/T/JK/SR Flip-Flop</a><br>
-                <a href="../mem/register.html">Register</a><br>
-                <a href="../mem/counter.html">Counter</a><br>
-                <a href="../mem/shiftreg.html">Shift Register</a><br>
-                <a href="../mem/random.html">Random</a>
+                <a href="../gates/index.html">Tous les composants</a>
               </td>
             </tr>
             <tr>
               <td valign="top">
-                <strong>Input/Output library</strong>
+                <strong>Librairie Mémoire</strong>
+              </td>
+              <td>
+                <a href="../mem/index.html">Tous les composants</a>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <strong>Librairie Entrée/Sortie</strong>
               </td>
               <td>
                 <a href="../io/button.html">Button</a><br>
-                <a href="../io/led.html">LED</a>
+                <a href="../io/dipswitch.html">Interrupteur Dip</a><br>
+                <a href="../io/led.html">LED</a><br>
+                <a href="../io/ledbar.html">Barre LED</a><br>
+                <a href="../io/rgbled.html">RGB LED</a><br>
+                <a href="../io/7seg.html">Afficheur 7-Segments</a><br>
+                <a href="../io/dotmat.html">Matrice de LED</a><br>
+                <a href="../io/portio.html">Port E/S</a>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <strong>Librairie Entrée/Sortie Extra</strong>
+              </td>
+              <td>
+                <a href="../ioextra/exswitch.html">Interrupteur</a><br>
+                <a href="../ioextra/exslider.html">Glissière</a><br>
+                <a href="../ioextra/explarom.html">Réseau logique programmable PLA</a>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <strong>librairie Système dans la puce</strong>
+              </td>
+              <td>
+                <a href="../soc/index.html">Tous les composants</a>
               </td>
             </tr>
           </tbody>
         </table>
       </blockquote>
       <p>
-        Pour les composants qui peuvent prendre une étiquette sans en avoir aucun, vous pouvez cliquer n'importe où dans le composant pour ajouter une étiquette. S'il y a déjà une étiquette, vous devez cliquer dans l'étiquette. Si vous cliquez sur un point pour lequel aucune étiquette ne doit actuellement être modifiée, Logisim lance l'ajout d'un nouveau composant Label.
+        Pour les composants qui peuvent prendre une étiquette sans en avoir aucune, vous pouvez cliquer n'importe où dans le composant pour ajouter une étiquette. S'il y a déjà une étiquette, vous devez cliquer dans l'étiquette. Si vous cliquez sur un point pour lequel aucune étiquette ne doit actuellement être modifiée, Logisim lance l'ajout d'un nouveau composant Label.
       </p>
       <p>
-        Dans la version actuelle de Logisim, les fonctionnalités d'édition de texte sont encore assez primitives. La sélection d'une région de texte dans une étiquette est impossible. Il n'y a aucun moyen d'insérer un saut de ligne dans une étiquette.
+        Dans la version actuelle de Logisim, les fonctionnalités d'édition de texte sont encore assez primitives. Il n'y a aucun moyen d'insérer un saut de ligne dans une étiquette. La sélection d'une région de texte dans une étiquette est impossible cependant, vous pouvez le faire dans la table des attributs dans le champ Texte ou Étiquette.
       </p>
       <h2>
         Attributs
       </h2>
       <p>
-        Les attributs de l'outil sont les mêmes que pour le <a href="label.html">composant d'étiquette</a> . Ces attributs n'ont aucun effet lors de l'édition de l'étiquette sur un composant existant, mais ils sont transmis aux étiquettes créées à l'aide de l'outil de texte.
+        Les attributs de l'outil ne seront valides que pour les étiquettes que l'on dépose n'importe où sur le circuit. Quand c'est une étiquette d'un composant, ce sont les attributs définis par le composant qui s'imposent.
       </p>
-      <p>
-        En cliquant sur un composant prenant en charge l'outil Texte, les attributs de ce composant s'affichent.
-      </p>
-      <p>
-        <a href="../index.html">Retour dans <em>Référence de la bibliothèque</em></a>
-      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Text
+          </dt>
+          <dd>
+            Le texte apparaissant sur l'étiquette. Cette valeur peut être modifiée dans la table attributaire ou, à l'aide de l'outil texte, sur la zone de dessins.
+          </dd>
+          <dt class="lib">
+            Font
+          </dt>
+          <dd>
+            La police à utiliser pour dessiner l'étiquette.
+          </dd>
+          <dt class="lib">
+            Alignement horizontal
+          </dt>
+          <dd>
+            La technique de positionnement horizontal du texte par rapport à l'emplacement officiel de l'étiquette (où la souris a été cliquée lors de la création de l'étiquette). "Gauche" signifie que le texte doit être dessiné de manière à ce que son bord gauche soit à l’emplacement; "Droite" signifie que le texte doit être dessiné de manière à ce que son bord droit soit à l'emplacement; et "Centré" signifie que le texte doit être dessiné de telle sorte que son centre (horizontalement) soit à l'emplacement.
+          </dd>
+          <dt class="lib">
+            Alignement Vertical
+          </dt>
+          <dd>
+            La technique de positionnement vertical du texte par rapport à l'emplacement officiel de l'étiquette (où la souris a été cliquée lors de la création de l'étiquette). "Base" signifie que la ligne de base doit croiser l'emplacement; "Sommet" signifie que la partie supérieure du texte doit croiser l'emplacement; "Fond" signifie que le fond du texte doit croiser l'emplacement; et "Centre" signifie que le texte doit être centré (verticalement) à l'emplacement.
+            <p>
+              Le haut et le bas du texte sont calculés en fonction des caractéristiques standard de montée et de descente de la police; ainsi, même si le texte ne contient pas de grandes lettres (telles que <em>b</em>) ou des lettres descendantes (telles que <em>g</em>), il sera aligné de la même manière.
+            </p>
+          </dd>
+        </dl>
+		</div>
+        <p>
+          En cliquant sur un composant prenant en charge l'outil Texte, les attributs de ce composant s'affichent.
+        </p>
+        <p>
+          <b>Retour dans</b> <a href="../index.html">Référence de la bibliothèque</a>
+        </p>
+      </div>
     </div>
   </body>
 </html>

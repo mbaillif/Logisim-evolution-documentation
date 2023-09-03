@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2018-10-23T06:18:42.262000000">
+    <meta name="changed" content="2023-09-04T06:18:42.262000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
-    <div>
+     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/wiring.png" alt="#########"> <em>l'outil câblage.</em>
+        <img class="iconlibs" src="../../../../icons/6464/toolwiring.png" alt="#########"> <em>l'outil câblage.</em>
       </h1>
       <table>
         <tbody>
@@ -66,31 +66,39 @@
       <p>
         L'outil de câblage n'a pas lui-même d'attributs, mais les fils qu'il crée en ont.
       </p>
+	    <div class="attliste">
       <dl>
-        <dt>
+        <dt class="lib">
           Direction
         </dt>
         <dd>
           Indique si le câble est horizontal ou vertical. La valeur de cet attribut ne peut pas être modifiée.
         </dd>
-        <dt>
+        <dt class="lib">
           Longueur
         </dt>
         <dd>
           Indique combien de pixels le fil est long. La valeur de cet attribut ne peut pas être modifiée.
         </dd>
       </dl>
+	  </div>
       <h2>
         Comportement de l'outil Pousser.
       </h2>
       <p>
-        Lorsque vous cliquez sur un segment de fil existant à l'aide de l'outil pousser, Logisim affiche la valeur actuelle passant par ce fil. Le comportement est particulièrement utile pour les fils multibits, dont la couleur noire ne fournit aucun retour visuel sur les valeurs que transporte le fil.
+        Lorsque vous cliquez sur un segment de fil existant à l'aide de l'outil pousser, Logisim affiche la valeur actuelle passant par ce fil.
+		</p>
+		<p align="center">
+         <img  class="notscal" src="../../../../img-guide/layouttab1.png" alt="#########" >
+		</p>
+		<p>
+		Le comportement est particulièrement utile pour les fils multibits, dont la couleur noire ne fournit aucun retour visuel sur les valeurs que transporte le fil.
       </p>
       <p>
-        Pour les valeurs multibits, vous pouvez configurer exactement l'affichage de la valeur (en binaire, décimal ou hexadécimal, par exemple) à l'aide de la <a href="../../guide/prefs/pref-layout.html">mise en page volet</a> de la boîte de dialogue Préférences Logisim.
+        Pour les valeurs multibits, vous pouvez configurer exactement l'affichage de la valeur (en binaire, décimal ou hexadécimal, par exemple) à l'aide de la a boîte de dialogue Préférences volet <a href="../../guide/prefs/pref-layout.html">présentation</a>.
       </p>
       <p>
-        <b>Retour dans<a href="../index.html"> Référence de la bibliothèque</a></b>
+        <b>Retour à</b>  <a href="../index.html#hlibgates">Référence de la bibliothèque</a>
       </p>
     </div>
   </body>
