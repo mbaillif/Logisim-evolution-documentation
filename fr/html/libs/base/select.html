@@ -43,25 +43,29 @@
         Permets de placer des composants individuels dans la sélection en cours. Il existe un certain nombre d’actions possibles avec cet outil.
       </p>
       <ul>
-        <li>Le fait d'appuyer sur le bouton de la souris alors qu'il se trouve dans un composant actuellement sélectionné commence un glissement en déplaçant tous les composants de la sélection.
+	    <li>Un <b class="tkeybd">clic gauche</b> sur un composant le sélectionne. Si vous maintez enfoncé la touche <b class="tkeybd">Maj</b> le composant est ajouté a la sélection courante ou est supprimé si il est déja dans la sélection.</li> 
+		
+        <li>Le fait de faire <b class="tkeybd">clic gauche</b> alors que le curseur se trouve dans un composant actuellement sélectionné commence un glissement en déplaçant tous les composants de la sélection.
           <p>
-            Par défaut, Logisim calculera un moyen d’ajouter de nouveaux fils afin qu’aucune connexion existante ne soit perdue pendant le déplacement. (Parfois, cela supprime ou raccourcit les câbles existants). Si vous effectuez un déplacement où vous ne souhaitez pas que ces modifications soient effectuées, vous pouvez appuyer sur la touche Maj pendant le déplacement. Si vous souhaitez désactiver complètement ce comportement, accédez à Project &amp; gt; Options, sélectionnez l'onglet Canevas et décochez la case <q>Conserver les connexions lors du déplacement</q> ; dans ce cas, les connexions ne sont calculées que lorsque la touche Maj <em>est</em> .
+            Par défaut, Logisim calculera un moyen d’ajouter de nouveaux fils afin qu’aucune connexion existante ne soit perdue pendant le déplacement. (Parfois, cela supprime ou raccourcit les câbles existants). Si vous effectuez un déplacement où vous ne souhaitez pas que ces modifications soient effectuées, vous pouvez appuyer sur la touche <b class="tkeybd">Maj</b> après avoir commencé le déplacement. Si vous souhaitez désactiver complètement ce comportement, accédez à <b class="menu">|&nbsp;Fichier&nbsp;|</b>→<b class="menu">|&nbsp;Préférences&hellip;&nbsp;|</b> onglet <b class="menu">|&nbsp;présentation&nbsp;|</b> et décochez la case <q>Conserver les connexions lors du déplacement</q> ; dans ce cas, les connexions ne sont calculées que lorsque la touche Maj est enfoncée.
           </p>
           <p>
             Le fait de faire glisser une sélection peut entraîner un comportement inattendu des fils&nbsp;: si vous faites glisser une sélection comprenant des fils sur d'autres fils, tous les fils sont fusionnés et les fils fusionnés sont placés dans la sélection. Par conséquent, si vous faites glisser la sélection une seconde fois, les câbles précédemment situés à l'emplacement ne seront pas laissés pour compte. Ce comportement est nécessaire pour conserver le comportement attendu des câbles dans Logisim. Et cela ne constitue généralement pas un problème majeur: Logisim va sélectionner la totalité de la liste en cours de chute, et vous ne devez pas la déposer avant d’être sûr qu’elle se trouve au bon endroit.
           </p>
         </li>
-        <li>Sinon, cliquer sur la souris dans un composant supprime tous les composants de la sélection actuelle et sélectionne à la place le ou les composants contenant l'emplacement cliqué.
+        <li>Sinon, un <b class="tkeybd">clic gauche</b> sur un composant qui n'est pas sélectionné désélectionne tous les composants de la sélection actuelle et sélectionne à la place le ou les composants contenu dans  l'emplacement cliqué.
         </li>
-        <li>Tout en maintenant la touche Maj enfoncée dans un composant, vous activez la présence de ce composant dans la sélection. Si plusieurs composants incluent le même emplacement, la présence de tous les composants sera modifiée. Rien de tout cela ne se produira cependant si un clic-clic est associé à un autre outil (via la <a href="../../guide/opts/opts-mouse.html">onglet Souris</a> de la fenêtre d'options du projet).
+        <li>Si vous effectuez un <b class="tkeybd">clic gauche</b> tout en maintenant la touche <b class="tkeybd">Maj</b> enfoncée sur un composant, vous activez la présence de ce composant dans la sélection. Si plusieurs composants incluent le même emplacement, la présence de tous les composants sera modifiée. Rien de tout cela ne se produira cependant si un clic-clic est associé à un autre outil (via la <a href="../../guide/opts/opts-mouse.html">onglet Souris</a> de la fenêtre d'options du projet).
         </li>
-        <li>Faire glisser la souris en commençant par un emplacement non contenu dans un composant supprime tous les composants de la sélection actuelle et lance une sélection rectangulaire. Tous les composants contenus dans le rectangle seront placés dans la sélection.
+        <li>Un <b class="tkeybd">clic gauche</b> et déplacement de la souris en commençant par un emplacement non contenu dans un composant déclenche une sélection rectangulaire. La présence dans la sélection de tous les composants contenus dans le rectangle sera modifiée. Cela ne se produira cependant pas si un clic-clic est associé à un autre outil.
         </li>
-        <li>Glisser-déplacer la souris en commençant par un emplacement non contenu dans un composant déclenche une sélection rectangulaire. La présence dans la sélection de tous les composants contenus dans le rectangle sera modifiée. Cela ne se produira cependant pas si un clic-clic est associé à un autre outil.
-        </li>
+		<li> Un <b class="tkeybd">clic-droit</b> sur un composant non sélectioné affiche un menu contextuel :  <b class="menu">|&nbsp;Rotation a gauche&nbsp;|</b>,  <b class="menu">|&nbsp;Rotation a droite&nbsp;|</b>,  <b class="menu">|&nbsp;Effacer&nbsp;|</b>,  <b class="menu">|&nbsp;Afficher les attributs&nbsp;|</b>.
+		</li>
+		<li> Un <b class="tkeybd">clic-droit</b> sur un composant sélectioné affiche un menu contextuel :  <b class="menu">|&nbsp;Effacer la sélection&nbsp;|</b>,  <b class="menu">|&nbsp;Couper la sélection&nbsp;|</b>,  <b class="menu">|&nbsp;Copier la sélection&nbsp;|</b>.
+		</li>
       </ul>
       <p>
-        Après avoir sélectionné les éléments souhaités dans la sélection, vous pouvez bien sûr couper / copier / coller / supprimer tous les éléments via le <a href="../../guide/menu/edit.html">menu Edition</a> .
+        Après avoir sélectionné les éléments souhaités dans la sélection, vous pouvez bien sûr couper / copier / coller / supprimer tous les éléments via le <a href="../../guide/menu/edit.html">menu Edition</a> ou avec les touches <b class="tkeybd">Ctrl-C Ctrl-V Ctrl-X, Del</b> .
       </p>
       <p>
         Le comportement de Logisim lors du collage du presse-papiers dans un circuit est quelque peu particulier&nbsp;: il ne placera pas immédiatement les composants dans le circuit; au lieu de cela, la sélection sera une collection de "fantômes", qui seront déposés dans le circuit dès qu'ils seront déplacés vers un autre emplacement ou retirés de la sélection. (Ce comportement particulier est nécessaire, car le collage fusionnera sinon les fils de la sélection dans le circuit en cours, et les câbles y seront déplacés avec le presse-papiers collé si l'utilisateur veut déplacer les composants collés ailleurs.)
@@ -73,7 +77,7 @@
         Aucun. La sélection d'un composant affichera cependant ses attributs. Avec plusieurs composants sélectionnés, les attributs partagés par tous sont affichés, vides s'ils ont des valeurs différentes et avec la valeur qu'ils ont tous en commun. (Les fils sont ignorés s'il y a des non-fils dans la sélection.) Les modifications apportées à la valeur d'attribut affectent tous les composants sélectionnés.
       </p>
       <p>
-        <a href="../index.html">Retour dans <em>Référence de la bibliothèque</em></a>
+        <b>Retour dans </b> <a href="../index.html">Référence de la bibliothèque</a>
       </p>
     </div>
   </body>

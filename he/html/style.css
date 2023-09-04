@@ -4,7 +4,10 @@ There is a compromise between css rules and html .propertys for it to work
 java-help supports version 1 of CSS
 */
 
-
+/* */
+:root {
+	direction:rtl;
+}
 /* For page  */
 div.maindiv {
 	max-width:560px;

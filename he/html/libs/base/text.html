@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="he">
+<html lang="he" dir="rtl">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
@@ -14,7 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img alt="" height="32" src="../../../../img-guide/text.png" width="32"> <em>כלי טקסט</em>
+        <img class="iconlibs" src="../../../../icons/6464/tooltext.png" alt="#########" width="32" height="32"> <em>כלי טקסט</em>
       </h1>
       <table>
         <tbody>
@@ -51,9 +51,17 @@
               </td>
               <td>
                 <a href="../wiring/pin.html">הצמד</a><br>
+                <a href="../wiring/probe.html">בדיקה</a><br>
+                <a href="../wiring/tunnel.html">מנהרה</a><br>
                 <a href="../wiring/clock.html">שעון</a><br>
-                <a href="label.html">תווית</a><br>
-                <a href="../wiring/probe.html">בדיקה</a>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <strong>ספריית השערים</strong>
+              </td>
+              <td>
+                <a href="../gates/index.html">כל הרכיבים</a>
               </td>
             </tr>
             <tr>
@@ -61,11 +69,7 @@
                 <strong>ספריית זיכרון</strong>
               </td>
               <td>
-                <a href="../mem/flipflops.html">כפכף D/T/JK/SR</a><br>
-                <a href="../mem/register.html">הירשם</a><br>
-                <a href="../mem/counter.html">מונה</a><br>
-                <a href="../mem/shiftreg.html">רישום משמרות</a><br>
-                <a href="../mem/random.html">אקראי</a>
+                <a href="../gates/index.html">כל הרכיבים</a>
               </td>
             </tr>
             <tr>
@@ -74,7 +78,23 @@
               </td>
               <td>
                 <a href="../io/button.html">לחצן</a><br>
-                <a href="../io/led.html">LED</a>
+                <a href="../io/dipswitch.html">מתג טבילה</a><br>
+                <a href="../io/led.html">לד</a><br>
+                <a href="../io/ledbar.html">סרגל LED</a><br>
+                <a href="../io/rgbled.html">RGB LED</a><br>
+                <a href="../io/7seg.html">תצוגה בת 7 פלחים</a><br>
+                <a href="../io/dotmat.html">מטריצת LED</a><br>
+                <a href="../io/portio.html">Port I/O</a>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <strong>ספריית I/O נוספת</strong>
+              </td>
+              <td>
+                <a href="../ioextra/exswitch.html">מתג</a><br>
+                <a href="../ioextra/exslider.html">פוטנציומטר שקופיות דיגיטלי</a><br>
+                <a href="../ioextra/explarom.html">מערך לוגי ניתן לתכנות</a>
               </td>
             </tr>
           </tbody>
@@ -84,11 +104,40 @@
         עבור רכיבים שיכולים לקחת תווית אך לא הוקצה להם תווית כרגע, אתה יכול ללחוץ בכל מקום בתוך הרכיב כדי להוסיף תווית. אם כבר יש תווית, עליך ללחוץ בתוך התווית. אם תלחץ בנקודה שבה יש אינו כרגע תווית לעריכה, לוגיסים תיזום הוספה של א רכיב תווית חדש.
       </p>
       <p>
-        בגרסה הנוכחית של Logisim, תכונות עריכת טקסט הן עדיין די פרימיטיבי. בחירה של אזור טקסט בתוך תווית היא בלתי אפשרית. אין דרך להוסיף מעבר שורה לתווית.
+        בגרסה הנוכחית של Logisim, תכונות עריכת טקסט הן עדיין די פרימיטיבי. אין דרך להוסיף מעבר שורה לתווית. בחירת אזור טקסט בתוך תווית אינה אפשרית עם זאת, אתה יכול לעשות זאת בטבלת התכונות בשדה טקסט או תווית.
       </p>
       <h2>
         מאפיינים
       </h2>
+      <p>
+        תכונות הכלי יהיו תקפות רק עבור תוויות הממוקמות בכל מקום במעגל. כאשר מדובר בתווית של רכיב, התכונות המוגדרות על ידי הרכיב הן חיוניות.
+      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            טקסט
+          </dt>
+          <dd>
+            הטקסט המופיע בתווית. ניתן לערוך ערך זה ב- טבלת תכונות או, באמצעות כלי הטקסט, על הבד.
+          </dd>
+          <dt class="lib">
+            גופן
+          </dt>
+          <dd>
+            הגופן לשימוש בעת ציור התווית.
+          </dd>
+          <dt class="lib">
+            יישור אופקי
+          </dt>
+          <dd>
+            טכניקת המיקום האופקי של הטקסט ביחס למיקום הרשמי של התווית (היכן לחצו על העכבר ביצירת התווית). "שמאלה" פירושו שיש לצייר את הטקסט כך שהקצה השמאלי שלו נמצא במקום; "נכון" פירושו שהטקסט צריך להיות מצויר כך שהקצה הימני שלו נמצא במיקום; ו"מרכז" פירושו זאת יש לצייר את הטקסט כך שמרכזו (אופקי) יהיה ב- מקום.
+          </dd>
+          <dt class="lib">
+            יישור אנכי
+          </dt>
+          <dd></dd>
+        </dl>
+      </div>
       <p>
         התכונות של הכלי זהות לאלו של ה-<a href="label.html">רכיב התווית</a>. לתכונות אלו אין השפעה כאשר עורכים את התווית ברכיב קיים, אך הם מועברים לכל תוויות שנוצרו באמצעות כלי הטקסט.
       </p>
