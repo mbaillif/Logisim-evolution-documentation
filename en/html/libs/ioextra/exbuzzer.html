@@ -14,8 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/buzzer.png" alt="#########" width="32" height="32"> 
-		<em>Buzzer</em>
+        <img class="iconlibs" src="../../../../icons/6464/buzzer.png" alt="#########" width="32" height="32"> <em>Buzzer</em>
       </h1>
       <table>
         <tbody>
@@ -32,7 +31,7 @@
               <strong>Introduced:</strong>
             </td>
             <td>
-              xxxxxxx
+              2.15 in Logisim ITA Component
             </td>
           </tr>
           <tr>
@@ -49,75 +48,123 @@
         Behavior
       </h2>
       <p>
-       bla bla
-      </p>
-      <p>
-       bla bla
+        This component generates sound on your system's speakers. One of the inputs defines the frequency, another the volume, and the last one activates or deactivates the sound. You can choose the waveform by setting the <b class="property">Waveform</b> attribute.
       </p>
       <h2>
         Pins
       </h2>
-      <p>
-        bla bla
-      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            North edge:
+          </dt>
+          <dd>
+            Input bus: Duty cycle - Unsigned digital value which determines the duty cycle of the waveform. Data width in bit 8.
+          </dd>
+          <dt class="lib">
+            West edge: up
+          </dt>
+          <dd>
+            Input bus: Frequency - Unsigned numerical value that determines the sound frequency in Hz or dHz in accordance with the <b class="property">Frequency</b> property. Data width in bit 14.
+          </dd>
+          <dt class="lib">
+            West edge: in the center
+          </dt>
+          <dd>
+            Input: Select - If this input is at <b class="unov">1</b> the sound is activated and at <b class="zerov">0</b> it is stopped. Data width 1.
+          </dd>
+          <dt class="lib">
+            West edge: below
+          </dt>
+          <dd>
+            Bus d'entrée : Volume - Permet de régler le volume du son. La largeur de donnée est définie par l'attribut <b class="property">Largeur de donnée volume</b>.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Attributes
       </h2>
       <p>
-        bla bla
+        When the component is selected or being added, the <b class="tkeybd">arrow keys</b> alter its <b class="property">Facing</b> attribute.
       </p>
-      <dl>
-        <dt>
-          Facing
-        </dt>
-        <dd>
-         bla bla
-        </dd>
-        <dt>
-          High Duration
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Low Duration
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label Location
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label Font
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-      </dl>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Facing
+          </dt>
+          <dd>
+            The side of the component where its output pin should be.
+          </dd>
+          <dt class="lib">
+            Select Location
+          </dt>
+          <dd>
+            The location of the <b>duty cycle</b> pin in relation to the other pins.
+          </dd>
+          <dt class="lib">
+            frequency
+          </dt>
+          <dd>
+            Set the sound frequency in Hertz or decihertz in accordance with the <b class="property">Frequency</b> property. The minimum value is 20Hz and the maximum 20,000Hz.
+          </dd>
+          <dt class="lib">
+            volume bit width
+          </dt>
+          <dd>
+            Bits width of the volume control bus.
+          </dd>
+          <dt class="lib">
+            Label
+          </dt>
+          <dd>
+            The label text associated with the component.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font used to render the label.
+          </dd>
+          <dt class="lib">
+            Waveform
+          </dt>
+          <dd>
+            Selects the signal waveform. Choices are: sinusoidal, square, triangular, sawtooth, white noise.
+          </dd>
+          <dt class="lib">
+            Channel
+          </dt>
+          <dd>
+            Selects left, right or both output channels.
+          </dd>
+          <dt class="lib">
+            Smooth level
+          </dt>
+          <dd>
+            Low-pass filter level applied to the signal.
+          </dd>
+          <dt class="lib">
+            Smooth window width
+          </dt>
+          <dd>
+            Number of samples required to calculate the filter.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Poke Tool Behavior
       </h2>
       <p>
-        bla bla
+        Aucun.
       </p>
       <h2>
         Text Tool Behavior
       </h2>
       <p>
-        bla bla
+        Allows you to modify the label associated with the component.
       </p>
       <p>
-        <p><b>Back to</b> <a href="../index.html#hlibioextra">Library Reference</a></p>
+        <b>Back to</b> <a href="../index.html#hlibioextra">Library Reference</a>
       </p>
     </div>
   </body>

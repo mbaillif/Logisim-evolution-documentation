@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/</loc>
+  <lastmod>2023-08-22T20:09:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/about/index.html</loc>
+  <lastmod>2023-09-02T15:22:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/index.html</loc>
+  <lastmod>2023-08-29T13:43:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/index.html</loc>
+  <lastmod>2023-09-04T14:29:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/tutorial/index.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/gui/index.html</loc>
+  <lastmod>2023-08-29T13:43:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/index.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/feature/index.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/analyze/index.html</loc>
+  <lastmod>2023-08-29T13:43:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/index.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prop/index.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/log/index.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/verify/index.html</loc>
+  <lastmod>2023-08-22T20:10:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/index.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/index.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/opts/index.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/hdl_ip/index.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/jar/index.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/index.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/splitter.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/pin.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/probe.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/tunnel.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/pull.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/clock.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/poweronreset.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/constant.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/const01.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/notconnect.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/transist.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/transmis.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/wiring/extender.html</loc>
+  <lastmod>2023-08-22T20:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/gates/index.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/gates/not.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/gates/buffer.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/gates/basic.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/gates/xor.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/gates/controlled.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/gates/pla.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/plexers/index.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/plexers/mux.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/plexers/demux.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/plexers/decoder.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/plexers/priencod.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/plexers/selector.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/index.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/adder.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/subtractor.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/multiplier.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/divider.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/negator.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/comparator.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/shifter.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/bitadder.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/bitfinder.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpadder.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpsubtractor.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpmultiplier.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpdivider.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpnegator.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpcomparator.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpfptoint.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/arith/fpinttofp.html</loc>
+  <lastmod>2023-08-22T20:10:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/index.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/flipflops.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/register.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/counter.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/shiftreg.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/random.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/ram.html</loc>
+  <lastmod>2023-09-02T15:22:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/rom.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/index.html</loc>
+  <lastmod>2023-09-04T14:29:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/button.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/dipswitch.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/joystick.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/keyboard.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/led.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/ledbar.html</loc>
+  <lastmod>2023-09-04T14:29:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/rgbled.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/7seg.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/hexdig.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/dotmat.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/tty.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/portio.html</loc>
+  <lastmod>2023-08-22T20:10:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/io/rgbvideo.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/ioextra/index.html</loc>
+  <lastmod>2023-09-02T15:22:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/ioextra/exswitch.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/ioextra/exbuzzer.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/ioextra/exslider.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/ioextra/exdigscop.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/ioextra/explarom.html</loc>
+  <lastmod>2023-08-29T13:43:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/soc/index.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/soc/socnios2s.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/soc/socbus.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/tcl/index.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/tutorial/tutor-orient.html</loc>
+  <lastmod>2023-08-22T20:10:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/tutorial/tutor-gates.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/tutorial/tutor-wires.html</loc>
+  <lastmod>2023-08-22T20:10:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/tutorial/tutor-text.html</loc>
+  <lastmod>2023-08-22T20:10:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/tutorial/tutor-test.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/gui/gui-canvas.html</loc>
+  <lastmod>2023-08-29T13:43:52+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/gui/gui-menu.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/gui/gui-explore.html</loc>
+  <lastmod>2023-08-29T13:43:52+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/gui/gui-toolsbar.html</loc>
+  <lastmod>2023-09-03T18:55:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/gui/gui-attribut.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/gui/gui-attrcomp.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/sub-creating.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/sub-using.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/sub-appear.html</loc>
+  <lastmod>2023-08-22T20:10:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/sub-personalise.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/sub-debug.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/sub-library.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/feature/fet-creating.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/feature/fet-splitting.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/feature/fet-colors.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/feature/fet-autolabel.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/feature/fet-matrix.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/analyze/ana-open.html</loc>
+  <lastmod>2023-08-29T13:43:52+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/analyze/ana-table.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/analyze/ana-expr.html</loc>
+  <lastmod>2023-08-22T20:10:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/analyze/ana-gen.html</loc>
+  <lastmod>2023-08-22T20:10:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-hex.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-poke.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-menu.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prop/delays.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prop/oscillate.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prop/shortcome.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/log/timetable.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/log/selection.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/verify/sub.html</loc>
+  <lastmod>2023-08-29T13:43:55+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/verify/other.html</loc>
+  <lastmod>2023-08-22T20:10:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/verify/multi.html</loc>
+  <lastmod>2023-08-22T20:10:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/verify/test.html</loc>
+  <lastmod>2023-08-29T13:43:55+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/file.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/edit.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/project.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/simulate.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/winhelp.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/pref-template.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/pref-intl.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/pref-window.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/pref-layout.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/pref-simulation.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/pref-exp.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/pref-cmdline.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/prefs/</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/opts/opts-simulate.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/opts/opts-toolbar.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/opts/opts-mouse.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/hdl_ip/vhdlcomp.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/hdl_ip/questa.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/hdl_ip/simulation.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/hdl_ip/testbenchs.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/jar/incr.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/jar/library.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/jar/simpctr.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/jar/counter.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/jar/guide.html</loc>
+  <lastmod>2023-08-22T20:10:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/tutorial/tutor-step.html</loc>
+  <lastmod>2023-08-29T13:43:54+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/mem/Ramappearance.html</loc>
+  <lastmod>2023-08-22T20:10:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/soc/minimal.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/soc/assembler.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/soc/disassembler.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/subcirc/dynamic_components.html</loc>
+  <lastmod>2023-08-22T20:10:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/tcl/redsconsole.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/tcl/tclgeneric.html</loc>
+  <lastmod>2023-08-22T20:10:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/base/poke.html</loc>
+  <lastmod>2023-09-03T18:55:23+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/base/select.html</loc>
+  <lastmod>2023-09-04T14:29:47+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/base/text.html</loc>
+  <lastmod>2023-09-03T18:55:23+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/base/wiring.html</loc>
+  <lastmod>2023-09-03T18:55:23+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/analyze/ana-expimp.html</loc>
+  <lastmod>2023-08-22T20:10:16+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-filepanel.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-v2raw.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-v3word.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-v3byte.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-vbinary.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/mem/mem-vascii.html</loc>
+  <lastmod>2023-08-22T20:10:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/exportab.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/menu/printertab.html</loc>
+  <lastmod>2023-08-29T13:43:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/guide/assembly/index.html</loc>
+  <lastmod>2023-08-22T20:10:17+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.baillifard.com/logisim/en/html/libs/base/index.html</loc>
+  <lastmod>2023-09-03T18:55:23+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>

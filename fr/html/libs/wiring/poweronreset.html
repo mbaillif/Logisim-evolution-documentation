@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2021-07-18T10:59:00.000000000">
+    <meta name="changed" content="2023-10-06T10:59:00.000000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -40,7 +40,7 @@
               <strong>Apparence&nbsp;:</strong>
             </td>
             <td valign="top">
-              <img class="notscal" src="../../../../img-libs/por.png" width="128" height="23" alt="#########">
+              <img class="appearancelibs" src="../../../../img-libs/por.png" alt="#########" width="64" height="64"> <img class="notscal" src="../../../../img-libs/por1.png" width="128" height="23" alt="#########">
             </td>
           </tr>
         </tbody>
@@ -49,8 +49,8 @@
         Comportement
       </h2>
       <p>
-        Le composant POR émet un signal haut au démarrage de la simulation durant un délai défini par la propriété <b class="property">Temps Reset</b> . Cela se passe soit à l'ouverture du projet par logisim soit quand on utilise le menu <a href="../../guide/menu/simulate.html">Redémarer la simulation</a>.<br>
-        En mode pas-à-pas <b class="menu"> Menu Simulation | Simulation pas-à-pas </b> la transition aura lieu après le délai, mais en synchronisation avec l'appui de la touche (<b class="tkeybd">Ctrl-I </b>).
+        Le composant POR émet un signal selon la propriété <b class="property">Transition</b> au démarrage de la simulation durant un délai défini par la propriété <b class="property">Temps Reset</b> . Cela se passe soit à l'ouverture du projet par logisim soit quand on utilise le menu <b class="menu">|&nbsp;<a href="../../guide/menu/simulate.html"> Redémarer la simulation</a>&nbsp;|</b> ou encore si on utilise l'outil Pousser(<img class="icontxt" src="../../../../icons/1616/toolpoke.png" alt="#########">) sur le composant.<br>
+        En mode pas-à-pas <b class="menu">|&nbsp;Menu Simulation&nbsp;|</b> → <b class="menu">|&nbsp;Simulation pas-à-pas&nbsp;|</b> la transition aura lieu après le délai, mais en synchronisation avec l'appui de la touche (<b class="tkeybd">Ctrl-I </b>).
       </p>
       <h2>
         Broches
@@ -72,11 +72,23 @@
         <dd>
           Le côté du composant dessiné où doit se trouver sa broche de sortie.
         </dd>
+		<dt class="lib">
+          Format du dessins
+        </dt>
+        <dd>
+          Permet de sélectionner différentes dimensions d'affichage de ce composant.
+        </dd>
+		<dt class="lib">
+          Transistion
+        </dt>
+        <dd>
+          Définis la transition (<b class="vprop">haut vers bas, Bas vers haut</b>) après le temps règlé par la propriété <b class="property">Temps reset</b>.
+        </dd>
         <dt class="lib">
           Temps reset
         </dt>
         <dd>
-          Le temps en seconde avant que le signal descende au niveau bas (0)
+          Le temps en seconde avant la transition du signal déterminée par la propriétée <b class="property">Transistion</b>.
         </dd>
         </dl>
 </div>		
@@ -84,10 +96,10 @@
             Comportement de l'outil pousser 
           </h2>
           <p>
-            Aucun.
+            L'outil pousser déclanche un reset d'une durée déterminée par la propriétée <b class="property">Temps reset</b>.
           </p>
           <h2>
-            Comportement de l'outil text
+            Comportement de l'outil texte
           </h2>
           <p>
             Aucun.

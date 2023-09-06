@@ -32,7 +32,7 @@
               <strong>Introduced:</strong>
             </td>
             <td>
-              ...
+              2.14.6
             </td>
           </tr>
           <tr>
@@ -40,7 +40,7 @@
               <strong>Appearance:</strong>
             </td>
             <td valign="top">
-              <img class="notscal" src="../../../../img-libs/por.png" alt="#########">
+               <img class="appearancelibs" src="../../../../img-libs/por.png" alt="#########" width="64" height="64"> <img class="notscal" src="../../../../img-libs/por1.png" width="128" height="23" alt="#########">
             </td>
           </tr>
         </tbody>
@@ -49,7 +49,8 @@
         Behavior
       </h2>
       <p>
-        The POR component emits a high signal during a time defined by the property <b class="property">POR-Time</b> at the start of the simulation. This happens either when the project is opened by logisim or when you use the <a href="../../guide/menu/simulate.html">Restart simulation</a> menu. In step-by-step mode <b class="menu">| Simulation menu | Step-by-step simulation |</b> the transition will take place after the delay but in synchronization with the pressing of the key (<b class="tkeybd">Ctrl-I</b>).  
+        The POR component emits a signal according to the <b class="property">Port transition</b> attribute at simulation startup for a period defined by the <b class="property">Reset Time</b> attribute. This happens either when the project is opened by logisim or when you use the <a href="../../guide/menu/simulate.html">Restart simulation</a> menu or using the Pook tool(<img class="icontxt" src="../../../../icons/1616/toolpoke.png" alt="#########">). <br>
+		In step-by-step mode the transition will take place after the delay but in synchronization with the pressing of the key (<b class="tkeybd">Ctrl-I</b>).  
       </p>
       <h2>
         Pins
@@ -61,7 +62,7 @@
         Attributes
       </h2>
       <p>
-        When the component is selected or added, the arrow keys change its <b class="property">Facing</b> attribute. The side of the drawn component where its output pin should be located. The time in seconds before the signal goes down to the low level (<b class="zerov">0</b>).
+        When the component is selected or added, the arrow keys change its <b class="property">Facing</b> attribute.
       </p>
 	  <div class="attliste">
       <dl>
@@ -70,6 +71,18 @@
         </dt>
         <dd>
           The side of the drawn component where its output pin should be located.
+        </dd>
+		<dt class="lib">
+          Draw Size
+        </dt>
+        <dd>
+          Select different display dimensions for this component.
+        </dd>
+		<dt class="lib">
+          Port transistion
+        </dt>
+        <dd>
+          Sets the transition (<b class="vprop">up to down, down to up</b>) after the time set by the <b class="property">Time reset</b> property.
         </dd>
         <dt class="lib">
           POR-Time

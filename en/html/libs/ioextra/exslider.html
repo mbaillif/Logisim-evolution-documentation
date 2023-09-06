@@ -14,8 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/slider.png" alt="#########" width="32" height="32"> 
-		<em>Slider</em>
+        <img class="iconlibs" src="../../../../icons/6464/slider.png" alt="#########" width="32" height="32"> <em>Slider</em>
       </h1>
       <table>
         <tbody>
@@ -32,7 +31,7 @@
               <strong>Introduced:</strong>
             </td>
             <td>
-              xxxxxxx
+              2.15 in Logisim ITA Component
             </td>
           </tr>
           <tr>
@@ -40,7 +39,7 @@
               <strong>Appearance:</strong>
             </td>
             <td valign="top">
-              <img class="appearancelibs" src="../../../../img-libs/slider.png" alt="#########" width="64" height="64">
+              <img class="appearancelibs" src="../../../../img-libs/slider.png" alt="#########">
             </td>
           </tr>
         </tbody>
@@ -49,75 +48,96 @@
         Behavior
       </h2>
       <p>
-       bla bla
+        When the cursor is moved, its position is progressively copied to the output port. The value for the minimum position is 0. The value for the maximum position is the maximum of the <b class="property">Data Bits</b> attribute.
       </p>
       <p>
-       bla bla
+        The direction in which the cursor moves from minimum to maximum is defined by the <b class="property">Direction</b> attribute.
       </p>
       <h2>
         Pins
       </h2>
-      <p>
-        bla bla
-      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            East edge:
+          </dt>
+          <dd>
+            Output: Data - This pin presents a value corresponding to the cursor position.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Attributes
       </h2>
       <p>
-        bla bla
+        When the component is selected or being added, the <b class="tkeybd">arrow keys</b> alter its <b class="property">Facing</b> attribute.
       </p>
-      <dl>
-        <dt>
-          Facing
-        </dt>
-        <dd>
-         bla bla
-        </dd>
-        <dt>
-          High Duration
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Low Duration
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label Location
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label Font
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-      </dl>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Facing
+          </dt>
+          <dd>
+            The side of the component where its output pin should be.
+          </dd>
+          <dt class="lib">
+            Data Bits
+          </dt>
+          <dd>
+            Output bus data width.
+          </dd>
+          <dt class="lib">
+            Radix
+          </dt>
+          <dd>
+            Allows you to define the base in which the values will be represented.
+          </dd>
+          <dt class="lib">
+            Label
+          </dt>
+          <dd>
+            The text within the label associated with the component.
+          </dd>
+          <dt class="lib">
+            Label Location
+          </dt>
+          <dd>
+            The location of the label relative to the component.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font with which to render the label.
+          </dd>
+          <dt class="lib">
+            Label Visible
+          </dt>
+          <dd>
+            Whether the label is displayed or not.
+          </dd>
+          <dt class="lib">
+            Direction
+          </dt>
+          <dd>
+            Specifies the direction in which the cursor moves from its minimum to its maximum value.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Poke Tool Behavior
       </h2>
       <p>
-        bla bla
+        A <b class="tkeybd">left-click</b> held on the cursor moves it.
       </p>
       <h2>
         Text Tool Behavior
       </h2>
       <p>
-        bla bla
+        Allows you to modify the label associated with the component.
       </p>
       <p>
-        <p><b>Back to</b> <a href="../index.html#hlibioextra">Library Reference</a></p>
+        <b>Back to</b> <a href="../index.html#hlibioextra">Library Reference</a>
       </p>
     </div>
   </body>

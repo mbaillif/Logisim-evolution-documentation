@@ -14,7 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/pla0.png" alt="#########" border=0 height="32" width="32"> <em>Programmable logic array</em>
+        <img class="iconlibs" src="../../../../icons/6464/pla0.png" alt="#########" border="0" height="32" width="32"> <em>Programmable logic array</em>
       </h1>
       <table>
         <tbody>
@@ -48,88 +48,107 @@
         Behavior
       </h2>
       <p>
-	    The <b>Programmable Logic Array</b> (PLA) will present on its output the result of a combinatorial logic function. If one of the inputs is in error (<b class="evalue">E</b>) or undefined (<b class="uvalue">U</b>), it will consider that all its inputs are at <b class="unov">1</b>. This component resembles a ROM, and you need to enter the programming in a very similar way. Programming can be exported and imported from a file.
-In the Input/Output library (extra), there's a PLA coposant that better represents the internal workings of these components.
+        The <b>Programmable Logic Array</b> (PLA) will present on its output the result of a combinatorial logic function. If one of the inputs is in error (<b class="evalue">E</b>) or undefined (<b class="uvalue">U</b>), it will consider that all its inputs are at <b class="unov">1</b>. This component resembles a ROM, and you need to enter the programming in a very similar way. Programming can be exported and imported from a file.<br>
+        In the Input/Output library (extra), there's a PLA composant that better represents the internal workings of these components.
       </p>
-	  <h2>
+      <p>
+        Once you've defined the number of input lines with the <b class="property">Bit width in</b> attribute and the number of output lines with the <b class="property">Bit with out</b> attribute, you can open this window by right-clicking on the PLA to open the context menu and selecting the menu <b class="menu">|&nbsp;Modify PLA program&nbsp;|</b>.
+      </p>
+      <p>
+        <img class="notscal" src="../../../img-libs/plaeditor.png" alt="#########"><br>
+      </p>
+      <p>
+        Click on the <b class="button">&nbsp;Add Row&nbsp;</b> button to create the first line of your program. You can already add other lines, or add them as you go along. The <b class="button">&nbsp;Remove&nbsp;</b> button deletes the line. You can see the button columns for programming inputs and the button columns for programming outputs. If you click on them, they will alternately display 0,1,x. 0 and 1 represent the logic level and x means unimportant.
+      </p>
+      <p>
+        For example, in the first line of the figure above, you'll see the combination 0.x.x for inputs and 0.0.0 for outputs. This means that if input 2 is set to 0, inputs 1 and 0 are irrelevant, and the value 0.0.0 will be delivered on the outputs.<br>
+        The comment column allows you to add a text that will be visible on the PLA when the line combination is active.
+      </p>
+      <p>
+        The <b class="button">&nbsp;Export&nbsp;</b> and <b class="button">&nbsp;Import&nbsp;</b> buttons respectively allow you to export the program or import it from a file.<br>
+        The <b class="button">&nbsp;OK&nbsp;</b> button confirms that the program has been saved and closes the window.<br>
+        The <b class="button">&nbsp;Cancel&nbsp;</b> button cancels the program and closes the window.<br>
+      </p>
+      <h2>
         Pins (assuming component faces east)
       </h2>
-	  <div class="attliste">
-      <dl>
-	   <dt class="lib">
-          West edge:
-        </dt>
-        <dd>
-		  The component input,  Bit width matches <b class="property">Bit width in</b> attribute. 
-		</dd>
-		<dt class="lib">
-          East edge:
-        </dt>
-        <dd>
-		  The component output,  Bit width matches <b class="property">Bit width out</b> attribute. 
-		</dd>
-	  </dl>
-      <h2>
-        Attributes
-      </h2>
-      <p>
-	    When the component is selected or being added, the arrow keys alter its <b class="property">Facing</b> attribute.
-      </p>
-	  <div class="attliste">
-	  <dl>
-         <dt class="lib">
-          Facing
-        </dt>
-        <dd>
-          The direction of the component, its output relative to input.
-        </dd>
-		<dt class="lib">
-          Bit width in
-        </dt>
-        <dd>
-          The bit width of the component's inputs.
-        </dd>
-		<dt class="lib">
-          Bit width out
-        </dt>
-        <dd>  
-		  The bit width of the component's output.
-        </dd>
-		<dt class="lib">
-          Program
-        </dt>
-        <dd>
-		  Opens the programming window.
-        </dd>
-		<dt class="lib">
-          Label
-        </dt>
-        <dd>
-          The text within the label associated with the gate.
-        </dd>
-        <dt class="lib">
-          Label Font
-        </dt>
-        <dd>
-          The font with which to render the label.
-        </dd>
-	  </dl>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            West edge:
+          </dt>
+          <dd>
+            The component input, Bit width matches <b class="property">Bit width in</b> attribute.
+          </dd>
+          <dt class="lib">
+            East edge:
+          </dt>
+          <dd>
+            The component output, Bit width matches <b class="property">Bit width out</b> attribute.
+          </dd>
+        </dl>
+        <h2>
+          Attributes
+        </h2>
+        <p>
+          When the component is selected or being added, the arrow keys alter its <b class="property">Facing</b> attribute.
+        </p>
+        <div class="attliste">
+          <dl>
+            <dt class="lib">
+              Facing
+            </dt>
+            <dd>
+              The direction of the component, its output relative to input.
+            </dd>
+            <dt class="lib">
+              Bit width in
+            </dt>
+            <dd>
+              The bit width of the component's inputs.
+            </dd>
+            <dt class="lib">
+              Bit width out
+            </dt>
+            <dd>
+              The bit width of the component's output.
+            </dd>
+            <dt class="lib">
+              Program
+            </dt>
+            <dd>
+              Opens the programming window.
+            </dd>
+            <dt class="lib">
+              Label
+            </dt>
+            <dd>
+              The text within the label associated with the gate.
+            </dd>
+            <dt class="lib">
+              Label Font
+            </dt>
+            <dd>
+              The font with which to render the label.
+            </dd>
+          </dl>
+        </div>
+        <h2>
+          Poke Tool Behavior
+        </h2>
+        <p>
+          None.
+        </p>
+        <h2>
+          Text Tool Behavior
+        </h2>
+        <p>
+          None.
+        </p>
+        <p>
+          <b>Back to</b> <a href="../index.html#hlibgates">Library Reference</a>
+        </p>
       </div>
-      <h2>
-        Poke Tool Behavior
-      </h2>
-      <p>
-        None.
-      </p>
-      <h2>
-        Text Tool Behavior
-      </h2>
-      <p>
-	    None.
-      </p>
-      <p>
-        <b>Back to</b> <a href="../index.html#hlibgates">Library Reference</a>
-      </p>
     </div>
   </body>
 </html>

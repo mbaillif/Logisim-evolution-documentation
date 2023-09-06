@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2023-08-20T32:36:22.532000000">
-    <meta name="changed" content="2023-08-20T32:36:22.532000000">
+    <meta name="changed" content="2023-09-05T32:36:22.532000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
@@ -14,8 +14,7 @@
   <body>
     <div class="maindiv">
       <h1>
-        <img class="iconlibs" src="../../../../icons/6464/switch.png" alt="#########" width="32" height="32"> 
-		<em>Switch</em>
+        <img class="iconlibs" src="../../../../icons/6464/switch.png" alt="#########" width="32" height="32"> <em>Switch</em>
       </h1>
       <table>
         <tbody>
@@ -32,7 +31,7 @@
               <strong>Introduced:</strong>
             </td>
             <td>
-              xxxxxxx
+              2.15 in Logisim ITA Component
             </td>
           </tr>
           <tr>
@@ -49,75 +48,87 @@
         Behavior
       </h2>
       <p>
-       bla bla
-      </p>
-      <p>
-       bla bla
+        This component simulates a switch. When it's open, its west output is set to the undefined state (<b class="uvalue">U</b>), and when it's closed it copies the state of its east input to its output.
       </p>
       <h2>
         Pins
       </h2>
-      <p>
-        bla bla
-      </p>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            East edge:
+          </dt>
+          <dd>
+            Output: Has undefined state (<b class="uvalue">U</b>) when switch is open and copies input state when switch is closed. Data width in bit according to <b class="property">Data Bits</b> attribute.
+          </dd>
+          <dt class="lib">
+            West edge:
+          </dt>
+          <dd>
+            Input: Signal to be copied to output when switch is closed. Data width in bit according to <b class="property">Data Bits</b> attribute.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Attributes
       </h2>
       <p>
-        bla bla
+        When the component is selected or being added, the <b class="tkeybd">arrow keys</b> alter its <b class="property">Facing</b> attribute.
       </p>
-      <dl>
-        <dt>
-          Facing
-        </dt>
-        <dd>
-         bla bla
-        </dd>
-        <dt>
-          High Duration
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Low Duration
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label Location
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-        <dt>
-          Label Font
-        </dt>
-        <dd>
-          bla bla
-        </dd>
-      </dl>
+      <div class="attliste">
+        <dl>
+          <dt class="lib">
+            Facing
+          </dt>
+          <dd>
+            The side of the component where its output pin should be.
+          </dd>
+          <dt class="lib">
+            Data Bits
+          </dt>
+          <dd>
+            The bit width of the value placed onto the wire.
+          </dd>
+          <dt class="lib">
+            Color
+          </dt>
+          <dd>
+            The color of the switch background.
+          </dd>
+          <dt class="lib">
+            Label
+          </dt>
+          <dd>
+            The text within the label associated with the component.
+          </dd>
+          <dt class="lib">
+            Label Location
+          </dt>
+          <dd>
+            The location of the label relative to the component.
+          </dd>
+          <dt class="lib">
+            Label Font
+          </dt>
+          <dd>
+            The font with which to render the label.
+          </dd>
+        </dl>
+      </div>
       <h2>
         Poke Tool Behavior
       </h2>
       <p>
-        bla bla
+        Each <b class="tkeybd">left-click</b> on the switch toggles it from one state to another.
       </p>
       <h2>
         Text Tool Behavior
       </h2>
       <p>
-        bla bla
+        Allows you to modify the label associated with the component.
       </p>
       <p>
-        <p><b>Back to</b> <a href="../index.html#hlibioextra">Library Reference</a></p>
+        <b>Back to</b> <a href="../index.html#hlibioextra">Library Reference</a>
       </p>
     </div>
   </body>
