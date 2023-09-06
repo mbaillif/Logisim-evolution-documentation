@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="created" content="2023-08-20T32:36:22.532000000">
-    <meta name="changed" content="2023-08-20T32:36:22.532000000">
+    <meta name="created" content="2023-09-06T32:36:22.532000000">
+    <meta name="changed" content="2023-09-06T32:36:22.532000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
@@ -32,7 +32,7 @@
               <strong>Introduced:</strong>
             </td>
             <td>
-              xxxxxxx
+              2.15 in Logisim ITA Component
             </td>
           </tr>
           <tr>
@@ -49,72 +49,110 @@
         Behavior
       </h2>
       <p>
-       bla bla
+       The Programmable Logic Array (PLA) will present on its output the result of a combinatorial logic function. If one of the inputs is in error (<b class="evalue">E</b>) or undefined (<b class="uvalue">U</b>), it will present the error status on the outputs concerned (<b class="evalue">E</b>). In the Input/Output library, there's a different PLA component, more organized like a ROM.
       </p>
       <p>
-       bla bla
+        After defining the number of input lines with the  <b class="property">Bit width in</b> attribute and the number of output lines with the  <b class="property">Bit width out</b> attribute, you can activate this window by clicking on the <b class="property">Content</b> property, right-clicking on the PLA to open the context menu and selecting the <b class="menu">|&nbsp;Modify content&nbsp;|</b> menu.
       </p>
+	  <p>
+	   <img class="notscal" src="../../../img-libs/plaeditor2.png" alt="#########"><br>
+	  </p>
+	  <p>
+	  	This circuit is designed to calculate the sum of the minterms of a function. In the matrix on the left, you can click on the intersections to connect the values or their complement to the AND gates to construct the minterms.
+	  </p>
+	  <p>
+        For example, in the figure above, the first line on the left is programmed to perform the <img class="intxt1" src="../../../../img-libs/mint0.png" alt="#########"> minterms and the second line <img class="intxt1" src="../../../../img-libs/mint1.png" alt="#########">.
+        The panel represents a simplified version of the diagram, so you should understand the result of programming the first two lines as follows</p>
+	  <p>
+	  <img class="notscal" src="../../../../img-libs/plaeditor3.png" alt="#########"></p>
+	  <p>
+	    In the matrix on the right, click at the intersections to specify the functions you wish to sum with OR gates. As before, the panel simplifies the schematic and you need to see OR gates with multiple inputs.
+	  </p>
       <h2>
         Pins
       </h2>
-      <p>
-        bla bla
-      </p>
+       <div class="attliste">
+      <dl>
+	   <dt class="lib">
+          East edge 
+        </dt>
+        <dd>
+		  Input: An input bus which receives values for the programmed function. It will have a data width in bits equal to the <b class="property">Bit width in</b> property.
+        </dd>
+		<dt class="lib">
+          West edge
+        </dt>
+        <dd>
+		  Output: An output bus which provides the result of the programmed function. It will have a data width in bits equal to the <b class="property">Bit width out</b> property.
+        </dd>
+	  </dl>
+	  </div>
       <h2>
         Attributes
       </h2>
-      <p>
-        bla bla
-      </p>
+       <div class="attliste">
       <dl>
-        <dt>
-          Facing
+        <dt class="lib">
+          Bit width in
         </dt>
         <dd>
-         bla bla
+		  The bit width of the component's inputs. 
         </dd>
-        <dt>
-          High Duration
+        <dt class="lib">
+          Number of And gates
         </dt>
         <dd>
-          bla bla
+          Define the number of AND gates, equal to the number of minterms used to provide the function solution.
         </dd>
-        <dt>
-          Low Duration
+        <dt class="lib">
+          Bit width out
         </dt>
         <dd>
-          bla bla
+          The bit width of the component's output. 
         </dd>
-        <dt>
-          Label
+        <dt class="lib">
+          Label 
         </dt>
         <dd>
-          bla bla
+          The text within the label associated with the component. 
         </dd>
-        <dt>
-          Label Location
+		<dt class="lib">
+          Label Font 
         </dt>
         <dd>
-          bla bla
+          The font with which to render the label. 
         </dd>
-        <dt>
-          Label Font
+        <dt class="lib">
+          Label Visible 
         </dt>
         <dd>
-          bla bla
+          Whether the label is displayed or not. 
+        </dd>
+        <dt class="lib">
+          Contents
+        </dt>
+        <dd>
+          Opens the content programming window.
+        </dd>
+		 <dt class="lib">
+          Select
+        </dt>
+        <dd>
+          Determines whether the Select signal activates PLA at high level (<b class="unov">1</b>) or low level (<b class="zerov">0</b>).
         </dd>
       </dl>
+	  </div>
       <h2>
         Poke Tool Behavior
       </h2>
       <p>
-        bla bla
+        None.
       </p>
       <h2>
         Text Tool Behavior
       </h2>
       <p>
-        bla bla
+        Allows you to modify the label associated with the component.
       </p>
       <p>
         <p><b>Back to</b> <a href="../index.html#hlibioextra">Library Reference</a></p>
