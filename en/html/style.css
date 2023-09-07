@@ -74,9 +74,7 @@ img.appearancelibslarge{
 }
 /* For img apparence upper of the library cards  */
 img.appearancelibshaut{
-	
 	vertical-align:middle;
-
 }
 
 div.twodiv{
@@ -320,6 +318,14 @@ b.unov {
 }
 b.zerov {
 	 color:#008000;
+}
+
+/* Color for code */
+pre.code {
+	 color:#0A400E
+}
+b.comment {
+	 color:#0764A6;
 }
 
 tr.tblvertitl{

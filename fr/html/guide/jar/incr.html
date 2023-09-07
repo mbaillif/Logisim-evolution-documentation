@@ -128,16 +128,25 @@ import com.cburch.logisim.instance.StdAttr;
 <b class="comment">/** Ce composant prend une entrée multibits et émet la valeur qui la suit en code
   * Gray. Par exemple, pour une entrée 0100, la sortie est 1100 */</b>
 class GrayIncrementer extends InstanceFactory {
-    <b class="comment">/* Notez qu'il n'y a pas de variables d'instance. Une seule instance de 
-     * cette classe est créée, qui gère toutes les instances du composant. 
-     * Toute information associée à des instances individuelles doit être 
-     * gérée au moyen d'attributs. Pour GrayIncrementer, chaque instance a une
-     * "largeur de bit" avec laquelle elle travaille, et nous aurons donc cet 
-         attribut. */</b>
-
+<b class="comment">  /**
+   * Identifiant unique de l'outil, utilisé comme référence dans les fichiers de projet.
+   *  Ne PAS modifier car cela empêcherait le chargement des fichiers de projet.
+   *
+   *  La valeur de l'identifiant doit OBLIGATOIREMENT être une chaîne unique parmi 
+   *  tous les outils.
+   */ </b>
+  public static final String _ID = "Gray Code Incrementer";
+  
+   <b class="comment">/* Notez qu'il n'y a pas de variables d'instance. Une seule instance de 
+    * cette classe est créée, qui gère toutes les instances du composant. 
+    * Toute information associée à des instances individuelles doit être 
+    * gérée au moyen d'attributs. Pour GrayIncrementer, chaque instance a une
+    * "largeur de bit" avec laquelle elle travaille, et nous aurons donc cet 
+    * attribut. */</b>
+	
     <b class="comment">/** Le constructeur configure le factory. */</b>
     GrayIncrementer() {
-        super("Gray Code Incrementer");
+        super(_ID);
                 
        <b class="comment"> /* C'est ainsi que nous pouvons définir les attributs des GrayIncrementers.
          * Dans ce cas, il n'y a qu'un seul attribut - la largeur - dont la valeur
@@ -156,8 +165,7 @@ class GrayIncrementer extends InstanceFactory {
          * (comme c'est typiquement le cas pour Logisim), qui se trouve être au
          * centre du bord est. Ainsi, le coin supérieur gauche de la boîte 
          * englobante se trouve à 30 pixels à l'ouest et à 15 pixels au nord de 
-         * l'emplacement de la souris. */</b>
-                
+         * l'emplacement de la souris. */</b>                
         setOffsetBounds(Bounds.create(-30, -15, 30, 30));
         
         <b class="comment">/* Les ports sont des emplacements où des fils peuvent être connectés 
@@ -168,52 +176,12 @@ class GrayIncrementer extends InstanceFactory {
          * ou un attribut (comme ici). */</b>
                                    
         setPorts(new Port[] {
-                new Port(-30, 0, Port.INPUT, StdAttr.WIDTH),
+                new Port(-30, 0, Port.INPUT, StdAttr.WIDTH),  
                 new Port(0, 0, Port.OUTPUT, StdAttr.WIDTH),
             });
     }
-
-    <b class="comment">/** Calcule la sortie actuelle pour ce composant.
-      * Cette méthode est invoquée chaque fois que l'une des entrées change de
-      *     valeur ; elle peut également être invoquée dans d'autres circonstances,
-      *     même s'il n'y a aucune raison de s'attendre à ce qu'elle change 
-      * quoi que ce soit. */</b>
-    public void propagate(InstanceState state) {
-        
-        <b class="comment">/* Tout d'abord, nous récupérons la valeur introduite dans l'entrée. 
-         * Notez que dans l'invocation setPorts ci-dessus, l'entrée du 
-         * composant était incluse à l'index 0 dans le tableau de paramètres, 
-         * nous utilisons donc 0 comme paramètre ci-dessous. */</b>
-        Value in = state.getPort(0);
-        
-        <b class="comment">/* Maintenant, calculez la sortie. Nous avons confié cette tâche à 
-         * une méthode helper, car la même logique est nécessaire pour les 
-         * autres composants de la bibliothèque. */</b>
-        Value out = nextGray(in);
-        
-       <b class="comment"> /* Enfin, nous propageons la sortie dans le circuit. Le premier 
-         * paramètre est 1 car dans notre liste de ports (configurée par 
-         * l'invocation de setPorts ci-dessus) la sortie est à l'index 1.
-         * Le deuxième paramètre est la valeur que nous voulons envoyer 
-         * sur ce port. Et le dernier paramètre est son "délai" - 
-         * le nombre d'étapes nécessaires pour que la sortie soit mise à jour 
-         * après son entrée. */</b>
-        state.setPort(1, out, out.getWidth() + 1);
-    }
-
-    <b class="comment">/** Indique comment une instance individuelle doit apparaître sur 
-            le canevas. */</b>
-    public void paintInstance(InstancePainter painter) {
-        
-        <b class="comment">/* Il se trouve que InstancePainter contient plusieurs méthodes de 
-         * commodité pour le dessin, et nous les utiliserons ici. Souvent, vous
-         * voudrez récupérer l'objet Graphics (painter.getGraphics) afin de 
-         * dessiner directement sur le canevas. */</b>
-        painter.drawRectangle(painter.getBounds(), "G+1");
-        painter.drawPorts();
-    }
-    
-    <b class="comment">/** Calcule la valeur du code de Gray suivante dans la séquence après la
+	
+     <b class="comment">/** Calcule la valeur du code de Gray suivante dans la séquence après la
       * précédente. Cette méthode statique ne fait que manipuler des bits ;
       * elle n'a pas grand-chose à voir avec Logisim, si ce n'est qu'elle 
       * manipule les objets Value et BitWidth. */</b>
@@ -221,19 +189,59 @@ class GrayIncrementer extends InstanceFactory {
         BitWidth bits = prev.getBitWidth();
         if(!prev.isFullyDefined()) return Value.createError(bits);
         int x = prev.toIntValue();
-        int ct = (x &gt;&gt; 16) ^ x; // compute parity of x
+        int ct = (x &gt;&gt; 16) ^ x; // calculer la parité de x
         ct = (ct &gt;&gt; 8) ^ ct;
         ct = (ct &gt;&gt; 4) ^ ct;
         ct = (ct &gt;&gt; 2) ^ ct;
         ct = (ct &gt;&gt; 1) ^ ct;
-        if((ct &amp; 1) == 0) { <b class="comment">// si la parité est paire, retourner le bit de 1</b>
+        if((ct &amp; 1) == 0) { <b class="comment"> // si la parité est paire, retourner le bit de 1</b>
             x = x ^ 1;
         } else { // else flip bit just above last 1
-            int y = x ^ (x &amp; (x - 1)); <b class="comment">// calculer d'abord le dernier 1</b>
+            int y = x ^ (x &amp; (x - 1)); <b class="comment"> // calculer d'abord le dernier 1</b>
             y = (y &lt;&lt; 1) &amp; bits.getMask();
             x = (y == 0 ? 0 : x ^ y);
         }
         return Value.createKnown(bits, x);
+    }
+	
+     <b class="comment">/** Indique comment une instance individuelle doit apparaître sur 
+         le canevas. */</b>
+    public void paintInstance(InstancePainter painter) {
+        
+        <b class="comment">// Il se trouve que InstancePainter contient plusieurs méthodes de 
+        // commodité pour le dessin, et nous les utiliserons ici. Souvent, vous
+        // voudrez récupérer l'objet Graphics (painter.getGraphics) afin de 
+        // dessiner directement sur le canevas. */</b>
+        painter.drawRectangle(painter.getBounds(), "G+1");
+        painter.drawPorts();
+    }
+	
+    <b class="comment">/** Calcule la sortie actuelle pour ce composant.
+      * Cette méthode est invoquée chaque fois que l'une des entrées change de
+      * valeur ; elle peut également être invoquée dans d'autres circonstances,
+      * même s'il n'y a aucune raison de s'attendre à ce qu'elle change 
+      * quoi que ce soit. */</b>
+    public void propagate(InstanceState state) {
+        
+        <b class="comment">/* Tout d'abord, nous récupérons la valeur introduite dans l'entrée. 
+        // Notez que dans l'invocation setPorts ci-dessus, l'entrée du 
+        // composant était incluse à l'index 0 dans le tableau de paramètres, 
+        // nous utilisons donc 0 comme paramètre ci-dessous. */</b>
+        Value in = state.getPort(0);
+        
+        <b class="comment">// Maintenant, calculez la sortie. Nous avons confié cette tâche à 
+        // une méthode helper, car la même logique est nécessaire pour les 
+        // autres composants de la bibliothèque. */</b>
+        Value out = nextGray(in);
+        
+       <b class="comment"> // Enfin, nous propageons la sortie dans le circuit. Le premier 
+        // paramètre est 1 car dans notre liste de ports (configurée par 
+        // l'invocation de setPorts ci-dessus) la sortie est à l'index 1.
+        // Le deuxième paramètre est la valeur que nous voulons envoyer 
+        // sur ce port. Et le dernier paramètre est son "délai" - 
+        // le nombre d'étapes nécessaires pour que la sortie soit mise à jour 
+        // après son entrée. */</b>
+        state.setPort(1, out, out.getWidth() + 1);
     }
 }
 </pre>

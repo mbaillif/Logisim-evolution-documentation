@@ -32,6 +32,14 @@ import com.cburch.logisim.tools.Library;
 
 <b class="comment">/** La bibliothèque de composants à laquelle l'utilisateur peut accéder. */</b>
 public class Components extends Library {
+<b class="comment">//**
+   * Identifiant unique de la bibliothèque, utilisé comme référence dans les fichiers de projet. 
+   * Ne PAS modifier car cela peu empêcher le chargement des fichiers de projet.
+   *
+   * La valeur de l'identifiant doit être une chaîne unique parmi toutes les bibliothèques.
+   */</b>
+ 
+  public static final String _ID = "Components";
     
    <b class="comment">/** La liste de tous les outils contenus dans cette bibliothèque. 
      * Techniquement, les bibliothèques contiennent des outils, ce qui est

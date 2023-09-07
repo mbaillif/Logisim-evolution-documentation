@@ -323,6 +323,14 @@ b.zerov {
 	 color:#008000;
 }
 
+/* Color for code */
+pre.code {
+	 color:#0A400E
+}
+b.comment {
+	 color:#0764A6;
+}
+
 tr.tblvertitl{
 	background-color:#ccd1d6;
 }
