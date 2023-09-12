@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2018-10-23T06:18:10.521000000">
+    <meta name="changed" content="2019-01-17T07:26:01.212000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>
+      Installer rapidement une autre version standard sous Windows     
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        Installer rapidement une autre versions standard sous windows
+      </h1>
+      <dl>
+        <dt>
+          1 - Téléchargement de la version
+        </dt>
+        <dd>
+          Vous pouvez télécharger télécharger le fichier <b>.jar</b> depuis github : <a href="https://github.com/logisim-evolution/logisim-evolution/releases">github</a>
+        </dd>
+        <dt>
+          2 - Sauvegardez l'installation précédente
+        </dt>
+        <dd>
+          Dupliquer le dossier de l'installation précédente (par défaut :<b>C:\Program Files\logisim-evolution\</b> ) et nommez le avec la version que vous désirez installer par exemple <b>C:\Program Files\logisim-evolution39\</b>
+        </dd>
+        <dt>
+          2 - Déposez le fichier .jar
+        </dt>
+        <dd>
+          Déposez le fichier <b>.jar</b> dans le sous-dossier </b>.\app\</b> du nouveau dossier d'installation.
+        </dd>
+        <dt>
+          3 - Modifiez le fichier de configuration
+        </dt>
+        <dd>
+          Modifiez les lignes suivantes du fichier de configuration :<br>
+		  - app.classpath=<i>nouveau nom du .jar</i><br>
+		  - java-options=<i>la version du fichier</i><br>
+		  <br>
+		  par exemple vous auriez pour la version 3.9 de dev ceci :<br>
+   <pre class="code">
+   ===========
+  [Application]
+  app.classpath=$APPDIR\logisim-evolution-3.9.0dev-all.jar
+  app.mainclass=com.cburch.logisim.Main
+
+  [JavaOptions]
+  java-options=-Djpackage.app-version=3.9.0
+  ===========
+  </pre>
+        </dd>
+        <dt>
+          5 - Créez un raccourci
+        </dt>
+        <dd>
+          Allez dans le nouveau dossier d'installation et exécutez un clic-droit sur le logiciel <b>logisim-evolution.exe</b> et sélectionner le sous-menu <b>Crée un raccourci</b>.
+        </dd>
+		 5 - Tester
+        </dt>
+        <dd>
+          Cliqze sur votre raccourci et dans le menu <b>aide</b> sous-menu <b>a propos</b> vous trouverez l'information sur la version qui s'exécute.
+        </dd>
+      </dl>
+      <p>
+        <b>Suivant:</b> <a href="index.html">Installation</a>.
+      </p>
+    </div>
+  </body>
+</html>

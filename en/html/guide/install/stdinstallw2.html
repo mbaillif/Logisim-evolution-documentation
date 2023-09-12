@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="created" content="2023-10-01T06:18:10.521000000">
+    <meta name="changed" content="2023-10-01T07:26:01.212000000">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>
+      Quickly install another standard version under Windows 
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>
+        Quickly install another standard version under Windows
+      </h1>
+      <dl>
+        <dt>
+          1 - Download version
+        </dt>
+        <dd>
+           You can download the <b>.jar</b> file from: <a href="https://github.com/logisim-evolution/logisim-evolution/releases">github</a>
+        </dd>
+        <dt>
+          2 - Save the previous installation
+        </dt>
+        <dd>
+		 Duplicate the previous installation folder (default: <b>C:\Program Fileslogisim-evolution\</b> ) and name it with the version you wish to install, e.g. <b>C:\Program Fileslogisim-evolution39\</b>.
+        </dd>
+        <dt>
+          2 - Drop the .jar file
+        </dt>
+        <dd>
+          Place the <b>.jar</b> file in the <b>.\app\</b> subfolder of the new installation folder.
+        </dd>
+        <dt>
+          3 - Modify the configuration file
+        </dt>
+        <dd>
+          Modify the following lines in the configuration file:<br>
+		  - app.classpath=<i>new name for .jar</i><br>
+		  - java-options=<i>the file version</i><br>
+		  <br>
+		  For example, for dev version 3.9 you would have this:<br>
+   <pre class="code">
+   ===========
+  [Application]
+  app.classpath=$APPDIR\logisim-evolution-3.9.0dev-all.jar
+  app.mainclass=com.cburch.logisim.Main
+
+  [JavaOptions]
+  java-options=-Djpackage.app-version=3.9.0
+  ===========
+  </pre>
+        </dd>
+        <dt>
+          5 - Create a shortcut
+        </dt>
+        <dd>
+          Go to the new installation folder and right-click on <b>logisim-evolution.exe</b> and select the <b>Create shortcut</b> submenu.
+        </dd>
+		 5 - Test
+        </dt>
+        <dd>
+         Click on your shortcut and in the <b>help</b> menu, in the <b>about</b> submenu, you'll find information on the version running.
+        </dd>
+      </dl>
+      <p>
+        <b>Next:</b> <a href="index.html">Installing</a>.
+      </p>
+    </div>
+  </body>
+</html>
