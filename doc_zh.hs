@@ -9,15 +9,15 @@
    <!-- maps --> 
    <maps>
      <homeID>top</homeID>
-     <mapref location="map_en.jhm" />
+     <mapref location="map_zh.jhm" />
    </maps>
 	
    <!-- views --> 
-   <view xml:lang="en" mergetype="javax.help.UniteAppendMerge">
+   <view xml:lang="zh" mergetype="javax.help.UniteAppendMerge">
       <name>TOC</name>
       <label>目录</label>
       <type>javax.help.TOCView</type>
-      <data>en/contents.xml</data>
+      <data>zh/contents.xml</data>
    </view>
 
   <view>
@@ -41,7 +41,7 @@
      *  The toolbar has a back arrow, a forward arrow, and
      *  a home button that has a user-defined image.
    -->
-   <presentation default="true">
+   <presentation default=true>
        <name>main window</name> 
        <location x="200" y="10" />
        <toolbar>
