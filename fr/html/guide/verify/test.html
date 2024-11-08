@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="created" content="2018-10-23T06:18:10.521000000">
-    <meta name="changed" content="2021-07-21T17:28:04.263000000">
+    <meta name="changed" content="2024-11-08T17:21:14.432000000">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="fr">
     <title>
@@ -46,7 +46,7 @@
         Toute sortie incorrecte sera signalée en rouge. Les lignes avec des sorties incorrectes sont triées en haut de la fenêtre.
       </p>
       <p>
-        Le format de fichier des vecteurs est simple. La première ligne contient les entêtes de colonnes qui correspondent au nom des signaux. Si la largeur en bit est plus grande que 1 alors il est nécessaire de le spécifier entre des crochets. Exemple <tt>C[8]</tt>. Les données de chaque situation de test sont dans les lignes suivantes. Les lignes vides sont ignorées. Tout ce qui suit un caractère "#" est un commentaire.
+        Le format de fichier des vecteurs est simple. La première ligne contient les entêtes de colonnes qui correspondent au nom des signaux. Si la largeur en bit est plus grande que 1 alors il est nécessaire de le spécifier entre des crochets, par exemple <tt>C[8]</tt>. Les données de chaque situation de test se retrouvent dans les lignes suivantes. Les lignes vides sont ignorées. Tout ce qui suit un caractère "#" est un commentaire.
       </p>
       <p>
         Les lignes restantes répertorient chaque valeur séparée par un espace ou une tabulation. Les valeurs peuvent être en hexadécimales, octal, binaire ou décimal signé. Les valeurs hexadécimal doivent avoir le préfixe <b><tt>"0x"</tt></b>. Les valeurs octales doivent avoir le préfixe <b><tt>"0o"</tt></b>. Les nombres binaires et décimaux se distinguent par le nombre de chiffres&nbsp;: les valeurs binaires doivent toujours avoir exactement autant de chiffres que la largeur de la colonne; les valeurs décimales ne doivent pas avoir de zéro en tête et peuvent avoir un signe négatif.
