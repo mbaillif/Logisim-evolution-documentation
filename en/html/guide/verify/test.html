@@ -7,20 +7,20 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <title>
-      Window Text Vector
+      Test Vector Window
     </title>
     <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
   <body>
     <div class=maindiv>
       <h1>
-        Window Text Vector
+        Test Vector Window
       </h1>
       <p>
-        From the Test Vector Window you can load a test vector from a file, and Logisim will start running tests on the current circuit. is only one test vector window for the project, and the table will change to reflect whichever circuit is being simulated in the project window. Note, however, that the Test Vector module runs a separate copy of the circuit simulator, and so does not interfere with, and is not influenced by, the simulation in the project window.
+        From the Test vector window you can load a test vector from a file and Logisim will run tests on the current circuit. There is only one test vector window for the project and the table will change to reflect the simulated circuit in the project window. Note however that the test vector module runs a separate copy of the circuit simulator and therefore does not interfere with the simulation in the project window and is not influenced by this simulation.
       </p>
       <p>
-        For the example we will test the circuit below. This circuit gives the results of five logical functions from two inputs. It has an error because the bottom NAND gate should be an AND gate.
+        For the example, we will test the circuit below. This circuit gives the results of five logic functions from two inputs. It has an error the bottom NAND gate should be an AND gate.
       </p>
       <p align="center">
         <img class=notscal src="../../../../img-guide/vector-test.png" alt="#########">
@@ -37,19 +37,19 @@
 </pre>
       </blockquote>
       <p>
-        To start the test, select the menu <b class="menu">|&nbsp; Simulate &nbsp;|</b>→<b class="menu">|&nbsp; Test Vector &nbsp;|</b> then use the button <b class=button>Load Vector</b>. Select the file of vectors that you have built. The simulation is executed immediately and a table is displayed with the result.
+        To start the test, select the menu <b class="menu">|&nbsp; Simulate &nbsp;|</b>→<b class="menu">|&nbsp; Test Vector &nbsp;|</b> then use the <b class=button>Load Vector</b> button. Select the vector file you built. The simulation is executed immediately and a table is displayed with the result.
       </p>
       <p align="center">
         <img src="../../../img-guide/vector-result.png" alt="#########">
       </p>
       <p>
-        Any incorrect output will be indicated in red. Lines with incorrect outputs are sorted at the top of the window.
+        Any incorrect output will be flagged in red. Rows with incorrect outputs are sorted at the top of the window.
       </p>
       <p>
         The file format is simple. The first line contains column headers that correspond to the names of the signals. If the bit width is greater than 1 then it is necessary to specify it in square brackets. Example <tt>C[8]</tt>. The data for each test situation is in the following lines. Blank lines are ignored. Anything following a "#" character is a comment.
       </p>
       <p>
-        The remaining rows list each value separated by a space or tab. Values can be in hexadecimal, octal, binary, or signed decimal. The hexadecimal values must have the prefix <b><tt>&lt; tt=""&gt;</tt></b>. Octal values must have the prefix <b><tt>"0o"</tt></b>. inary and decimal are be distinguished by the number of digits: binary values must always have exactly as many digits as the width of the column; decimal values must always have fewer, should not have leading zeros, and may have a negative sign.
+        The remaining lines list each value separated by a space or a tab. Values ​​can be hexadecimal, octal, binary, or signed decimal. Hexadecimal values ​​must have the prefix <b><tt>"0x"</tt></b>. Octal values ​​must have the prefix <b><tt>"0o"</tt></b>. Binary and decimal numbers are distinguished by the number of digits: binary values ​​must always have exactly as many digits as the width of the column; decimal values ​​must not have a leading zero and may have a negative sign.
       </p>
       <p>
         Here is an example of a test vector file:
@@ -65,7 +65,7 @@ A[4] B[4] O[4] C_in C_out
 </pre>
       </blockquote>
       <p>
-        Depending on the representation of values in hexadecimal, octal or binary, the lowercase "<tt>x</tt>" is used to specify four, three or one "unimportant" bits. For example 101xx is a binary value of five bits, with the last two unspecified bits, and 0x1ax5 is a hexadecimal value with two unspecified four-bit bits. Such wildcards can not be used in decimal notation.
+        Depending on the representation of hexadecimal, octal, or binary values, the lowercase letter <tt>"x"</tt> is used to specify four, three, or one "unimportant" bits. For example, a value of <tt>101xx</tt> is a five-bit binary value, with the last two bits unspecified, and <tt>0x1ax5</tt> is a hexadecimal value with two unspecified four-bit bits. Such wildcards cannot be used in decimal notation.
       </p>
       <p>
         <strong>Command line:</strong> To facilitate automated testing, the test vector feature can be run from the command line as follows:
@@ -74,20 +74,19 @@ A[4] B[4] O[4] C_in C_out
         <tt>java -jar logisim-evolution.jar -w &lt;circuitname&gt;<br>
         &nbsp;&nbsp; &lt;vector.txt&gt; &lt;project.circ&gt;</tt>
       </blockquote>
-	   <p>
-	   The result of a successful test will be in the standard output (stdout) this one for example
+	    The result of a successful test will be sent to standard output (stdout), for example
 	  <blockquote><pre>Loading test vector "testv1b.txt" ...
-Execution 4 vectors ...
+Running 4 vectors ...
 1 
 2 
 3 
 4 
 
-Réussit: 4, Erreur: 0
+Passed : 4, Failed : 0
 	  </pre></blockquote>
 	   and in case of failure
 	  <blockquote><pre>Loading test vector "testv1a.txt" ...
-Exécution 4 vectors  ...
+Running 4 vectors ...
 1 
 2 
 3 
@@ -97,7 +96,7 @@ Exécution 4 vectors  ...
 
   ob = 1 (expected 0)
 
-Réussit: 2, Erreur: 2
+Passed : 2, Error: 2
 	  </pre></blockquote>
 	  <b class="note">Note</b>: In the error output (stderr) we will read this:
 	  <blockquote><pre>Error on test vector 3:
